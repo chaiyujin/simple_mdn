@@ -1,10 +1,12 @@
 from __future__ import absolute_import
 
+import sys
 import tensorflow as tf
 from tensorflow.contrib.layers import fully_connected
 from tensorflow.contrib.distributions import Categorical
 from tensorflow.contrib.distributions import Mixture
 from tensorflow.contrib.distributions import MultivariateNormalDiag
+from utils import process_bar
 
 
 def reshape_gmm_tensor(tensor, D, K):
@@ -168,8 +170,6 @@ class Model():
         )
         self._loss_fn = loss_fn(self._y, self._mixtures)
 
-        self._output = self._feature_input
-
     def LSTM_cell(self, size):
         cell = tf.contrib.rnn.LSTMCell(
             size, state_is_tuple=True,
@@ -211,25 +211,21 @@ if __name__ == '__main__':
         3, 3, 3, 3
     ]
     session = tf.InteractiveSession()
-    tf.global_variables_initializer().run()
-    result = model._output.eval(feed_dict={
+    feed_dict = {
         model._audio_input: audio_input,
         model._anime_data: anime_input,
         model._seq_len: seq_len
-    })
+    }
 
-    d, ld, loss = session.run(
-        [model._anime_data, model._last_anime_data, model._loss_fn],
-        feed_dict={
-            model._audio_input: audio_input,
-            model._anime_data: anime_input,
-            model._seq_len: seq_len
-        }
-    )
+    optimizer = tf.train.MomentumOptimizer(1e-4, 0.9).minimize(model._loss_fn)
 
-    print(d)
-    print('----------')
-    print(ld)
-    print('----------')
-    print(loss)
+    tf.global_variables_initializer().run()
+    epoches = 10000
+    for epoch in range(epoches):
+        bar = process_bar.process_bar(epoch, epoches)
+        loss, _ = session.run([model._loss_fn, optimizer], feed_dict=feed_dict)
+        bar += ' Loss:' + str(loss) + '\r'
+        sys.stdout.write(bar)
+        sys.stdout.flush()
+    sys.stdout.write('\n')
 
