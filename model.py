@@ -157,7 +157,8 @@ class Model():
             self._dense_output,
             [self._batch_size, -1, self._dense_size]
         )
-        # 3. mdn layer
+
+        # III. mdn layer
         self._locs, self._scales_diag, self._pi = parameter_layer(
             self._dense_output, self._mdn_dims, self._mdn_K
         )
@@ -168,6 +169,8 @@ class Model():
             self._anime_data,
             [-1, self._anime_num_features]
         )
+
+        # IV. Loss function
         self._loss_fn = loss_fn(self._y, self._mixtures)
 
     def LSTM_cell(self, size):
