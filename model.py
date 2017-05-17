@@ -1,6 +1,8 @@
 from __future__ import absolute_import
 
+import os
 import sys
+import numpy as np
 import tensorflow as tf
 import matplotlib.pyplot as plt
 from tensorflow.contrib.layers import fully_connected
@@ -38,11 +40,19 @@ def parameter_layer(X, Dims, K):
 def mixture(locs, scales, pi, K):
     cat = Categorical(probs=pi)
     components = [
-        MultivariateNormalDiag(loc=locs[:, i], scale_diag=scales[:, i])
+        MultivariateNormalDiag(loc=locs[:, i, :], scale_diag=scales[:, i, :])
         for i in range(K)]
     # get the mixture distribution
     mix = Mixture(cat=cat, components=components)
     return mix
+
+
+def sample_gmm(locs, scales, pi):
+    idx = np.random.choice(pi.shape[1], p=pi[0])
+    loc = locs[:, idx, :]
+    scale_diag = scales[:, idx, :]
+    x = np.random.multivariate_normal(loc, scale_diag, 1)
+    return x[0]
 
 
 def loss_fn(y, mixture):
@@ -174,6 +184,9 @@ class Model():
         # IV. Loss function
         self._loss_fn = loss_fn(self._y, self._mixtures)
 
+        # saver
+        self._saver = tf.train.Saver()
+
     def LSTM_layer(self, lstm_size, inputs, seq_len, scope):
         layer = {}
         layer['cell'] = self.LSTM_cell(lstm_size)
@@ -258,6 +271,8 @@ class Model():
         train_loss_list = []
         valid_loss_list = []
         optimizer = optimizer.minimize(self._loss_fn)
+        # best loss
+        best_valid_loss = 1000000
         with tf.Session() as sess:
             sess.run(tf.global_variables_initializer())
             for epoch in range(epoches):
@@ -288,6 +303,10 @@ class Model():
                 valid_loss_list.append(valid_loss)
 
                 if epoch % 10 == 0:
+                    # save model
+                    if valid_loss < best_valid_loss:
+                        best_valid_loss = valid_loss
+                        self.save(sess, './model/', epoch)
                     # draw the figure of the training process
                     fig = plt.figure(figsize=(12, 12))
                     cost_plt = fig.add_subplot(111)
@@ -297,6 +316,41 @@ class Model():
                         epoch_list, valid_loss_list, 'r')
                     plt.savefig('error.png')
                     plt.clf()
+
+    def sample_one_step(self, sess, audio_frame):
+        # it should not be training mode
+        if self._train:
+            return None
+        assert(audio_frame.shape[0] == 1)
+        assert(audio_frame.shape[1] == 1)
+        assert(audio_frame.shape[2] == self._audio_num_features)
+        feed_dict = {
+            self._audio_input: audio_frame,
+            self._seq_len: [1]
+        }
+        locs, scales, pi = sess.run(
+            [self._locs, self._scales_diag, self._pi],
+            feed_dict=feed_dict)
+        anime_frame = sample_gmm(locs, scales, pi)
+        return anime_frame
+
+    def sample_audio(self, sess, audio_input):
+        # it should not be training mode
+        if self._train:
+            return None
+        assert(audio_input.shape[0] == 1)
+        assert(audio_input.shape[1] >= 1)
+        assert(audio_input.shape[2] == self._audio_num_features)
+        anime_data = []
+        for time_step in range(audio_input.shape[1]):
+            audio_frame = audio_input[:, time_step: time_step + 1, :]
+            anime_frame = self.sample_one_step(sess, audio_frame)
+            anime_data.append(anime_frame)
+        return anime_data
+
+    def save(self, sess, path, epoch):
+        path = os.path.abspath(path)
+        self._saver.save(sess, path, global_step=epoch)
 
 
 if __name__ == '__main__':

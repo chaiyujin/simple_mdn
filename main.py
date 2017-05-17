@@ -2,7 +2,7 @@ import tensorflow as tf
 from model import Model
 import data_process
 
-data_process.process()
+# data_process.process()
 
 train_data = data_process.load('data/train.pkl')
 valid_data = data_process.load('data/test.pkl')
