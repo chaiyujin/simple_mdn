@@ -2,11 +2,12 @@ from __future__ import absolute_import
 
 import sys
 import tensorflow as tf
+import matplotlib.pyplot as plt
 from tensorflow.contrib.layers import fully_connected
 from tensorflow.contrib.distributions import Categorical
 from tensorflow.contrib.distributions import Mixture
 from tensorflow.contrib.distributions import MultivariateNormalDiag
-from utils import process_bar
+from utils import process_bar, console
 
 
 def reshape_gmm_tensor(tensor, D, K):
@@ -205,45 +206,97 @@ class Model():
             )
         return cell
 
+    def train_one_epoch(
+            self, sess, data, batch_size,
+            optimizer, log_prefix=''):
+        total_samples = len(data['inputs'])
+        batches = int((total_samples - 1) / batch_size) + 1
+        avg_loss = 0
+        for batch in range(batches):
+            indexes = [i % total_samples
+                       for i in range(batch * batch_size,
+                                      (batch + 1) * batch_size)]
+            bar = process_bar.process_bar(batch, batches)
+            # feed dict
+            feed = {
+                self._audio_input: data['inputs'][indexes],
+                self._anime_data: data['outputs'][indexes],
+                self._seq_len: data['seq_len'][indexes]
+            }
+            if optimizer is not None:
+                loss, _ = sess.run(
+                    [self._loss_fn, optimizer],
+                    feed_dict=feed
+                )
+            else:
+                loss = sess.run(self._loss_fn, feed_dict=feed)
+            avg_loss += loss
+            loss_str = "%.4f" % loss
+            bar = log_prefix + bar
+            if optimizer is not None:
+                bar += ' Train Loss: ' + loss_str + '\r'
+            else:
+                bar += ' Valid Loss: ' + loss_str + '\r'
+            console.log('', bar)
+        print()
+        avg_loss /= batches
+        return avg_loss
+
     def simple_train(
-            self, audio, anime, seq_len,
-            epoches, mini_batch_size, optimizer):
+            self, epoches, optimizer,
+            train_data, mini_batch_size,
+            valid_data=None, valid_batch_size=None):
+        # fix the batch size
+        if valid_batch_size is None:
+            valid_batch_size = mini_batch_size
+        if mini_batch_size > len(train_data['inputs']):
+            mini_batch_size = len(train_data['inputs'])
+        if valid_batch_size > len(valid_data['inputs']):
+            valid_batch_size = len(valid_data['inputs'])
+        # begin to train
+        epoch_list = []
+        train_loss_list = []
+        valid_loss_list = []
         optimizer = optimizer.minimize(self._loss_fn)
-        total_samples = len(audio)
-        batches = int((total_samples - 1) / mini_batch_size) + 1
         with tf.Session() as sess:
             sess.run(tf.global_variables_initializer())
             for epoch in range(epoches):
                 # show the epoch number
-                prefix = '\033[01;33m[Epoch ' + str(epoch) + '/' +\
-                         str(epoches) + ']\033[0m'
+                prefix = console.color(
+                    '[Epoch ' + str(epoch) + '/' + str(epoches) + ']',
+                    'yellow')
                 # training phase
-                avg_train_loss = 0
-                for batch in range(batches):
-                    indexes = [i % total_samples
-                               for i in range(batch * mini_batch_size, 
-                                              (batch + 1) * mini_batch_size)]
-                    bar = process_bar.process_bar(batch, batches)
-                    # train batch
-                    feed_train = {
-                        self._audio_input: audio[indexes],
-                        self._anime_data: anime[indexes],
-                        self._seq_len: seq_len[indexes]
-                    }
-                    train_loss, _ = sess.run(
-                        [self._loss_fn, optimizer],
-                        feed_dict=feed_train
-                    )
-                    avg_train_loss += train_loss
-                    train_loss_str = "%.4f" % train_loss
-                    bar = prefix + bar
-                    bar += ' Train Loss: ' + train_loss_str + '\r'
-                    sys.stdout.write(bar)
-                    sys.stdout.flush()
-                # valid
-                # over
-                avg_train_loss = avg_train_loss / batches
-                print('\nTrain Loss: ' + str(avg_train_loss))
+                train_loss = self.train_one_epoch(
+                    sess, train_data,
+                    mini_batch_size, optimizer, prefix)
+                # validation
+                valid_prefix = console.color('[Validing]', 'yellow')
+                valid_loss = self.train_one_epoch(
+                    sess, valid_data, valid_batch_size, None, valid_prefix
+                )
+                # console the training loss
+                console.log(
+                    'info',
+                    'Train Loss: ' + str(train_loss) + '\n')
+                console.log(
+                    'info',
+                    'Valid Loss: ' + str(valid_loss) + '\n')
+
+                # put into list
+                epoch_list.append(epoch)
+                train_loss_list.append(train_loss)
+                valid_loss_list.append(valid_loss)
+
+                if epoch % 10 == 0:
+                    # draw the figure of the training process
+                    fig = plt.figure(figsize=(12, 12))
+                    cost_plt = fig.add_subplot(111)
+                    cost_plt.title.set_text('Cost')
+                    cost_plt.plot(
+                        epoch_list, train_loss_list, 'g',
+                        epoch_list, valid_loss_list, 'r')
+                    plt.savefig('error.png')
+                    plt.clf()
 
 
 if __name__ == '__main__':

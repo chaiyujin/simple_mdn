@@ -5,6 +5,7 @@ import ffmpy
 import numpy
 import fbxanime
 import scipy.io.wavfile as wav
+from utils import console
 from python_speech_features import mfcc, delta, logfbank
 
 loglevel = 'error'
@@ -67,25 +68,43 @@ def get_mfcc(audio_path):
     return mfcc_feat
 
 
-def process_media(video_path, show=False, fbx=False, clear_old=False):
-    dde.reset()
-    demuxed = demux_video(video_path, clear_old)
-    # audio feat
-    audio_feat = get_mfcc(demuxed['audio_path'])
-    a_frames = len(audio_feat)
-    # video track
+def cache_path(video_path):
+    return video_path + '_cache_expr'
+
+
+def get_anime_data_from_cache(video_path, clear_old):
+    anime_data = None
+    if clear_old:
+        return anime_data
+    cache = cache_path(video_path)
+    if os.path.exists(cache):
+        console.log('log', 'Get anime data from cache\n')
+        anime_data = []
+        with open(cache) as file:
+            for line in file:
+                exprs = line.strip().split(' ')
+                tuple = []
+                for expr in exprs:
+                    tuple.append(float(expr))
+                assert(len(tuple) == 19)
+                tuple = numpy.asarray(tuple, dtype=numpy.float32)
+                anime_data.append(tuple)
+    return anime_data
+
+
+def save_anime_data_into_cache(video_path, anime_data):
+    cache = cache_path(video_path)
+    with open(cache, 'w') as file:
+        for data in anime_data:
+            for d in data:
+                file.write(str(d) + ' ')
+            file.write('\n')
+
+
+def get_anime_data_from_video(video_path, show, fbx):
+    console.log('log', 'Get anime data from video\n')
+    cap = cv2.VideoCapture(video_path)
     anime_data = []
-    cap = cv2.VideoCapture(demuxed['video_path'])
-    v_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
-    if a_frames <= 0:
-        print('\033[01;31m[No audio feature]\033[0m ' +
-              video_path)
-        return None
-    if a_frames != v_frames:
-        print('\033[01;31m[Audio and Video are not aligned]\033[0m ' +
-              video_path)
-        cap.release()
-        return None
     while True:
         ret, frame = cap.read()
         if not ret:
@@ -123,10 +142,38 @@ def process_media(video_path, show=False, fbx=False, clear_old=False):
             cv2.waitKey(1)
 
     cap.release()
-    if len(anime_data) != a_frames:
-        print('\033[01;31m[Fail to aligne]\033[0m ' +
+    return anime_data
+
+
+def process_media(video_path, show=False, fbx=False, clear_old=False):
+    dde.reset()
+    demuxed = demux_video(video_path, clear_old)
+    # audio feat
+    audio_feat = get_mfcc(demuxed['audio_path'])
+    a_frames = len(audio_feat)
+    if a_frames <= 0:
+        print('\033[01;31m[No audio feature]\033[0m ' +
               video_path)
         return None
+    # video track
+    anime_data = get_anime_data_from_cache(
+        demuxed['video_path'], clear_old
+    )
+    if anime_data is None:
+        anime_data = get_anime_data_from_video(
+            demuxed['video_path'], show, fbx
+        )
+    if anime_data is None:
+        return None
+    v_frames = len(anime_data)
+    if v_frames != a_frames:
+        print('\033[01;31m[Fail to align]\033[0m ' +
+              video_path)
+        return None
+    save_anime_data_into_cache(
+        demuxed['video_path'],
+        anime_data
+    )
     anime_data = numpy.asarray(anime_data, dtype=numpy.float32)
     return (audio_feat, anime_data)
 

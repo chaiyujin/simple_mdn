@@ -1,9 +1,11 @@
 import tensorflow as tf
 from model import Model
-from data_process import load
+import data_process
 
-data = load('data/train.pkl')
-# print(len(data['inputs']))
+data_process.process()
+
+train_data = data_process.load('data/train.pkl')
+valid_data = data_process.load('data/test.pkl')
 
 if __name__ == '__main__':
     config = {
@@ -21,9 +23,8 @@ if __name__ == '__main__':
 
     optimizer = tf.train.MomentumOptimizer(1e-4, 0.9)
     model.simple_train(
-        audio=data['inputs'],
-        anime=data['outputs'],
-        seq_len=data['seq_len'],
+        train_data=train_data,
+        valid_data=valid_data,
         epoches=200,
         mini_batch_size=8,
         optimizer=optimizer

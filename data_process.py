@@ -3,6 +3,7 @@ from __future__ import absolute_import
 import os
 import sys
 import dde
+import random
 import fbxanime
 import numpy as np
 import pickle
@@ -21,8 +22,27 @@ def find_files(path, target_ext):
     return result_list
 
 
-def accumulate_data(path, ext):
+def generate_train_test(path, ext, rate=0.2):
     file_list = find_files(path, ext)
+    train_list = []
+    test_list = []
+    for file_path in file_list:
+        if random.random() < rate:
+            test_list.append(file_path)
+        else:
+            train_list.append(file_path)
+    print('Train data: ' + str(len(train_list)))
+    print('Test data: ' + str(len(test_list)))
+
+    train_set = accumulate_data(train_list)
+    test_set = accumulate_data(test_list)
+    return {
+        'train_set': train_set,
+        'test_set': test_set
+    }
+
+
+def accumulate_data(file_list):
     inputs = []
     outputs = []
     seq_len = []
@@ -40,7 +60,7 @@ def accumulate_data(path, ext):
             seq_len.append(len(res[0]))
         else:
             failed += 1
-        # if idx > 20: break
+        if idx > 2: break
     if failed > 0:
         print('\033[01;31m[Failed]\033[0m ' + str(failed))
     if len(inputs) == 0:
@@ -76,8 +96,15 @@ def init(
     fbxanime.init(640, 480, fbx_path)
 
 
-if __name__ == '__main__':
+def process(
+        root_path='../../dataset/GRID/video/s1/', ext='mpg', test_rate=0.2,
+        train_path='data/train.pkl', test_path='data/test.pkl'):
+
     init()
-    d = accumulate_data('../../dataset/GRID/video/s1/', 'mpg')
-    # d = accumulate_data('./', 'mpg')
-    save('data/train.pkl', d)
+    sets = generate_train_test(root_path, ext, test_rate)
+    save(train_path, sets['train_set'])
+    save(test_path, sets['test_set'])
+
+
+if __name__ == '__main__':
+    process()
