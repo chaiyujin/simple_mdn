@@ -48,8 +48,8 @@ def accumulate_data(path, ext):
     inputs = np.asarray(inputs, dtype=np.float64)
     outputs = np.asarray(outputs, dtype=np.float32)
     seq_len = np.asarray(seq_len, dtype=np.int32)
-    # assert(inputs.dtype == np.float64)
-    # assert(outputs.dtype == np.float32)
+    assert(inputs.dtype == np.float64)
+    assert(outputs.dtype == np.float32)
 
     return {
         'inputs': inputs,
@@ -78,6 +78,6 @@ def init(
 
 if __name__ == '__main__':
     init()
-    d = accumulate_data('../../dataset/GRID/video/', 'mpg')
+    d = accumulate_data('../../dataset/GRID/video/s1/', 'mpg')
     # d = accumulate_data('./', 'mpg')
     save('data/train.pkl', d)

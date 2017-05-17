@@ -9,4 +9,5 @@ def process_bar(x, total, length=50):
     for _ in range(length - int(x * step) - 1):
         line += ' '
     line += ']'
+    line += ' ' + str(x) + '/' + str(total)
     return line + ' ' + str(int(x * 100 / total)) + '%'

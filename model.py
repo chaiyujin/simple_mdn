@@ -92,16 +92,16 @@ class Model():
 
         # I. build the Audio process layers
         # 1. uni-lstm layer
-        self._audio_lstm_cell = self.LSTM_cell(self._audio_lstm_size)
-        self._audio_lstm_output, _ = tf.nn.dynamic_rnn(
-            self._audio_lstm_cell, self._audio_input,
-            self._seq_len, dtype=tf.float32,
+        self._audio_lstm = self.LSTM_layer(
+            lstm_size=self._audio_lstm_size,
+            inputs=self._audio_input,
+            seq_len=self._seq_len,
             scope='audio_lstm'
         )
         # 2. dense layer
         # a. flatten the batch and timestep
         self._audio_lstm_output = tf.reshape(
-            self._audio_lstm_output,
+            self._audio_lstm['output'],
             [-1, self._audio_lstm_size]
         )
         # b. xw+b
@@ -129,15 +129,15 @@ class Model():
             [self._last_anime_data, self._phn_vector], 2)
         self._feature_size = self._anime_num_features + self._phoneme_classes
         # 1. uni-lstm
-        self._anime_lstm_cell = self.LSTM_cell(self._anime_lstm_size)
-        self._anime_lstm_output, _ = tf.nn.dynamic_rnn(
-            self._anime_lstm_cell, self._feature_input,
-            self._seq_len, dtype=tf.float32,
+        self._anime_lstm = self.LSTM_layer(
+            lstm_size=self._anime_lstm_size,
+            inputs=self._feature_input,
+            seq_len=self._seq_len,
             scope='anime_lstm'
         )
         # 2. dense layer for mdn param
         self._anime_lstm_output = tf.reshape(
-            self._anime_lstm_output,
+            self._anime_lstm['output'],
             [-1, self._anime_lstm_size]
         )
         with tf.variable_scope('lstm_h'):
@@ -173,6 +173,27 @@ class Model():
         # IV. Loss function
         self._loss_fn = loss_fn(self._y, self._mixtures)
 
+    def LSTM_layer(self, lstm_size, inputs, seq_len, scope):
+        layer = {}
+        layer['cell'] = self.LSTM_cell(lstm_size)
+        # the zero state
+        layer['zero_state'] = layer['cell'].zero_state(
+            batch_size=self._batch_size, dtype=tf.float32
+        )
+        # last state is set as zero at first
+        layer['last_state'] = layer['cell'].zero_state(
+            batch_size=self._batch_size, dtype=tf.float32
+        )
+        if self._train:
+            layer['init_state'] = layer['zero_state']
+        else:
+            layer['init_state'] = layer['last_state']
+        layer['output'], layer['last_state'] = tf.nn.dynamic_rnn(
+            cell=layer['cell'], inputs=inputs, sequence_length=seq_len,
+            scope=scope, dtype=tf.float32, initial_state=layer['init_state']
+        )
+        return layer
+
     def LSTM_cell(self, size):
         cell = tf.contrib.rnn.LSTMCell(
             size, state_is_tuple=True,
@@ -183,6 +204,46 @@ class Model():
                 cell, output_keep_prob=self._dropout
             )
         return cell
+
+    def simple_train(
+            self, audio, anime, seq_len,
+            epoches, mini_batch_size, optimizer):
+        optimizer = optimizer.minimize(self._loss_fn)
+        total_samples = len(audio)
+        batches = int((total_samples - 1) / mini_batch_size) + 1
+        with tf.Session() as sess:
+            sess.run(tf.global_variables_initializer())
+            for epoch in range(epoches):
+                # show the epoch number
+                prefix = '\033[01;33m[Epoch ' + str(epoch) + '/' +\
+                         str(epoches) + ']\033[0m'
+                # training phase
+                avg_train_loss = 0
+                for batch in range(batches):
+                    indexes = [i % total_samples
+                               for i in range(batch * mini_batch_size, 
+                                              (batch + 1) * mini_batch_size)]
+                    bar = process_bar.process_bar(batch, batches)
+                    # train batch
+                    feed_train = {
+                        self._audio_input: audio[indexes],
+                        self._anime_data: anime[indexes],
+                        self._seq_len: seq_len[indexes]
+                    }
+                    train_loss, _ = sess.run(
+                        [self._loss_fn, optimizer],
+                        feed_dict=feed_train
+                    )
+                    avg_train_loss += train_loss
+                    train_loss_str = "%.4f" % train_loss
+                    bar = prefix + bar
+                    bar += ' Train Loss: ' + train_loss_str + '\r'
+                    sys.stdout.write(bar)
+                    sys.stdout.flush()
+                # valid
+                # over
+                avg_train_loss = avg_train_loss / batches
+                print('\nTrain Loss: ' + str(avg_train_loss))
 
 
 if __name__ == '__main__':

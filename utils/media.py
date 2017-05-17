@@ -77,6 +77,10 @@ def process_media(video_path, show=False, fbx=False, clear_old=False):
     anime_data = []
     cap = cv2.VideoCapture(demuxed['video_path'])
     v_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
+    if a_frames <= 0:
+        print('\033[01;31m[No audio feature]\033[0m ' +
+              video_path)
+        return None
     if a_frames != v_frames:
         print('\033[01;31m[Audio and Video are not aligned]\033[0m ' +
               video_path)
@@ -119,7 +123,11 @@ def process_media(video_path, show=False, fbx=False, clear_old=False):
             cv2.waitKey(1)
 
     cap.release()
-    anime_data = numpy.asarray(anime_data)
+    if len(anime_data) != a_frames:
+        print('\033[01;31m[Fail to aligne]\033[0m ' +
+              video_path)
+        return None
+    anime_data = numpy.asarray(anime_data, dtype=numpy.float32)
     return (audio_feat, anime_data)
 
 
