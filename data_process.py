@@ -42,6 +42,50 @@ def generate_train_test(path, ext, rate=0.2):
     }
 
 
+def pad_sequences(sequences, maxlen=None, dtype=np.float32,
+                  padding='post', truncating='post', value=0.):
+    lengths = np.asarray([len(s) for s in sequences], dtype=np.int64)
+
+    nb_samples = len(sequences)
+    if maxlen is None:
+        maxlen = np.max(lengths)
+
+    # take the sample shape from the first non empty sequence
+    # checking for consistency in the main loop below.
+    sample_shape = tuple()
+    for s in sequences:
+        if len(s) > 0:
+            sample_shape = np.asarray(s).shape[1:]
+            break
+
+    x = (np.ones((nb_samples, maxlen) + sample_shape) * value).astype(dtype)
+    for idx, s in enumerate(sequences):
+        if len(s) == 0:
+            continue  # empty list was found
+        if truncating == 'pre':
+            trunc = s[-maxlen:]
+        elif truncating == 'post':
+            trunc = s[:maxlen]
+        else:
+            raise ValueError('Truncating type "%s" not understood' % 
+                             truncating)
+
+        # check `trunc` has expected shape
+        trunc = np.asarray(trunc, dtype=dtype)
+        if trunc.shape[1:] != sample_shape:
+            raise ValueError('Shape of sample %s of sequence at position %s is\
+                              different from expected shape %s' %
+                             (trunc.shape[1:], idx, sample_shape))
+
+        if padding == 'post':
+            x[idx, :len(trunc)] = trunc
+        elif padding == 'pre':
+            x[idx, -len(trunc):] = trunc
+        else:
+            raise ValueError('Padding type "%s" not understood' % padding)
+    return x, lengths
+
+
 def accumulate_data(file_list):
     inputs = []
     outputs = []
@@ -60,11 +104,14 @@ def accumulate_data(file_list):
             seq_len.append(len(res[0]))
         else:
             failed += 1
-        if idx > 2: break
+        # if idx > 2: break
     if failed > 0:
         print('\033[01;31m[Failed]\033[0m ' + str(failed))
     if len(inputs) == 0:
         return None
+    # padding the data at end
+    inputs, _ = pad_sequences(inputs, dtype=np.float64)
+    outputs, seq_len = pad_sequences(outputs, dtype=np.float32)
     inputs = np.asarray(inputs, dtype=np.float64)
     outputs = np.asarray(outputs, dtype=np.float32)
     seq_len = np.asarray(seq_len, dtype=np.int32)

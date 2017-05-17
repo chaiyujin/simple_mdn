@@ -25,7 +25,7 @@ if __name__ == '__main__':
     model.simple_train(
         train_data=train_data,
         valid_data=valid_data,
-        epoches=200,
+        epoches=400,
         mini_batch_size=8,
         optimizer=optimizer
     )
