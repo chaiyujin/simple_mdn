@@ -25,8 +25,14 @@ if __name__ == '__main__':
     model.simple_train(
         train_data=train_data,
         valid_data=valid_data,
-        epoches=400,
+        epoches=200,
         mini_batch_size=8,
         optimizer=optimizer
     )
 
+    with tf.Session() as sess:
+        model.load(sess)
+        model.run_one_epoch(
+            sess, valid_data,
+            8, None
+        )

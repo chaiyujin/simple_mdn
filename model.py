@@ -2,6 +2,7 @@ from __future__ import absolute_import
 
 import os
 import sys
+import time
 import numpy as np
 import tensorflow as tf
 import matplotlib.pyplot as plt
@@ -9,7 +10,7 @@ from tensorflow.contrib.layers import fully_connected
 from tensorflow.contrib.distributions import Categorical
 from tensorflow.contrib.distributions import Mixture
 from tensorflow.contrib.distributions import MultivariateNormalDiag
-from utils import process_bar, console
+from utils import process_bar, console, format_time
 
 
 def reshape_gmm_tensor(tensor, D, K):
@@ -219,7 +220,7 @@ class Model():
             )
         return cell
 
-    def train_one_epoch(
+    def run_one_epoch(
             self, sess, data, batch_size,
             optimizer, log_prefix=''):
         total_samples = len(data['inputs'])
@@ -245,12 +246,11 @@ class Model():
                 loss = sess.run(self._loss_fn, feed_dict=feed)
             avg_loss += loss
             loss_str = "%.4f" % loss
-            bar = log_prefix + bar
             if optimizer is not None:
                 bar += ' Train Loss: ' + loss_str + '\r'
             else:
                 bar += ' Valid Loss: ' + loss_str + '\r'
-            console.log('', bar)
+            console.log('log', log_prefix, bar)
         print()
         avg_loss /= batches
         return avg_loss
@@ -273,40 +273,51 @@ class Model():
         optimizer = optimizer.minimize(self._loss_fn)
         # best loss
         best_valid_loss = 1000000
+        # time
+        total_time = 0
         with tf.Session() as sess:
             sess.run(tf.global_variables_initializer())
             for epoch in range(epoches):
+                # print epoch
+                console.log(
+                    'log',
+                    'Epoch ' + str(epoch) + '/' + str(epoches), '\n')
+                # start time
+                start_time = time.time()
                 # show the epoch number
-                prefix = console.color(
-                    '[Epoch ' + str(epoch) + '/' + str(epoches) + ']',
-                    'yellow')
+                prefix = 'Train'
                 # training phase
-                train_loss = self.train_one_epoch(
+                train_loss = self.run_one_epoch(
                     sess, train_data,
                     mini_batch_size, optimizer, prefix)
                 # validation
-                valid_prefix = console.color('[Validing]', 'yellow')
-                valid_loss = self.train_one_epoch(
+                valid_prefix = 'Valid'
+                valid_loss = self.run_one_epoch(
                     sess, valid_data, valid_batch_size, None, valid_prefix
                 )
-                # console the training loss
-                console.log(
-                    'info',
-                    'Train Loss: ' + str(train_loss) + '\n')
-                console.log(
-                    'info',
-                    'Valid Loss: ' + str(valid_loss) + '\n')
-
                 # put into list
                 epoch_list.append(epoch)
                 train_loss_list.append(train_loss)
                 valid_loss_list.append(valid_loss)
+                # end time
+                delta_time = time.time() - start_time
+                total_time += delta_time
+                avg_time = total_time / (epoch + 1)
+                need_time = avg_time * (epoches - epoch - 1)
+                delta_time = format_time.format_sec(delta_time)
+                need_time = format_time.format_sec(need_time)
+                console.log('log', 'Time', delta_time + '\n')
+                console.log('log', 'Left', need_time + '\n')
+                # console the training loss
+                console.log('info', 'Train Loss', str(train_loss) + '\n')
+                console.log('info', 'Valid Loss', str(valid_loss) + '\n')
+                print()
 
-                if epoch % 10 == 0:
+                if (epoch + 1) % 10 == 0 or (epoch + 1) == epoches:
                     # save model
                     if valid_loss < best_valid_loss:
                         best_valid_loss = valid_loss
-                        self.save(sess, './model/', epoch)
+                        self.save(sess, epoch)
                     # draw the figure of the training process
                     fig = plt.figure(figsize=(12, 12))
                     cost_plt = fig.add_subplot(111)
@@ -334,7 +345,7 @@ class Model():
         anime_frame = sample_gmm(locs, scales, pi)
         return anime_frame
 
-    def sample_audio(self, sess, audio_input):
+    def sample_audio(self, audio_input):
         # it should not be training mode
         if self._train:
             return None
@@ -342,15 +353,21 @@ class Model():
         assert(audio_input.shape[1] >= 1)
         assert(audio_input.shape[2] == self._audio_num_features)
         anime_data = []
-        for time_step in range(audio_input.shape[1]):
-            audio_frame = audio_input[:, time_step: time_step + 1, :]
-            anime_frame = self.sample_one_step(sess, audio_frame)
-            anime_data.append(anime_frame)
+        with tf.Session() as sess:
+            self.load(sess)
+            for time_step in range(audio_input.shape[1]):
+                audio_frame = audio_input[:, time_step: time_step + 1, :]
+                anime_frame = self.sample_one_step(sess, audio_frame)
+                anime_data.append(anime_frame)
         return anime_data
 
-    def save(self, sess, path, epoch):
+    def load(self, sess, path='./model/best'):
         path = os.path.abspath(path)
-        self._saver.save(sess, path, global_step=epoch)
+        self._saver.restore(sess, path)
+
+    def save(self, sess, epoch=0, path='./model/best'):
+        path = os.path.abspath(path)
+        self._saver.save(sess, path)
 
 
 if __name__ == '__main__':

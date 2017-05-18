@@ -13,14 +13,16 @@ def color(string, style):
     return string
 
 
-def log(level, string):
+def log(level='', title='', content=''):
+    if len(title) > 0:
+        title = '[' + title + '] '
     if level == 'warning' or level == 'error':
-        string = color(string, 'red')
+        title = color(title, 'red')
     elif level == 'log':
-        string = color(string, 'yellow')
+        title = color(title, 'yellow')
     elif level == 'info':
-        string = color(string, 'green')
+        title = color(title, 'green')
     else:
         pass
-    sys.stdout.write(string)
+    sys.stdout.write(title + content)
     sys.stdout.flush()
