@@ -7,7 +7,7 @@ import random
 import fbxanime
 import numpy as np
 import pickle
-from utils import media
+from utils import media, console
 
 
 def find_files(path, target_ext):
@@ -22,7 +22,7 @@ def find_files(path, target_ext):
     return result_list
 
 
-def generate_train_test(path, ext, rate=0.2):
+def generate_train_test(path, ext, rate=0.2, config=None):
     file_list = find_files(path, ext)
     train_list = []
     test_list = []
@@ -34,8 +34,8 @@ def generate_train_test(path, ext, rate=0.2):
     print('Train data: ' + str(len(train_list)))
     print('Test data: ' + str(len(test_list)))
 
-    train_set = accumulate_data(train_list)
-    test_set = accumulate_data(test_list)
+    train_set = accumulate_data(train_list, config)
+    test_set = accumulate_data(test_list, config)
     return {
         'train_set': train_set,
         'test_set': test_set
@@ -86,27 +86,28 @@ def pad_sequences(sequences, maxlen=None, dtype=np.float32,
     return x, lengths
 
 
-def accumulate_data(file_list):
+def accumulate_data(file_list, config):
     inputs = []
     outputs = []
     seq_len = []
+    path_prefix = []
     if len(file_list) == 0:
         return None
     failed = 0
     for idx, file in enumerate(file_list):
-        sys.stdout.write('\033[01;33m[Process ' + str(idx + 1) + '/'
-                         + str(len(file_list)) + ']\033[0m ')
-        sys.stdout.flush()
-        res = media.process_media(file)
+        console.log(
+            'info', 'Process ' + str(idx + 1) + '/' + str(len(file_list)))
+        res = media.process_media(file, config)
         if res is not None:
             inputs.append(res[0])
             outputs.append(res[1])
             seq_len.append(len(res[0]))
+            path_prefix.append(res[2])
         else:
             failed += 1
         # if idx > 2: break
     if failed > 0:
-        print('\033[01;31m[Failed]\033[0m ' + str(failed))
+        console.log('error', 'Failed', str(failed) + '\n')
     if len(inputs) == 0:
         return None
     # padding the data at end
@@ -121,7 +122,8 @@ def accumulate_data(file_list):
     return {
         'inputs': inputs,
         'outputs': outputs,
-        'seq_len': seq_len
+        'seq_len': seq_len,
+        'path_prefix': path_prefix
     }
 
 
@@ -135,20 +137,22 @@ def load(path):
         return pickle.load(file)
 
 
-def init(
-    dde_path='D:/software/dev/DDE/v3.bin',
-    fbx_path='asset/fbx_anime.fbx'
-):
-    dde.init(dde_path)
-    fbxanime.init(640, 480, fbx_path)
-
-
 def process(
+        config,
         root_path='../../dataset/GRID/video/s1/', ext='mpg', test_rate=0.2,
         train_path='data/train.pkl', test_path='data/test.pkl'):
 
-    init()
-    sets = generate_train_test(root_path, ext, test_rate)
+    if os.path.exists(train_path) and os.path.exists(test_path):
+        res = ''
+        while res.lower() != 'y' and res.lower() != 'n':
+            res = input('Find train and test sets, replace? [y/[N]]').lower()
+            if res == '':
+                res = 'n'
+        if res == 'n':
+            return
+
+    media.init_dde_fbx()
+    sets = generate_train_test(root_path, ext, test_rate, config)
     save(train_path, sets['train_set'])
     save(test_path, sets['test_set'])
 

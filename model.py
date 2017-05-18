@@ -49,10 +49,22 @@ def mixture(locs, scales, pi, K):
 
 
 def sample_gmm(locs, scales, pi):
-    idx = np.random.choice(pi.shape[1], p=pi[0])
-    loc = locs[:, idx, :]
-    scale_diag = scales[:, idx, :]
+    # idx = np.random.choice(pi.shape[1], p=pi[0])
+    idx = 0
+    for i in range(pi.shape[1]):
+        if (pi[0][i] > pi[0][idx]):
+            idx = i
+    loc = locs[0, idx, :]
+    scale = scales[0, idx, :]
+    scale_diag = np.zeros((scale.shape[0], scale.shape[0]))
+    for i in range(len(scale)):
+        scale_diag[i][i] = scale[i]
+    # print(loc.shape)
+    # print(scale_diag.shape)
     x = np.random.multivariate_normal(loc, scale_diag, 1)
+    # print(loc)
+    # print(x)
+    print(pi)
     return x[0]
 
 
@@ -98,9 +110,13 @@ class Model():
         self._time_step = self._audio_input_shape[1]
         self._zero_anime_data = tf.zeros(
             [self._batch_size, 1, self._anime_num_features], dtype=tf.float32)
-        self._last_anime_data = tf.concat(
-            [self._zero_anime_data, self._anime_data[:, 0: -1, :]], 1
-        )
+        if self._train:
+            self._last_anime_data = tf.concat(
+                [self._zero_anime_data, self._anime_data[:, 0: -1, :]], 1
+            )
+        else:
+            # when no train, directly use anime_data
+            self._last_anime_data = self._anime_data
 
         # I. build the Audio process layers
         # 1. uni-lstm layer
@@ -191,18 +207,9 @@ class Model():
     def LSTM_layer(self, lstm_size, inputs, seq_len, scope):
         layer = {}
         layer['cell'] = self.LSTM_cell(lstm_size)
-        # the zero state
-        layer['zero_state'] = layer['cell'].zero_state(
+        layer['init_state'] = layer['cell'].zero_state(
             batch_size=self._batch_size, dtype=tf.float32
         )
-        # last state is set as zero at first
-        layer['last_state'] = layer['cell'].zero_state(
-            batch_size=self._batch_size, dtype=tf.float32
-        )
-        if self._train:
-            layer['init_state'] = layer['zero_state']
-        else:
-            layer['init_state'] = layer['last_state']
         layer['output'], layer['last_state'] = tf.nn.dynamic_rnn(
             cell=layer['cell'], inputs=inputs, sequence_length=seq_len,
             scope=scope, dtype=tf.float32, initial_state=layer['init_state']
@@ -328,37 +335,63 @@ class Model():
                     plt.savefig('error.png')
                     plt.clf()
 
-    def sample_one_step(self, sess, audio_frame):
+    def sample_one_step(self, sess, audio_frame, anime_frame):
         # it should not be training mode
-        if self._train:
-            return None
+        # if self._train:
+        #     return None
         assert(audio_frame.shape[0] == 1)
         assert(audio_frame.shape[1] == 1)
         assert(audio_frame.shape[2] == self._audio_num_features)
         feed_dict = {
             self._audio_input: audio_frame,
+            self._anime_data: anime_frame,
             self._seq_len: [1]
         }
-        locs, scales, pi = sess.run(
-            [self._locs, self._scales_diag, self._pi],
-            feed_dict=feed_dict)
-        anime_frame = sample_gmm(locs, scales, pi)
-        return anime_frame
+        if self._audio_lstm['next_state'] is not None and\
+           self._anime_lstm['next_state'] is not None:
+            # set next state of audio lstm
+            feed_dict[self._audio_lstm['init_state']] =\
+                self._audio_lstm['next_state']
+            # set next state of anime lstm
+            feed_dict[self._anime_lstm['init_state']] =\
+                self._anime_lstm['next_state']
+        # feed
+        is0, is1,\
+            self._audio_lstm['next_state'],\
+            self._anime_lstm['next_state'],\
+            locs, scales, pi = sess.run(
+                [
+                    self._audio_lstm['init_state'],
+                    self._anime_lstm['init_state'],
+                    self._audio_lstm['last_state'],
+                    self._anime_lstm['last_state'],
+                    self._locs, self._scales_diag, self._pi
+                ],
+                feed_dict=feed_dict
+            )
+        # print(is0)
+        # print(is1)
+        # os.system('pause')
+        return sample_gmm(locs, scales, pi)
 
-    def sample_audio(self, audio_input):
+    def sample_audio(self, sess, audio_input):
         # it should not be training mode
-        if self._train:
-            return None
+        # if self._train:
+        #     return None
         assert(audio_input.shape[0] == 1)
         assert(audio_input.shape[1] >= 1)
         assert(audio_input.shape[2] == self._audio_num_features)
         anime_data = []
-        with tf.Session() as sess:
-            self.load(sess)
-            for time_step in range(audio_input.shape[1]):
-                audio_frame = audio_input[:, time_step: time_step + 1, :]
-                anime_frame = self.sample_one_step(sess, audio_frame)
-                anime_data.append(anime_frame)
+        anime_frame = np.zeros((1, 1, self._anime_num_features))
+        # init next_state
+        self._anime_lstm['next_state'] = None
+        self._audio_lstm['next_state'] = None
+        for time_step in range(audio_input.shape[1]):
+            audio_frame = audio_input[:, time_step: time_step + 1, :]
+            anime_frame = self.sample_one_step(
+                sess, audio_frame, anime_frame)
+            anime_data.append(anime_frame)
+            anime_frame = anime_frame.reshape(1, 1, self._anime_num_features)
         return anime_data
 
     def load(self, sess, path='./model/best'):

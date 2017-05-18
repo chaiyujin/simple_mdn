@@ -13,7 +13,7 @@ def color(string, style):
     return string
 
 
-def log(level='', title='', content=''):
+def log(level='', title='', content='\n'):
     if len(title) > 0:
         title = '[' + title + '] '
     if level == 'warning' or level == 'error':
