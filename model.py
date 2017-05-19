@@ -11,6 +11,8 @@ from tensorflow.contrib.distributions import Categorical
 from tensorflow.contrib.distributions import Mixture
 from tensorflow.contrib.distributions import MultivariateNormalDiag
 from utils import process_bar, console, format_time
+from utils.media import sample_video
+import data_process
 
 
 def reshape_gmm_tensor(tensor, D, K):
@@ -24,17 +26,29 @@ def reshape_gmm_tensor(tensor, D, K):
     return reshaped
 
 
-def parameter_layer(X, Dims, K):
+def parameter_layer(X, Dims, K, bias=0):
     locs = fully_connected(X, K * Dims, activation_fn=None)
-    scales = fully_connected(X, K * Dims, activation_fn=tf.exp)
-    pi = fully_connected(X, K, activation_fn=tf.nn.softmax)
+    scales_hat = fully_connected(X, K * Dims, activation_fn=None)
+    pi_hat = fully_connected(X, K, activation_fn=None)
+    # add bias on the parameter
+    # larger bias, more stable
+    if bias > 0:
+        b_scale = tf.constant(
+            np.full((K * Dims), -bias, np.float32),
+            dtype=tf.float32
+        )
+        b_pi = tf.constant(
+            np.full((K), 1 + bias, np.float32),
+            dtype=tf.float32
+        )
+        scales_hat = tf.add(scales_hat, b_scale)
+        pi_hat = tf.multiply(pi_hat, b_pi)
+    scales = tf.exp(scales_hat)
+    pi = tf.nn.softmax(pi_hat)
     # reshape the output tensor into parameters
     locs = reshape_gmm_tensor(locs, Dims, K)
     scales = reshape_gmm_tensor(scales, Dims, K)
     pi = tf.reshape(pi, [-1, K])
-    # print(locs.shape)
-    # print(scales.shape)
-    # print(pi.shape)
     return locs, scales, pi
 
 
@@ -49,22 +63,13 @@ def mixture(locs, scales, pi, K):
 
 
 def sample_gmm(locs, scales, pi):
-    # idx = np.random.choice(pi.shape[1], p=pi[0])
-    idx = 0
-    for i in range(pi.shape[1]):
-        if (pi[0][i] > pi[0][idx]):
-            idx = i
+    idx = np.random.choice(pi.shape[1], p=pi[0])
     loc = locs[0, idx, :]
     scale = scales[0, idx, :]
     scale_diag = np.zeros((scale.shape[0], scale.shape[0]))
     for i in range(len(scale)):
         scale_diag[i][i] = scale[i]
-    # print(loc.shape)
-    # print(scale_diag.shape)
     x = np.random.multivariate_normal(loc, scale_diag, 1)
-    # print(loc)
-    # print(x)
-    print(pi)
     return x[0]
 
 
@@ -86,6 +91,9 @@ class Model():
         self._train = bool(config['train'])
         self._phoneme_classes = config['phoneme_classes']
         self._dropout = float(config['dropout'])
+        self._mdn_bias = float(config['mdn_bias'])
+        if self._train:
+            self._mdn_bias = 0
 
         # config the initializer
         self._initializer = tf.truncated_normal_initializer(
@@ -188,8 +196,8 @@ class Model():
 
         # III. mdn layer
         self._locs, self._scales_diag, self._pi = parameter_layer(
-            self._dense_output, self._mdn_dims, self._mdn_K
-        )
+              self._dense_output, self._mdn_dims, self._mdn_K, self._mdn_bias
+            )
         self._mixtures = mixture(
             self._locs, self._scales_diag, self._pi, self._mdn_K
         )
@@ -320,12 +328,15 @@ class Model():
                 console.log('info', 'Valid Loss', str(valid_loss) + '\n')
                 print()
 
-                if (epoch + 1) % 10 == 0 or (epoch + 1) == epoches:
-                    # save model
-                    if valid_loss < best_valid_loss:
+                # save the model
+                if valid_loss < best_valid_loss:
+                    if (epoch + 1) % 10 == 0 or\
+                       (epoch + 1) == epoches or\
+                       epoch > 400:
                         best_valid_loss = valid_loss
                         self.save(sess, epoch)
-                    # draw the figure of the training process
+                # draw the figure of the training process
+                if (epoch + 1) % 10 == 0 or (epoch + 1) == epoches:
                     fig = plt.figure(figsize=(12, 12))
                     cost_plt = fig.add_subplot(111)
                     cost_plt.title.set_text('Cost')
@@ -336,9 +347,6 @@ class Model():
                     plt.clf()
 
     def sample_one_step(self, sess, audio_frame, anime_frame):
-        # it should not be training mode
-        # if self._train:
-        #     return None
         assert(audio_frame.shape[0] == 1)
         assert(audio_frame.shape[1] == 1)
         assert(audio_frame.shape[2] == self._audio_num_features)
@@ -375,9 +383,6 @@ class Model():
         return sample_gmm(locs, scales, pi)
 
     def sample_audio(self, sess, audio_input):
-        # it should not be training mode
-        # if self._train:
-        #     return None
         assert(audio_input.shape[0] == 1)
         assert(audio_input.shape[1] >= 1)
         assert(audio_input.shape[2] == self._audio_num_features)
@@ -393,6 +398,53 @@ class Model():
             anime_data.append(anime_frame)
             anime_frame = anime_frame.reshape(1, 1, self._anime_num_features)
         return anime_data
+
+    def sample_data(self, sess, data, number=None, video=False):
+        if number is None or number > len(data['inputs']):
+            number = len(data['inputs'])
+        avg_mse = 0
+        avg_value = 0
+        count = number
+        print(number)
+        for idx in range(number):
+            bar = process_bar.process_bar(idx, number)
+            console.log('log', 'Sample', bar + '\r')
+            audio = data['inputs'][idx: idx + 1]
+            anime_true = data['outputs'][idx]
+            assert(len(audio[0]) == len(anime_true))
+            path_prefix = data['path_prefix'][idx]
+
+            anime_pred = self.sample_audio(sess, audio)
+            assert(len(anime_pred) == len(anime_true))
+            # update error
+            zeros = np.zeros(anime_true.shape[0])
+            mse = ((anime_pred - anime_true) ** 2).mean()
+            avg_value += ((anime_true - zeros) ** 2).mean()
+            avg_mse += mse
+
+            if video:
+                anime_pred, _ = data_process.pad_sequences(
+                    anime_pred, 19
+                )
+                anime_true, _ = data_process.pad_sequences(
+                    anime_true, 19
+                )
+                sample_video(
+                    {
+                        'path_prefix': path_prefix,
+                        'anime_pred': anime_pred,
+                        'anime_true': anime_true
+                    },
+                    'result/' + str(idx) + '.mp4'
+                )
+        console.log()
+        # return the mean square error and avg value
+        if count == 0:
+            return None
+        else:
+            avg_value /= count
+            avg_mse /= count
+        return avg_mse / avg_value
 
     def load(self, sess, path='./model/best'):
         path = os.path.abspath(path)
