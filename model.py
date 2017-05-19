@@ -291,6 +291,12 @@ class Model():
         avg_loss /= batches
         return avg_loss
 
+    def checkpoint_epoch(self, epoch, epoches, cp=10):
+        if (epoch + 1) % cp == 0 or (epoch + 1) == epoches:
+            return True
+        else:
+            return False
+
     def simple_train(
             self, epoches, optimizer,
             train_data, mini_batch_size,
@@ -306,6 +312,7 @@ class Model():
         epoch_list = []
         train_loss_list = []
         valid_loss_list = []
+        error_epoch = []
         error_rate_list = []
         optimizer = optimizer.minimize(self._loss_fn)
         # best loss
@@ -341,28 +348,30 @@ class Model():
                 console.log('info', 'Valid Loss', str(valid_loss) + '\n')
 
                 # sample all valid data
-                if epoch == 0 or (epoch + 1) % 10 == 0:
+                if self.checkpoint_epoch(epoch, epoches) or\
+                   epoch == 0:
                     error_rate = self.sample_data(
                         sess, valid_data, valid_batch_size)
+                    error_epoch.append(epoch)
                     error_rate_list.append(error_rate)
                 # save the model
                 if valid_loss < best_valid_loss:
-                    if (epoch + 1) % 10 == 0 or\
-                       (epoch + 1) == epoches or\
+                    if self.checkpoint_epoch(epoch, epoches) or\
                        epoch > 400:
                         best_valid_loss = valid_loss
                         self.save(sess, epoch)
                 # draw the figure of the training process
-                if (epoch + 1) % 10 == 0 or (epoch + 1) == epoches:
+                if self.checkpoint_epoch(epoch, epoches):
                     fig = plt.figure(figsize=(12, 12))
                     cost_plt = fig.add_subplot(211)
-                    rate_plt = fig.add_subplot(211)
+                    rate_plt = fig.add_subplot(212)
                     cost_plt.title.set_text('Cost')
                     cost_plt.plot(
                         epoch_list, train_loss_list, 'g',
-                        epoch_list, valid_loss_list, 'r')
+                        epoch_list, valid_loss_list, 'r'
+                    )
                     rate_plt.plot(
-                        epoch_list, error_rate_list, 'r'
+                        error_epoch, error_rate_list, 'r'
                     )
                     plt.savefig('error.png')
                     plt.clf()

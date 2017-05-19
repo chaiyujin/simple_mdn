@@ -32,12 +32,13 @@ if __name__ == '__main__':
     print(mean, stdv)
 
     if model._train:
-        optimizer = tf.train.MomentumOptimizer(1e-3, 0.9)
+        optimizer = tf.train.MomentumOptimizer(5e-3, 0.9)
         model.simple_train(
             train_data=train_data,
             valid_data=valid_data,
-            epoches=1000,
+            epoches=10000,
             mini_batch_size=4,
+            valid_batch_size=32,
             optimizer=optimizer
         )
 
