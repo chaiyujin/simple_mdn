@@ -41,15 +41,18 @@ def parameter_layer(X, Dims, K, bias=0):
             np.full((K), 1 + bias, np.float32),
             dtype=tf.float32
         )
-        scales_hat = tf.add(scales_hat, b_scale)
-        pi_hat = tf.multiply(pi_hat, b_pi)
-    scales = tf.exp(scales_hat)
-    pi = tf.nn.softmax(pi_hat)
+        scales = tf.exp(tf.add(scales_hat, b_scale))
+        pi = tf.nn.softmax(tf.multiply(pi_hat, b_pi))
+    else:
+        scales = tf.exp(scales_hat)
+        pi = tf.nn.softmax(pi_hat)
     # reshape the output tensor into parameters
     locs = reshape_gmm_tensor(locs, Dims, K)
     scales = reshape_gmm_tensor(scales, Dims, K)
     pi = tf.reshape(pi, [-1, K])
-    return locs, scales, pi
+    scales_hat = reshape_gmm_tensor(scales_hat, Dims, K)
+    pi_hat = tf.reshape(pi_hat, [-1, K])
+    return locs, scales, pi, scales_hat, pi_hat
 
 
 def mixture(locs, scales, pi, K):
@@ -62,15 +65,31 @@ def mixture(locs, scales, pi, K):
     return mix
 
 
+def softmax(x):
+    """Compute softmax values for each sets of scores in x."""
+    e_x = np.exp(x - np.max(x))
+    return e_x / e_x.sum()
+
+
+# sample directly from locs, scale_diag and pi
 def sample_gmm(locs, scales, pi):
-    idx = np.random.choice(pi.shape[1], p=pi[0])
-    loc = locs[0, idx, :]
-    scale = scales[0, idx, :]
+    idx = np.random.choice(len(pi), p=pi)
+    loc = locs[idx, :]
+    scale = scales[idx, :]
     scale_diag = np.zeros((scale.shape[0], scale.shape[0]))
     for i in range(len(scale)):
         scale_diag[i][i] = scale[i]
     x = np.random.multivariate_normal(loc, scale_diag, 1)
     return x[0]
+
+
+# use hat result to sample, with bias
+def sample_gmm_with_hat(locs, scales_hat, pi_hat, bias=0):
+    b_scale = np.full(scales_hat.shape, -bias, np.float32)
+    b_pi = np.full(pi_hat.shape, 1 + bias, np.float32)
+    scales = np.exp(scales_hat + b_scale)
+    pi = softmax(pi_hat * b_pi)
+    return sample_gmm(locs, scales, pi)
 
 
 def loss_fn(y, mixture):
@@ -93,6 +112,7 @@ class Model():
         self._dropout = float(config['dropout'])
         self._mdn_bias = float(config['mdn_bias'])
         if self._train:
+            self._sample_mdn_bias = self._mdn_bias
             self._mdn_bias = 0
 
         # config the initializer
@@ -195,7 +215,8 @@ class Model():
         )
 
         # III. mdn layer
-        self._locs, self._scales_diag, self._pi = parameter_layer(
+        self._locs, self._scales_diag, self._pi,\
+            self._scales_hat, self._pi_hat = parameter_layer(
               self._dense_output, self._mdn_dims, self._mdn_K, self._mdn_bias
             )
         self._mixtures = mixture(
@@ -285,6 +306,7 @@ class Model():
         epoch_list = []
         train_loss_list = []
         valid_loss_list = []
+        error_rate_list = []
         optimizer = optimizer.minimize(self._loss_fn)
         # best loss
         best_valid_loss = 1000000
@@ -314,20 +336,15 @@ class Model():
                 epoch_list.append(epoch)
                 train_loss_list.append(train_loss)
                 valid_loss_list.append(valid_loss)
-                # end time
-                delta_time = time.time() - start_time
-                total_time += delta_time
-                avg_time = total_time / (epoch + 1)
-                need_time = avg_time * (epoches - epoch - 1)
-                delta_time = format_time.format_sec(delta_time)
-                need_time = format_time.format_sec(need_time)
-                console.log('log', 'Time', delta_time + '\n')
-                console.log('log', 'Left', need_time + '\n')
                 # console the training loss
                 console.log('info', 'Train Loss', str(train_loss) + '\n')
                 console.log('info', 'Valid Loss', str(valid_loss) + '\n')
-                print()
 
+                # sample all valid data
+                if epoch == 0 or (epoch + 1) % 10 == 0:
+                    error_rate = self.sample_data(
+                        sess, valid_data, valid_batch_size)
+                    error_rate_list.append(error_rate)
                 # save the model
                 if valid_loss < best_valid_loss:
                     if (epoch + 1) % 10 == 0 or\
@@ -338,22 +355,38 @@ class Model():
                 # draw the figure of the training process
                 if (epoch + 1) % 10 == 0 or (epoch + 1) == epoches:
                     fig = plt.figure(figsize=(12, 12))
-                    cost_plt = fig.add_subplot(111)
+                    cost_plt = fig.add_subplot(211)
+                    rate_plt = fig.add_subplot(211)
                     cost_plt.title.set_text('Cost')
                     cost_plt.plot(
                         epoch_list, train_loss_list, 'g',
                         epoch_list, valid_loss_list, 'r')
+                    rate_plt.plot(
+                        epoch_list, error_rate_list, 'r'
+                    )
                     plt.savefig('error.png')
                     plt.clf()
 
+                # end time
+                delta_time = time.time() - start_time
+                total_time += delta_time
+                avg_time = total_time / (epoch + 1)
+                need_time = avg_time * (epoches - epoch - 1)
+                delta_time = format_time.format_sec(delta_time)
+                need_time = format_time.format_sec(need_time)
+                console.log('log', 'Epoch Time', delta_time + '\n')
+                console.log('log', 'Total Left', need_time + '\n')
+                # end of epoch
+                console.log('log', '---End of Epoch---', '\n\n')
+
     def sample_one_step(self, sess, audio_frame, anime_frame):
-        assert(audio_frame.shape[0] == 1)
+        bs = audio_frame.shape[0]
         assert(audio_frame.shape[1] == 1)
         assert(audio_frame.shape[2] == self._audio_num_features)
         feed_dict = {
             self._audio_input: audio_frame,
             self._anime_data: anime_frame,
-            self._seq_len: [1]
+            self._seq_len: np.full((bs), 1, np.int32)
         }
         if self._audio_lstm['next_state'] is not None and\
            self._anime_lstm['next_state'] is not None:
@@ -367,27 +400,39 @@ class Model():
         is0, is1,\
             self._audio_lstm['next_state'],\
             self._anime_lstm['next_state'],\
-            locs, scales, pi = sess.run(
+            locs, scales, pi,\
+            scales_hat, pi_hat = sess.run(
                 [
                     self._audio_lstm['init_state'],
                     self._anime_lstm['init_state'],
                     self._audio_lstm['last_state'],
                     self._anime_lstm['last_state'],
-                    self._locs, self._scales_diag, self._pi
+                    self._locs, self._scales_diag, self._pi,
+                    self._scales_hat, self._pi_hat
                 ],
                 feed_dict=feed_dict
             )
         # print(is0)
         # print(is1)
         # os.system('pause')
-        return sample_gmm(locs, scales, pi)
+        anime_frame = []
+        for i in range(bs):
+            if self._train:
+                one_sample = sample_gmm_with_hat(
+                    locs[i], scales_hat[i],
+                    pi_hat[i], self._sample_mdn_bias)
+            else:
+                one_sample = sample_gmm(locs[i], scales[i], pi[i])
+            anime_frame.append([one_sample])
+        # (batch_size, 1, features)
+        return np.asarray(anime_frame, dtype=np.float32)
 
     def sample_audio(self, sess, audio_input):
-        assert(audio_input.shape[0] == 1)
+        bs = audio_input.shape[0]
         assert(audio_input.shape[1] >= 1)
         assert(audio_input.shape[2] == self._audio_num_features)
-        anime_data = []
-        anime_frame = np.zeros((1, 1, self._anime_num_features))
+        anime_data = None
+        anime_frame = np.zeros((bs, 1, self._anime_num_features))
         # init next_state
         self._anime_lstm['next_state'] = None
         self._audio_lstm['next_state'] = None
@@ -395,48 +440,59 @@ class Model():
             audio_frame = audio_input[:, time_step: time_step + 1, :]
             anime_frame = self.sample_one_step(
                 sess, audio_frame, anime_frame)
-            anime_data.append(anime_frame)
-            anime_frame = anime_frame.reshape(1, 1, self._anime_num_features)
-        return anime_data
+            if anime_data is None:
+                anime_data = anime_frame
+            else:
+                # append on time axis
+                anime_data = np.append(anime_data, anime_frame, axis=1)
+            anime_frame = anime_frame.reshape(bs, 1, self._anime_num_features)
+        return np.asarray(anime_data)
 
-    def sample_data(self, sess, data, number=None, video=False):
+    def sample_data(self, sess, data, batch_size, number=None, video=False):
         if number is None or number > len(data['inputs']):
             number = len(data['inputs'])
+        if batch_size > number:
+            batch_size = number
+        batches = int(number / batch_size)
         avg_mse = 0
         avg_value = 0
         count = number
-        print(number)
-        for idx in range(number):
-            bar = process_bar.process_bar(idx, number)
-            console.log('log', 'Sample', bar + '\r')
-            audio = data['inputs'][idx: idx + 1]
-            anime_true = data['outputs'][idx]
-            assert(len(audio[0]) == len(anime_true))
-            path_prefix = data['path_prefix'][idx]
+
+        bar = process_bar.process_bar(0, batches)
+        console.log('log', 'Sample', bar + '\r')
+        for idx in range(batches):
+            li = idx * batch_size
+            ri = li + batch_size
+            audio = data['inputs'][li: ri]
+            anime_true = data['outputs'][li: ri]
+            path_prefix = data['path_prefix'][li: ri]
 
             anime_pred = self.sample_audio(sess, audio)
             assert(len(anime_pred) == len(anime_true))
             # update error
-            zeros = np.zeros(anime_true.shape[0])
-            mse = ((anime_pred - anime_true) ** 2).mean()
+            zeros = np.zeros(anime_true.shape)
+            mse = ((anime_true - anime_pred) ** 2).mean()
             avg_value += ((anime_true - zeros) ** 2).mean()
             avg_mse += mse
 
             if video:
-                anime_pred, _ = data_process.pad_sequences(
-                    anime_pred, 19
-                )
-                anime_true, _ = data_process.pad_sequences(
-                    anime_true, 19
-                )
-                sample_video(
-                    {
-                        'path_prefix': path_prefix,
-                        'anime_pred': anime_pred,
-                        'anime_true': anime_true
-                    },
-                    'result/' + str(idx) + '.mp4'
-                )
+                for i in range(batch_size):
+                    pred, _ = data_process.pad_sequences(
+                        anime_pred[i], 19
+                    )
+                    true, _ = data_process.pad_sequences(
+                        anime_true[i], 19
+                    )
+                    sample_video(
+                        {
+                            'path_prefix': path_prefix[i],
+                            'anime_pred': pred,
+                            'anime_true': true
+                        },
+                        'result/' + str(li + i) + '.mp4'
+                    )
+            bar = process_bar.process_bar(idx, batches)
+            console.log('log', 'Sample', bar + '\r')
         console.log()
         # return the mean square error and avg value
         if count == 0:

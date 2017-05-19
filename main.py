@@ -16,7 +16,7 @@ if __name__ == '__main__':
         'mdn_K': 5,
         'mdn_bias': 5,
         'phoneme_classes': 20,
-        'train': 0,
+        'train': 1,
         'dropout': 0.5
     }
 
@@ -31,19 +31,16 @@ if __name__ == '__main__':
     valid_data['inputs'] = (valid_data['inputs'] - mean) / stdv
     print(mean, stdv)
 
-    # if model._train:
-    #     optimizer = tf.train.MomentumOptimizer(1e-3, 0.9)
-    #     model.simple_train(
-    #         train_data=train_data,
-    #         valid_data=valid_data,
-    #         epoches=1000,
-    #         mini_batch_size=4,
-    #         optimizer=optimizer
-    #     )
+    if model._train:
+        optimizer = tf.train.MomentumOptimizer(1e-3, 0.9)
+        model.simple_train(
+            train_data=train_data,
+            valid_data=valid_data,
+            epoches=1000,
+            mini_batch_size=4,
+            optimizer=optimizer
+        )
 
-    with tf.Session() as sess:
-        model.load(sess)
-        # model.run_one_epoch(
-        #     sess, valid_data, 8, None
-        # )
-        print(model.sample_data(sess, valid_data, 8))
+    # with tf.Session() as sess:
+    #     model.load(sess)
+    #     print(model.sample_data(sess, valid_data, 8, 8, True))
