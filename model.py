@@ -27,7 +27,7 @@ def reshape_gmm_tensor(tensor, D, K):
 
 
 def parameter_layer(X, Dims, K, bias=0):
-    locs = fully_connected(X, K * Dims, activation_fn=None)
+    locs = fully_connected(X, K * Dims, activation_fn=tf.sigmoid)
     scales_hat = fully_connected(X, K * Dims, activation_fn=None)
     pi_hat = fully_connected(X, K, activation_fn=None)
     # add bias on the parameter
@@ -41,10 +41,10 @@ def parameter_layer(X, Dims, K, bias=0):
             np.full((K), 1 + bias, np.float32),
             dtype=tf.float32
         )
-        scales = tf.exp(tf.add(scales_hat, b_scale))
+        scales = tf.sigmoid(tf.add(scales_hat, b_scale))
         pi = tf.nn.softmax(tf.multiply(pi_hat, b_pi))
     else:
-        scales = tf.exp(scales_hat)
+        scales = tf.sigmoid(scales_hat)
         pi = tf.nn.softmax(pi_hat)
     # reshape the output tensor into parameters
     locs = reshape_gmm_tensor(locs, Dims, K)
@@ -71,6 +71,10 @@ def softmax(x):
     return e_x / e_x.sum()
 
 
+def sigmoid(x):
+    return 1 / (1 + np.exp(-x))
+
+
 # sample directly from locs, scale_diag and pi
 def sample_gmm(locs, scales, pi):
     idx = np.random.choice(len(pi), p=pi)
@@ -87,13 +91,18 @@ def sample_gmm(locs, scales, pi):
 def sample_gmm_with_hat(locs, scales_hat, pi_hat, bias=0):
     b_scale = np.full(scales_hat.shape, -bias, np.float32)
     b_pi = np.full(pi_hat.shape, 1 + bias, np.float32)
-    scales = np.exp(scales_hat + b_scale)
+    scales = sigmoid(scales_hat + b_scale)
     pi = softmax(pi_hat * b_pi)
     return sample_gmm(locs, scales, pi)
 
 
 def loss_fn(y, mixture):
-    loss = tf.reduce_mean(-tf.log(mixture.prob(y)))
+    loss = tf.reduce_mean(
+        # -tf.log(
+        #     tf.clip_by_value(mixture.prob(y), 1e-10, 10)
+        # )
+        -mixture.log_prob(y)
+    )
     return loss
 
 
@@ -274,10 +283,15 @@ class Model():
                 self._seq_len: data['seq_len'][indexes]
             }
             if optimizer is not None:
-                loss, _ = sess.run(
-                    [self._loss_fn, optimizer],
-                    feed_dict=feed
-                )
+                locs, scale, pi, \
+                    scale_hat, pi_hat, loss, _ = sess.run(
+                        [self._locs, self._scales_diag, self._pi,
+                         self._scales_hat, self._pi_hat,
+                         self._loss_fn, optimizer],
+                        feed_dict=feed
+                    )
+                # print(pi.mean(), ' ', locs.mean(), ' ', scale.mean(), '\t')
+                # print(pi_hat)
             else:
                 loss = sess.run(self._loss_fn, feed_dict=feed)
             avg_loss += loss

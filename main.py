@@ -9,13 +9,13 @@ from utils import console
 if __name__ == '__main__':
     config = {
         'audio_num_features': 39,
-        'anime_num_features': 1,
+        'anime_num_features': 19,
         'audio_lstm_size': 128,
         'anime_lstm_size': 50,
         'dense_size': 400,
         'mdn_K': 5,
         'mdn_bias': 5,
-        'phoneme_classes': 20,
+        'phoneme_classes': 40,
         'train': 1,
         'dropout': 0.5
     }
@@ -29,10 +29,12 @@ if __name__ == '__main__':
     stdv = numpy.std(train_data['inputs'])
     train_data['inputs'] = (train_data['inputs'] - mean) / stdv
     valid_data['inputs'] = (valid_data['inputs'] - mean) / stdv
+    print(numpy.amin(train_data['outputs']), ' ',
+          numpy.amax(train_data['outputs']))
     print(mean, stdv)
 
     if model._train:
-        optimizer = tf.train.MomentumOptimizer(5e-3, 0.9)
+        optimizer = tf.train.MomentumOptimizer(1e-3, 0.9)
         model.simple_train(
             train_data=train_data,
             valid_data=valid_data,
@@ -42,6 +44,6 @@ if __name__ == '__main__':
             optimizer=optimizer
         )
 
-    # with tf.Session() as sess:
-    #     model.load(sess)
-    #     print(model.sample_data(sess, valid_data, 8, 8, True))
+    with tf.Session() as sess:
+        model.load(sess)
+        print(model.sample_data(sess, valid_data, 8, 8, True))

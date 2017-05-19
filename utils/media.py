@@ -216,6 +216,7 @@ def process_media(video_path, config, show=False, fbx=False, clear_old=False):
         anime_data = new_data
 
     anime_data = numpy.asarray(anime_data, dtype=numpy.float32)
+    numpy.clip(anime_data, 0.0, 1.0, out=anime_data)
     print('Audio shape: ', audio_feat.shape)
     print('Anime shape: ', anime_data.shape)
     data_path_prefix, _ = os.path.splitext(demuxed['audio_path'])
