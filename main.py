@@ -34,7 +34,7 @@ if __name__ == '__main__':
     print(mean, stdv)
 
     if model._train:
-        optimizer = tf.train.MomentumOptimizer(1e-3, 0.9)
+        optimizer = tf.train.AdamOptimizer(1e-4)
         model.simple_train(
             train_data=train_data,
             valid_data=valid_data,

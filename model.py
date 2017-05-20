@@ -46,6 +46,13 @@ def parameter_layer(X, Dims, K, bias=0):
     else:
         scales = tf.sigmoid(scales_hat)
         pi = tf.nn.softmax(pi_hat)
+    # scale should be bigger than 0.05
+    # otherwise, the loss will boom
+    min_scale = tf.constant(
+        np.full((K * Dims), 0.05, np.float32),
+        dtype=tf.float32
+    )
+    scales = tf.add(scales, min_scale)
     # reshape the output tensor into parameters
     locs = reshape_gmm_tensor(locs, Dims, K)
     scales = reshape_gmm_tensor(scales, Dims, K)
@@ -97,9 +104,10 @@ def sample_gmm_with_hat(locs, scales_hat, pi_hat, bias=0):
 
 
 def loss_fn(y, mixture):
+    # prob = mixture.prob(y)
     loss = tf.reduce_mean(
         # -tf.log(
-        #     tf.clip_by_value(mixture.prob(y), 1e-10, 10)
+        #     prob
         # )
         -mixture.log_prob(y)
     )
@@ -290,8 +298,6 @@ class Model():
                          self._loss_fn, optimizer],
                         feed_dict=feed
                     )
-                # print(pi.mean(), ' ', locs.mean(), ' ', scale.mean(), '\t')
-                # print(pi_hat)
             else:
                 loss = sess.run(self._loss_fn, feed_dict=feed)
             avg_loss += loss
@@ -331,6 +337,7 @@ class Model():
         optimizer = optimizer.minimize(self._loss_fn)
         # best loss
         best_valid_loss = 1000000
+        best_error_rate = 1000000
         # time
         total_time = 0
         with tf.Session() as sess:
@@ -357,9 +364,6 @@ class Model():
                 epoch_list.append(epoch)
                 train_loss_list.append(train_loss)
                 valid_loss_list.append(valid_loss)
-                # console the training loss
-                console.log('info', 'Train Loss', str(train_loss) + '\n')
-                console.log('info', 'Valid Loss', str(valid_loss) + '\n')
 
                 # sample all valid data
                 if self.checkpoint_epoch(epoch, epoches) or\
@@ -368,6 +372,8 @@ class Model():
                         sess, valid_data, valid_batch_size)
                     error_epoch.append(epoch)
                     error_rate_list.append(error_rate)
+                    if error_rate < best_error_rate:
+                        best_error_rate = error_rate
                 # save the model
                 if valid_loss < best_valid_loss:
                     if self.checkpoint_epoch(epoch, epoches) or\
@@ -390,6 +396,10 @@ class Model():
                     plt.savefig('error.png')
                     plt.clf()
 
+                # console the training loss and error rate
+                console.log('info', 'Train Loss', str(train_loss) + '\n')
+                console.log('info', 'Valid Loss', str(valid_loss) + '\n')
+                console.log('info', 'Best Error', str(best_error_rate) + '\n')
                 # end time
                 delta_time = time.time() - start_time
                 total_time += delta_time
