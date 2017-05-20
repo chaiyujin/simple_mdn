@@ -366,12 +366,16 @@ class Model():
                 valid_loss_list.append(valid_loss)
 
                 # sample all valid data
-                if self.checkpoint_epoch(epoch, epoches) or\
-                   epoch == 0:
+                # if self.checkpoint_epoch(epoch, epoches) or\
+                #    epoch == 0:
+                if True:
                     error_rate = self.sample_data(
                         sess, valid_data, valid_batch_size)
                     error_epoch.append(epoch)
-                    error_rate_list.append(error_rate)
+                    if error_rate > 1:
+                        error_rate_list.append(1)
+                    else:
+                        error_rate_list.append(error_rate)
                     if error_rate < best_error_rate:
                         best_error_rate = error_rate
                 # save the model
@@ -381,7 +385,7 @@ class Model():
                         best_valid_loss = valid_loss
                         self.save(sess, epoch)
                 # draw the figure of the training process
-                if self.checkpoint_epoch(epoch, epoches):
+                if self.checkpoint_epoch(epoch, epoches, 1):
                     fig = plt.figure(figsize=(12, 12))
                     cost_plt = fig.add_subplot(211)
                     rate_plt = fig.add_subplot(212)
@@ -399,7 +403,13 @@ class Model():
                 # console the training loss and error rate
                 console.log('info', 'Train Loss', str(train_loss) + '\n')
                 console.log('info', 'Valid Loss', str(valid_loss) + '\n')
+                console.log('info', 'Error Rate', str(error_rate) + '\n')
                 console.log('info', 'Best Error', str(best_error_rate) + '\n')
+                content = '\nTrain Loss: ' + str(train_loss) + '\n' +\
+                          'Valid Loss: ' + str(valid_loss) + '\n' +\
+                          'Error Rate: ' + str(error_rate) + '\n' +\
+                          'Best Error: ' + str(best_error_rate) + '\n\n'
+                console.log_file('Epoch ' + str(epoch), content)
                 # end time
                 delta_time = time.time() - start_time
                 total_time += delta_time

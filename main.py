@@ -1,3 +1,4 @@
+import sys
 import numpy
 import data_process
 import tensorflow as tf
@@ -34,6 +35,7 @@ if __name__ == '__main__':
     print(mean, stdv)
 
     if model._train:
+        console.add_log_file('log.txt')
         optimizer = tf.train.AdamOptimizer(1e-4)
         model.simple_train(
             train_data=train_data,
@@ -43,6 +45,7 @@ if __name__ == '__main__':
             valid_batch_size=32,
             optimizer=optimizer
         )
+        console.close_log_files()
 
     with tf.Session() as sess:
         model.load(sess)

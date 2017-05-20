@@ -26,3 +26,23 @@ def log(level='', title='', content='\n'):
         pass
     sys.stdout.write(title + content)
     sys.stdout.flush()
+
+
+file_list = []
+
+
+def add_log_file(path):
+    file_list.append(open(path, 'a+'))
+
+
+def log_file(level='', content='\n'):
+    global file_list
+    for file in file_list:
+        # print(content)
+        file.write('[' + level + '] ' + content)
+        file.flush()
+
+
+def close_log_files():
+    for file in file_list:
+        file.close()
