@@ -5,6 +5,7 @@ import tensorflow as tf
 from model import Model
 from utils.process_bar import process_bar
 from utils import console
+from train import RTRL
 
 
 if __name__ == '__main__':
@@ -34,18 +35,26 @@ if __name__ == '__main__':
           numpy.amax(train_data['outputs']))
     print(mean, stdv)
 
-    # if model._train:
-    #     console.add_log_file('log.txt')
-    #     optimizer = tf.train.AdamOptimizer(1e-4)
-    #     model.simple_train(
-    #         train_data=train_data,
-    #         valid_data=valid_data,
-    #         epoches=10000,
-    #         mini_batch_size=4,
-    #         valid_batch_size=32,
-    #         optimizer=optimizer
-    #     )
-    #     console.close_log_files()
+    if model._train:
+        # console.add_log_file('log.txt')
+        # optimizer = tf.train.AdamOptimizer(1e-3)
+        # model.simple_train(
+        #     train_data=train_data,
+        #     valid_data=valid_data,
+        #     epoches=10000,
+        #     mini_batch_size=4,
+        #     valid_batch_size=32,
+        #     optimizer=optimizer
+        # )
+        # console.close_log_files()
+        optimizer = tf.train.AdamOptimizer(1e-5)
+        trainer = RTRL.Trainer(model, train_data, valid_data)
+        trainer.train(
+            optimizer,
+            3000,
+            128,
+            64
+        )
 
     with tf.Session() as sess:
         model.load(sess)

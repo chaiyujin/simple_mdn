@@ -6,112 +6,10 @@ import time
 import numpy as np
 import tensorflow as tf
 import matplotlib.pyplot as plt
-from tensorflow.contrib.layers import fully_connected
-from tensorflow.contrib.distributions import Categorical
-from tensorflow.contrib.distributions import Mixture
-from tensorflow.contrib.distributions import MultivariateNormalDiag
+from nn import layer, mdn
 from utils import process_bar, console, format_time
 from utils.media import sample_video
 import data_process
-
-
-def reshape_gmm_tensor(tensor, D, K):
-    tmp = []
-    for i in range(D):
-        tmp.append(tensor[:, :, i * K: (i + 1) * K])
-    stacked = tf.stack(tmp, axis=3)
-    reshaped = tf.reshape(
-        stacked,
-        [-1, K, D])
-    return reshaped
-
-
-def parameter_layer(X, Dims, K, bias=0):
-    locs = fully_connected(X, K * Dims, activation_fn=tf.sigmoid)
-    scales_hat = fully_connected(X, K * Dims, activation_fn=None)
-    pi_hat = fully_connected(X, K, activation_fn=None)
-    # add bias on the parameter
-    # larger bias, more stable
-    if bias > 0:
-        b_scale = tf.constant(
-            np.full((K * Dims), -bias, np.float32),
-            dtype=tf.float32
-        )
-        b_pi = tf.constant(
-            np.full((K), 1 + bias, np.float32),
-            dtype=tf.float32
-        )
-        scales = tf.sigmoid(tf.add(scales_hat, b_scale))
-        pi = tf.nn.softmax(tf.multiply(pi_hat, b_pi))
-    else:
-        scales = tf.sigmoid(scales_hat)
-        pi = tf.nn.softmax(pi_hat)
-    # scale should be bigger than 0.05
-    # otherwise, the loss will boom
-    min_scale = tf.constant(
-        np.full((K * Dims), 0.05, np.float32),
-        dtype=tf.float32
-    )
-    scales = tf.add(scales, min_scale)
-    # reshape the output tensor into parameters
-    locs = reshape_gmm_tensor(locs, Dims, K)
-    scales = reshape_gmm_tensor(scales, Dims, K)
-    pi = tf.reshape(pi, [-1, K])
-    scales_hat = reshape_gmm_tensor(scales_hat, Dims, K)
-    pi_hat = tf.reshape(pi_hat, [-1, K])
-    return locs, scales, pi, scales_hat, pi_hat
-
-
-def mixture(locs, scales, pi, K):
-    cat = Categorical(probs=pi)
-    components = [
-        MultivariateNormalDiag(loc=locs[:, i, :], scale_diag=scales[:, i, :])
-        for i in range(K)]
-    # get the mixture distribution
-    mix = Mixture(cat=cat, components=components)
-    return mix
-
-
-def softmax(x):
-    """Compute softmax values for each sets of scores in x."""
-    e_x = np.exp(x - np.max(x))
-    return e_x / e_x.sum()
-
-
-def sigmoid(x):
-    return 1 / (1 + np.exp(-x))
-
-
-# sample directly from locs, scale_diag and pi
-def sample_gmm(locs, scales, pi):
-    idx = np.random.choice(len(pi), p=pi)
-    loc = locs[idx, :]
-    scale = scales[idx, :]
-    scale_diag = np.zeros((scale.shape[0], scale.shape[0]))
-    for i in range(len(scale)):
-        scale_diag[i][i] = scale[i]
-    x = np.random.multivariate_normal(loc, scale_diag, 1)
-    return x[0]
-
-
-# use hat result to sample, with bias
-def sample_gmm_with_hat(locs, scales_hat, pi_hat, bias=0):
-    b_scale = np.full(scales_hat.shape, -bias, np.float32)
-    b_pi = np.full(pi_hat.shape, 1 + bias, np.float32)
-    scales = sigmoid(scales_hat + b_scale)
-    pi = softmax(pi_hat * b_pi)
-    return sample_gmm(locs, scales, pi)
-
-
-def loss_fn(y, mixture):
-    # prob = mixture.prob(y)
-    loss = tf.reduce_mean(
-        # -tf.log(
-        #     prob
-        # )
-        -mixture.log_prob(y)
-    )
-    return loss
 
 
 class Model():
@@ -138,16 +36,19 @@ class Model():
         )
         self._W = {}
         self._b = {}
+        self._lstm_layers = []
 
         # set the input tensor
-        self._audio_input = tf.placeholder(
+        self._inputs = tf.placeholder(
             dtype=tf.float32,
             shape=[None, None, self._audio_num_features]
         )
-        self._anime_data = tf.placeholder(
+        self._audio_input = self._inputs
+        self._outputs = tf.placeholder(
             dtype=tf.float32,
             shape=[None, None, self._anime_num_features]
         )
+        self._anime_data = self._outputs
         self._seq_len = tf.placeholder(tf.int32, [None])
         # set the last_anime_data
         self._audio_input_shape = tf.shape(self._audio_input)
@@ -165,35 +66,34 @@ class Model():
 
         # I. build the Audio process layers
         # 1. uni-lstm layer
-        self._audio_lstm = self.LSTM_layer(
+        self._audio_lstm = layer.LSTM_layer(
+            batch_size=self._batch_size,
             lstm_size=self._audio_lstm_size,
             inputs=self._audio_input,
             seq_len=self._seq_len,
+            initializer=self._initializer,
+            dropout=self._dropout,
             scope='audio_lstm'
         )
+        self._lstm_layers.append(self._audio_lstm)
         # 2. dense layer
         # a. flatten the batch and timestep
         self._audio_lstm_output = tf.reshape(
             self._audio_lstm['output'],
             [-1, self._audio_lstm_size]
         )
-        # b. xw+b
-        with tf.variable_scope('lstm_phn'):
-            self._W['lstm_phn'] = tf.get_variable(
-                "lstm_phn_w",
-                [self._audio_lstm_size, self._phoneme_classes],
-                initializer=self._initializer)
-            self._b['lstm_phn'] = tf.get_variable(
-                "lstm_phn_b", [self._phoneme_classes],
-                initializer=self._initializer)
-        self._phn_vector = tf.nn.softmax(tf.nn.xw_plus_b(
-            self._audio_lstm_output,
-            self._W['lstm_phn'],
-            self._b['lstm_phn']
-        ))
+        # b. dense layer
+        self._phn_layer = layer.dense_layer(
+            input_size=self._audio_lstm_size,
+            output_size=self._phoneme_classes,
+            inputs=self._audio_lstm_output,
+            initializer=self._initializer,
+            activation=tf.nn.softmax,
+            scope='lstm2phn_dense'
+        )
         # c. reshape the vector back to batch and timestep
         self._phn_vector = tf.reshape(
-            self._phn_vector,
+            self._phn_layer['output'],
             [self._batch_size, -1, self._phoneme_classes]
         )
 
@@ -202,41 +102,40 @@ class Model():
             [self._last_anime_data, self._phn_vector], 2)
         self._feature_size = self._anime_num_features + self._phoneme_classes
         # 1. uni-lstm
-        self._anime_lstm = self.LSTM_layer(
+        self._anime_lstm = layer.LSTM_layer(
+            batch_size=self._batch_size,
             lstm_size=self._anime_lstm_size,
             inputs=self._feature_input,
             seq_len=self._seq_len,
+            initializer=self._initializer,
+            dropout=self._dropout,
             scope='anime_lstm'
         )
-        # 2. dense layer for mdn param
+        self._lstm_layers.append(self._anime_lstm)
+        # 2. dense layer
         self._anime_lstm_output = tf.reshape(
             self._anime_lstm['output'],
             [-1, self._anime_lstm_size]
         )
-        with tf.variable_scope('lstm_h'):
-            self._W['lstm_h'] = tf.get_variable(
-                "lstm_h_w",
-                [self._anime_lstm_size, self._dense_size],
-                initializer=self._initializer)
-            self._b['lstm_h'] = tf.get_variable(
-                "lstm_h_b", [self._dense_size],
-                initializer=self._initializer)
-        self._dense_output = tf.nn.softmax(tf.nn.xw_plus_b(
-            self._anime_lstm_output,
-            self._W['lstm_h'],
-            self._b['lstm_h']
-        ))
+        self._hidden_layer = layer.dense_layer(
+            input_size=self._anime_lstm_size,
+            output_size=self._dense_size,
+            inputs=self._anime_lstm_output,
+            initializer=self._initializer,
+            activation=tf.nn.relu,
+            scope='lstm2hidden_dense'
+        )
         self._dense_output = tf.reshape(
-            self._dense_output,
+            self._hidden_layer['output'],
             [self._batch_size, -1, self._dense_size]
         )
 
         # III. mdn layer
         self._locs, self._scales_diag, self._pi,\
-            self._scales_hat, self._pi_hat = parameter_layer(
+            self._scales_hat, self._pi_hat = mdn.parameter_layer(
               self._dense_output, self._mdn_dims, self._mdn_K, self._mdn_bias
             )
-        self._mixtures = mixture(
+        self._mixtures = mdn.mixture(
             self._locs, self._scales_diag, self._pi, self._mdn_K
         )
         self._y = tf.reshape(
@@ -245,33 +144,10 @@ class Model():
         )
 
         # IV. Loss function
-        self._loss_fn = loss_fn(self._y, self._mixtures)
+        self._loss_fn = mdn.loss_fn(self._y, self._mixtures)
 
         # saver
         self._saver = tf.train.Saver()
-
-    def LSTM_layer(self, lstm_size, inputs, seq_len, scope):
-        layer = {}
-        layer['cell'] = self.LSTM_cell(lstm_size)
-        layer['init_state'] = layer['cell'].zero_state(
-            batch_size=self._batch_size, dtype=tf.float32
-        )
-        layer['output'], layer['last_state'] = tf.nn.dynamic_rnn(
-            cell=layer['cell'], inputs=inputs, sequence_length=seq_len,
-            scope=scope, dtype=tf.float32, initial_state=layer['init_state']
-        )
-        return layer
-
-    def LSTM_cell(self, size):
-        cell = tf.contrib.rnn.LSTMCell(
-            size, state_is_tuple=True,
-            initializer=self._initializer
-        )
-        if self._train and self._dropout < 1:
-            cell = tf.contrib.rnn.DropoutWrapper(
-                cell, output_keep_prob=self._dropout
-            )
-        return cell
 
     def run_one_epoch(
             self, sess, data, batch_size,
@@ -461,11 +337,11 @@ class Model():
         anime_frame = []
         for i in range(bs):
             if self._train:
-                one_sample = sample_gmm_with_hat(
+                one_sample = mdn.sample_gmm_with_hat(
                     locs[i], scales_hat[i],
                     pi_hat[i], self._sample_mdn_bias)
             else:
-                one_sample = sample_gmm(locs[i], scales[i], pi[i])
+                one_sample = mdn.sample_gmm(locs[i], scales[i], pi[i])
             anime_frame.append([one_sample])
         # (batch_size, 1, features)
         return np.asarray(anime_frame, dtype=np.float32)
