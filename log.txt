@@ -1246,3 +1246,8703 @@ Valid Loss: -37.5717169444
 Error Rate: 0.784959178046
 Best Error: 0.779870529974
 
+[Epoch 0] 
+Train Loss: -1.61098544091
+Valid Loss: -6.28864717484
+Error Rate: 1.16416139863
+Best Error: 1.16416139863
+
+[Epoch 0] 
+Train Loss: 0.610996820927
+Valid Loss: 0.584079444408
+Error Rate: 13.6885142557
+Best Error: 13.6885142557
+
+[Epoch 1] 
+Train Loss: 0.547191917896
+Valid Loss: 0.501111845175
+Error Rate: 10.7502516187
+Best Error: 10.7502516187
+
+[Epoch 2] 
+Train Loss: 0.402866768837
+Valid Loss: 0.231401532888
+Error Rate: 4.70200742001
+Best Error: 4.70200742001
+
+[Epoch 3] 
+Train Loss: -0.278756800517
+Valid Loss: -1.08765963713
+Error Rate: 1.20332267619
+Best Error: 1.20332267619
+
+[Epoch 4] 
+Train Loss: -1.69064226151
+Valid Loss: -2.41547600428
+Error Rate: 1.06608551642
+Best Error: 1.06608551642
+
+[Epoch 5] 
+Train Loss: -3.21713423729
+Valid Loss: -4.13888168335
+Error Rate: 1.01828525498
+Best Error: 1.01828525498
+
+[Epoch 6] 
+Train Loss: -4.9277195549
+Valid Loss: -5.83407608668
+Error Rate: 0.965532611935
+Best Error: 0.965532611935
+
+[Epoch 7] 
+Train Loss: -6.52662065506
+Valid Loss: -7.36465628942
+Error Rate: 0.945288091814
+Best Error: 0.945288091814
+
+[Epoch 8] 
+Train Loss: -7.99545978546
+Valid Loss: -8.77714188894
+Error Rate: 0.948259263763
+Best Error: 0.945288091814
+
+[Epoch 9] 
+Train Loss: -9.35990200043
+Valid Loss: -10.0856472651
+Error Rate: 0.951386356648
+Best Error: 0.945288091814
+
+[Epoch 10] 
+Train Loss: -10.634262886
+Valid Loss: -11.3539253871
+Error Rate: 0.959134820414
+Best Error: 0.945288091814
+
+[Epoch 11] 
+Train Loss: -11.8525904083
+Valid Loss: -12.5356438955
+Error Rate: 0.968463018842
+Best Error: 0.945288091814
+
+[Epoch 12] 
+Train Loss: -13.0109191132
+Valid Loss: -13.677286466
+Error Rate: 0.976031323962
+Best Error: 0.945288091814
+
+[Epoch 13] 
+Train Loss: -14.1049882507
+Valid Loss: -14.7551275889
+Error Rate: 0.98157901084
+Best Error: 0.945288091814
+
+[Epoch 14] 
+Train Loss: -15.1470981216
+Valid Loss: -15.7791862488
+Error Rate: 0.986778945486
+Best Error: 0.945288091814
+
+[Epoch 15] 
+Train Loss: -16.1394560623
+Valid Loss: -16.7667827606
+Error Rate: 0.990699743042
+Best Error: 0.945288091814
+
+[Epoch 16] 
+Train Loss: -17.1001807785
+Valid Loss: -17.7117087046
+Error Rate: 0.993087853507
+Best Error: 0.945288091814
+
+[Epoch 17] 
+Train Loss: -18.0100801086
+Valid Loss: -18.6250921885
+Error Rate: 0.995700992722
+Best Error: 0.945288091814
+
+[Epoch 18] 
+Train Loss: -18.8861571503
+Valid Loss: -19.4867331187
+Error Rate: 0.995021301666
+Best Error: 0.945288091814
+
+[Epoch 19] 
+Train Loss: -19.7421810913
+Valid Loss: -20.3192392985
+Error Rate: 0.997043633324
+Best Error: 0.945288091814
+
+[Epoch 20] 
+Train Loss: -20.5687521362
+Valid Loss: -21.1504484812
+Error Rate: 0.998872884319
+Best Error: 0.945288091814
+
+[Epoch 21] 
+Train Loss: -21.3654612732
+Valid Loss: -21.9519545237
+Error Rate: 0.999411004306
+Best Error: 0.945288091814
+
+[Epoch 0] 
+Train Loss: 0.627207217216
+Valid Loss: 0.626721382141
+Error Rate: 15.5251029582
+Best Error: 15.5251029582
+
+[Epoch 1] 
+Train Loss: 0.622302188873
+Valid Loss: 0.621264199416
+Error Rate: 15.3434847674
+Best Error: 15.3434847674
+
+[Epoch 2] 
+Train Loss: 0.616774032116
+Valid Loss: 0.615694065889
+Error Rate: 15.1066380106
+Best Error: 15.1066380106
+
+[Epoch 3] 
+Train Loss: 0.611202905178
+Valid Loss: 0.610135177771
+Error Rate: 14.902879047
+Best Error: 14.902879047
+
+[Epoch 4] 
+Train Loss: 0.60567920208
+Valid Loss: 0.604613681634
+Error Rate: 14.6930197481
+Best Error: 14.6930197481
+
+[Epoch 5] 
+Train Loss: 0.60017250061
+Valid Loss: 0.599162181218
+Error Rate: 14.4952845871
+Best Error: 14.4952845871
+
+[Epoch 6] 
+Train Loss: 0.594688098431
+Valid Loss: 0.593694309394
+Error Rate: 14.290060081
+Best Error: 14.290060081
+
+[Epoch 7] 
+Train Loss: 0.589237947464
+Valid Loss: 0.588248411814
+Error Rate: 14.0967483912
+Best Error: 14.0967483912
+
+[Epoch 8] 
+Train Loss: 0.583796651363
+Valid Loss: 0.582803388437
+Error Rate: 13.9244003569
+Best Error: 13.9244003569
+
+[Epoch 9] 
+Train Loss: 0.578359963894
+Valid Loss: 0.577388306459
+Error Rate: 13.7210726032
+Best Error: 13.7210726032
+
+[Epoch 10] 
+Train Loss: 0.572935311794
+Valid Loss: 0.571949263414
+Error Rate: 13.5265443874
+Best Error: 13.5265443874
+
+[Epoch 11] 
+Train Loss: 0.56752935648
+Valid Loss: 0.566540797551
+Error Rate: 13.354043859
+Best Error: 13.354043859
+
+[Epoch 12] 
+Train Loss: 0.5621205163
+Valid Loss: 0.561138192813
+Error Rate: 13.1582654201
+Best Error: 13.1582654201
+
+[Epoch 13] 
+Train Loss: 0.556735291481
+Valid Loss: 0.555719673634
+Error Rate: 12.9634550616
+Best Error: 12.9634550616
+
+[Epoch 14] 
+Train Loss: 0.551348392963
+Valid Loss: 0.55036910375
+Error Rate: 12.789819109
+Best Error: 12.789819109
+
+[Epoch 15] 
+Train Loss: 0.545901215076
+Valid Loss: 0.54499344031
+Error Rate: 12.5880814062
+Best Error: 12.5880814062
+
+[Epoch 16] 
+Train Loss: 0.540501763821
+Valid Loss: 0.539558808009
+Error Rate: 12.4314733904
+Best Error: 12.4314733904
+
+[Epoch 17] 
+Train Loss: 0.535102443695
+Valid Loss: 0.534157574177
+Error Rate: 12.2455311066
+Best Error: 12.2455311066
+
+[Epoch 18] 
+Train Loss: 0.52969727993
+Valid Loss: 0.528721153736
+Error Rate: 12.0499651313
+Best Error: 12.0499651313
+
+[Epoch 19] 
+Train Loss: 0.52426264286
+Valid Loss: 0.523284077644
+Error Rate: 11.8971746084
+Best Error: 11.8971746084
+
+[Epoch 20] 
+Train Loss: 0.518802288771
+Valid Loss: 0.517811457316
+Error Rate: 11.7285983757
+Best Error: 11.7285983757
+
+[Epoch 21] 
+Train Loss: 0.51333075881
+Valid Loss: 0.512422005335
+Error Rate: 11.570712151
+Best Error: 11.570712151
+
+[Epoch 0] 
+Train Loss: 0.629445829391
+Valid Loss: 0.592339535554
+Error Rate: 13.8520393354
+Best Error: 13.8520393354
+
+[Epoch 1] 
+Train Loss: 0.546216084957
+Valid Loss: 0.49379653732
+Error Rate: 11.1760734073
+Best Error: 11.1760734073
+
+[Epoch 2] 
+Train Loss: 0.408753470182
+Valid Loss: 0.294748028119
+Error Rate: 6.24288949798
+Best Error: 6.24288949798
+
+[Epoch 3] 
+Train Loss: 0.158749221563
+Valid Loss: 0.070079224805
+Error Rate: 1.47314528309
+Best Error: 1.47314528309
+
+[Epoch 4] 
+Train Loss: 0.061144387275
+Valid Loss: 0.0586497224867
+Error Rate: 1.31135846482
+Best Error: 1.31135846482
+
+[Epoch 5] 
+Train Loss: 0.0532962346822
+Valid Loss: 0.0230890729775
+Error Rate: 1.26283631943
+Best Error: 1.26283631943
+
+[Epoch 6] 
+Train Loss: -0.536483965889
+Valid Loss: -1.01981021961
+Error Rate: 1.22785973394
+Best Error: 1.22785973394
+
+[Epoch 7] 
+Train Loss: -1.00618442774
+Valid Loss: -1.04653720061
+Error Rate: 1.19908246917
+Best Error: 1.19908246917
+
+[Epoch 8] 
+Train Loss: -1.03991951466
+Valid Loss: -1.07347830137
+Error Rate: 1.11788496424
+Best Error: 1.11788496424
+
+[Epoch 9] 
+Train Loss: -1.06818646431
+Valid Loss: -1.09582805634
+Error Rate: 1.06224689148
+Best Error: 1.06224689148
+
+[Epoch 10] 
+Train Loss: -1.09117041349
+Valid Loss: -1.12312523524
+Error Rate: 1.00731688825
+Best Error: 1.00731688825
+
+[Epoch 11] 
+Train Loss: -1.12316186905
+Valid Loss: -1.15588037173
+Error Rate: 0.965568522297
+Best Error: 0.965568522297
+
+[Epoch 12] 
+Train Loss: -1.16003888369
+Valid Loss: -1.18285103639
+Error Rate: 0.938842253227
+Best Error: 0.938842253227
+
+[Epoch 13] 
+Train Loss: -1.1918073225
+Valid Loss: -1.2139408191
+Error Rate: 0.917942422544
+Best Error: 0.917942422544
+
+[Epoch 14] 
+Train Loss: -1.21912498474
+Valid Loss: -1.23749558131
+Error Rate: 0.893770715249
+Best Error: 0.893770715249
+
+[Epoch 15] 
+Train Loss: -1.2444507122
+Valid Loss: -1.26434501012
+Error Rate: 0.870103537832
+Best Error: 0.870103537832
+
+[Epoch 16] 
+Train Loss: -1.2684828186
+Valid Loss: -1.28322680791
+Error Rate: 0.856385208409
+Best Error: 0.856385208409
+
+[Epoch 17] 
+Train Loss: -1.28381697655
+Valid Loss: -1.29866401354
+Error Rate: 0.856821879839
+Best Error: 0.856385208409
+
+[Epoch 18] 
+Train Loss: -1.29822593689
+Valid Loss: -1.31134569645
+Error Rate: 0.84872912637
+Best Error: 0.84872912637
+
+[Epoch 19] 
+Train Loss: -1.30925111771
+Valid Loss: -1.31538486481
+Error Rate: 0.839849379113
+Best Error: 0.839849379113
+
+[Epoch 20] 
+Train Loss: -1.31882974625
+Valid Loss: -1.331960241
+Error Rate: 0.83934574164
+Best Error: 0.83934574164
+
+[Epoch 21] 
+Train Loss: -1.32821142197
+Valid Loss: -1.34125300248
+Error Rate: 0.832021883994
+Best Error: 0.832021883994
+
+[Epoch 22] 
+Train Loss: -1.33803740978
+Valid Loss: -1.34848539035
+Error Rate: 0.832452594161
+Best Error: 0.832021883994
+
+[Epoch 23] 
+Train Loss: -1.34552933693
+Valid Loss: -1.35740955671
+Error Rate: 0.825567870981
+Best Error: 0.825567870981
+
+[Epoch 24] 
+Train Loss: -1.35559987545
+Valid Loss: -1.36586089929
+Error Rate: 0.827887016417
+Best Error: 0.825567870981
+
+[Epoch 25] 
+Train Loss: -1.3634559536
+Valid Loss: -1.3775900205
+Error Rate: 0.821229999201
+Best Error: 0.821229999201
+
+[Epoch 26] 
+Train Loss: -1.37354029655
+Valid Loss: -1.38640216986
+Error Rate: 0.829504303466
+Best Error: 0.821229999201
+
+[Epoch 27] 
+Train Loss: -1.38104150295
+Valid Loss: -1.39369726181
+Error Rate: 0.818298878371
+Best Error: 0.818298878371
+
+[Epoch 28] 
+Train Loss: -1.39011354446
+Valid Loss: -1.40051194032
+Error Rate: 0.821125230898
+Best Error: 0.818298878371
+
+[Epoch 29] 
+Train Loss: -1.39876197815
+Valid Loss: -1.41234107812
+Error Rate: 0.817754725729
+Best Error: 0.817754725729
+
+[Epoch 30] 
+Train Loss: -1.40981631279
+Valid Loss: -1.41584380468
+Error Rate: 0.821847614592
+Best Error: 0.817754725729
+
+[Epoch 31] 
+Train Loss: -1.41603406906
+Valid Loss: -1.42377571265
+Error Rate: 0.818799053314
+Best Error: 0.817754725729
+
+[Epoch 32] 
+Train Loss: -1.42340874672
+Valid Loss: -1.42868804932
+Error Rate: 0.817565286075
+Best Error: 0.817565286075
+
+[Epoch 33] 
+Train Loss: -1.42833687305
+Valid Loss: -1.43714555105
+Error Rate: 0.819830244703
+Best Error: 0.817565286075
+
+[Epoch 34] 
+Train Loss: -1.4329254818
+Valid Loss: -1.43827823798
+Error Rate: 0.818753540678
+Best Error: 0.817565286075
+
+[Epoch 35] 
+Train Loss: -1.43781112671
+Valid Loss: -1.44797980785
+Error Rate: 0.820781976384
+Best Error: 0.817565286075
+
+[Epoch 36] 
+Train Loss: -1.44183224201
+Valid Loss: -1.45082139969
+Error Rate: 0.817196901447
+Best Error: 0.817196901447
+
+[Epoch 37] 
+Train Loss: -1.44551302433
+Valid Loss: -1.45275803407
+Error Rate: 0.819813396104
+Best Error: 0.817196901447
+
+[Epoch 38] 
+Train Loss: -1.45032615185
+Valid Loss: -1.45806602637
+Error Rate: 0.820288726502
+Best Error: 0.817196901447
+
+[Epoch 39] 
+Train Loss: -1.45414081573
+Valid Loss: -1.46261147658
+Error Rate: 0.82017150023
+Best Error: 0.817196901447
+
+[Epoch 40] 
+Train Loss: -1.45960132599
+Valid Loss: -1.46822794278
+Error Rate: 0.820822205985
+Best Error: 0.817196901447
+
+[Epoch 41] 
+Train Loss: -1.46398806095
+Valid Loss: -1.46835498015
+Error Rate: 0.818742189291
+Best Error: 0.817196901447
+
+[Epoch 42] 
+Train Loss: -1.46566419601
+Valid Loss: -1.47506213188
+Error Rate: 0.815245498108
+Best Error: 0.815245498108
+
+[Epoch 43] 
+Train Loss: -1.46991826534
+Valid Loss: -1.48204259078
+Error Rate: 0.820370149499
+Best Error: 0.815245498108
+
+[Epoch 44] 
+Train Loss: -1.47319369793
+Valid Loss: -1.48039472103
+Error Rate: 0.817487718266
+Best Error: 0.815245498108
+
+[Epoch 45] 
+Train Loss: -1.47849661827
+Valid Loss: -1.49018971125
+Error Rate: 0.820820242695
+Best Error: 0.815245498108
+
+[Epoch 46] 
+Train Loss: -1.48173372746
+Valid Loss: -1.49119277795
+Error Rate: 0.821488261099
+Best Error: 0.815245498108
+
+[Epoch 47] 
+Train Loss: -1.48280730724
+Valid Loss: -1.49200216929
+Error Rate: 0.822330583973
+Best Error: 0.815245498108
+
+[Epoch 48] 
+Train Loss: -1.48756754875
+Valid Loss: -1.49747888247
+Error Rate: 0.816628832361
+Best Error: 0.815245498108
+
+[Epoch 49] 
+Train Loss: -1.48834781647
+Valid Loss: -1.50218820572
+Error Rate: 0.819973814758
+Best Error: 0.815245498108
+
+[Epoch 50] 
+Train Loss: -1.49216132641
+Valid Loss: -1.50323490302
+Error Rate: 0.820813103458
+Best Error: 0.815245498108
+
+[Epoch 51] 
+Train Loss: -1.49621351719
+Valid Loss: -1.50655082862
+Error Rate: 0.820260062465
+Best Error: 0.815245498108
+
+[Epoch 52] 
+Train Loss: -1.49874021053
+Valid Loss: -1.50878663858
+Error Rate: 0.817536443558
+Best Error: 0.815245498108
+
+[Epoch 53] 
+Train Loss: -1.50261039257
+Valid Loss: -1.5138690869
+Error Rate: 0.823609970936
+Best Error: 0.815245498108
+
+[Epoch 54] 
+Train Loss: -1.50499514103
+Valid Loss: -1.5172778368
+Error Rate: 0.816723819909
+Best Error: 0.815245498108
+
+[Epoch 55] 
+Train Loss: -1.50930918217
+Valid Loss: -1.51722415288
+Error Rate: 0.816642718177
+Best Error: 0.815245498108
+
+[Epoch 56] 
+Train Loss: -1.51038630962
+Valid Loss: -1.5223329862
+Error Rate: 0.82006016383
+Best Error: 0.815245498108
+
+[Epoch 57] 
+Train Loss: -1.5132490015
+Valid Loss: -1.52486638228
+Error Rate: 0.818353243661
+Best Error: 0.815245498108
+
+[Epoch 58] 
+Train Loss: -1.51745107651
+Valid Loss: -1.52635602156
+Error Rate: 0.816849006429
+Best Error: 0.815245498108
+
+[Epoch 59] 
+Train Loss: -1.52004876137
+Valid Loss: -1.53116842111
+Error Rate: 0.815816422889
+Best Error: 0.815245498108
+
+[Epoch 60] 
+Train Loss: -1.52320168018
+Valid Loss: -1.53481415908
+Error Rate: 0.816289825693
+Best Error: 0.815245498108
+
+[Epoch 61] 
+Train Loss: -1.52364395618
+Valid Loss: -1.53877623876
+Error Rate: 0.816689872837
+Best Error: 0.815245498108
+
+[Epoch 62] 
+Train Loss: -1.52643939018
+Valid Loss: -1.54024128119
+Error Rate: 0.819710234129
+Best Error: 0.815245498108
+
+[Epoch 63] 
+Train Loss: -1.53052467346
+Valid Loss: -1.54227952162
+Error Rate: 0.818826111022
+Best Error: 0.815245498108
+
+[Epoch 64] 
+Train Loss: -1.53175895691
+Valid Loss: -1.54726803303
+Error Rate: 0.818758466752
+Best Error: 0.815245498108
+
+[Epoch 65] 
+Train Loss: -1.53567745209
+Valid Loss: -1.54516307513
+Error Rate: 0.813674080657
+Best Error: 0.813674080657
+
+[Epoch 66] 
+Train Loss: -1.53828928947
+Valid Loss: -1.54571183523
+Error Rate: 0.820138552652
+Best Error: 0.813674080657
+
+[Epoch 67] 
+Train Loss: -1.54022783279
+Valid Loss: -1.55179003874
+Error Rate: 0.813998844547
+Best Error: 0.813674080657
+
+[Epoch 68] 
+Train Loss: -1.54357328415
+Valid Loss: -1.55467053254
+Error Rate: 0.817132862492
+Best Error: 0.813674080657
+
+[Epoch 69] 
+Train Loss: -1.54588082314
+Valid Loss: -1.55876672268
+Error Rate: 0.810699945924
+Best Error: 0.810699945924
+
+[Epoch 70] 
+Train Loss: -1.54843886852
+Valid Loss: -1.55771636963
+Error Rate: 0.817033412921
+Best Error: 0.810699945924
+
+[Epoch 71] 
+Train Loss: -1.55044577122
+Valid Loss: -1.56329071522
+Error Rate: 0.814392751947
+Best Error: 0.810699945924
+
+[Epoch 72] 
+Train Loss: -1.55256168365
+Valid Loss: -1.56751902898
+Error Rate: 0.814990805829
+Best Error: 0.810699945924
+
+[Epoch 73] 
+Train Loss: -1.55707451344
+Valid Loss: -1.56850703557
+Error Rate: 0.809478636654
+Best Error: 0.809478636654
+
+[Epoch 74] 
+Train Loss: -1.55818571091
+Valid Loss: -1.57034961383
+Error Rate: 0.813581841715
+Best Error: 0.809478636654
+
+[Epoch 75] 
+Train Loss: -1.56100394249
+Valid Loss: -1.57111040751
+Error Rate: 0.808272855225
+Best Error: 0.808272855225
+
+[Epoch 76] 
+Train Loss: -1.56395701885
+Valid Loss: -1.57565073172
+Error Rate: 0.811916507601
+Best Error: 0.808272855225
+
+[Epoch 77] 
+Train Loss: -1.5678166914
+Valid Loss: -1.57980151971
+Error Rate: 0.808449444251
+Best Error: 0.808272855225
+
+[Epoch 78] 
+Train Loss: -1.57051809311
+Valid Loss: -1.58665188154
+Error Rate: 0.809694420092
+Best Error: 0.808272855225
+
+[Epoch 79] 
+Train Loss: -1.57310406208
+Valid Loss: -1.58357699712
+Error Rate: 0.806656317796
+Best Error: 0.806656317796
+
+[Epoch 80] 
+Train Loss: -1.5770321703
+Valid Loss: -1.5869358778
+Error Rate: 0.809308687118
+Best Error: 0.806656317796
+
+[Epoch 81] 
+Train Loss: -1.58046266556
+Valid Loss: -1.59109385808
+Error Rate: 0.803627639293
+Best Error: 0.803627639293
+
+[Epoch 82] 
+Train Loss: -1.58280639648
+Valid Loss: -1.5961227417
+Error Rate: 0.803562279578
+Best Error: 0.803562279578
+
+[Epoch 83] 
+Train Loss: -1.58788605213
+Valid Loss: -1.60234820843
+Error Rate: 0.803109045119
+Best Error: 0.803109045119
+
+[Epoch 84] 
+Train Loss: -1.59026387691
+Valid Loss: -1.60209790866
+Error Rate: 0.804872650829
+Best Error: 0.803109045119
+
+[Epoch 85] 
+Train Loss: -1.59282827377
+Valid Loss: -1.60445801417
+Error Rate: 0.797756402194
+Best Error: 0.797756402194
+
+[Epoch 86] 
+Train Loss: -1.59504788876
+Valid Loss: -1.60968987147
+Error Rate: 0.798665298454
+Best Error: 0.797756402194
+
+[Epoch 87] 
+Train Loss: -1.59874064445
+Valid Loss: -1.611937205
+Error Rate: 0.805348588062
+Best Error: 0.797756402194
+
+[Epoch 88] 
+Train Loss: -1.60196342945
+Valid Loss: -1.61452412605
+Error Rate: 0.801410049503
+Best Error: 0.797756402194
+
+[Epoch 89] 
+Train Loss: -1.60387751579
+Valid Loss: -1.61458516121
+Error Rate: 0.804579014012
+Best Error: 0.797756402194
+
+[Epoch 90] 
+Train Loss: -1.60792172432
+Valid Loss: -1.61939243476
+Error Rate: 0.806868281742
+Best Error: 0.797756402194
+
+[Epoch 91] 
+Train Loss: -1.61013884068
+Valid Loss: -1.62671152751
+Error Rate: 0.800712438961
+Best Error: 0.797756402194
+
+[Epoch 92] 
+Train Loss: -1.61293170929
+Valid Loss: -1.62617067496
+Error Rate: 0.802074212719
+Best Error: 0.797756402194
+
+[Epoch 93] 
+Train Loss: -1.61824611664
+Valid Loss: -1.62780547142
+Error Rate: 0.79987700545
+Best Error: 0.797756402194
+
+[Epoch 94] 
+Train Loss: -1.61569116592
+Valid Loss: -1.63060943286
+Error Rate: 0.802688972415
+Best Error: 0.797756402194
+
+[Epoch 95] 
+Train Loss: -1.62007791042
+Valid Loss: -1.63174255689
+Error Rate: 0.803944371541
+Best Error: 0.797756402194
+
+[Epoch 96] 
+Train Loss: -1.62259668827
+Valid Loss: -1.6340610981
+Error Rate: 0.802815443998
+Best Error: 0.797756402194
+
+[Epoch 97] 
+Train Loss: -1.62567356586
+Valid Loss: -1.63519207637
+Error Rate: 0.797234309794
+Best Error: 0.797234309794
+
+[Epoch 98] 
+Train Loss: -1.62734258175
+Valid Loss: -1.63855663935
+Error Rate: 0.802070143354
+Best Error: 0.797234309794
+
+[Epoch 99] 
+Train Loss: -1.62953168869
+Valid Loss: -1.63973911603
+Error Rate: 0.802163881535
+Best Error: 0.797234309794
+
+[Epoch 100] 
+Train Loss: -1.6323720932
+Valid Loss: -1.64507095019
+Error Rate: 0.801690086073
+Best Error: 0.797234309794
+
+[Epoch 101] 
+Train Loss: -1.63546659946
+Valid Loss: -1.6448576053
+Error Rate: 0.801123837492
+Best Error: 0.797234309794
+
+[Epoch 102] 
+Train Loss: -1.63688686848
+Valid Loss: -1.64520776272
+Error Rate: 0.802576993483
+Best Error: 0.797234309794
+
+[Epoch 103] 
+Train Loss: -1.6373712492
+Valid Loss: -1.64789394538
+Error Rate: 0.800206873895
+Best Error: 0.797234309794
+
+[Epoch 104] 
+Train Loss: -1.63948211193
+Valid Loss: -1.65019237995
+Error Rate: 0.802992782644
+Best Error: 0.797234309794
+
+[Epoch 105] 
+Train Loss: -1.64203379154
+Valid Loss: -1.65343487263
+Error Rate: 0.799787872076
+Best Error: 0.797234309794
+
+[Epoch 106] 
+Train Loss: -1.64405807018
+Valid Loss: -1.65410606066
+Error Rate: 0.801205010617
+Best Error: 0.797234309794
+
+[Epoch 107] 
+Train Loss: -1.64453252792
+Valid Loss: -1.65935881933
+Error Rate: 0.801885986736
+Best Error: 0.797234309794
+
+[Epoch 108] 
+Train Loss: -1.647716465
+Valid Loss: -1.65605131785
+Error Rate: 0.804946220666
+Best Error: 0.797234309794
+
+[Epoch 109] 
+Train Loss: -1.64961552143
+Valid Loss: -1.65739162763
+Error Rate: 0.800922332528
+Best Error: 0.797234309794
+
+[Epoch 110] 
+Train Loss: -1.65117940903
+Valid Loss: -1.6625187397
+Error Rate: 0.795605028827
+Best Error: 0.795605028827
+
+[Epoch 111] 
+Train Loss: -1.65288475037
+Valid Loss: -1.65964321295
+Error Rate: 0.802101841566
+Best Error: 0.795605028827
+
+[Epoch 112] 
+Train Loss: -1.65546345711
+Valid Loss: -1.66548303763
+Error Rate: 0.798654982257
+Best Error: 0.795605028827
+
+[Epoch 113] 
+Train Loss: -1.65971083641
+Valid Loss: -1.66684206327
+Error Rate: 0.796665027037
+Best Error: 0.795605028827
+
+[Epoch 114] 
+Train Loss: -1.65943334103
+Valid Loss: -1.66749115785
+Error Rate: 0.799479599824
+Best Error: 0.795605028827
+
+[Epoch 115] 
+Train Loss: -1.66221072674
+Valid Loss: -1.66999379794
+Error Rate: 0.800108316728
+Best Error: 0.795605028827
+
+[Epoch 116] 
+Train Loss: -1.66174646378
+Valid Loss: -1.6741185983
+Error Rate: 0.804012694039
+Best Error: 0.795605028827
+
+[Epoch 117] 
+Train Loss: -1.66311294556
+Valid Loss: -1.6725029548
+Error Rate: 0.807773251421
+Best Error: 0.795605028827
+
+[Epoch 118] 
+Train Loss: -1.66644713879
+Valid Loss: -1.67691187064
+Error Rate: 0.803516088715
+Best Error: 0.795605028827
+
+[Epoch 119] 
+Train Loss: -1.6675853157
+Valid Loss: -1.67538960775
+Error Rate: 0.804235688106
+Best Error: 0.795605028827
+
+[Epoch 120] 
+Train Loss: -1.66830649376
+Valid Loss: -1.67590550582
+Error Rate: 0.807109659344
+Best Error: 0.795605028827
+
+[Epoch 121] 
+Train Loss: -1.6712709713
+Valid Loss: -1.67806943258
+Error Rate: 0.80427195543
+Best Error: 0.795605028827
+
+[Epoch 122] 
+Train Loss: -1.6728314352
+Valid Loss: -1.68527237574
+Error Rate: 0.798955365652
+Best Error: 0.795605028827
+
+[Epoch 123] 
+Train Loss: -1.67637496471
+Valid Loss: -1.68648894628
+Error Rate: 0.798422992751
+Best Error: 0.795605028827
+
+[Epoch 124] 
+Train Loss: -1.67617498875
+Valid Loss: -1.6863896052
+Error Rate: 0.797934276284
+Best Error: 0.795605028827
+
+[Epoch 125] 
+Train Loss: -1.679724617
+Valid Loss: -1.68898189068
+Error Rate: 0.800275910316
+Best Error: 0.795605028827
+
+[Epoch 126] 
+Train Loss: -1.68049655437
+Valid Loss: -1.68857212861
+Error Rate: 0.803530902632
+Best Error: 0.795605028827
+
+[Epoch 127] 
+Train Loss: -1.68187348366
+Valid Loss: -1.6928383112
+Error Rate: 0.790599067251
+Best Error: 0.790599067251
+
+[Epoch 128] 
+Train Loss: -1.68393179417
+Valid Loss: -1.6935668389
+Error Rate: 0.79726747155
+Best Error: 0.790599067251
+
+[Epoch 129] 
+Train Loss: -1.68545116901
+Valid Loss: -1.69622035821
+Error Rate: 0.795976626112
+Best Error: 0.790599067251
+
+[Epoch 130] 
+Train Loss: -1.68588530064
+Valid Loss: -1.69716970126
+Error Rate: 0.800679598471
+Best Error: 0.790599067251
+
+[Epoch 131] 
+Train Loss: -1.68830293179
+Valid Loss: -1.69755939643
+Error Rate: 0.794885679309
+Best Error: 0.790599067251
+
+[Epoch 132] 
+Train Loss: -1.68928361893
+Valid Loss: -1.70324289799
+Error Rate: 0.79822623538
+Best Error: 0.790599067251
+
+[Epoch 133] 
+Train Loss: -1.69083996773
+Valid Loss: -1.69901196162
+Error Rate: 0.801270655901
+Best Error: 0.790599067251
+
+[Epoch 134] 
+Train Loss: -1.69405335903
+Valid Loss: -1.69983931382
+Error Rate: 0.796768153316
+Best Error: 0.790599067251
+
+[Epoch 135] 
+Train Loss: -1.69271086216
+Valid Loss: -1.70595359802
+Error Rate: 0.794013657209
+Best Error: 0.790599067251
+
+[Epoch 136] 
+Train Loss: -1.69597047806
+Valid Loss: -1.70188653469
+Error Rate: 0.797831649752
+Best Error: 0.790599067251
+
+[Epoch 137] 
+Train Loss: -1.69876057148
+Valid Loss: -1.70474652449
+Error Rate: 0.799069486355
+Best Error: 0.790599067251
+
+[Epoch 138] 
+Train Loss: -1.70026231766
+Valid Loss: -1.70929674308
+Error Rate: 0.792648349529
+Best Error: 0.790599067251
+
+[Epoch 139] 
+Train Loss: -1.7009103775
+Valid Loss: -1.71287659804
+Error Rate: 0.797999635998
+Best Error: 0.790599067251
+
+[Epoch 140] 
+Train Loss: -1.70327751637
+Valid Loss: -1.71560355028
+Error Rate: 0.795810531764
+Best Error: 0.790599067251
+
+[Epoch 141] 
+Train Loss: -1.70638044834
+Valid Loss: -1.71058046818
+Error Rate: 0.793043113638
+Best Error: 0.790599067251
+
+[Epoch 142] 
+Train Loss: -1.70647315979
+Valid Loss: -1.71235267321
+Error Rate: 0.796646750591
+Best Error: 0.790599067251
+
+[Epoch 143] 
+Train Loss: -1.70787609577
+Valid Loss: -1.71578204632
+Error Rate: 0.797470725627
+Best Error: 0.790599067251
+
+[Epoch 144] 
+Train Loss: -1.70825004101
+Valid Loss: -1.71869560083
+Error Rate: 0.795813208977
+Best Error: 0.790599067251
+
+[Epoch 145] 
+Train Loss: -1.7082064867
+Valid Loss: -1.72023506959
+Error Rate: 0.792815015016
+Best Error: 0.790599067251
+
+[Epoch 146] 
+Train Loss: -1.71052013874
+Valid Loss: -1.71831667423
+Error Rate: 0.796042449877
+Best Error: 0.790599067251
+
+[Epoch 147] 
+Train Loss: -1.71163957119
+Valid Loss: -1.7206145525
+Error Rate: 0.793495491389
+Best Error: 0.790599067251
+
+[Epoch 148] 
+Train Loss: -1.71479939938
+Valid Loss: -1.72445980708
+Error Rate: 0.791326055752
+Best Error: 0.790599067251
+
+[Epoch 149] 
+Train Loss: -1.71709191799
+Valid Loss: -1.72555065155
+Error Rate: 0.78970430668
+Best Error: 0.78970430668
+
+[Epoch 150] 
+Train Loss: -1.7153702879
+Valid Loss: -1.72605935733
+Error Rate: 0.791949739494
+Best Error: 0.78970430668
+
+[Epoch 151] 
+Train Loss: -1.71924698353
+Valid Loss: -1.73040386041
+Error Rate: 0.794347880588
+Best Error: 0.78970430668
+
+[Epoch 152] 
+Train Loss: -1.71910370827
+Valid Loss: -1.72809429963
+Error Rate: 0.792970222028
+Best Error: 0.78970430668
+
+[Epoch 153] 
+Train Loss: -1.72060259342
+Valid Loss: -1.73309330146
+Error Rate: 0.78787894657
+Best Error: 0.78787894657
+
+[Epoch 154] 
+Train Loss: -1.72118882179
+Valid Loss: -1.73358718554
+Error Rate: 0.794102112355
+Best Error: 0.78787894657
+
+[Epoch 155] 
+Train Loss: -1.72438817978
+Valid Loss: -1.73426612218
+Error Rate: 0.782845391842
+Best Error: 0.782845391842
+
+[Epoch 156] 
+Train Loss: -1.7229549408
+Valid Loss: -1.73480077585
+Error Rate: 0.79160452169
+Best Error: 0.782845391842
+
+[Epoch 157] 
+Train Loss: -1.72565471649
+Valid Loss: -1.73894290129
+Error Rate: 0.791433465572
+Best Error: 0.782845391842
+
+[Epoch 158] 
+Train Loss: -1.72626821518
+Valid Loss: -1.73757195473
+Error Rate: 0.789868116473
+Best Error: 0.782845391842
+
+[Epoch 159] 
+Train Loss: -1.72711785793
+Valid Loss: -1.74318794409
+Error Rate: 0.786239385101
+Best Error: 0.782845391842
+
+[Epoch 160] 
+Train Loss: -1.73052939415
+Valid Loss: -1.73966964086
+Error Rate: 0.785544237597
+Best Error: 0.782845391842
+
+[Epoch 161] 
+Train Loss: -1.73053108692
+Valid Loss: -1.74301040173
+Error Rate: 0.783705063063
+Best Error: 0.782845391842
+
+[Epoch 162] 
+Train Loss: -1.73176580906
+Valid Loss: -1.74214601517
+Error Rate: 0.785461565233
+Best Error: 0.782845391842
+
+[Epoch 163] 
+Train Loss: -1.73301038742
+Valid Loss: -1.74294650555
+Error Rate: 0.779145161012
+Best Error: 0.779145161012
+
+[Epoch 164] 
+Train Loss: -1.73337658405
+Valid Loss: -1.74458384514
+Error Rate: 0.787377700741
+Best Error: 0.779145161012
+
+[Epoch 165] 
+Train Loss: -1.7363681078
+Valid Loss: -1.7453691562
+Error Rate: 0.77782301002
+Best Error: 0.77782301002
+
+[Epoch 166] 
+Train Loss: -1.73683112621
+Valid Loss: -1.74705040455
+Error Rate: 0.777764860935
+Best Error: 0.777764860935
+
+[Epoch 167] 
+Train Loss: -1.73685208321
+Valid Loss: -1.74823717276
+Error Rate: 0.78026020274
+Best Error: 0.777764860935
+
+[Epoch 168] 
+Train Loss: -1.73996125698
+Valid Loss: -1.74708338579
+Error Rate: 0.781871599918
+Best Error: 0.777764860935
+
+[Epoch 169] 
+Train Loss: -1.74082193375
+Valid Loss: -1.75010049343
+Error Rate: 0.776982579043
+Best Error: 0.776982579043
+
+[Epoch 170] 
+Train Loss: -1.74145196915
+Valid Loss: -1.74566352367
+Error Rate: 0.782235772396
+Best Error: 0.776982579043
+
+[Epoch 171] 
+Train Loss: -1.74326467991
+Valid Loss: -1.74846132596
+Error Rate: 0.779994801605
+Best Error: 0.776982579043
+
+[Epoch 172] 
+Train Loss: -1.74321179867
+Valid Loss: -1.7518132925
+Error Rate: 0.777068178495
+Best Error: 0.776982579043
+
+[Epoch 173] 
+Train Loss: -1.74373092651
+Valid Loss: -1.75219706694
+Error Rate: 0.783887577656
+Best Error: 0.776982579043
+
+[Epoch 174] 
+Train Loss: -1.74528210163
+Valid Loss: -1.75123802821
+Error Rate: 0.775398310965
+Best Error: 0.775398310965
+
+[Epoch 175] 
+Train Loss: -1.74498062134
+Valid Loss: -1.75352116426
+Error Rate: 0.784090010721
+Best Error: 0.775398310965
+
+[Epoch 176] 
+Train Loss: -1.74557461262
+Valid Loss: -1.7526541551
+Error Rate: 0.775273017357
+Best Error: 0.775273017357
+
+[Epoch 177] 
+Train Loss: -1.74601696968
+Valid Loss: -1.75824276606
+Error Rate: 0.775663140961
+Best Error: 0.775273017357
+
+[Epoch 178] 
+Train Loss: -1.7494889164
+Valid Loss: -1.75377229849
+Error Rate: 0.776549334447
+Best Error: 0.775273017357
+
+[Epoch 179] 
+Train Loss: -1.75017481327
+Valid Loss: -1.75674454371
+Error Rate: 0.785037387468
+Best Error: 0.775273017357
+
+[Epoch 180] 
+Train Loss: -1.75058683395
+Valid Loss: -1.75768625736
+Error Rate: 0.772530443775
+Best Error: 0.772530443775
+
+[Epoch 181] 
+Train Loss: -1.75213294029
+Valid Loss: -1.75888593992
+Error Rate: 0.776557366089
+Best Error: 0.772530443775
+
+[Epoch 182] 
+Train Loss: -1.74948101997
+Valid Loss: -1.75923446814
+Error Rate: 0.770261522871
+Best Error: 0.770261522871
+
+[Epoch 183] 
+Train Loss: -1.75331172943
+Valid Loss: -1.76145768166
+Error Rate: 0.777036373194
+Best Error: 0.770261522871
+
+[Epoch 184] 
+Train Loss: -1.7536097908
+Valid Loss: -1.75957596302
+Error Rate: 0.777848889754
+Best Error: 0.770261522871
+
+[Epoch 185] 
+Train Loss: -1.75201368809
+Valid Loss: -1.76054004828
+Error Rate: 0.775619770097
+Best Error: 0.770261522871
+
+[Epoch 186] 
+Train Loss: -1.7538048172
+Valid Loss: -1.75984660784
+Error Rate: 0.769746819581
+Best Error: 0.769746819581
+
+[Epoch 187] 
+Train Loss: -1.75558225632
+Valid Loss: -1.76171541214
+Error Rate: 0.775463813465
+Best Error: 0.769746819581
+
+[Epoch 188] 
+Train Loss: -1.75692138195
+Valid Loss: -1.76340611776
+Error Rate: 0.776630793141
+Best Error: 0.769746819581
+
+[Epoch 189] 
+Train Loss: -1.75627277851
+Valid Loss: -1.76036099593
+Error Rate: 0.771292535779
+Best Error: 0.769746819581
+
+[Epoch 190] 
+Train Loss: -1.75889163971
+Valid Loss: -1.76673940818
+Error Rate: 0.778292736117
+Best Error: 0.769746819581
+
+[Epoch 191] 
+Train Loss: -1.75922955513
+Valid Loss: -1.76278424263
+Error Rate: 0.773243617853
+Best Error: 0.769746819581
+
+[Epoch 192] 
+Train Loss: -1.76107412338
+Valid Loss: -1.76727545261
+Error Rate: 0.771125013584
+Best Error: 0.769746819581
+
+[Epoch 193] 
+Train Loss: -1.7601458025
+Valid Loss: -1.7641111215
+Error Rate: 0.760991509225
+Best Error: 0.760991509225
+
+[Epoch 194] 
+Train Loss: -1.76024398327
+Valid Loss: -1.76226985455
+Error Rate: 0.764178179042
+Best Error: 0.760991509225
+
+[Epoch 195] 
+Train Loss: -1.76001655102
+Valid Loss: -1.76734693845
+Error Rate: 0.771247701371
+Best Error: 0.760991509225
+
+[Epoch 196] 
+Train Loss: -1.76158796787
+Valid Loss: -1.76585626602
+Error Rate: 0.768600008249
+Best Error: 0.760991509225
+
+[Epoch 197] 
+Train Loss: -1.76289102077
+Valid Loss: -1.76820397377
+Error Rate: 0.770550197918
+Best Error: 0.760991509225
+
+[Epoch 198] 
+Train Loss: -1.7616915226
+Valid Loss: -1.76664038499
+Error Rate: 0.772043048067
+Best Error: 0.760991509225
+
+[Epoch 199] 
+Train Loss: -1.76159311295
+Valid Loss: -1.77027750015
+Error Rate: 0.768308977254
+Best Error: 0.760991509225
+
+[Epoch 200] 
+Train Loss: -1.76317275047
+Valid Loss: -1.76485772928
+Error Rate: 0.767950373381
+Best Error: 0.760991509225
+
+[Epoch 201] 
+Train Loss: -1.76267556667
+Valid Loss: -1.76979339123
+Error Rate: 0.762313553128
+Best Error: 0.760991509225
+
+[Epoch 202] 
+Train Loss: -1.76318336487
+Valid Loss: -1.76869138082
+Error Rate: 0.765351334159
+Best Error: 0.760991509225
+
+[Epoch 203] 
+Train Loss: -1.76609167576
+Valid Loss: -1.77207096418
+Error Rate: 0.765989117894
+Best Error: 0.760991509225
+
+[Epoch 204] 
+Train Loss: -1.76515715122
+Valid Loss: -1.76934476693
+Error Rate: 0.772207393302
+Best Error: 0.760991509225
+
+[Epoch 205] 
+Train Loss: -1.76774978161
+Valid Loss: -1.77003363768
+Error Rate: 0.767733768931
+Best Error: 0.760991509225
+
+[Epoch 206] 
+Train Loss: -1.76673705101
+Valid Loss: -1.766568621
+Error Rate: 0.764926656647
+Best Error: 0.760991509225
+
+[Epoch 207] 
+Train Loss: -1.76658118725
+Valid Loss: -1.77052052816
+Error Rate: 0.767641065938
+Best Error: 0.760991509225
+
+[Epoch 208] 
+Train Loss: -1.7664691925
+Valid Loss: -1.77292044957
+Error Rate: 0.763099690208
+Best Error: 0.760991509225
+
+[Epoch 209] 
+Train Loss: -1.76578701496
+Valid Loss: -1.77083444595
+Error Rate: 0.768355525079
+Best Error: 0.760991509225
+
+[Epoch 210] 
+Train Loss: -1.76684744358
+Valid Loss: -1.77520974477
+Error Rate: 0.76741078985
+Best Error: 0.760991509225
+
+[Epoch 211] 
+Train Loss: -1.76829962254
+Valid Loss: -1.7725768884
+Error Rate: 0.769917697218
+Best Error: 0.760991509225
+
+[Epoch 212] 
+Train Loss: -1.76992166519
+Valid Loss: -1.77389740944
+Error Rate: 0.775015005332
+Best Error: 0.760991509225
+
+[Epoch 213] 
+Train Loss: -1.77089699268
+Valid Loss: -1.77180830638
+Error Rate: 0.771784322119
+Best Error: 0.760991509225
+
+[Epoch 214] 
+Train Loss: -1.7724535799
+Valid Loss: -1.77681279182
+Error Rate: 0.76753719004
+Best Error: 0.760991509225
+
+[Epoch 215] 
+Train Loss: -1.77305434227
+Valid Loss: -1.76986825466
+Error Rate: 0.765751488391
+Best Error: 0.760991509225
+
+[Epoch 216] 
+Train Loss: -1.7730066824
+Valid Loss: -1.7749530077
+Error Rate: 0.773391007401
+Best Error: 0.760991509225
+
+[Epoch 217] 
+Train Loss: -1.7719731617
+Valid Loss: -1.77382608255
+Error Rate: 0.768757071463
+Best Error: 0.760991509225
+
+[Epoch 218] 
+Train Loss: -1.77283261299
+Valid Loss: -1.77857037385
+Error Rate: 0.765313460507
+Best Error: 0.760991509225
+
+[Epoch 219] 
+Train Loss: -1.77465229988
+Valid Loss: -1.77709257603
+Error Rate: 0.761294070088
+Best Error: 0.760991509225
+
+[Epoch 220] 
+Train Loss: -1.77096017838
+Valid Loss: -1.77394429843
+Error Rate: 0.760382532311
+Best Error: 0.760382532311
+
+[Epoch 221] 
+Train Loss: -1.77277065754
+Valid Loss: -1.77556788921
+Error Rate: 0.766678982363
+Best Error: 0.760382532311
+
+[Epoch 222] 
+Train Loss: -1.77315677643
+Valid Loss: -1.77787820498
+Error Rate: 0.766826550392
+Best Error: 0.760382532311
+
+[Epoch 223] 
+Train Loss: -1.77559763908
+Valid Loss: -1.78097478549
+Error Rate: 0.773332180088
+Best Error: 0.760382532311
+
+[Epoch 224] 
+Train Loss: -1.77460010052
+Valid Loss: -1.7753576835
+Error Rate: 0.772584987546
+Best Error: 0.760382532311
+
+[Epoch 225] 
+Train Loss: -1.77573830128
+Valid Loss: -1.77546656132
+Error Rate: 0.772304272748
+Best Error: 0.760382532311
+
+[Epoch 226] 
+Train Loss: -1.77371452808
+Valid Loss: -1.77855531375
+Error Rate: 0.76557204367
+Best Error: 0.760382532311
+
+[Epoch 227] 
+Train Loss: -1.77491270542
+Valid Loss: -1.77867861589
+Error Rate: 0.758467396295
+Best Error: 0.758467396295
+
+[Epoch 228] 
+Train Loss: -1.77567268372
+Valid Loss: -1.77800401052
+Error Rate: 0.770579647271
+Best Error: 0.758467396295
+
+[Epoch 229] 
+Train Loss: -1.77766821384
+Valid Loss: -1.77673796813
+Error Rate: 0.763608325147
+Best Error: 0.758467396295
+
+[Epoch 230] 
+Train Loss: -1.77659097195
+Valid Loss: -1.77964890003
+Error Rate: 0.763883292859
+Best Error: 0.758467396295
+
+[Epoch 231] 
+Train Loss: -1.77721839428
+Valid Loss: -1.78152827422
+Error Rate: 0.769548670059
+Best Error: 0.758467396295
+
+[Epoch 232] 
+Train Loss: -1.77587308407
+Valid Loss: -1.77852833271
+Error Rate: 0.766623581884
+Best Error: 0.758467396295
+
+[Epoch 233] 
+Train Loss: -1.77769874096
+Valid Loss: -1.78241388003
+Error Rate: 0.767263007644
+Best Error: 0.758467396295
+
+[Epoch 234] 
+Train Loss: -1.77888629913
+Valid Loss: -1.7811435461
+Error Rate: 0.768630028741
+Best Error: 0.758467396295
+
+[Epoch 235] 
+Train Loss: -1.77423077106
+Valid Loss: -1.7799907128
+Error Rate: 0.778826822436
+Best Error: 0.758467396295
+
+[Epoch 236] 
+Train Loss: -1.77875541687
+Valid Loss: -1.78033693631
+Error Rate: 0.76950169388
+Best Error: 0.758467396295
+
+[Epoch 237] 
+Train Loss: -1.7797816658
+Valid Loss: -1.77917901675
+Error Rate: 0.769460286305
+Best Error: 0.758467396295
+
+[Epoch 238] 
+Train Loss: -1.78028569221
+Valid Loss: -1.78205339114
+Error Rate: 0.766699900328
+Best Error: 0.758467396295
+
+[Epoch 239] 
+Train Loss: -1.77903131962
+Valid Loss: -1.78033610185
+Error Rate: 0.765511467244
+Best Error: 0.758467396295
+
+[Epoch 240] 
+Train Loss: -1.77980486393
+Valid Loss: -1.7797374328
+Error Rate: 0.770370074969
+Best Error: 0.758467396295
+
+[Epoch 241] 
+Train Loss: -1.78044698715
+Valid Loss: -1.7823330164
+Error Rate: 0.767890153917
+Best Error: 0.758467396295
+
+[Epoch 242] 
+Train Loss: -1.77853516102
+Valid Loss: -1.78119385242
+Error Rate: 0.770698444174
+Best Error: 0.758467396295
+
+[Epoch 243] 
+Train Loss: -1.7814089489
+Valid Loss: -1.78375585874
+Error Rate: 0.768399716956
+Best Error: 0.758467396295
+
+[Epoch 244] 
+Train Loss: -1.78126363277
+Valid Loss: -1.78123470147
+Error Rate: 0.772132252833
+Best Error: 0.758467396295
+
+[Epoch 245] 
+Train Loss: -1.78028008461
+Valid Loss: -1.78569372495
+Error Rate: 0.766718819306
+Best Error: 0.758467396295
+
+[Epoch 246] 
+Train Loss: -1.78171922207
+Valid Loss: -1.78515696526
+Error Rate: 0.767818440281
+Best Error: 0.758467396295
+
+[Epoch 247] 
+Train Loss: -1.78225322723
+Valid Loss: -1.78651614984
+Error Rate: 0.773582803002
+Best Error: 0.758467396295
+
+[Epoch 248] 
+Train Loss: -1.78252064705
+Valid Loss: -1.78365898132
+Error Rate: 0.764727400543
+Best Error: 0.758467396295
+
+[Epoch 249] 
+Train Loss: -1.78173960209
+Valid Loss: -1.78670581182
+Error Rate: 0.765621125924
+Best Error: 0.758467396295
+
+[Epoch 250] 
+Train Loss: -1.78300506592
+Valid Loss: -1.78521041075
+Error Rate: 0.763572022127
+Best Error: 0.758467396295
+
+[Epoch 251] 
+Train Loss: -1.78328596115
+Valid Loss: -1.78432285786
+Error Rate: 0.766991466766
+Best Error: 0.758467396295
+
+[Epoch 252] 
+Train Loss: -1.78410115242
+Valid Loss: -1.78586999575
+Error Rate: 0.764445721948
+Best Error: 0.758467396295
+
+[Epoch 253] 
+Train Loss: -1.78466626167
+Valid Loss: -1.78122528394
+Error Rate: 0.765914227298
+Best Error: 0.758467396295
+
+[Epoch 254] 
+Train Loss: -1.78306479931
+Valid Loss: -1.78282415867
+Error Rate: 0.760742849601
+Best Error: 0.758467396295
+
+[Epoch 255] 
+Train Loss: -1.78499010086
+Valid Loss: -1.7874875466
+Error Rate: 0.767586450776
+Best Error: 0.758467396295
+
+[Epoch 256] 
+Train Loss: -1.78470484734
+Valid Loss: -1.78802339236
+Error Rate: 0.768147059359
+Best Error: 0.758467396295
+
+[Epoch 257] 
+Train Loss: -1.78266453266
+Valid Loss: -1.7840231657
+Error Rate: 0.756905688206
+Best Error: 0.756905688206
+
+[Epoch 258] 
+Train Loss: -1.78537629128
+Valid Loss: -1.78375252088
+Error Rate: 0.765664960839
+Best Error: 0.756905688206
+
+[Epoch 259] 
+Train Loss: -1.78624491215
+Valid Loss: -1.7847101291
+Error Rate: 0.764527252034
+Best Error: 0.756905688206
+
+[Epoch 260] 
+Train Loss: -1.78562533379
+Valid Loss: -1.78405892849
+Error Rate: 0.761892409539
+Best Error: 0.756905688206
+
+[Epoch 261] 
+Train Loss: -1.78399591923
+Valid Loss: -1.78405980269
+Error Rate: 0.761683229896
+Best Error: 0.756905688206
+
+[Epoch 262] 
+Train Loss: -1.78046224117
+Valid Loss: -1.77647523085
+Error Rate: 0.786210899546
+Best Error: 0.756905688206
+
+[Epoch 263] 
+Train Loss: -1.77744909286
+Valid Loss: -1.78264963627
+Error Rate: 0.80053767044
+Best Error: 0.756905688206
+
+[Epoch 264] 
+Train Loss: -1.77996710777
+Valid Loss: -1.77986613909
+Error Rate: 0.793304588192
+Best Error: 0.756905688206
+
+[Epoch 265] 
+Train Loss: -1.78137575626
+Valid Loss: -1.7892879645
+Error Rate: 0.79009278826
+Best Error: 0.756905688206
+
+[Epoch 266] 
+Train Loss: -1.78086240768
+Valid Loss: -1.78417646885
+Error Rate: 0.786935425011
+Best Error: 0.756905688206
+
+[Epoch 267] 
+Train Loss: -1.78207057953
+Valid Loss: -1.78916128476
+Error Rate: 0.784036002393
+Best Error: 0.756905688206
+
+[Epoch 268] 
+Train Loss: -1.78228633881
+Valid Loss: -1.78705263138
+Error Rate: 0.785482768766
+Best Error: 0.756905688206
+
+[Epoch 269] 
+Train Loss: -1.78284873962
+Valid Loss: -1.78519590696
+Error Rate: 0.779976061108
+Best Error: 0.756905688206
+
+[Epoch 270] 
+Train Loss: -1.78290837288
+Valid Loss: -1.78472367922
+Error Rate: 0.777666446553
+Best Error: 0.756905688206
+
+[Epoch 271] 
+Train Loss: -1.78500702381
+Valid Loss: -1.78707897663
+Error Rate: 0.785474630036
+Best Error: 0.756905688206
+
+[Epoch 272] 
+Train Loss: -1.78347268581
+Valid Loss: -1.7886852026
+Error Rate: 0.783255719487
+Best Error: 0.756905688206
+
+[Epoch 273] 
+Train Loss: -1.78533174992
+Valid Loss: -1.78696465492
+Error Rate: 0.777362100881
+Best Error: 0.756905688206
+
+[Epoch 274] 
+Train Loss: -1.78559375286
+Valid Loss: -1.78906516234
+Error Rate: 0.765937465515
+Best Error: 0.756905688206
+
+[Epoch 275] 
+Train Loss: -1.78553067207
+Valid Loss: -1.78613297145
+Error Rate: 0.770096356624
+Best Error: 0.756905688206
+
+[Epoch 276] 
+Train Loss: -1.78607437611
+Valid Loss: -1.79011011124
+Error Rate: 0.767054327747
+Best Error: 0.756905688206
+
+[Epoch 277] 
+Train Loss: -1.78785999298
+Valid Loss: -1.78820733229
+Error Rate: 0.762634711704
+Best Error: 0.756905688206
+
+[Epoch 278] 
+Train Loss: -1.78610322952
+Valid Loss: -1.7889901797
+Error Rate: 0.765101853522
+Best Error: 0.756905688206
+
+[Epoch 279] 
+Train Loss: -1.78760184288
+Valid Loss: -1.79140110811
+Error Rate: 0.762018916818
+Best Error: 0.756905688206
+
+[Epoch 280] 
+Train Loss: -1.79022175312
+Valid Loss: -1.78773931662
+Error Rate: 0.768255290192
+Best Error: 0.756905688206
+
+[Epoch 281] 
+Train Loss: -1.79035559177
+Valid Loss: -1.79098109404
+Error Rate: 0.768700564402
+Best Error: 0.756905688206
+
+[Epoch 282] 
+Train Loss: -1.78975522518
+Valid Loss: -1.79181285699
+Error Rate: 0.770666460393
+Best Error: 0.756905688206
+
+[Epoch 283] 
+Train Loss: -1.78824614048
+Valid Loss: -1.79040857156
+Error Rate: 0.773600008563
+Best Error: 0.756905688206
+
+[Epoch 284] 
+Train Loss: -1.79024550915
+Valid Loss: -1.78750860691
+Error Rate: 0.770413874188
+Best Error: 0.756905688206
+
+[Epoch 285] 
+Train Loss: -1.78944693089
+Valid Loss: -1.78823459148
+Error Rate: 0.769756707425
+Best Error: 0.756905688206
+
+[Epoch 286] 
+Train Loss: -1.79014485359
+Valid Loss: -1.78665355841
+Error Rate: 0.77188377169
+Best Error: 0.756905688206
+
+[Epoch 287] 
+Train Loss: -1.79150389671
+Valid Loss: -1.79260985057
+Error Rate: 0.769687064168
+Best Error: 0.756905688206
+
+[Epoch 288] 
+Train Loss: -1.79104146004
+Valid Loss: -1.79017988841
+Error Rate: 0.766797350912
+Best Error: 0.756905688206
+
+[Epoch 289] 
+Train Loss: -1.78844721317
+Valid Loss: -1.78752330939
+Error Rate: 0.766144182121
+Best Error: 0.756905688206
+
+[Epoch 290] 
+Train Loss: -1.79021943569
+Valid Loss: -1.78980533282
+Error Rate: 0.769797972214
+Best Error: 0.756905688206
+
+[Epoch 291] 
+Train Loss: -1.79020783424
+Valid Loss: -1.79212868214
+Error Rate: 0.763935444985
+Best Error: 0.756905688206
+
+[Epoch 292] 
+Train Loss: -1.79074182034
+Valid Loss: -1.79256375631
+Error Rate: 0.760441431016
+Best Error: 0.756905688206
+
+[Epoch 293] 
+Train Loss: -1.79147150517
+Valid Loss: -1.79001744588
+Error Rate: 0.765278977992
+Best Error: 0.756905688206
+
+[Epoch 294] 
+Train Loss: -1.7926460743
+Valid Loss: -1.79131670793
+Error Rate: 0.762967078881
+Best Error: 0.756905688206
+
+[Epoch 295] 
+Train Loss: -1.79111979485
+Valid Loss: -1.79089915752
+Error Rate: 0.768884007096
+Best Error: 0.756905688206
+
+[Epoch 296] 
+Train Loss: -1.79157602787
+Valid Loss: -1.79407258828
+Error Rate: 0.769366797997
+Best Error: 0.756905688206
+
+[Epoch 297] 
+Train Loss: -1.79212213516
+Valid Loss: -1.78939676285
+Error Rate: 0.766121979094
+Best Error: 0.756905688206
+
+[Epoch 298] 
+Train Loss: -1.79313242912
+Valid Loss: -1.78886127472
+Error Rate: 0.762173302818
+Best Error: 0.756905688206
+
+[Epoch 299] 
+Train Loss: -1.79355774879
+Valid Loss: -1.79169086615
+Error Rate: 0.762041548199
+Best Error: 0.756905688206
+
+[Epoch 300] 
+Train Loss: -1.7929140377
+Valid Loss: -1.79337871075
+Error Rate: 0.765738780549
+Best Error: 0.756905688206
+
+[Epoch 301] 
+Train Loss: -1.79335748672
+Valid Loss: -1.79281640053
+Error Rate: 0.769726044402
+Best Error: 0.756905688206
+
+[Epoch 302] 
+Train Loss: -1.79284761906
+Valid Loss: -1.79153013229
+Error Rate: 0.764475064212
+Best Error: 0.756905688206
+
+[Epoch 303] 
+Train Loss: -1.7921463728
+Valid Loss: -1.79402462641
+Error Rate: 0.765566832027
+Best Error: 0.756905688206
+
+[Epoch 304] 
+Train Loss: -1.79381089687
+Valid Loss: -1.79256657759
+Error Rate: 0.765728035998
+Best Error: 0.756905688206
+
+[Epoch 305] 
+Train Loss: -1.79238936901
+Valid Loss: -1.79305823644
+Error Rate: 0.761034951482
+Best Error: 0.756905688206
+
+[Epoch 306] 
+Train Loss: -1.79242921352
+Valid Loss: -1.79251253605
+Error Rate: 0.763745327104
+Best Error: 0.756905688206
+
+[Epoch 307] 
+Train Loss: -1.79435319901
+Valid Loss: -1.79513895512
+Error Rate: 0.765286724064
+Best Error: 0.756905688206
+
+[Epoch 308] 
+Train Loss: -1.79468413353
+Valid Loss: -1.79488412539
+Error Rate: 0.761176094197
+Best Error: 0.756905688206
+
+[Epoch 309] 
+Train Loss: -1.79291708946
+Valid Loss: -1.7926047643
+Error Rate: 0.765938714881
+Best Error: 0.756905688206
+
+[Epoch 310] 
+Train Loss: -1.79310338974
+Valid Loss: -1.79222957293
+Error Rate: 0.774953322325
+Best Error: 0.756905688206
+
+[Epoch 311] 
+Train Loss: -1.79373944759
+Valid Loss: -1.78931625684
+Error Rate: 0.769541138164
+Best Error: 0.756905688206
+
+[Epoch 312] 
+Train Loss: -1.79530888081
+Valid Loss: -1.7929114898
+Error Rate: 0.76976470337
+Best Error: 0.756905688206
+
+[Epoch 313] 
+Train Loss: -1.79372329712
+Valid Loss: -1.79533100128
+Error Rate: 0.764386252104
+Best Error: 0.756905688206
+
+[Epoch 314] 
+Train Loss: -1.79476396084
+Valid Loss: -1.79472037156
+Error Rate: 0.768286060303
+Best Error: 0.756905688206
+
+[Epoch 315] 
+Train Loss: -1.79620248318
+Valid Loss: -1.79327042898
+Error Rate: 0.766241489921
+Best Error: 0.756905688206
+
+[Epoch 316] 
+Train Loss: -1.7961746788
+Valid Loss: -1.79051959515
+Error Rate: 0.768536219167
+Best Error: 0.756905688206
+
+[Epoch 317] 
+Train Loss: -1.795558424
+Valid Loss: -1.79597830772
+Error Rate: 0.770730499348
+Best Error: 0.756905688206
+
+[Epoch 318] 
+Train Loss: -1.79593361378
+Valid Loss: -1.79249338309
+Error Rate: 0.766231316509
+Best Error: 0.756905688206
+
+[Epoch 319] 
+Train Loss: -1.7949367857
+Valid Loss: -1.79458137353
+Error Rate: 0.771152356861
+Best Error: 0.756905688206
+
+[Epoch 320] 
+Train Loss: -1.79628153324
+Valid Loss: -1.79383218288
+Error Rate: 0.76385773439
+Best Error: 0.756905688206
+
+[Epoch 321] 
+Train Loss: -1.7949534893
+Valid Loss: -1.7929144303
+Error Rate: 0.768304729408
+Best Error: 0.756905688206
+
+[Epoch 322] 
+Train Loss: -1.79805027962
+Valid Loss: -1.79415686925
+Error Rate: 0.764856870606
+Best Error: 0.756905688206
+
+[Epoch 323] 
+Train Loss: -1.7968999958
+Valid Loss: -1.7908235391
+Error Rate: 0.761107236256
+Best Error: 0.756905688206
+
+[Epoch 324] 
+Train Loss: -1.7964926672
+Valid Loss: -1.79743425051
+Error Rate: 0.768199782624
+Best Error: 0.756905688206
+
+[Epoch 325] 
+Train Loss: -1.7972536993
+Valid Loss: -1.79395067692
+Error Rate: 0.763769993168
+Best Error: 0.756905688206
+
+[Epoch 326] 
+Train Loss: -1.7960341692
+Valid Loss: -1.79627160231
+Error Rate: 0.765195520312
+Best Error: 0.756905688206
+
+[Epoch 327] 
+Train Loss: -1.79803725719
+Valid Loss: -1.79304607709
+Error Rate: 0.76882642915
+Best Error: 0.756905688206
+
+[Epoch 328] 
+Train Loss: -1.79596001148
+Valid Loss: -1.79699222247
+Error Rate: 0.765680881338
+Best Error: 0.756905688206
+
+[Epoch 329] 
+Train Loss: -1.79904616833
+Valid Loss: -1.79729318619
+Error Rate: 0.763110184887
+Best Error: 0.756905688206
+
+[Epoch 330] 
+Train Loss: -1.79781047821
+Valid Loss: -1.79429606597
+Error Rate: 0.761069969439
+Best Error: 0.756905688206
+
+[Epoch 331] 
+Train Loss: -1.79787009716
+Valid Loss: -1.79329907894
+Error Rate: 0.761325946781
+Best Error: 0.756905688206
+
+[Epoch 332] 
+Train Loss: -1.79746638775
+Valid Loss: -1.79278429349
+Error Rate: 0.758998412741
+Best Error: 0.756905688206
+
+[Epoch 333] 
+Train Loss: -1.79930141926
+Valid Loss: -1.79750903447
+Error Rate: 0.766670201102
+Best Error: 0.756905688206
+
+[Epoch 334] 
+Train Loss: -1.79820705414
+Valid Loss: -1.79545632998
+Error Rate: 0.758411924424
+Best Error: 0.756905688206
+
+[Epoch 335] 
+Train Loss: -1.79679187298
+Valid Loss: -1.79793894291
+Error Rate: 0.758398788228
+Best Error: 0.756905688206
+
+[Epoch 336] 
+Train Loss: -1.79425225735
+Valid Loss: -1.79374758403
+Error Rate: 0.772530515168
+Best Error: 0.756905688206
+
+[Epoch 337] 
+Train Loss: -1.79543907642
+Valid Loss: -1.79799338182
+Error Rate: 0.768330145092
+Best Error: 0.756905688206
+
+[Epoch 338] 
+Train Loss: -1.7986915493
+Valid Loss: -1.79426530997
+Error Rate: 0.758648018991
+Best Error: 0.756905688206
+
+[Epoch 339] 
+Train Loss: -1.79800520897
+Valid Loss: -1.79457358519
+Error Rate: 0.75457915366
+Best Error: 0.75457915366
+
+[Epoch 340] 
+Train Loss: -1.79700235844
+Valid Loss: -1.79698455334
+Error Rate: 0.759849267004
+Best Error: 0.75457915366
+
+[Epoch 341] 
+Train Loss: -1.79917961121
+Valid Loss: -1.79593086243
+Error Rate: 0.766728957022
+Best Error: 0.75457915366
+
+[Epoch 342] 
+Train Loss: -1.79839636803
+Valid Loss: -1.7935680151
+Error Rate: 0.761963052289
+Best Error: 0.75457915366
+
+[Epoch 343] 
+Train Loss: -1.79856622219
+Valid Loss: -1.79439310233
+Error Rate: 0.759988553518
+Best Error: 0.75457915366
+
+[Epoch 344] 
+Train Loss: -1.79894313812
+Valid Loss: -1.79682060083
+Error Rate: 0.762820117688
+Best Error: 0.75457915366
+
+[Epoch 345] 
+Train Loss: -1.80107873917
+Valid Loss: -1.79774475098
+Error Rate: 0.76042062014
+Best Error: 0.75457915366
+
+[Epoch 346] 
+Train Loss: -1.79945158005
+Valid Loss: -1.79670612017
+Error Rate: 0.765531956854
+Best Error: 0.75457915366
+
+[Epoch 347] 
+Train Loss: -1.80081926823
+Valid Loss: -1.79961423079
+Error Rate: 0.764901562229
+Best Error: 0.75457915366
+
+[Epoch 348] 
+Train Loss: -1.79826034546
+Valid Loss: -1.79822166761
+Error Rate: 0.768021373092
+Best Error: 0.75457915366
+
+[Epoch 349] 
+Train Loss: -1.80064871788
+Valid Loss: -1.79578626156
+Error Rate: 0.765791289637
+Best Error: 0.75457915366
+
+[Epoch 350] 
+Train Loss: -1.79902528763
+Valid Loss: -1.79384553432
+Error Rate: 0.767121543664
+Best Error: 0.75457915366
+
+[Epoch 351] 
+Train Loss: -1.79249808311
+Valid Loss: -1.78899069627
+Error Rate: 0.776297854825
+Best Error: 0.75457915366
+
+[Epoch 352] 
+Train Loss: -1.79230202198
+Valid Loss: -1.79542557398
+Error Rate: 0.785491121674
+Best Error: 0.75457915366
+
+[Epoch 353] 
+Train Loss: -1.79306872845
+Valid Loss: -1.79411300023
+Error Rate: 0.78657239481
+Best Error: 0.75457915366
+
+[Epoch 354] 
+Train Loss: -1.79506940842
+Valid Loss: -1.79510529836
+Error Rate: 0.783916384477
+Best Error: 0.75457915366
+
+[Epoch 355] 
+Train Loss: -1.79613487244
+Valid Loss: -1.79662958781
+Error Rate: 0.778791447516
+Best Error: 0.75457915366
+
+[Epoch 356] 
+Train Loss: -1.79822464466
+Valid Loss: -1.79935753345
+Error Rate: 0.777455553493
+Best Error: 0.75457915366
+
+[Epoch 357] 
+Train Loss: -1.79828628063
+Valid Loss: -1.79832502206
+Error Rate: 0.784564555802
+Best Error: 0.75457915366
+
+[Epoch 358] 
+Train Loss: -1.79602358341
+Valid Loss: -1.79557788372
+Error Rate: 0.783514231258
+Best Error: 0.75457915366
+
+[Epoch 359] 
+Train Loss: -1.79739836216
+Valid Loss: -1.79906205336
+Error Rate: 0.777612224049
+Best Error: 0.75457915366
+
+[Epoch 360] 
+Train Loss: -1.79803276539
+Valid Loss: -1.79991253217
+Error Rate: 0.780774549068
+Best Error: 0.75457915366
+
+[Epoch 361] 
+Train Loss: -1.79660289288
+Valid Loss: -1.79620420933
+Error Rate: 0.781617264601
+Best Error: 0.75457915366
+
+[Epoch 362] 
+Train Loss: -1.79771520138
+Valid Loss: -1.79937867324
+Error Rate: 0.780044883353
+Best Error: 0.75457915366
+
+[Epoch 363] 
+Train Loss: -1.79904384613
+Valid Loss: -1.79856880506
+Error Rate: 0.773466112174
+Best Error: 0.75457915366
+
+[Epoch 364] 
+Train Loss: -1.79928864002
+Valid Loss: -1.80000782013
+Error Rate: 0.771395090919
+Best Error: 0.75457915366
+
+[Epoch 365] 
+Train Loss: -1.79957350731
+Valid Loss: -1.79854253928
+Error Rate: 0.772179407493
+Best Error: 0.75457915366
+
+[Epoch 366] 
+Train Loss: -1.79931339264
+Valid Loss: -1.79685978095
+Error Rate: 0.780157326335
+Best Error: 0.75457915366
+
+[Epoch 367] 
+Train Loss: -1.80102889538
+Valid Loss: -1.80141035716
+Error Rate: 0.776270725724
+Best Error: 0.75457915366
+
+[Epoch 368] 
+Train Loss: -1.80003070354
+Valid Loss: -1.80130624771
+Error Rate: 0.775498188891
+Best Error: 0.75457915366
+
+[Epoch 369] 
+Train Loss: -1.80105160236
+Valid Loss: -1.80192220211
+Error Rate: 0.774641409061
+Best Error: 0.75457915366
+
+[Epoch 370] 
+Train Loss: -1.80044967651
+Valid Loss: -1.8000442187
+Error Rate: 0.773626816398
+Best Error: 0.75457915366
+
+[Epoch 371] 
+Train Loss: -1.80085024834
+Valid Loss: -1.79864199956
+Error Rate: 0.769637375078
+Best Error: 0.75457915366
+
+[Epoch 372] 
+Train Loss: -1.80060072422
+Valid Loss: -1.79854349295
+Error Rate: 0.773995665076
+Best Error: 0.75457915366
+
+[Epoch 373] 
+Train Loss: -1.80089644432
+Valid Loss: -1.80001854897
+Error Rate: 0.766447492604
+Best Error: 0.75457915366
+
+[Epoch 374] 
+Train Loss: -1.79890669346
+Valid Loss: -1.79938177268
+Error Rate: 0.774845983897
+Best Error: 0.75457915366
+
+[Epoch 375] 
+Train Loss: -1.80170915604
+Valid Loss: -1.80042823156
+Error Rate: 0.761249164287
+Best Error: 0.75457915366
+
+[Epoch 376] 
+Train Loss: -1.80227577209
+Valid Loss: -1.80382549763
+Error Rate: 0.758888325707
+Best Error: 0.75457915366
+
+[Epoch 377] 
+Train Loss: -1.8014951992
+Valid Loss: -1.79637928804
+Error Rate: 0.763530793033
+Best Error: 0.75457915366
+
+[Epoch 378] 
+Train Loss: -1.8019989872
+Valid Loss: -1.80095720291
+Error Rate: 0.766160638062
+Best Error: 0.75457915366
+
+[Epoch 379] 
+Train Loss: -1.80292402267
+Valid Loss: -1.79798217614
+Error Rate: 0.758884684696
+Best Error: 0.75457915366
+
+[Epoch 380] 
+Train Loss: -1.80296976566
+Valid Loss: -1.80114690463
+Error Rate: 0.762241161265
+Best Error: 0.75457915366
+
+[Epoch 381] 
+Train Loss: -1.80438808918
+Valid Loss: -1.80014884472
+Error Rate: 0.762367168798
+Best Error: 0.75457915366
+
+[Epoch 382] 
+Train Loss: -1.80299214363
+Valid Loss: -1.79572109381
+Error Rate: 0.759009050205
+Best Error: 0.75457915366
+
+[Epoch 383] 
+Train Loss: -1.80340345383
+Valid Loss: -1.79937048753
+Error Rate: 0.760817418931
+Best Error: 0.75457915366
+
+[Epoch 384] 
+Train Loss: -1.80427114487
+Valid Loss: -1.80015901724
+Error Rate: 0.766203116523
+Best Error: 0.75457915366
+
+[Epoch 385] 
+Train Loss: -1.80422611237
+Valid Loss: -1.79996530215
+Error Rate: 0.760978087459
+Best Error: 0.75457915366
+
+[Epoch 386] 
+Train Loss: -1.80303918839
+Valid Loss: -1.80062317848
+Error Rate: 0.76917739404
+Best Error: 0.75457915366
+
+[Epoch 387] 
+Train Loss: -1.80302941322
+Valid Loss: -1.80195748806
+Error Rate: 0.766445921972
+Best Error: 0.75457915366
+
+[Epoch 388] 
+Train Loss: -1.80451054096
+Valid Loss: -1.79841895898
+Error Rate: 0.753332285921
+Best Error: 0.753332285921
+
+[Epoch 389] 
+Train Loss: -1.80575817108
+Valid Loss: -1.80251038074
+Error Rate: 0.763917596893
+Best Error: 0.753332285921
+
+[Epoch 390] 
+Train Loss: -1.80298356533
+Valid Loss: -1.79998409748
+Error Rate: 0.769703305932
+Best Error: 0.753332285921
+
+[Epoch 391] 
+Train Loss: -1.80470049858
+Valid Loss: -1.80094158649
+Error Rate: 0.766384453142
+Best Error: 0.753332285921
+
+[Epoch 392] 
+Train Loss: -1.8050860548
+Valid Loss: -1.79989671707
+Error Rate: 0.762428387755
+Best Error: 0.753332285921
+
+[Epoch 393] 
+Train Loss: -1.80416198254
+Valid Loss: -1.80106405417
+Error Rate: 0.760020608692
+Best Error: 0.753332285921
+
+[Epoch 394] 
+Train Loss: -1.80559977055
+Valid Loss: -1.79995799065
+Error Rate: 0.759019544883
+Best Error: 0.753332285921
+
+[Epoch 395] 
+Train Loss: -1.80497172832
+Valid Loss: -1.80042473475
+Error Rate: 0.759039534746
+Best Error: 0.753332285921
+
+[Epoch 396] 
+Train Loss: -1.80468938828
+Valid Loss: -1.80240480105
+Error Rate: 0.763541501889
+Best Error: 0.753332285921
+
+[Epoch 397] 
+Train Loss: -1.80603987694
+Valid Loss: -1.80396914482
+Error Rate: 0.764706411186
+Best Error: 0.753332285921
+
+[Epoch 398] 
+Train Loss: -1.80576207638
+Valid Loss: -1.80193666617
+Error Rate: 0.759211733142
+Best Error: 0.753332285921
+
+[Epoch 399] 
+Train Loss: -1.8062970686
+Valid Loss: -1.79878985882
+Error Rate: 0.756601235445
+Best Error: 0.753332285921
+
+[Epoch 400] 
+Train Loss: -1.80697303772
+Valid Loss: -1.80200648308
+Error Rate: 0.764005231026
+Best Error: 0.753332285921
+
+[Epoch 401] 
+Train Loss: -1.80792048454
+Valid Loss: -1.80432291826
+Error Rate: 0.765257810154
+Best Error: 0.753332285921
+
+[Epoch 402] 
+Train Loss: -1.80649847031
+Valid Loss: -1.80190380414
+Error Rate: 0.760043168681
+Best Error: 0.753332285921
+
+[Epoch 403] 
+Train Loss: -1.80821495056
+Valid Loss: -1.80297032992
+Error Rate: 0.7654248683
+Best Error: 0.753332285921
+
+[Epoch 404] 
+Train Loss: -1.80728007317
+Valid Loss: -1.7992494901
+Error Rate: 0.766082820379
+Best Error: 0.753332285921
+
+[Epoch 405] 
+Train Loss: -1.8068337965
+Valid Loss: -1.80401150386
+Error Rate: 0.766138363643
+Best Error: 0.753332285921
+
+[Epoch 406] 
+Train Loss: -1.80769648552
+Valid Loss: -1.80093884468
+Error Rate: 0.764188316759
+Best Error: 0.753332285921
+
+[Epoch 407] 
+Train Loss: -1.80728138924
+Valid Loss: -1.80056035519
+Error Rate: 0.765622161113
+Best Error: 0.753332285921
+
+[Epoch 408] 
+Train Loss: -1.80806367397
+Valid Loss: -1.8038273255
+Error Rate: 0.763044218337
+Best Error: 0.753332285921
+
+[Epoch 409] 
+Train Loss: -1.80879007816
+Valid Loss: -1.80485765139
+Error Rate: 0.762900791066
+Best Error: 0.753332285921
+
+[Epoch 410] 
+Train Loss: -1.80428306103
+Valid Loss: -1.80257328351
+Error Rate: 0.772984534943
+Best Error: 0.753332285921
+
+[Epoch 411] 
+Train Loss: -1.80467563629
+Valid Loss: -1.79969064395
+Error Rate: 0.768375586335
+Best Error: 0.753332285921
+
+[Epoch 412] 
+Train Loss: -1.80773156166
+Valid Loss: -1.80064829191
+Error Rate: 0.769830134477
+Best Error: 0.753332285921
+
+[Epoch 413] 
+Train Loss: -1.80623231411
+Valid Loss: -1.80311795076
+Error Rate: 0.765877174658
+Best Error: 0.753332285921
+
+[Epoch 414] 
+Train Loss: -1.80681750298
+Valid Loss: -1.80198574066
+Error Rate: 0.766843863041
+Best Error: 0.753332285921
+
+[Epoch 415] 
+Train Loss: -1.80816447258
+Valid Loss: -1.80273195108
+Error Rate: 0.768741329445
+Best Error: 0.753332285921
+
+[Epoch 416] 
+Train Loss: -1.80812339783
+Valid Loss: -1.80373108387
+Error Rate: 0.765461421193
+Best Error: 0.753332285921
+
+[Epoch 417] 
+Train Loss: -1.80840556622
+Valid Loss: -1.79900125662
+Error Rate: 0.762858848049
+Best Error: 0.753332285921
+
+[Epoch 418] 
+Train Loss: -1.80718310833
+Valid Loss: -1.80321915944
+Error Rate: 0.767643528975
+Best Error: 0.753332285921
+
+[Epoch 419] 
+Train Loss: -1.81035543919
+Valid Loss: -1.80172892412
+Error Rate: 0.767544008012
+Best Error: 0.753332285921
+
+[Epoch 420] 
+Train Loss: -1.80846032619
+Valid Loss: -1.8011884292
+Error Rate: 0.765729106883
+Best Error: 0.753332285921
+
+[Epoch 421] 
+Train Loss: -1.81001850128
+Valid Loss: -1.80337309837
+Error Rate: 0.756586707098
+Best Error: 0.753332285921
+
+[Epoch 422] 
+Train Loss: -1.80839484215
+Valid Loss: -1.80015138785
+Error Rate: 0.758384331273
+Best Error: 0.753332285921
+
+[Epoch 423] 
+Train Loss: -1.80926175594
+Valid Loss: -1.80296866099
+Error Rate: 0.764999369776
+Best Error: 0.753332285921
+
+[Epoch 424] 
+Train Loss: -1.81027713776
+Valid Loss: -1.80037311713
+Error Rate: 0.767733447665
+Best Error: 0.753332285921
+
+[Epoch 425] 
+Train Loss: -1.80957302094
+Valid Loss: -1.80371809006
+Error Rate: 0.765705832971
+Best Error: 0.753332285921
+
+[Epoch 426] 
+Train Loss: -1.80985432148
+Valid Loss: -1.80410166581
+Error Rate: 0.770433292913
+Best Error: 0.753332285921
+
+[Epoch 427] 
+Train Loss: -1.81091678619
+Valid Loss: -1.80230327447
+Error Rate: 0.759846803968
+Best Error: 0.753332285921
+
+[Epoch 428] 
+Train Loss: -1.80946930408
+Valid Loss: -1.80432327588
+Error Rate: 0.761828192102
+Best Error: 0.753332285921
+
+[Epoch 429] 
+Train Loss: -1.80997301579
+Valid Loss: -1.80151776473
+Error Rate: 0.756840007226
+Best Error: 0.753332285921
+
+[Epoch 430] 
+Train Loss: -1.80904045582
+Valid Loss: -1.80243706703
+Error Rate: 0.759110927116
+Best Error: 0.753332285921
+
+[Epoch 431] 
+Train Loss: -1.80954403877
+Valid Loss: -1.8025050958
+Error Rate: 0.763694388648
+Best Error: 0.753332285921
+
+[Epoch 432] 
+Train Loss: -1.809172225
+Valid Loss: -1.80175499121
+Error Rate: 0.758095442048
+Best Error: 0.753332285921
+
+[Epoch 433] 
+Train Loss: -1.81069979191
+Valid Loss: -1.8019105196
+Error Rate: 0.76462170414
+Best Error: 0.753332285921
+
+[Epoch 434] 
+Train Loss: -1.80912784576
+Valid Loss: -1.80453685919
+Error Rate: 0.762254618727
+Best Error: 0.753332285921
+
+[Epoch 435] 
+Train Loss: -1.81026567936
+Valid Loss: -1.80128224691
+Error Rate: 0.764069091501
+Best Error: 0.753332285921
+
+[Epoch 436] 
+Train Loss: -1.81133508205
+Valid Loss: -1.80483945211
+Error Rate: 0.765775333443
+Best Error: 0.753332285921
+
+[Epoch 437] 
+Train Loss: -1.81039076805
+Valid Loss: -1.80146662394
+Error Rate: 0.768003953354
+Best Error: 0.753332285921
+
+[Epoch 438] 
+Train Loss: -1.80738798141
+Valid Loss: -1.79971623421
+Error Rate: 0.766974903736
+Best Error: 0.753332285921
+
+[Epoch 439] 
+Train Loss: -1.80725167751
+Valid Loss: -1.80080763499
+Error Rate: 0.763155019295
+Best Error: 0.753332285921
+
+[Epoch 440] 
+Train Loss: -1.81077457905
+Valid Loss: -1.80134526889
+Error Rate: 0.767711887169
+Best Error: 0.753332285921
+
+[Epoch 441] 
+Train Loss: -1.81152973652
+Valid Loss: -1.8033465147
+Error Rate: 0.762937308263
+Best Error: 0.753332285921
+
+[Epoch 442] 
+Train Loss: -1.81209012032
+Valid Loss: -1.80089596907
+Error Rate: 0.759477776808
+Best Error: 0.753332285921
+
+[Epoch 443] 
+Train Loss: -1.81177187443
+Valid Loss: -1.80367894967
+Error Rate: 0.764431907524
+Best Error: 0.753332285921
+
+[Epoch 444] 
+Train Loss: -1.81143897057
+Valid Loss: -1.80133056641
+Error Rate: 0.7648101443
+Best Error: 0.753332285921
+
+[Epoch 445] 
+Train Loss: -1.81274479389
+Valid Loss: -1.80121393998
+Error Rate: 0.766449848552
+Best Error: 0.753332285921
+
+[Epoch 446] 
+Train Loss: -1.81245893955
+Valid Loss: -1.80481517315
+Error Rate: 0.768357345584
+Best Error: 0.753332285921
+
+[Epoch 447] 
+Train Loss: -1.81033803463
+Valid Loss: -1.80275038878
+Error Rate: 0.765070690753
+Best Error: 0.753332285921
+
+[Epoch 448] 
+Train Loss: -1.81115137577
+Valid Loss: -1.80484724045
+Error Rate: 0.761000897321
+Best Error: 0.753332285921
+
+[Epoch 449] 
+Train Loss: -1.81272876263
+Valid Loss: -1.8030731678
+Error Rate: 0.762104159308
+Best Error: 0.753332285921
+
+[Epoch 450] 
+Train Loss: -1.81290557861
+Valid Loss: -1.80243575573
+Error Rate: 0.76101335529
+Best Error: 0.753332285921
+
+[Epoch 451] 
+Train Loss: -1.81355493546
+Valid Loss: -1.8032134374
+Error Rate: 0.75694541806
+Best Error: 0.753332285921
+
+[Epoch 452] 
+Train Loss: -1.81198956013
+Valid Loss: -1.8032998244
+Error Rate: 0.759694631132
+Best Error: 0.753332285921
+
+[Epoch 453] 
+Train Loss: -1.81186288834
+Valid Loss: -1.8047186931
+Error Rate: 0.761256803271
+Best Error: 0.753332285921
+
+[Epoch 454] 
+Train Loss: -1.81272421837
+Valid Loss: -1.80188671748
+Error Rate: 0.766724887657
+Best Error: 0.753332285921
+
+[Epoch 455] 
+Train Loss: -1.81298232555
+Valid Loss: -1.80355191231
+Error Rate: 0.7610909231
+Best Error: 0.753332285921
+
+[Epoch 456] 
+Train Loss: -1.81266001225
+Valid Loss: -1.79853204886
+Error Rate: 0.764371009833
+Best Error: 0.753332285921
+
+[Epoch 457] 
+Train Loss: -1.81312883854
+Valid Loss: -1.80596554279
+Error Rate: 0.768475856918
+Best Error: 0.753332285921
+
+[Epoch 458] 
+Train Loss: -1.81245928288
+Valid Loss: -1.80300156275
+Error Rate: 0.767028555102
+Best Error: 0.753332285921
+
+[Epoch 459] 
+Train Loss: -1.81398012638
+Valid Loss: -1.805377086
+Error Rate: 0.760578968416
+Best Error: 0.753332285921
+
+[Epoch 460] 
+Train Loss: -1.81257806301
+Valid Loss: -1.80394562085
+Error Rate: 0.763970891297
+Best Error: 0.753332285921
+
+[Epoch 461] 
+Train Loss: -1.81346643448
+Valid Loss: -1.80426847935
+Error Rate: 0.761174309388
+Best Error: 0.753332285921
+
+[Epoch 462] 
+Train Loss: -1.8137307024
+Valid Loss: -1.80353109042
+Error Rate: 0.761690083563
+Best Error: 0.753332285921
+
+[Epoch 463] 
+Train Loss: -1.81103023052
+Valid Loss: -1.80099999905
+Error Rate: 0.767034088011
+Best Error: 0.753332285921
+
+[Epoch 464] 
+Train Loss: -1.81052399158
+Valid Loss: -1.79750974973
+Error Rate: 0.775306714555
+Best Error: 0.753332285921
+
+[Epoch 465] 
+Train Loss: -1.81312862396
+Valid Loss: -1.80601088206
+Error Rate: 0.765006044962
+Best Error: 0.753332285921
+
+[Epoch 466] 
+Train Loss: -1.81329116344
+Valid Loss: -1.80512619019
+Error Rate: 0.768387366076
+Best Error: 0.753332285921
+
+[Epoch 467] 
+Train Loss: -1.81319040775
+Valid Loss: -1.80668695768
+Error Rate: 0.769135593807
+Best Error: 0.753332285921
+
+[Epoch 468] 
+Train Loss: -1.81456983089
+Valid Loss: -1.80134439468
+Error Rate: 0.761248378971
+Best Error: 0.753332285921
+
+[Epoch 469] 
+Train Loss: -1.81362380505
+Valid Loss: -1.80350220203
+Error Rate: 0.764491413065
+Best Error: 0.753332285921
+
+[Epoch 470] 
+Train Loss: -1.81502185345
+Valid Loss: -1.80292371909
+Error Rate: 0.76099707783
+Best Error: 0.753332285921
+
+[Epoch 471] 
+Train Loss: -1.81468225956
+Valid Loss: -1.80354193846
+Error Rate: 0.761169311922
+Best Error: 0.753332285921
+
+[Epoch 472] 
+Train Loss: -1.81474940777
+Valid Loss: -1.80563672384
+Error Rate: 0.771714536077
+Best Error: 0.753332285921
+
+[Epoch 473] 
+Train Loss: -1.81484357357
+Valid Loss: -1.80370342731
+Error Rate: 0.763469823949
+Best Error: 0.753332285921
+
+[Epoch 474] 
+Train Loss: -1.81461727619
+Valid Loss: -1.80542767048
+Error Rate: 0.761251770109
+Best Error: 0.753332285921
+
+[Epoch 475] 
+Train Loss: -1.81534418583
+Valid Loss: -1.80035662651
+Error Rate: 0.76655475964
+Best Error: 0.753332285921
+
+[Epoch 476] 
+Train Loss: -1.81470218182
+Valid Loss: -1.80473633607
+Error Rate: 0.764267633682
+Best Error: 0.753332285921
+
+[Epoch 477] 
+Train Loss: -1.81439968109
+Valid Loss: -1.80616291364
+Error Rate: 0.767854457732
+Best Error: 0.753332285921
+
+[Epoch 478] 
+Train Loss: -1.81555988789
+Valid Loss: -1.80054052671
+Error Rate: 0.767375379234
+Best Error: 0.753332285921
+
+[Epoch 479] 
+Train Loss: -1.81582170963
+Valid Loss: -1.80346719424
+Error Rate: 0.753870548693
+Best Error: 0.753332285921
+
+[Epoch 480] 
+Train Loss: -1.81468943596
+Valid Loss: -1.80478028456
+Error Rate: 0.762886655377
+Best Error: 0.753332285921
+
+[Epoch 481] 
+Train Loss: -1.8151778841
+Valid Loss: -1.80241938432
+Error Rate: 0.764011906213
+Best Error: 0.753332285921
+
+[Epoch 482] 
+Train Loss: -1.8152742672
+Valid Loss: -1.80308882395
+Error Rate: 0.766671950215
+Best Error: 0.753332285921
+
+[Epoch 483] 
+Train Loss: -1.81509891987
+Valid Loss: -1.80566636721
+Error Rate: 0.757461120843
+Best Error: 0.753332285921
+
+[Epoch 484] 
+Train Loss: -1.81545423031
+Valid Loss: -1.80024707317
+Error Rate: 0.773023515177
+Best Error: 0.753332285921
+
+[Epoch 485] 
+Train Loss: -1.81577912331
+Valid Loss: -1.80212601026
+Error Rate: 0.762051685916
+Best Error: 0.753332285921
+
+[Epoch 486] 
+Train Loss: -1.81304742813
+Valid Loss: -1.8048217694
+Error Rate: 0.759163257723
+Best Error: 0.753332285921
+
+[Epoch 487] 
+Train Loss: -1.81588079453
+Valid Loss: -1.80191719532
+Error Rate: 0.7596584352
+Best Error: 0.753332285921
+
+[Epoch 488] 
+Train Loss: -1.81650225163
+Valid Loss: -1.80284627279
+Error Rate: 0.760482767198
+Best Error: 0.753332285921
+
+[Epoch 489] 
+Train Loss: -1.81619641781
+Valid Loss: -1.80396898588
+Error Rate: 0.762969292045
+Best Error: 0.753332285921
+
+[Epoch 490] 
+Train Loss: -1.81622445583
+Valid Loss: -1.80341116587
+Error Rate: 0.766188231213
+Best Error: 0.753332285921
+
+[Epoch 491] 
+Train Loss: -1.81574876308
+Valid Loss: -1.80136156082
+Error Rate: 0.7646520102
+Best Error: 0.753332285921
+
+[Epoch 492] 
+Train Loss: -1.81845236301
+Valid Loss: -1.80691564083
+Error Rate: 0.769107393821
+Best Error: 0.753332285921
+
+[Epoch 493] 
+Train Loss: -1.81787127495
+Valid Loss: -1.80488661925
+Error Rate: 0.760763303515
+Best Error: 0.753332285921
+
+[Epoch 494] 
+Train Loss: -1.81666664124
+Valid Loss: -1.80172924201
+Error Rate: 0.760102352955
+Best Error: 0.753332285921
+
+[Epoch 495] 
+Train Loss: -1.81712765694
+Valid Loss: -1.8020935456
+Error Rate: 0.762865023489
+Best Error: 0.753332285921
+
+[Epoch 496] 
+Train Loss: -1.81496088982
+Valid Loss: -1.80380058289
+Error Rate: 0.758321363203
+Best Error: 0.753332285921
+
+[Epoch 497] 
+Train Loss: -1.81713374138
+Valid Loss: -1.80489261945
+Error Rate: 0.764462606243
+Best Error: 0.753332285921
+
+[Epoch 498] 
+Train Loss: -1.8177225399
+Valid Loss: -1.80718441804
+Error Rate: 0.762611402095
+Best Error: 0.753332285921
+
+[Epoch 499] 
+Train Loss: -1.81664259911
+Valid Loss: -1.80383308729
+Error Rate: 0.768684536815
+Best Error: 0.753332285921
+
+[Epoch 500] 
+Train Loss: -1.81715452671
+Valid Loss: -1.80337456862
+Error Rate: 0.766486936889
+Best Error: 0.753332285921
+
+[Epoch 501] 
+Train Loss: -1.81775902271
+Valid Loss: -1.8058826526
+Error Rate: 0.765445536391
+Best Error: 0.753332285921
+
+[Epoch 502] 
+Train Loss: -1.81820385456
+Valid Loss: -1.80527921518
+Error Rate: 0.761300138439
+Best Error: 0.753332285921
+
+[Epoch 503] 
+Train Loss: -1.81757374763
+Valid Loss: -1.80656965574
+Error Rate: 0.764104537813
+Best Error: 0.753332285921
+
+[Epoch 504] 
+Train Loss: -1.81820634842
+Valid Loss: -1.80500594775
+Error Rate: 0.760397024962
+Best Error: 0.753332285921
+
+[Epoch 505] 
+Train Loss: -1.8183946991
+Valid Loss: -1.80454512437
+Error Rate: 0.762218922542
+Best Error: 0.753332285921
+
+[Epoch 506] 
+Train Loss: -1.8179380703
+Valid Loss: -1.80794958274
+Error Rate: 0.764144410451
+Best Error: 0.753332285921
+
+[Epoch 507] 
+Train Loss: -1.81923606396
+Valid Loss: -1.80457194646
+Error Rate: 0.760784435656
+Best Error: 0.753332285921
+
+[Epoch 508] 
+Train Loss: -1.81833810329
+Valid Loss: -1.80187467734
+Error Rate: 0.76419906131
+Best Error: 0.753332285921
+
+[Epoch 509] 
+Train Loss: -1.81787687778
+Valid Loss: -1.80767170588
+Error Rate: 0.76017977798
+Best Error: 0.753332285921
+
+[Epoch 510] 
+Train Loss: -1.81760701656
+Valid Loss: -1.80591619015
+Error Rate: 0.762107621838
+Best Error: 0.753332285921
+
+[Epoch 511] 
+Train Loss: -1.81788069248
+Valid Loss: -1.80328659217
+Error Rate: 0.762222135199
+Best Error: 0.753332285921
+
+[Epoch 512] 
+Train Loss: -1.81949599743
+Valid Loss: -1.80506424109
+Error Rate: 0.765208549419
+Best Error: 0.753332285921
+
+[Epoch 513] 
+Train Loss: -1.81984431267
+Valid Loss: -1.80428167184
+Error Rate: 0.767313874708
+Best Error: 0.753332285921
+
+[Epoch 514] 
+Train Loss: -1.82019635201
+Valid Loss: -1.80277129014
+Error Rate: 0.764624559834
+Best Error: 0.753332285921
+
+[Epoch 515] 
+Train Loss: -1.81855106831
+Valid Loss: -1.80399513245
+Error Rate: 0.767450876665
+Best Error: 0.753332285921
+
+[Epoch 516] 
+Train Loss: -1.81825712681
+Valid Loss: -1.80701335271
+Error Rate: 0.762602692226
+Best Error: 0.753332285921
+
+[Epoch 517] 
+Train Loss: -1.81806985378
+Valid Loss: -1.80600384871
+Error Rate: 0.763048716056
+Best Error: 0.753332285921
+
+[Epoch 518] 
+Train Loss: -1.81920442581
+Valid Loss: -1.80589417617
+Error Rate: 0.760934395329
+Best Error: 0.753332285921
+
+[Epoch 519] 
+Train Loss: -1.81876348019
+Valid Loss: -1.80406498909
+Error Rate: 0.769685957586
+Best Error: 0.753332285921
+
+[Epoch 520] 
+Train Loss: -1.8201390028
+Valid Loss: -1.80502907435
+Error Rate: 0.759115674709
+Best Error: 0.753332285921
+
+[Epoch 521] 
+Train Loss: -1.82144549847
+Valid Loss: -1.8011988004
+Error Rate: 0.754577939989
+Best Error: 0.753332285921
+
+[Epoch 522] 
+Train Loss: -1.81863752842
+Valid Loss: -1.80197227001
+Error Rate: 0.769297047652
+Best Error: 0.753332285921
+
+[Epoch 523] 
+Train Loss: -1.81991632938
+Valid Loss: -1.8060413599
+Error Rate: 0.762301202248
+Best Error: 0.753332285921
+
+[Epoch 524] 
+Train Loss: -1.81945186615
+Valid Loss: -1.80037891865
+Error Rate: 0.768666974292
+Best Error: 0.753332285921
+
+[Epoch 525] 
+Train Loss: -1.81461672783
+Valid Loss: -1.8018099467
+Error Rate: 0.766321163806
+Best Error: 0.753332285921
+
+[Epoch 526] 
+Train Loss: -1.81762537956
+Valid Loss: -1.80592278639
+Error Rate: 0.766322448869
+Best Error: 0.753332285921
+
+[Epoch 527] 
+Train Loss: -1.82003269196
+Valid Loss: -1.804139932
+Error Rate: 0.76617984261
+Best Error: 0.753332285921
+
+[Epoch 528] 
+Train Loss: -1.81917076588
+Valid Loss: -1.8034936587
+Error Rate: 0.763635311462
+Best Error: 0.753332285921
+
+[Epoch 529] 
+Train Loss: -1.82105768681
+Valid Loss: -1.80660577615
+Error Rate: 0.758364484194
+Best Error: 0.753332285921
+
+[Epoch 530] 
+Train Loss: -1.8195612669
+Valid Loss: -1.80324319998
+Error Rate: 0.76231241085
+Best Error: 0.753332285921
+
+[Epoch 531] 
+Train Loss: -1.8207384634
+Valid Loss: -1.8071107467
+Error Rate: 0.761537803638
+Best Error: 0.753332285921
+
+[Epoch 532] 
+Train Loss: -1.81931299686
+Valid Loss: -1.80823385715
+Error Rate: 0.755330701136
+Best Error: 0.753332285921
+
+[Epoch 533] 
+Train Loss: -1.82084619999
+Valid Loss: -1.80081546307
+Error Rate: 0.758533791199
+Best Error: 0.753332285921
+
+[Epoch 534] 
+Train Loss: -1.81976392269
+Valid Loss: -1.80434421698
+Error Rate: 0.767241697022
+Best Error: 0.753332285921
+
+[Epoch 535] 
+Train Loss: -1.82114600182
+Valid Loss: -1.80425878366
+Error Rate: 0.764591433775
+Best Error: 0.753332285921
+
+[Epoch 536] 
+Train Loss: -1.82068300247
+Valid Loss: -1.80484851201
+Error Rate: 0.761010106937
+Best Error: 0.753332285921
+
+[Epoch 537] 
+Train Loss: -1.82109077454
+Valid Loss: -1.80611391862
+Error Rate: 0.762720204067
+Best Error: 0.753332285921
+
+[Epoch 538] 
+Train Loss: -1.82197198391
+Valid Loss: -1.8007795016
+Error Rate: 0.764065057832
+Best Error: 0.753332285921
+
+[Epoch 539] 
+Train Loss: -1.8210473299
+Valid Loss: -1.8049646616
+Error Rate: 0.761470052279
+Best Error: 0.753332285921
+
+[Epoch 540] 
+Train Loss: -1.82068561077
+Valid Loss: -1.80330042044
+Error Rate: 0.763795765814
+Best Error: 0.753332285921
+
+[Epoch 541] 
+Train Loss: -1.82184928417
+Valid Loss: -1.80387687683
+Error Rate: 0.767291136238
+Best Error: 0.753332285921
+
+[Epoch 542] 
+Train Loss: -1.82127911091
+Valid Loss: -1.80272122224
+Error Rate: 0.760915333566
+Best Error: 0.753332285921
+
+[Epoch 543] 
+Train Loss: -1.82231957912
+Valid Loss: -1.80245065689
+Error Rate: 0.759842306248
+Best Error: 0.753332285921
+
+[Epoch 544] 
+Train Loss: -1.82212903976
+Valid Loss: -1.80338509878
+Error Rate: 0.763501664946
+Best Error: 0.753332285921
+
+[Epoch 545] 
+Train Loss: -1.82199464321
+Valid Loss: -1.80457194646
+Error Rate: 0.761638966626
+Best Error: 0.753332285921
+
+[Epoch 546] 
+Train Loss: -1.82120722771
+Valid Loss: -1.8062346379
+Error Rate: 0.763874404509
+Best Error: 0.753332285921
+
+[Epoch 547] 
+Train Loss: -1.82337571144
+Valid Loss: -1.80462344488
+Error Rate: 0.763128140068
+Best Error: 0.753332285921
+
+[Epoch 548] 
+Train Loss: -1.82256587505
+Valid Loss: -1.80467788378
+Error Rate: 0.760406056096
+Best Error: 0.753332285921
+
+[Epoch 549] 
+Train Loss: -1.82233251572
+Valid Loss: -1.8029131492
+Error Rate: 0.762017096313
+Best Error: 0.753332285921
+
+[Epoch 550] 
+Train Loss: -1.8236639595
+Valid Loss: -1.80494574706
+Error Rate: 0.765051129244
+Best Error: 0.753332285921
+
+[Epoch 551] 
+Train Loss: -1.82097911835
+Valid Loss: -1.80675983429
+Error Rate: 0.764021365702
+Best Error: 0.753332285921
+
+[Epoch 552] 
+Train Loss: -1.82326300621
+Valid Loss: -1.8046563069
+Error Rate: 0.762418250039
+Best Error: 0.753332285921
+
+[Epoch 553] 
+Train Loss: -1.8188650465
+Valid Loss: -1.80403145154
+Error Rate: 0.766319878743
+Best Error: 0.753332285921
+
+[Epoch 554] 
+Train Loss: -1.81998714447
+Valid Loss: -1.80463767052
+Error Rate: 0.768203673509
+Best Error: 0.753332285921
+
+[Epoch 555] 
+Train Loss: -1.82271147728
+Valid Loss: -1.80267735322
+Error Rate: 0.771286146162
+Best Error: 0.753332285921
+
+[Epoch 556] 
+Train Loss: -1.82147347927
+Valid Loss: -1.80939853191
+Error Rate: 0.763424525491
+Best Error: 0.753332285921
+
+[Epoch 557] 
+Train Loss: -1.82274712086
+Valid Loss: -1.80818450451
+Error Rate: 0.767791204092
+Best Error: 0.753332285921
+
+[Epoch 558] 
+Train Loss: -1.82215758801
+Valid Loss: -1.80289117495
+Error Rate: 0.759587078526
+Best Error: 0.753332285921
+
+[Epoch 559] 
+Train Loss: -1.8235239315
+Valid Loss: -1.80461283525
+Error Rate: 0.761453239376
+Best Error: 0.753332285921
+
+[Epoch 560] 
+Train Loss: -1.82152405262
+Valid Loss: -1.80378536383
+Error Rate: 0.764606247691
+Best Error: 0.753332285921
+
+[Epoch 561] 
+Train Loss: -1.82240550995
+Valid Loss: -1.80447471142
+Error Rate: 0.761154105347
+Best Error: 0.753332285921
+
+[Epoch 562] 
+Train Loss: -1.82288517952
+Valid Loss: -1.80307225386
+Error Rate: 0.768516836139
+Best Error: 0.753332285921
+
+[Epoch 563] 
+Train Loss: -1.82386875629
+Valid Loss: -1.8050532341
+Error Rate: 0.759731255417
+Best Error: 0.753332285921
+
+[Epoch 564] 
+Train Loss: -1.82236467838
+Valid Loss: -1.8033948342
+Error Rate: 0.765927541975
+Best Error: 0.753332285921
+
+[Epoch 565] 
+Train Loss: -1.82283072948
+Valid Loss: -1.80449191729
+Error Rate: 0.766292107111
+Best Error: 0.753332285921
+
+[Epoch 566] 
+Train Loss: -1.82391104221
+Valid Loss: -1.80724652608
+Error Rate: 0.760423618619
+Best Error: 0.753332285921
+
+[Epoch 567] 
+Train Loss: -1.82383822918
+Valid Loss: -1.80260181427
+Error Rate: 0.760594888914
+Best Error: 0.753332285921
+
+[Epoch 568] 
+Train Loss: -1.8249190855
+Valid Loss: -1.80512464046
+Error Rate: 0.759607925098
+Best Error: 0.753332285921
+
+[Epoch 569] 
+Train Loss: -1.82311861515
+Valid Loss: -1.80643081665
+Error Rate: 0.760844976386
+Best Error: 0.753332285921
+
+[Epoch 570] 
+Train Loss: -1.8250684309
+Valid Loss: -1.80359824498
+Error Rate: 0.755575220003
+Best Error: 0.753332285921
+
+[Epoch 571] 
+Train Loss: -1.82399811745
+Valid Loss: -1.80300124486
+Error Rate: 0.765410768307
+Best Error: 0.753332285921
+
+[Epoch 572] 
+Train Loss: -1.82530716896
+Valid Loss: -1.8065896829
+Error Rate: 0.761568252484
+Best Error: 0.753332285921
+
+[Epoch 573] 
+Train Loss: -1.82534955025
+Valid Loss: -1.8031373024
+Error Rate: 0.756512744603
+Best Error: 0.753332285921
+
+[Epoch 574] 
+Train Loss: -1.82369519234
+Valid Loss: -1.80768485864
+Error Rate: 0.764827778215
+Best Error: 0.753332285921
+
+[Epoch 575] 
+Train Loss: -1.8234439373
+Valid Loss: -1.80650790532
+Error Rate: 0.75528472445
+Best Error: 0.753332285921
+
+[Epoch 576] 
+Train Loss: -1.82464623928
+Valid Loss: -1.80533297857
+Error Rate: 0.764162437025
+Best Error: 0.753332285921
+
+[Epoch 577] 
+Train Loss: -1.82453328609
+Valid Loss: -1.80934055646
+Error Rate: 0.753514550641
+Best Error: 0.753332285921
+
+[Epoch 578] 
+Train Loss: -1.82460804462
+Valid Loss: -1.80268259843
+Error Rate: 0.765518249519
+Best Error: 0.753332285921
+
+[Epoch 579] 
+Train Loss: -1.82434593201
+Valid Loss: -1.80736188094
+Error Rate: 0.755920723376
+Best Error: 0.753332285921
+
+[Epoch 580] 
+Train Loss: -1.82421016693
+Valid Loss: -1.80828551451
+Error Rate: 0.760620019029
+Best Error: 0.753332285921
+
+[Epoch 581] 
+Train Loss: -1.82609137058
+Valid Loss: -1.80322416623
+Error Rate: 0.760869963715
+Best Error: 0.753332285921
+
+[Epoch 582] 
+Train Loss: -1.82504014492
+Valid Loss: -1.80332370599
+Error Rate: 0.766413973887
+Best Error: 0.753332285921
+
+[Epoch 583] 
+Train Loss: -1.82455716133
+Valid Loss: -1.80148379008
+Error Rate: 0.751360214491
+Best Error: 0.751360214491
+
+[Epoch 584] 
+Train Loss: -1.82765605927
+Valid Loss: -1.80124036471
+Error Rate: 0.763446728518
+Best Error: 0.751360214491
+
+[Epoch 585] 
+Train Loss: -1.82592437267
+Valid Loss: -1.80205702782
+Error Rate: 0.763108435773
+Best Error: 0.751360214491
+
+[Epoch 586] 
+Train Loss: -1.82579955101
+Valid Loss: -1.80318899949
+Error Rate: 0.767655451501
+Best Error: 0.751360214491
+
+[Epoch 587] 
+Train Loss: -1.82565998554
+Valid Loss: -1.80358425776
+Error Rate: 0.771352362585
+Best Error: 0.751360214491
+
+[Epoch 588] 
+Train Loss: -1.82601932526
+Valid Loss: -1.80394963423
+Error Rate: 0.757694680981
+Best Error: 0.751360214491
+
+[Epoch 589] 
+Train Loss: -1.82656118393
+Valid Loss: -1.80815784136
+Error Rate: 0.756870456072
+Best Error: 0.751360214491
+
+[Epoch 590] 
+Train Loss: -1.82614605427
+Valid Loss: -1.80261786779
+Error Rate: 0.758881829002
+Best Error: 0.751360214491
+
+[Epoch 591] 
+Train Loss: -1.82552170277
+Valid Loss: -1.8053800265
+Error Rate: 0.757707138949
+Best Error: 0.751360214491
+
+[Epoch 592] 
+Train Loss: -1.8269203043
+Valid Loss: -1.80699996154
+Error Rate: 0.769126955331
+Best Error: 0.751360214491
+
+[Epoch 593] 
+Train Loss: -1.82634404182
+Valid Loss: -1.80486392975
+Error Rate: 0.755321205951
+Best Error: 0.751360214491
+
+[Epoch 594] 
+Train Loss: -1.82569721699
+Valid Loss: -1.80334480604
+Error Rate: 0.75942087709
+Best Error: 0.751360214491
+
+[Epoch 595] 
+Train Loss: -1.82775060177
+Valid Loss: -1.80608105659
+Error Rate: 0.758932446192
+Best Error: 0.751360214491
+
+[Epoch 596] 
+Train Loss: -1.82611844063
+Valid Loss: -1.80310940742
+Error Rate: 0.76459671681
+Best Error: 0.751360214491
+
+[Epoch 597] 
+Train Loss: -1.82734024525
+Valid Loss: -1.80464482307
+Error Rate: 0.758177793147
+Best Error: 0.751360214491
+
+[Epoch 598] 
+Train Loss: -1.82848297596
+Valid Loss: -1.80490561326
+Error Rate: 0.761342474115
+Best Error: 0.751360214491
+
+[Epoch 599] 
+Train Loss: -1.82830608845
+Valid Loss: -1.8024870952
+Error Rate: 0.761087531962
+Best Error: 0.751360214491
+
+[Epoch 600] 
+Train Loss: -1.82598234653
+Valid Loss: -1.80050718784
+Error Rate: 0.759807431076
+Best Error: 0.751360214491
+
+[Epoch 601] 
+Train Loss: -1.82746687412
+Valid Loss: -1.80484096209
+Error Rate: 0.760568687915
+Best Error: 0.751360214491
+
+[Epoch 602] 
+Train Loss: -1.82660758018
+Valid Loss: -1.80279727777
+Error Rate: 0.757304557376
+Best Error: 0.751360214491
+
+[Epoch 603] 
+Train Loss: -1.82651040077
+Valid Loss: -1.80082952976
+Error Rate: 0.76384520503
+Best Error: 0.751360214491
+
+[Epoch 604] 
+Train Loss: -1.82363759995
+Valid Loss: -1.80526351929
+Error Rate: 0.763613572486
+Best Error: 0.751360214491
+
+[Epoch 605] 
+Train Loss: -1.82546730042
+Valid Loss: -1.80719125271
+Error Rate: 0.755935822863
+Best Error: 0.751360214491
+
+[Epoch 606] 
+Train Loss: -1.82602350235
+Valid Loss: -1.80606599649
+Error Rate: 0.756427823379
+Best Error: 0.751360214491
+
+[Epoch 607] 
+Train Loss: -1.82711381912
+Valid Loss: -1.80794405937
+Error Rate: 0.758589370159
+Best Error: 0.751360214491
+
+[Epoch 608] 
+Train Loss: -1.82801759243
+Valid Loss: -1.80658590794
+Error Rate: 0.754745283704
+Best Error: 0.751360214491
+
+[Epoch 609] 
+Train Loss: -1.82585574627
+Valid Loss: -1.80392241478
+Error Rate: 0.761191586341
+Best Error: 0.751360214491
+
+[Epoch 610] 
+Train Loss: -1.82688755989
+Valid Loss: -1.80525461833
+Error Rate: 0.758541894233
+Best Error: 0.751360214491
+
+[Epoch 611] 
+Train Loss: -1.82824415207
+Valid Loss: -1.80503972371
+Error Rate: 0.755115167572
+Best Error: 0.751360214491
+
+[Epoch 612] 
+Train Loss: -1.82876554012
+Valid Loss: -1.80242609978
+Error Rate: 0.761660063072
+Best Error: 0.751360214491
+
+[Epoch 613] 
+Train Loss: -1.82607500553
+Valid Loss: -1.80361894766
+Error Rate: 0.762133216002
+Best Error: 0.751360214491
+
+[Epoch 614] 
+Train Loss: -1.82843101978
+Valid Loss: -1.80379660924
+Error Rate: 0.761330051842
+Best Error: 0.751360214491
+
+[Epoch 615] 
+Train Loss: -1.82850327492
+Valid Loss: -1.80354229609
+Error Rate: 0.762571636545
+Best Error: 0.751360214491
+
+[Epoch 616] 
+Train Loss: -1.8273090601
+Valid Loss: -1.80256104469
+Error Rate: 0.76040751964
+Best Error: 0.751360214491
+
+[Epoch 617] 
+Train Loss: -1.82851369381
+Valid Loss: -1.80771934986
+Error Rate: 0.758480461099
+Best Error: 0.751360214491
+
+[Epoch 618] 
+Train Loss: -1.82795341492
+Valid Loss: -1.8046741883
+Error Rate: 0.758503413746
+Best Error: 0.751360214491
+
+[Epoch 619] 
+Train Loss: -1.82846180916
+Valid Loss: -1.80290472507
+Error Rate: 0.757938021873
+Best Error: 0.751360214491
+
+[Epoch 620] 
+Train Loss: -1.82725637436
+Valid Loss: -1.80533385277
+Error Rate: 0.755719825248
+Best Error: 0.751360214491
+
+[Epoch 621] 
+Train Loss: -1.82881391525
+Valid Loss: -1.80333995819
+Error Rate: 0.758687963021
+Best Error: 0.751360214491
+
+[Epoch 622] 
+Train Loss: -1.82802819252
+Valid Loss: -1.80458537738
+Error Rate: 0.761574070962
+Best Error: 0.751360214491
+
+[Epoch 623] 
+Train Loss: -1.82764233112
+Valid Loss: -1.80524317424
+Error Rate: 0.75543143577
+Best Error: 0.751360214491
+
+[Epoch 624] 
+Train Loss: -1.82833846569
+Valid Loss: -1.80331476529
+Error Rate: 0.758816397895
+Best Error: 0.751360214491
+
+[Epoch 625] 
+Train Loss: -1.82905948162
+Valid Loss: -1.80764289697
+Error Rate: 0.757496781332
+Best Error: 0.751360214491
+
+[Epoch 626] 
+Train Loss: -1.82946713448
+Valid Loss: -1.80412618319
+Error Rate: 0.755912299077
+Best Error: 0.751360214491
+
+[Epoch 627] 
+Train Loss: -1.82724236488
+Valid Loss: -1.80602045854
+Error Rate: 0.75781379915
+Best Error: 0.751360214491
+
+[Epoch 628] 
+Train Loss: -1.83062589169
+Valid Loss: -1.80387934049
+Error Rate: 0.748990701738
+Best Error: 0.748990701738
+
+[Epoch 629] 
+Train Loss: -1.82960910797
+Valid Loss: -1.80893421173
+Error Rate: 0.761867493602
+Best Error: 0.748990701738
+
+[Epoch 630] 
+Train Loss: -1.83026295185
+Valid Loss: -1.80339948336
+Error Rate: 0.752687220164
+Best Error: 0.748990701738
+
+[Epoch 631] 
+Train Loss: -1.82887279034
+Valid Loss: -1.80604461829
+Error Rate: 0.752442487121
+Best Error: 0.748990701738
+
+[Epoch 632] 
+Train Loss: -1.82962134361
+Valid Loss: -1.80241874854
+Error Rate: 0.764121814766
+Best Error: 0.748990701738
+
+[Epoch 633] 
+Train Loss: -1.8286631012
+Valid Loss: -1.80256398519
+Error Rate: 0.75903949905
+Best Error: 0.748990701738
+
+[Epoch 634] 
+Train Loss: -1.82962481022
+Valid Loss: -1.80277740955
+Error Rate: 0.753849452248
+Best Error: 0.748990701738
+
+[Epoch 635] 
+Train Loss: -1.8282169199
+Valid Loss: -1.80313694477
+Error Rate: 0.757091344064
+Best Error: 0.748990701738
+
+[Epoch 636] 
+Train Loss: -1.83074723244
+Valid Loss: -1.80252250036
+Error Rate: 0.756969013238
+Best Error: 0.748990701738
+
+[Epoch 637] 
+Train Loss: -1.82957061768
+Valid Loss: -1.80075267951
+Error Rate: 0.763279813157
+Best Error: 0.748990701738
+
+[Epoch 638] 
+Train Loss: -1.83195055008
+Valid Loss: -1.80574158827
+Error Rate: 0.755747168525
+Best Error: 0.748990701738
+
+[Epoch 639] 
+Train Loss: -1.82709409714
+Valid Loss: -1.80185298125
+Error Rate: 0.760021893755
+Best Error: 0.748990701738
+
+[Epoch 640] 
+Train Loss: -1.82979541302
+Valid Loss: -1.80422786872
+Error Rate: 0.759044567908
+Best Error: 0.748990701738
+
+[Epoch 641] 
+Train Loss: -1.83063623905
+Valid Loss: -1.80208754539
+Error Rate: 0.755080827842
+Best Error: 0.748990701738
+
+[Epoch 642] 
+Train Loss: -1.8304734993
+Valid Loss: -1.80136771997
+Error Rate: 0.760922472803
+Best Error: 0.748990701738
+
+[Epoch 643] 
+Train Loss: -1.82921961308
+Valid Loss: -1.80447733402
+Error Rate: 0.763205350915
+Best Error: 0.748990701738
+
+[Epoch 644] 
+Train Loss: -1.82983790874
+Valid Loss: -1.80192371209
+Error Rate: 0.760857077392
+Best Error: 0.748990701738
+
+[Epoch 645] 
+Train Loss: -1.8309945631
+Valid Loss: -1.80311286449
+Error Rate: 0.758585479275
+Best Error: 0.748990701738
+
+[Epoch 646] 
+Train Loss: -1.82965188026
+Valid Loss: -1.80477639039
+Error Rate: 0.761128225613
+Best Error: 0.748990701738
+
+[Epoch 647] 
+Train Loss: -1.83070009232
+Valid Loss: -1.80239844322
+Error Rate: 0.762776211381
+Best Error: 0.748990701738
+
+[Epoch 648] 
+Train Loss: -1.83021227837
+Valid Loss: -1.80401968956
+Error Rate: 0.763413352585
+Best Error: 0.748990701738
+
+[Epoch 649] 
+Train Loss: -1.83041194439
+Valid Loss: -1.80399314562
+Error Rate: 0.756569894195
+Best Error: 0.748990701738
+
+[Epoch 650] 
+Train Loss: -1.83105700016
+Valid Loss: -1.80477869511
+Error Rate: 0.75833046573
+Best Error: 0.748990701738
+
+[Epoch 651] 
+Train Loss: -1.83301620483
+Valid Loss: -1.80156691869
+Error Rate: 0.760099175995
+Best Error: 0.748990701738
+
+[Epoch 652] 
+Train Loss: -1.83046349525
+Valid Loss: -1.80400987466
+Error Rate: 0.756695401981
+Best Error: 0.748990701738
+
+[Epoch 653] 
+Train Loss: -1.83046388626
+Valid Loss: -1.80377260844
+Error Rate: 0.75882710675
+Best Error: 0.748990701738
+
+[Epoch 654] 
+Train Loss: -1.83152364731
+Valid Loss: -1.80578315258
+Error Rate: 0.754099753897
+Best Error: 0.748990701738
+
+[Epoch 655] 
+Train Loss: -1.83257014751
+Valid Loss: -1.79804758231
+Error Rate: 0.764388965014
+Best Error: 0.748990701738
+
+[Epoch 656] 
+Train Loss: -1.83204332829
+Valid Loss: -1.80304650466
+Error Rate: 0.760009721356
+Best Error: 0.748990701738
+
+[Epoch 657] 
+Train Loss: -1.8310148859
+Valid Loss: -1.80568917592
+Error Rate: 0.763970177373
+Best Error: 0.748990701738
+
+[Epoch 658] 
+Train Loss: -1.82992767811
+Valid Loss: -1.80551489194
+Error Rate: 0.756733204241
+Best Error: 0.748990701738
+
+[Epoch 659] 
+Train Loss: -1.83245054245
+Valid Loss: -1.80357178052
+Error Rate: 0.758870834577
+Best Error: 0.748990701738
+
+[Epoch 660] 
+Train Loss: -1.83276181698
+Valid Loss: -1.80153004328
+Error Rate: 0.761852965255
+Best Error: 0.748990701738
+
+[Epoch 661] 
+Train Loss: -1.83142619133
+Valid Loss: -1.80363651117
+Error Rate: 0.761896693081
+Best Error: 0.748990701738
+
+[Epoch 662] 
+Train Loss: -1.83133196831
+Valid Loss: -1.8064190944
+Error Rate: 0.760109278015
+Best Error: 0.748990701738
+
+[Epoch 663] 
+Train Loss: -1.8314010334
+Valid Loss: -1.80250402292
+Error Rate: 0.76674983929
+Best Error: 0.748990701738
+
+[Epoch 664] 
+Train Loss: -1.83223222733
+Valid Loss: -1.80484875043
+Error Rate: 0.755639687313
+Best Error: 0.748990701738
+
+[Epoch 665] 
+Train Loss: -1.83124825001
+Valid Loss: -1.80216614405
+Error Rate: 0.763207242813
+Best Error: 0.748990701738
+
+[Epoch 666] 
+Train Loss: -1.82990551949
+Valid Loss: -1.79799648126
+Error Rate: 0.772497888855
+Best Error: 0.748990701738
+
+[Epoch 667] 
+Train Loss: -1.83076762676
+Valid Loss: -1.80478481452
+Error Rate: 0.757949123387
+Best Error: 0.748990701738
+
+[Epoch 668] 
+Train Loss: -1.8319325304
+Valid Loss: -1.80108698209
+Error Rate: 0.764066806945
+Best Error: 0.748990701738
+
+[Epoch 669] 
+Train Loss: -1.8329762888
+Valid Loss: -1.79967300097
+Error Rate: 0.761993179869
+Best Error: 0.748990701738
+
+[Epoch 670] 
+Train Loss: -1.83249411106
+Valid Loss: -1.80260443687
+Error Rate: 0.765386601989
+Best Error: 0.748990701738
+
+[Epoch 671] 
+Train Loss: -1.83385721684
+Valid Loss: -1.80311894417
+Error Rate: 0.763529151009
+Best Error: 0.748990701738
+
+[Epoch 672] 
+Train Loss: -1.83220636845
+Valid Loss: -1.79823553562
+Error Rate: 0.76672813601
+Best Error: 0.748990701738
+
+[Epoch 673] 
+Train Loss: -1.83298544407
+Valid Loss: -1.79888955752
+Error Rate: 0.761349756136
+Best Error: 0.748990701738
+
+[Epoch 674] 
+Train Loss: -1.83170829296
+Valid Loss: -1.80034379164
+Error Rate: 0.766255732699
+Best Error: 0.748990701738
+
+[Epoch 675] 
+Train Loss: -1.83429263115
+Valid Loss: -1.800765872
+Error Rate: 0.760446749747
+Best Error: 0.748990701738
+
+[Epoch 676] 
+Train Loss: -1.83122956276
+Valid Loss: -1.8012701273
+Error Rate: 0.764206200547
+Best Error: 0.748990701738
+
+[Epoch 677] 
+Train Loss: -1.83362167835
+Valid Loss: -1.80092489719
+Error Rate: 0.763666509928
+Best Error: 0.748990701738
+
+[Epoch 678] 
+Train Loss: -1.83337523937
+Valid Loss: -1.79681106408
+Error Rate: 0.766599558352
+Best Error: 0.748990701738
+
+[Epoch 0] 
+Train Loss: 0.678618049622
+Valid Loss: 0.675776163737
+Error Rate: 0.575508085631
+Best Error: 0.575508085631
+
+[Epoch 1] 
+Train Loss: 0.634794688225
+Valid Loss: 0.659226834774
+Error Rate: 0.553079841749
+Best Error: 0.553079841749
+
+[Epoch 2] 
+Train Loss: 0.575236763954
+Valid Loss: 0.662231544654
+Error Rate: 0.574730033424
+Best Error: 0.553079841749
+
+[Epoch 3] 
+Train Loss: 0.525945600271
+Valid Loss: 0.628549734751
+Error Rate: 0.597398863049
+Best Error: 0.553079841749
+
+[Epoch 4] 
+Train Loss: 0.492291209698
+Valid Loss: 0.57921175162
+Error Rate: 0.596941738554
+Best Error: 0.553079841749
+
+[Epoch 5] 
+Train Loss: 0.474128510952
+Valid Loss: 0.560881396135
+Error Rate: 0.593109926998
+Best Error: 0.553079841749
+
+[Epoch 6] 
+Train Loss: 0.470539647341
+Valid Loss: 0.55480358998
+Error Rate: 0.598304563541
+Best Error: 0.553079841749
+
+[Epoch 7] 
+Train Loss: 0.46838886261
+Valid Loss: 0.546098391215
+Error Rate: 0.61130156831
+Best Error: 0.553079841749
+
+[Epoch 8] 
+Train Loss: 0.465255485773
+Valid Loss: 0.541908979416
+Error Rate: 0.624678112436
+Best Error: 0.553079841749
+
+[Epoch 9] 
+Train Loss: 0.462825487852
+Valid Loss: 0.536243140697
+Error Rate: 0.637148098903
+Best Error: 0.553079841749
+
+[Epoch 10] 
+Train Loss: 0.460700654984
+Valid Loss: 0.532873928547
+Error Rate: 0.645865689118
+Best Error: 0.553079841749
+
+[Epoch 11] 
+Train Loss: 0.458438876867
+Valid Loss: 0.530199448268
+Error Rate: 0.651895205679
+Best Error: 0.553079841749
+
+[Epoch 0] 
+Train Loss: 0.691432271004
+Valid Loss: 0.691325863202
+Error Rate: 0.590649303592
+Best Error: 0.590649303592
+
+[Epoch 1] 
+Train Loss: 0.670218830109
+Valid Loss: 0.678067028522
+Error Rate: 0.576073491085
+Best Error: 0.576073491085
+
+[Epoch 2] 
+Train Loss: 0.648015210629
+Valid Loss: 0.665056447188
+Error Rate: 0.563956309651
+Best Error: 0.563956309651
+
+[Epoch 3] 
+Train Loss: 0.627016603947
+Valid Loss: 0.654156287511
+Error Rate: 0.556585281428
+Best Error: 0.556585281428
+
+[Epoch 4] 
+Train Loss: 0.608091440201
+Valid Loss: 0.644434154034
+Error Rate: 0.553201026537
+Best Error: 0.553201026537
+
+[Epoch 5] 
+Train Loss: 0.591116886139
+Valid Loss: 0.63558502992
+Error Rate: 0.553338381652
+Best Error: 0.553201026537
+
+[Epoch 6] 
+Train Loss: 0.576009948254
+Valid Loss: 0.626671493053
+Error Rate: 0.555697882596
+Best Error: 0.553201026537
+
+[Epoch 7] 
+Train Loss: 0.562321631908
+Valid Loss: 0.617591341337
+Error Rate: 0.559529369819
+Best Error: 0.553201026537
+
+[Epoch 8] 
+Train Loss: 0.549439661503
+Valid Loss: 0.607185165087
+Error Rate: 0.563284638737
+Best Error: 0.553201026537
+
+[Epoch 9] 
+Train Loss: 0.536443984509
+Valid Loss: 0.594895998637
+Error Rate: 0.565053181404
+Best Error: 0.553201026537
+
+[Epoch 10] 
+Train Loss: 0.522882339954
+Valid Loss: 0.580510675907
+Error Rate: 0.564024187959
+Best Error: 0.553201026537
+
+[Epoch 11] 
+Train Loss: 0.509190326929
+Valid Loss: 0.566079417864
+Error Rate: 0.56015398925
+Best Error: 0.553201026537
+
+[Epoch 12] 
+Train Loss: 0.496899138689
+Valid Loss: 0.553588191668
+Error Rate: 0.55865102915
+Best Error: 0.553201026537
+
+[Epoch 13] 
+Train Loss: 0.486157536507
+Valid Loss: 0.542783796787
+Error Rate: 0.560545135103
+Best Error: 0.553201026537
+
+[Epoch 14] 
+Train Loss: 0.476545913219
+Valid Loss: 0.533275922139
+Error Rate: 0.564978515266
+Best Error: 0.553201026537
+
+[Epoch 15] 
+Train Loss: 0.467715620995
+Valid Loss: 0.525134285291
+Error Rate: 0.569531203717
+Best Error: 0.553201026537
+
+[Epoch 16] 
+Train Loss: 0.459738527536
+Valid Loss: 0.517904897531
+Error Rate: 0.576148968056
+Best Error: 0.553201026537
+
+[Epoch 17] 
+Train Loss: 0.452629388571
+Valid Loss: 0.510517259439
+Error Rate: 0.580462877764
+Best Error: 0.553201026537
+
+[Epoch 18] 
+Train Loss: 0.445980187654
+Valid Loss: 0.504659374555
+Error Rate: 0.58659453612
+Best Error: 0.553201026537
+
+[Epoch 19] 
+Train Loss: 0.440058634281
+Valid Loss: 0.499968320131
+Error Rate: 0.592573781034
+Best Error: 0.553201026537
+
+[Epoch 20] 
+Train Loss: 0.434863108397
+Valid Loss: 0.495231767495
+Error Rate: 0.59979346148
+Best Error: 0.553201026537
+
+[Epoch 21] 
+Train Loss: 0.430322351456
+Valid Loss: 0.49085538586
+Error Rate: 0.604797135261
+Best Error: 0.553201026537
+
+[Epoch 22] 
+Train Loss: 0.426107394695
+Valid Loss: 0.487176805735
+Error Rate: 0.612874028384
+Best Error: 0.553201026537
+
+[Epoch 23] 
+Train Loss: 0.422552648783
+Valid Loss: 0.484819124142
+Error Rate: 0.619594629518
+Best Error: 0.553201026537
+
+[Epoch 24] 
+Train Loss: 0.419288756847
+Valid Loss: 0.482069800297
+Error Rate: 0.625281233208
+Best Error: 0.553201026537
+
+[Epoch 25] 
+Train Loss: 0.416719087362
+Valid Loss: 0.479053258896
+Error Rate: 0.630934801245
+Best Error: 0.553201026537
+
+[Epoch 26] 
+Train Loss: 0.414230383635
+Valid Loss: 0.477576424678
+Error Rate: 0.638547202876
+Best Error: 0.553201026537
+
+[Epoch 27] 
+Train Loss: 0.412327418327
+Valid Loss: 0.475725601117
+Error Rate: 0.643486658681
+Best Error: 0.553201026537
+
+[Epoch 28] 
+Train Loss: 0.410153008699
+Valid Loss: 0.474243253469
+Error Rate: 0.650233669806
+Best Error: 0.553201026537
+
+[Epoch 29] 
+Train Loss: 0.408774616718
+Valid Loss: 0.472651729981
+Error Rate: 0.654161854659
+Best Error: 0.553201026537
+
+[Epoch 30] 
+Train Loss: 0.406866966486
+Valid Loss: 0.470650961002
+Error Rate: 0.660719455188
+Best Error: 0.553201026537
+
+[Epoch 31] 
+Train Loss: 0.405605783463
+Valid Loss: 0.469050546487
+Error Rate: 0.665904014234
+Best Error: 0.553201026537
+
+[Epoch 32] 
+Train Loss: 0.404255231619
+Valid Loss: 0.467614601056
+Error Rate: 0.669495402214
+Best Error: 0.553201026537
+
+[Epoch 33] 
+Train Loss: 0.403050925732
+Valid Loss: 0.466038733721
+Error Rate: 0.673437741895
+Best Error: 0.553201026537
+
+[Epoch 34] 
+Train Loss: 0.401900773048
+Valid Loss: 0.465591390928
+Error Rate: 0.678489254825
+Best Error: 0.553201026537
+
+[Epoch 35] 
+Train Loss: 0.401144233942
+Valid Loss: 0.464396168788
+Error Rate: 0.684609746852
+Best Error: 0.553201026537
+
+[Epoch 36] 
+Train Loss: 0.400055874586
+Valid Loss: 0.463538110256
+Error Rate: 0.687403112966
+Best Error: 0.553201026537
+
+[Epoch 37] 
+Train Loss: 0.399187742472
+Valid Loss: 0.461934864521
+Error Rate: 0.691855258121
+Best Error: 0.553201026537
+
+[Epoch 38] 
+Train Loss: 0.398448991776
+Valid Loss: 0.461374441783
+Error Rate: 0.696550050852
+Best Error: 0.553201026537
+
+[Epoch 39] 
+Train Loss: 0.397564476728
+Valid Loss: 0.461040278276
+Error Rate: 0.699114993719
+Best Error: 0.553201026537
+
+[Epoch 40] 
+Train Loss: 0.396698087454
+Valid Loss: 0.460559397936
+Error Rate: 0.702331614674
+Best Error: 0.553201026537
+
+[Epoch 41] 
+Train Loss: 0.396273380518
+Valid Loss: 0.46048861742
+Error Rate: 0.705083489303
+Best Error: 0.553201026537
+
+[Epoch 42] 
+Train Loss: 0.395585062504
+Valid Loss: 0.460408230623
+Error Rate: 0.708440801371
+Best Error: 0.553201026537
+
+[Epoch 43] 
+Train Loss: 0.395156168938
+Valid Loss: 0.459447075923
+Error Rate: 0.711297296628
+Best Error: 0.553201026537
+
+[Epoch 44] 
+Train Loss: 0.394486505985
+Valid Loss: 0.459476103385
+Error Rate: 0.71242440087
+Best Error: 0.553201026537
+
+[Epoch 45] 
+Train Loss: 0.394132624865
+Valid Loss: 0.458832303683
+Error Rate: 0.71590896739
+Best Error: 0.553201026537
+
+[Epoch 46] 
+Train Loss: 0.393712728024
+Valid Loss: 0.458843787511
+Error Rate: 0.718565742889
+Best Error: 0.553201026537
+
+[Epoch 47] 
+Train Loss: 0.393107465506
+Valid Loss: 0.458861658971
+Error Rate: 0.72001484051
+Best Error: 0.553201026537
+
+[Epoch 48] 
+Train Loss: 0.392973822355
+Valid Loss: 0.456589221954
+Error Rate: 0.720816152041
+Best Error: 0.553201026537
+
+[Epoch 49] 
+Train Loss: 0.392145992517
+Valid Loss: 0.456786185503
+Error Rate: 0.723423350892
+Best Error: 0.553201026537
+
+[Epoch 50] 
+Train Loss: 0.391907379627
+Valid Loss: 0.457532783349
+Error Rate: 0.727226852792
+Best Error: 0.553201026537
+
+[Epoch 51] 
+Train Loss: 0.391500504017
+Valid Loss: 0.455490549405
+Error Rate: 0.72604637257
+Best Error: 0.553201026537
+
+[Epoch 52] 
+Train Loss: 0.391080583334
+Valid Loss: 0.455335179965
+Error Rate: 0.728316913548
+Best Error: 0.553201026537
+
+[Epoch 53] 
+Train Loss: 0.390774593353
+Valid Loss: 0.455561240514
+Error Rate: 0.730455821575
+Best Error: 0.553201026537
+
+[Epoch 54] 
+Train Loss: 0.390325632095
+Valid Loss: 0.455235123634
+Error Rate: 0.729931421106
+Best Error: 0.553201026537
+
+[Epoch 55] 
+Train Loss: 0.389973404408
+Valid Loss: 0.455348501603
+Error Rate: 0.732681836237
+Best Error: 0.553201026537
+
+[Epoch 56] 
+Train Loss: 0.389387226105
+Valid Loss: 0.454942435026
+Error Rate: 0.733606301722
+Best Error: 0.553201026537
+
+[Epoch 57] 
+Train Loss: 0.389313704967
+Valid Loss: 0.455032000939
+Error Rate: 0.736948045796
+Best Error: 0.553201026537
+
+[Epoch 58] 
+Train Loss: 0.389078654051
+Valid Loss: 0.455229431391
+Error Rate: 0.736836382504
+Best Error: 0.553201026537
+
+[Epoch 59] 
+Train Loss: 0.388351448774
+Valid Loss: 0.454961458842
+Error Rate: 0.735530408497
+Best Error: 0.553201026537
+
+[Epoch 60] 
+Train Loss: 0.388278048038
+Valid Loss: 0.455179144939
+Error Rate: 0.738575526682
+Best Error: 0.553201026537
+
+[Epoch 61] 
+Train Loss: 0.387711571455
+Valid Loss: 0.454700301091
+Error Rate: 0.738637844992
+Best Error: 0.553201026537
+
+[Epoch 62] 
+Train Loss: 0.38736405611
+Valid Loss: 0.455541938543
+Error Rate: 0.737696537347
+Best Error: 0.553201026537
+
+[Epoch 63] 
+Train Loss: 0.386894956827
+Valid Loss: 0.454752892256
+Error Rate: 0.741299856156
+Best Error: 0.553201026537
+
+[Epoch 64] 
+Train Loss: 0.386757305861
+Valid Loss: 0.455361713966
+Error Rate: 0.742852439237
+Best Error: 0.553201026537
+
+[Epoch 65] 
+Train Loss: 0.386382659674
+Valid Loss: 0.4552132984
+Error Rate: 0.742538948022
+Best Error: 0.553201026537
+
+[Epoch 66] 
+Train Loss: 0.385985707045
+Valid Loss: 0.455848018328
+Error Rate: 0.743814365208
+Best Error: 0.553201026537
+
+[Epoch 67] 
+Train Loss: 0.38580008626
+Valid Loss: 0.454759637515
+Error Rate: 0.743501661659
+Best Error: 0.553201026537
+
+[Epoch 68] 
+Train Loss: 0.385389373302
+Valid Loss: 0.455977529287
+Error Rate: 0.74518844919
+Best Error: 0.553201026537
+
+[Epoch 69] 
+Train Loss: 0.385110673904
+Valid Loss: 0.455373555422
+Error Rate: 0.744766816016
+Best Error: 0.553201026537
+
+[Epoch 70] 
+Train Loss: 0.384759143591
+Valid Loss: 0.454625944297
+Error Rate: 0.746812594078
+Best Error: 0.553201026537
+
+[Epoch 71] 
+Train Loss: 0.384592471123
+Valid Loss: 0.45490565896
+Error Rate: 0.74641018923
+Best Error: 0.553201026537
+
+[Epoch 72] 
+Train Loss: 0.384188375473
+Valid Loss: 0.455268541972
+Error Rate: 0.745988463389
+Best Error: 0.553201026537
+
+[Epoch 73] 
+Train Loss: 0.384176750183
+Valid Loss: 0.455892701944
+Error Rate: 0.746306031936
+Best Error: 0.553201026537
+
+[Epoch 74] 
+Train Loss: 0.384037483931
+Valid Loss: 0.455073128144
+Error Rate: 0.747449399172
+Best Error: 0.553201026537
+
+[Epoch 75] 
+Train Loss: 0.38345605135
+Valid Loss: 0.45587883393
+Error Rate: 0.748497690443
+Best Error: 0.553201026537
+
+[Epoch 76] 
+Train Loss: 0.383274849653
+Valid Loss: 0.456159015497
+Error Rate: 0.749374756946
+Best Error: 0.553201026537
+
+[Epoch 77] 
+Train Loss: 0.383109081984
+Valid Loss: 0.45520105958
+Error Rate: 0.750399302393
+Best Error: 0.553201026537
+
+[Epoch 78] 
+Train Loss: 0.382669017315
+Valid Loss: 0.455437938372
+Error Rate: 0.749372417114
+Best Error: 0.553201026537
+
+[Epoch 79] 
+Train Loss: 0.382537884712
+Valid Loss: 0.455495874087
+Error Rate: 0.751220884751
+Best Error: 0.553201026537
+
+[Epoch 80] 
+Train Loss: 0.382125600576
+Valid Loss: 0.456563125054
+Error Rate: 0.748186098894
+Best Error: 0.553201026537
+
+[Epoch 81] 
+Train Loss: 0.381758915186
+Valid Loss: 0.455851713816
+Error Rate: 0.751351452035
+Best Error: 0.553201026537
+
+[Epoch 82] 
+Train Loss: 0.381596784592
+Valid Loss: 0.455775449673
+Error Rate: 0.75162820093
+Best Error: 0.553201026537
+
+[Epoch 83] 
+Train Loss: 0.381299108267
+Valid Loss: 0.455752044916
+Error Rate: 0.751863690008
+Best Error: 0.553201026537
+
+[Epoch 84] 
+Train Loss: 0.381277908087
+Valid Loss: 0.455790609121
+Error Rate: 0.752030513112
+Best Error: 0.553201026537
+
+[Epoch 85] 
+Train Loss: 0.380893256664
+Valid Loss: 0.455148696899
+Error Rate: 0.751474281655
+Best Error: 0.553201026537
+
+[Epoch 86] 
+Train Loss: 0.380876030922
+Valid Loss: 0.455567051967
+Error Rate: 0.75218531272
+Best Error: 0.553201026537
+
+[Epoch 87] 
+Train Loss: 0.380513350964
+Valid Loss: 0.454732775688
+Error Rate: 0.749498281566
+Best Error: 0.553201026537
+
+[Epoch 88] 
+Train Loss: 0.380169051886
+Valid Loss: 0.454429586728
+Error Rate: 0.751976720132
+Best Error: 0.553201026537
+
+[Epoch 89] 
+Train Loss: 0.380135823488
+Valid Loss: 0.455511907736
+Error Rate: 0.753011899076
+Best Error: 0.553201026537
+
+[Epoch 90] 
+Train Loss: 0.379666856527
+Valid Loss: 0.454555610816
+Error Rate: 0.75310621054
+Best Error: 0.553201026537
+
+[Epoch 91] 
+Train Loss: 0.379480136633
+Valid Loss: 0.45444654425
+Error Rate: 0.751864686175
+Best Error: 0.553201026537
+
+[Epoch 92] 
+Train Loss: 0.379203476906
+Valid Loss: 0.454955498377
+Error Rate: 0.751413214345
+Best Error: 0.553201026537
+
+[Epoch 93] 
+Train Loss: 0.379055833817
+Valid Loss: 0.454063991706
+Error Rate: 0.75254819525
+Best Error: 0.553201026537
+
+[Epoch 94] 
+Train Loss: 0.37884759903
+Valid Loss: 0.453947047393
+Error Rate: 0.752739366512
+Best Error: 0.553201026537
+
+[Epoch 95] 
+Train Loss: 0.37863411665
+Valid Loss: 0.453646451235
+Error Rate: 0.752869864296
+Best Error: 0.553201026537
+
+[Epoch 96] 
+Train Loss: 0.378268771172
+Valid Loss: 0.453718245029
+Error Rate: 0.753677060158
+Best Error: 0.553201026537
+
+[Epoch 97] 
+Train Loss: 0.378238102198
+Valid Loss: 0.453705489635
+Error Rate: 0.751340100372
+Best Error: 0.553201026537
+
+[Epoch 98] 
+Train Loss: 0.378063802719
+Valid Loss: 0.452997028828
+Error Rate: 0.749096293718
+Best Error: 0.553201026537
+
+[Epoch 99] 
+Train Loss: 0.377845133543
+Valid Loss: 0.452694306771
+Error Rate: 0.751525804302
+Best Error: 0.553201026537
+
+[Epoch 100] 
+Train Loss: 0.377700135708
+Valid Loss: 0.453694353501
+Error Rate: 0.751663506917
+Best Error: 0.553201026537
+
+[Epoch 101] 
+Train Loss: 0.377564134598
+Valid Loss: 0.453382074833
+Error Rate: 0.752268295689
+Best Error: 0.553201026537
+
+[Epoch 102] 
+Train Loss: 0.37729211688
+Valid Loss: 0.454408446948
+Error Rate: 0.75230932384
+Best Error: 0.553201026537
+
+[Epoch 103] 
+Train Loss: 0.377075176239
+Valid Loss: 0.453032384316
+Error Rate: 0.755066874301
+Best Error: 0.553201026537
+
+[Epoch 104] 
+Train Loss: 0.376668680906
+Valid Loss: 0.454670270284
+Error Rate: 0.752365016486
+Best Error: 0.553201026537
+
+[Epoch 105] 
+Train Loss: 0.376607015133
+Valid Loss: 0.454127927621
+Error Rate: 0.751779085374
+Best Error: 0.553201026537
+
+[Epoch 106] 
+Train Loss: 0.376656370163
+Valid Loss: 0.453025708596
+Error Rate: 0.750867384717
+Best Error: 0.553201026537
+
+[Epoch 107] 
+Train Loss: 0.376342049837
+Valid Loss: 0.452325125535
+Error Rate: 0.751845110349
+Best Error: 0.553201026537
+
+[Epoch 108] 
+Train Loss: 0.375978358984
+Valid Loss: 0.453619579474
+Error Rate: 0.752426315463
+Best Error: 0.553201026537
+
+[Epoch 109] 
+Train Loss: 0.376197338104
+Valid Loss: 0.45337203145
+Error Rate: 0.751888686832
+Best Error: 0.553201026537
+
+[Epoch 110] 
+Train Loss: 0.376029360294
+Valid Loss: 0.4532002906
+Error Rate: 0.751637305427
+Best Error: 0.553201026537
+
+[Epoch 111] 
+Train Loss: 0.375937720537
+Valid Loss: 0.45326496164
+Error Rate: 0.750173589645
+Best Error: 0.553201026537
+
+[Epoch 112] 
+Train Loss: 0.375838136673
+Valid Loss: 0.453824937344
+Error Rate: 0.752172015059
+Best Error: 0.553201026537
+
+[Epoch 113] 
+Train Loss: 0.375740722418
+Valid Loss: 0.453364501397
+Error Rate: 0.750822510901
+Best Error: 0.553201026537
+
+[Epoch 114] 
+Train Loss: 0.375731360912
+Valid Loss: 0.453678101301
+Error Rate: 0.750835993896
+Best Error: 0.553201026537
+
+[Epoch 115] 
+Train Loss: 0.375382574797
+Valid Loss: 0.454449524482
+Error Rate: 0.753108828372
+Best Error: 0.553201026537
+
+[Epoch 116] 
+Train Loss: 0.375631719828
+Valid Loss: 0.454105705023
+Error Rate: 0.752386630978
+Best Error: 0.553201026537
+
+[Epoch 117] 
+Train Loss: 0.375445266962
+Valid Loss: 0.453700443109
+Error Rate: 0.752666044039
+Best Error: 0.553201026537
+
+[Epoch 118] 
+Train Loss: 0.375322313309
+Valid Loss: 0.45373960336
+Error Rate: 0.751871450839
+Best Error: 0.553201026537
+
+[Epoch 119] 
+Train Loss: 0.375314742327
+Valid Loss: 0.454618901014
+Error Rate: 0.751530182801
+Best Error: 0.553201026537
+
+[Epoch 120] 
+Train Loss: 0.375011441708
+Valid Loss: 0.454503248135
+Error Rate: 0.750063779687
+Best Error: 0.553201026537
+
+[Epoch 121] 
+Train Loss: 0.375084906816
+Valid Loss: 0.454216082891
+Error Rate: 0.749915513076
+Best Error: 0.553201026537
+
+[Epoch 122] 
+Train Loss: 0.374861124754
+Valid Loss: 0.455249061187
+Error Rate: 0.750217351462
+Best Error: 0.553201026537
+
+[Epoch 123] 
+Train Loss: 0.37508286953
+Valid Loss: 0.454808245103
+Error Rate: 0.752653742544
+Best Error: 0.553201026537
+
+[Epoch 124] 
+Train Loss: 0.374782786369
+Valid Loss: 0.455970416466
+Error Rate: 0.75159298761
+Best Error: 0.553201026537
+
+[Epoch 125] 
+Train Loss: 0.374852615595
+Valid Loss: 0.455469250679
+Error Rate: 0.751814437694
+Best Error: 0.553201026537
+
+[Epoch 126] 
+Train Loss: 0.374755891562
+Valid Loss: 0.454407890638
+Error Rate: 0.753122241867
+Best Error: 0.553201026537
+
+[Epoch 127] 
+Train Loss: 0.374650720358
+Valid Loss: 0.455783089002
+Error Rate: 0.750449713041
+Best Error: 0.553201026537
+
+[Epoch 128] 
+Train Loss: 0.374367246628
+Valid Loss: 0.454608629147
+Error Rate: 0.751147863445
+Best Error: 0.553201026537
+
+[Epoch 129] 
+Train Loss: 0.374605956078
+Valid Loss: 0.454703480005
+Error Rate: 0.750483212029
+Best Error: 0.553201026537
+
+[Epoch 130] 
+Train Loss: 0.374349111319
+Valid Loss: 0.455015440782
+Error Rate: 0.751711878899
+Best Error: 0.553201026537
+
+[Epoch 131] 
+Train Loss: 0.374134310484
+Valid Loss: 0.454016834497
+Error Rate: 0.748730492189
+Best Error: 0.553201026537
+
+[Epoch 132] 
+Train Loss: 0.374119707346
+Valid Loss: 0.455089449883
+Error Rate: 0.749763377633
+Best Error: 0.553201026537
+
+[Epoch 133] 
+Train Loss: 0.374026284218
+Valid Loss: 0.454051971436
+Error Rate: 0.748228980378
+Best Error: 0.553201026537
+
+[Epoch 134] 
+Train Loss: 0.374082039595
+Valid Loss: 0.454259077708
+Error Rate: 0.750768694754
+Best Error: 0.553201026537
+
+[Epoch 135] 
+Train Loss: 0.373938132524
+Valid Loss: 0.453304290771
+Error Rate: 0.745697165832
+Best Error: 0.553201026537
+
+[Epoch 136] 
+Train Loss: 0.373708926439
+Valid Loss: 0.454682876666
+Error Rate: 0.746843035067
+Best Error: 0.553201026537
+
+[Epoch 137] 
+Train Loss: 0.373761488199
+Valid Loss: 0.45446507136
+Error Rate: 0.750432338048
+Best Error: 0.553201026537
+
+[Epoch 138] 
+Train Loss: 0.37350045085
+Valid Loss: 0.453780909379
+Error Rate: 0.744667199387
+Best Error: 0.553201026537
+
+[Epoch 139] 
+Train Loss: 0.373605632782
+Valid Loss: 0.454219778379
+Error Rate: 0.74433251068
+Best Error: 0.553201026537
+
+[Epoch 140] 
+Train Loss: 0.373445841074
+Valid Loss: 0.455195854108
+Error Rate: 0.744967045441
+Best Error: 0.553201026537
+
+[Epoch 141] 
+Train Loss: 0.373492536545
+Valid Loss: 0.453979313374
+Error Rate: 0.74550759307
+Best Error: 0.553201026537
+
+[Epoch 142] 
+Train Loss: 0.373325726986
+Valid Loss: 0.45447525382
+Error Rate: 0.744063545781
+Best Error: 0.553201026537
+
+[Epoch 143] 
+Train Loss: 0.373393332958
+Valid Loss: 0.455259233713
+Error Rate: 0.744602216911
+Best Error: 0.553201026537
+
+[Epoch 144] 
+Train Loss: 0.373230360746
+Valid Loss: 0.456064015627
+Error Rate: 0.742917213213
+Best Error: 0.553201026537
+
+[Epoch 145] 
+Train Loss: 0.373059588671
+Valid Loss: 0.455199599266
+Error Rate: 0.745248381335
+Best Error: 0.553201026537
+
+[Epoch 146] 
+Train Loss: 0.37301104784
+Valid Loss: 0.455376764139
+Error Rate: 0.743635449109
+Best Error: 0.553201026537
+
+[Epoch 147] 
+Train Loss: 0.373178212643
+Valid Loss: 0.455253650745
+Error Rate: 0.745859100771
+Best Error: 0.553201026537
+
+[Epoch 148] 
+Train Loss: 0.373040466309
+Valid Loss: 0.455273389816
+Error Rate: 0.74448258429
+Best Error: 0.553201026537
+
+[Epoch 149] 
+Train Loss: 0.372762234211
+Valid Loss: 0.456029067437
+Error Rate: 0.746272000115
+Best Error: 0.553201026537
+
+[Epoch 150] 
+Train Loss: 0.373104846478
+Valid Loss: 0.454931557178
+Error Rate: 0.743383048371
+Best Error: 0.553201026537
+
+[Epoch 151] 
+Train Loss: 0.37276296258
+Valid Loss: 0.456192344427
+Error Rate: 0.748917099619
+Best Error: 0.553201026537
+
+[Epoch 152] 
+Train Loss: 0.372957164049
+Valid Loss: 0.455011020104
+Error Rate: 0.742788800428
+Best Error: 0.553201026537
+
+[Epoch 153] 
+Train Loss: 0.372691748142
+Valid Loss: 0.456259618203
+Error Rate: 0.745396230945
+Best Error: 0.553201026537
+
+[Epoch 154] 
+Train Loss: 0.372681387663
+Valid Loss: 0.456809093555
+Error Rate: 0.745617565195
+Best Error: 0.553201026537
+
+[Epoch 0] 
+Train Loss: 0.377492793798
+Valid Loss: 0.45382981499
+Error Rate: 0.752250735362
+Best Error: 0.752250735362
+
+[Epoch 1] 
+Train Loss: 0.377427078485
+Valid Loss: 0.454375992219
+Error Rate: 0.751071876807
+Best Error: 0.751071876807
+
+[Epoch 2] 
+Train Loss: 0.377695611715
+Valid Loss: 0.453057269255
+Error Rate: 0.752149358067
+Best Error: 0.751071876807
+
+[Epoch 3] 
+Train Loss: 0.377660956383
+Valid Loss: 0.453541646401
+Error Rate: 0.751122125288
+Best Error: 0.751071876807
+
+[Epoch 4] 
+Train Loss: 0.37755143404
+Valid Loss: 0.453336248795
+Error Rate: 0.751968449636
+Best Error: 0.751071876807
+
+[Epoch 5] 
+Train Loss: 0.377317992449
+Valid Loss: 0.454307764769
+Error Rate: 0.751598871941
+Best Error: 0.751071876807
+
+[Epoch 6] 
+Train Loss: 0.377282121181
+Valid Loss: 0.454075882832
+Error Rate: 0.75163895026
+Best Error: 0.751071876807
+
+[Epoch 7] 
+Train Loss: 0.377469228506
+Valid Loss: 0.453731954098
+Error Rate: 0.751447917998
+Best Error: 0.751071876807
+
+[Epoch 8] 
+Train Loss: 0.377406476736
+Valid Loss: 0.45342635115
+Error Rate: 0.751282739727
+Best Error: 0.751071876807
+
+[Epoch 9] 
+Train Loss: 0.377497209311
+Valid Loss: 0.454030017058
+Error Rate: 0.750755095926
+Best Error: 0.750755095926
+
+[Epoch 0] 
+Train Loss: 0.692302048206
+Valid Loss: 0.691681563854
+Error Rate: 0.528089012694
+Best Error: 0.528089012694
+
+[Epoch 1] 
+Train Loss: 0.672059643269
+Valid Loss: 0.688521405061
+Error Rate: 0.522015572801
+Best Error: 0.522015572801
+
+[Epoch 2] 
+Train Loss: 0.65135058403
+Valid Loss: 0.690527021885
+Error Rate: 0.518100750186
+Best Error: 0.518100750186
+
+[Epoch 3] 
+Train Loss: 0.628685081005
+Valid Loss: 0.701360901197
+Error Rate: 0.517389097686
+Best Error: 0.517389097686
+
+[Epoch 4] 
+Train Loss: 0.603872869015
+Valid Loss: 0.725326259931
+Error Rate: 0.522365224807
+Best Error: 0.517389097686
+
+[Epoch 5] 
+Train Loss: 0.579859974384
+Valid Loss: 0.761377414068
+Error Rate: 0.534589698494
+Best Error: 0.517389097686
+
+[Epoch 6] 
+Train Loss: 0.561362907887
+Valid Loss: 0.800426602364
+Error Rate: 0.550840248597
+Best Error: 0.517389097686
+
+[Epoch 7] 
+Train Loss: 0.549011437893
+Valid Loss: 0.831548094749
+Error Rate: 0.567858635836
+Best Error: 0.517389097686
+
+[Epoch 8] 
+Train Loss: 0.540790376663
+Valid Loss: 0.849438667297
+Error Rate: 0.584194196758
+Best Error: 0.517389097686
+
+[Epoch 9] 
+Train Loss: 0.53475714922
+Valid Loss: 0.855724950631
+Error Rate: 0.599956619586
+Best Error: 0.517389097686
+
+[Epoch 10] 
+Train Loss: 0.529722113609
+Valid Loss: 0.854426542918
+Error Rate: 0.615327374241
+Best Error: 0.517389097686
+
+[Epoch 11] 
+Train Loss: 0.525162711143
+Valid Loss: 0.848804712296
+Error Rate: 0.63099464914
+Best Error: 0.517389097686
+
+[Epoch 12] 
+Train Loss: 0.520836138725
+Valid Loss: 0.840592682362
+Error Rate: 0.646991986766
+Best Error: 0.517389097686
+
+[Epoch 13] 
+Train Loss: 0.516651406288
+Valid Loss: 0.83079957962
+Error Rate: 0.663583304227
+Best Error: 0.517389097686
+
+[Epoch 14] 
+Train Loss: 0.512581571341
+Valid Loss: 0.819536487261
+Error Rate: 0.680301472546
+Best Error: 0.517389097686
+
+[Epoch 15] 
+Train Loss: 0.508639135361
+Valid Loss: 0.80768618981
+Error Rate: 0.697120150896
+Best Error: 0.517389097686
+
+[Epoch 16] 
+Train Loss: 0.504877126217
+Valid Loss: 0.795765399933
+Error Rate: 0.713763328088
+Best Error: 0.517389097686
+
+[Epoch 17] 
+Train Loss: 0.501304631233
+Valid Loss: 0.7840599219
+Error Rate: 0.730163723459
+Best Error: 0.517389097686
+
+[Epoch 18] 
+Train Loss: 0.497917006016
+Valid Loss: 0.772454063098
+Error Rate: 0.746216991316
+Best Error: 0.517389097686
+
+[Epoch 19] 
+Train Loss: 0.494750972986
+Valid Loss: 0.761330684026
+Error Rate: 0.761588685316
+Best Error: 0.517389097686
+
+[Epoch 20] 
+Train Loss: 0.491820145845
+Valid Loss: 0.750814338525
+Error Rate: 0.776216652063
+Best Error: 0.517389097686
+
+[Epoch 21] 
+Train Loss: 0.489121198654
+Valid Loss: 0.740927318732
+Error Rate: 0.790019442422
+Best Error: 0.517389097686
+
+[Epoch 22] 
+Train Loss: 0.486636532545
+Valid Loss: 0.731631795565
+Error Rate: 0.802777914783
+Best Error: 0.517389097686
+
+[Epoch 23] 
+Train Loss: 0.484363924265
+Valid Loss: 0.722940305869
+Error Rate: 0.814576649431
+Best Error: 0.517389097686
+
+[Epoch 24] 
+Train Loss: 0.482294101715
+Valid Loss: 0.714852253596
+Error Rate: 0.825460774119
+Best Error: 0.517389097686
+
+[Epoch 25] 
+Train Loss: 0.480393768549
+Valid Loss: 0.707325637341
+Error Rate: 0.835342068592
+Best Error: 0.517389097686
+
+[Epoch 26] 
+Train Loss: 0.478650261164
+Valid Loss: 0.700234254201
+Error Rate: 0.844358460168
+Best Error: 0.517389097686
+
+[Epoch 27] 
+Train Loss: 0.477050321102
+Valid Loss: 0.693599939346
+Error Rate: 0.852437423501
+Best Error: 0.517389097686
+
+[Epoch 28] 
+Train Loss: 0.475565079451
+Valid Loss: 0.687408864498
+Error Rate: 0.859926007826
+Best Error: 0.517389097686
+
+[Epoch 29] 
+Train Loss: 0.474186245203
+Valid Loss: 0.681488931179
+Error Rate: 0.866814741403
+Best Error: 0.517389097686
+
+[Epoch 30] 
+Train Loss: 0.472896565199
+Valid Loss: 0.675938506921
+Error Rate: 0.873040140094
+Best Error: 0.517389097686
+
+[Epoch 31] 
+Train Loss: 0.471708399057
+Valid Loss: 0.670791606108
+Error Rate: 0.878813478486
+Best Error: 0.517389097686
+
+[Epoch 32] 
+Train Loss: 0.47060433507
+Valid Loss: 0.665850063165
+Error Rate: 0.884042700665
+Best Error: 0.517389097686
+
+[Epoch 33] 
+Train Loss: 0.469562525749
+Valid Loss: 0.661305149396
+Error Rate: 0.888990353858
+Best Error: 0.517389097686
+
+[Epoch 34] 
+Train Loss: 0.468590259552
+Valid Loss: 0.65688252449
+Error Rate: 0.893437492151
+Best Error: 0.517389097686
+
+[Epoch 35] 
+Train Loss: 0.467662051916
+Valid Loss: 0.652849376202
+Error Rate: 0.897742476072
+Best Error: 0.517389097686
+
+[Epoch 36] 
+Train Loss: 0.466784377098
+Valid Loss: 0.648961981138
+Error Rate: 0.901688120979
+Best Error: 0.517389097686
+
+[Epoch 37] 
+Train Loss: 0.465957530737
+Valid Loss: 0.645267228285
+Error Rate: 0.905434428822
+Best Error: 0.517389097686
+
+[Epoch 38] 
+Train Loss: 0.465187574625
+Valid Loss: 0.641784866651
+Error Rate: 0.908976468032
+Best Error: 0.517389097686
+
+[Epoch 39] 
+Train Loss: 0.464468091726
+Valid Loss: 0.63847186168
+Error Rate: 0.91219157567
+Best Error: 0.517389097686
+
+[Epoch 40] 
+Train Loss: 0.463791854382
+Valid Loss: 0.635378837585
+Error Rate: 0.915268364598
+Best Error: 0.517389097686
+
+[Epoch 41] 
+Train Loss: 0.463150616884
+Valid Loss: 0.632425526778
+Error Rate: 0.918171805035
+Best Error: 0.517389097686
+
+[Epoch 42] 
+Train Loss: 0.462565990686
+Valid Loss: 0.629703899225
+Error Rate: 0.920880409441
+Best Error: 0.517389097686
+
+[Epoch 43] 
+Train Loss: 0.462009888887
+Valid Loss: 0.627116123835
+Error Rate: 0.923365919155
+Best Error: 0.517389097686
+
+[Epoch 44] 
+Train Loss: 0.461468576193
+Valid Loss: 0.624700029691
+Error Rate: 0.925625359579
+Best Error: 0.517389097686
+
+[Epoch 45] 
+Train Loss: 0.460953427553
+Valid Loss: 0.622523705165
+Error Rate: 0.927565461478
+Best Error: 0.517389097686
+
+[Epoch 46] 
+Train Loss: 0.460423152447
+Valid Loss: 0.620581408342
+Error Rate: 0.928656198828
+Best Error: 0.517389097686
+
+[Epoch 47] 
+Train Loss: 0.459851958752
+Valid Loss: 0.61961889267
+Error Rate: 0.928779253164
+Best Error: 0.517389097686
+
+[Epoch 48] 
+Train Loss: 0.459315234423
+Valid Loss: 0.619652648767
+Error Rate: 0.929220902377
+Best Error: 0.517389097686
+
+[Epoch 49] 
+Train Loss: 0.458801776171
+Valid Loss: 0.618864576022
+Error Rate: 0.929811516221
+Best Error: 0.517389097686
+
+[Epoch 50] 
+Train Loss: 0.458384971619
+Valid Loss: 0.618076284726
+Error Rate: 0.93062714259
+Best Error: 0.517389097686
+
+[Epoch 51] 
+Train Loss: 0.457925591469
+Valid Loss: 0.61778618892
+Error Rate: 0.931516781601
+Best Error: 0.517389097686
+
+[Epoch 52] 
+Train Loss: 0.457531307936
+Valid Loss: 0.617133279641
+Error Rate: 0.932566344282
+Best Error: 0.517389097686
+
+[Epoch 53] 
+Train Loss: 0.45711327076
+Valid Loss: 0.616548995177
+Error Rate: 0.933114139601
+Best Error: 0.517389097686
+
+[Epoch 54] 
+Train Loss: 0.45674836874
+Valid Loss: 0.615799148877
+Error Rate: 0.933912505486
+Best Error: 0.517389097686
+
+[Epoch 55] 
+Train Loss: 0.45636736989
+Valid Loss: 0.61552709341
+Error Rate: 0.934129298732
+Best Error: 0.517389097686
+
+[Epoch 56] 
+Train Loss: 0.45601600647
+Valid Loss: 0.615016678969
+Error Rate: 0.934470242217
+Best Error: 0.517389097686
+
+[Epoch 57] 
+Train Loss: 0.455695459843
+Valid Loss: 0.614217778047
+Error Rate: 0.934712084692
+Best Error: 0.517389097686
+
+[Epoch 58] 
+Train Loss: 0.455334681273
+Valid Loss: 0.613982597987
+Error Rate: 0.935040855818
+Best Error: 0.517389097686
+
+[Epoch 59] 
+Train Loss: 0.455028452873
+Valid Loss: 0.613938987255
+Error Rate: 0.935563641048
+Best Error: 0.517389097686
+
+[Epoch 60] 
+Train Loss: 0.454735580683
+Valid Loss: 0.612926661968
+Error Rate: 0.93569976795
+Best Error: 0.517389097686
+
+[Epoch 61] 
+Train Loss: 0.454388327599
+Valid Loss: 0.612681825956
+Error Rate: 0.936306937769
+Best Error: 0.517389097686
+
+[Epoch 62] 
+Train Loss: 0.454129719734
+Valid Loss: 0.611845890681
+Error Rate: 0.936596804312
+Best Error: 0.517389097686
+
+[Epoch 63] 
+Train Loss: 0.453809602261
+Valid Loss: 0.611372788747
+Error Rate: 0.936961935959
+Best Error: 0.517389097686
+
+[Epoch 64] 
+Train Loss: 0.453556780815
+Valid Loss: 0.610534866651
+Error Rate: 0.937186361392
+Best Error: 0.517389097686
+
+[Epoch 65] 
+Train Loss: 0.453270090818
+Valid Loss: 0.609514355659
+Error Rate: 0.937503038438
+Best Error: 0.517389097686
+
+[Epoch 66] 
+Train Loss: 0.452986321449
+Valid Loss: 0.608722984791
+Error Rate: 0.938015921394
+Best Error: 0.517389097686
+
+[Epoch 67] 
+Train Loss: 0.452747977972
+Valid Loss: 0.607720235984
+Error Rate: 0.938090912523
+Best Error: 0.517389097686
+
+[Epoch 68] 
+Train Loss: 0.45248660326
+Valid Loss: 0.606981039047
+Error Rate: 0.938799883972
+Best Error: 0.517389097686
+
+[Epoch 69] 
+Train Loss: 0.452199690342
+Valid Loss: 0.605916221937
+Error Rate: 0.9387494724
+Best Error: 0.517389097686
+
+[Epoch 70] 
+Train Loss: 0.451988036633
+Valid Loss: 0.605485379696
+Error Rate: 0.939428619612
+Best Error: 0.517389097686
+
+[Epoch 71] 
+Train Loss: 0.451745882034
+Valid Loss: 0.604920864105
+Error Rate: 0.940029174869
+Best Error: 0.517389097686
+
+[Epoch 72] 
+Train Loss: 0.45155454874
+Valid Loss: 0.604184031487
+Error Rate: 0.940268473281
+Best Error: 0.517389097686
+
+[Epoch 73] 
+Train Loss: 0.451354248524
+Valid Loss: 0.603373110294
+Error Rate: 0.940384482521
+Best Error: 0.517389097686
+
+[Epoch 74] 
+Train Loss: 0.451153979301
+Valid Loss: 0.602852741877
+Error Rate: 0.940691452991
+Best Error: 0.517389097686
+
+[Epoch 75] 
+Train Loss: 0.45094954133
+Valid Loss: 0.602563083172
+Error Rate: 0.941318701332
+Best Error: 0.517389097686
+
+[Epoch 76] 
+Train Loss: 0.450743691921
+Valid Loss: 0.601689577103
+Error Rate: 0.941354161646
+Best Error: 0.517389097686
+
+[Epoch 77] 
+Train Loss: 0.450566968918
+Valid Loss: 0.601120233536
+Error Rate: 0.941337175138
+Best Error: 0.517389097686
+
+[Epoch 78] 
+Train Loss: 0.450392440557
+Valid Loss: 0.600587487221
+Error Rate: 0.941811427487
+Best Error: 0.517389097686
+
+[Epoch 79] 
+Train Loss: 0.450218867064
+Valid Loss: 0.599865198135
+Error Rate: 0.942062311168
+Best Error: 0.517389097686
+
+[Epoch 80] 
+Train Loss: 0.450033205748
+Valid Loss: 0.599587698778
+Error Rate: 0.942412217581
+Best Error: 0.517389097686
+
+[Epoch 81] 
+Train Loss: 0.449893454313
+Valid Loss: 0.598788917065
+Error Rate: 0.942354800052
+Best Error: 0.517389097686
+
+[Epoch 82] 
+Train Loss: 0.449698898792
+Valid Loss: 0.59858506918
+Error Rate: 0.942544156565
+Best Error: 0.517389097686
+
+[Epoch 83] 
+Train Loss: 0.449555031061
+Valid Loss: 0.597949783007
+Error Rate: 0.9427941009
+Best Error: 0.517389097686
+
+[Epoch 84] 
+Train Loss: 0.449399297237
+Valid Loss: 0.597618222237
+Error Rate: 0.943206160711
+Best Error: 0.517389097686
+
+[Epoch 85] 
+Train Loss: 0.449251419306
+Valid Loss: 0.597140411536
+Error Rate: 0.943359078424
+Best Error: 0.517389097686
+
+[Epoch 86] 
+Train Loss: 0.449106793404
+Valid Loss: 0.596546947956
+Error Rate: 0.943459314478
+Best Error: 0.517389097686
+
+[Epoch 87] 
+Train Loss: 0.448937799931
+Valid Loss: 0.59626921018
+Error Rate: 0.943385849787
+Best Error: 0.517389097686
+
+[Epoch 88] 
+Train Loss: 0.448826270103
+Valid Loss: 0.595722913742
+Error Rate: 0.943430547005
+Best Error: 0.517389097686
+
+[Epoch 89] 
+Train Loss: 0.448689403534
+Valid Loss: 0.595402956009
+Error Rate: 0.943875875323
+Best Error: 0.517389097686
+
+[Epoch 90] 
+Train Loss: 0.448514517546
+Valid Loss: 0.595085740089
+Error Rate: 0.943952745143
+Best Error: 0.517389097686
+
+[Epoch 91] 
+Train Loss: 0.448392045498
+Valid Loss: 0.594617386659
+Error Rate: 0.943837283855
+Best Error: 0.517389097686
+
+[Epoch 92] 
+Train Loss: 0.448260694742
+Valid Loss: 0.594465255737
+Error Rate: 0.944194861594
+Best Error: 0.517389097686
+
+[Epoch 93] 
+Train Loss: 0.448117947578
+Valid Loss: 0.59428580602
+Error Rate: 0.944384296386
+Best Error: 0.517389097686
+
+[Epoch 94] 
+Train Loss: 0.447995680571
+Valid Loss: 0.593916475773
+Error Rate: 0.944358894902
+Best Error: 0.517389097686
+
+[Epoch 95] 
+Train Loss: 0.447879785299
+Valid Loss: 0.593444148699
+Error Rate: 0.944234001014
+Best Error: 0.517389097686
+
+[Epoch 96] 
+Train Loss: 0.447792563438
+Valid Loss: 0.593104441961
+Error Rate: 0.944349501441
+Best Error: 0.517389097686
+
+[Epoch 97] 
+Train Loss: 0.447636322975
+Valid Loss: 0.592887461185
+Error Rate: 0.944641755489
+Best Error: 0.517389097686
+
+[Epoch 98] 
+Train Loss: 0.447530319691
+Valid Loss: 0.592512925466
+Error Rate: 0.944541519435
+Best Error: 0.517389097686
+
+[Epoch 99] 
+Train Loss: 0.447382355928
+Valid Loss: 0.592216730118
+Error Rate: 0.944435569026
+Best Error: 0.517389097686
+
+[Epoch 100] 
+Train Loss: 0.447308083773
+Valid Loss: 0.591965019703
+Error Rate: 0.944627665298
+Best Error: 0.517389097686
+
+[Epoch 101] 
+Train Loss: 0.447170746326
+Valid Loss: 0.59167244037
+Error Rate: 0.944878196724
+Best Error: 0.517389097686
+
+[Epoch 102] 
+Train Loss: 0.44705647707
+Valid Loss: 0.591416637103
+Error Rate: 0.945036124283
+Best Error: 0.517389097686
+
+[Epoch 103] 
+Train Loss: 0.446942657232
+Valid Loss: 0.591159979502
+Error Rate: 0.945028766072
+Best Error: 0.517389097686
+
+[Epoch 104] 
+Train Loss: 0.446834301949
+Valid Loss: 0.59094107151
+Error Rate: 0.944979215566
+Best Error: 0.517389097686
+
+[Epoch 105] 
+Train Loss: 0.446753242016
+Valid Loss: 0.591010808945
+Error Rate: 0.945160939892
+Best Error: 0.517389097686
+
+[Epoch 106] 
+Train Loss: 0.44664711237
+Valid Loss: 0.590787907441
+Error Rate: 0.945500122104
+Best Error: 0.517389097686
+
+[Epoch 107] 
+Train Loss: 0.446550194025
+Valid Loss: 0.590431471666
+Error Rate: 0.94535331014
+Best Error: 0.517389097686
+
+[Epoch 108] 
+Train Loss: 0.446446342468
+Valid Loss: 0.590099990368
+Error Rate: 0.945099217027
+Best Error: 0.517389097686
+
+[Epoch 109] 
+Train Loss: 0.446319180727
+Valid Loss: 0.590001304944
+Error Rate: 0.944911895764
+Best Error: 0.517389097686
+
+[Epoch 110] 
+Train Loss: 0.446222168207
+Valid Loss: 0.589894553026
+Error Rate: 0.944983090369
+Best Error: 0.517389097686
+
+[Epoch 111] 
+Train Loss: 0.446135443449
+Valid Loss: 0.589571515719
+Error Rate: 0.944989196118
+Best Error: 0.517389097686
+
+[Epoch 112] 
+Train Loss: 0.446055418253
+Valid Loss: 0.589429756006
+Error Rate: 0.944924498657
+Best Error: 0.517389097686
+
+[Epoch 113] 
+Train Loss: 0.445936886072
+Valid Loss: 0.589061260223
+Error Rate: 0.9449067685
+Best Error: 0.517389097686
+
+[Epoch 114] 
+Train Loss: 0.445842037201
+Valid Loss: 0.588930269082
+Error Rate: 0.945089393033
+Best Error: 0.517389097686
+
+[Epoch 115] 
+Train Loss: 0.445711452961
+Valid Loss: 0.588933805625
+Error Rate: 0.944937101551
+Best Error: 0.517389097686
+
+[Epoch 116] 
+Train Loss: 0.445646451712
+Valid Loss: 0.588854710261
+Error Rate: 0.944969978663
+Best Error: 0.517389097686
+
+[Epoch 117] 
+Train Loss: 0.44552970767
+Valid Loss: 0.588788330555
+Error Rate: 0.944696824653
+Best Error: 0.517389097686
+
+[Epoch 118] 
+Train Loss: 0.445464098454
+Valid Loss: 0.588405489922
+Error Rate: 0.944842423294
+Best Error: 0.517389097686
+
+[Epoch 119] 
+Train Loss: 0.445370479822
+Valid Loss: 0.588285982609
+Error Rate: 0.944545981329
+Best Error: 0.517389097686
+
+[Epoch 120] 
+Train Loss: 0.445270286798
+Valid Loss: 0.588259855906
+Error Rate: 0.94430977493
+Best Error: 0.517389097686
+
+[Epoch 121] 
+Train Loss: 0.445160702467
+Valid Loss: 0.588261683782
+Error Rate: 0.944636706504
+Best Error: 0.517389097686
+
+[Epoch 122] 
+Train Loss: 0.445110285282
+Valid Loss: 0.588058988253
+Error Rate: 0.944360343061
+Best Error: 0.517389097686
+
+[Epoch 123] 
+Train Loss: 0.444976891279
+Valid Loss: 0.587759653727
+Error Rate: 0.943985543977
+Best Error: 0.517389097686
+
+[Epoch 124] 
+Train Loss: 0.444920905828
+Valid Loss: 0.587592105071
+Error Rate: 0.943603190985
+Best Error: 0.517389097686
+
+[Epoch 125] 
+Train Loss: 0.444829645157
+Valid Loss: 0.587394356728
+Error Rate: 0.943479901813
+Best Error: 0.517389097686
+
+[Epoch 126] 
+Train Loss: 0.444751909971
+Valid Loss: 0.587333520253
+Error Rate: 0.9437586919
+Best Error: 0.517389097686
+
+[Epoch 127] 
+Train Loss: 0.444668442011
+Valid Loss: 0.587254881859
+Error Rate: 0.943476105289
+Best Error: 0.517389097686
+
+[Epoch 128] 
+Train Loss: 0.444587464333
+Valid Loss: 0.587206621965
+Error Rate: 0.943049877008
+Best Error: 0.517389097686
+
+[Epoch 129] 
+Train Loss: 0.444506032467
+Valid Loss: 0.587038854758
+Error Rate: 0.943135944592
+Best Error: 0.517389097686
+
+[Epoch 130] 
+Train Loss: 0.444420641661
+Valid Loss: 0.5868704319
+Error Rate: 0.942941969628
+Best Error: 0.517389097686
+
+[Epoch 131] 
+Train Loss: 0.444357165098
+Valid Loss: 0.586801290512
+Error Rate: 0.943197550039
+Best Error: 0.517389097686
+
+[Epoch 132] 
+Train Loss: 0.444256085157
+Valid Loss: 0.58672563235
+Error Rate: 0.942900834097
+Best Error: 0.517389097686
+
+[Epoch 133] 
+Train Loss: 0.444205180407
+Valid Loss: 0.586523850759
+Error Rate: 0.942659774411
+Best Error: 0.517389097686
+
+[Epoch 134] 
+Train Loss: 0.44413274765
+Valid Loss: 0.586723744869
+Error Rate: 0.942626936438
+Best Error: 0.517389097686
+
+[Epoch 135] 
+Train Loss: 0.444053348303
+Valid Loss: 0.586524685224
+Error Rate: 0.942660283223
+Best Error: 0.517389097686
+
+[Epoch 136] 
+Train Loss: 0.444007837772
+Valid Loss: 0.586351235708
+Error Rate: 0.942228692842
+Best Error: 0.517389097686
+
+[Epoch 137] 
+Train Loss: 0.443954552412
+Valid Loss: 0.586192528407
+Error Rate: 0.94211886763
+Best Error: 0.517389097686
+
+[Epoch 138] 
+Train Loss: 0.443849869967
+Valid Loss: 0.586293160915
+Error Rate: 0.942372569349
+Best Error: 0.517389097686
+
+[Epoch 139] 
+Train Loss: 0.443810464144
+Valid Loss: 0.586162308852
+Error Rate: 0.942138946152
+Best Error: 0.517389097686
+
+[Epoch 140] 
+Train Loss: 0.443793805838
+Valid Loss: 0.586107611656
+Error Rate: 0.942080276162
+Best Error: 0.517389097686
+
+[Epoch 141] 
+Train Loss: 0.443675307035
+Valid Loss: 0.585839072863
+Error Rate: 0.942125129937
+Best Error: 0.517389097686
+
+[Epoch 142] 
+Train Loss: 0.443659707308
+Valid Loss: 0.585954030355
+Error Rate: 0.942132253311
+Best Error: 0.517389097686
+
+[Epoch 143] 
+Train Loss: 0.443560633659
+Valid Loss: 0.586089372635
+Error Rate: 0.941990725169
+Best Error: 0.517389097686
+
+[Epoch 144] 
+Train Loss: 0.443488724232
+Valid Loss: 0.585717598597
+Error Rate: 0.941835419952
+Best Error: 0.517389097686
+
+[Epoch 145] 
+Train Loss: 0.443459076881
+Valid Loss: 0.585750242074
+Error Rate: 0.942030764796
+Best Error: 0.517389097686
+
+[Epoch 146] 
+Train Loss: 0.443378825188
+Valid Loss: 0.585794766744
+Error Rate: 0.941979844411
+Best Error: 0.517389097686
+
+[Epoch 147] 
+Train Loss: 0.443369283676
+Valid Loss: 0.585675577323
+Error Rate: 0.941819137953
+Best Error: 0.517389097686
+
+[Epoch 148] 
+Train Loss: 0.443301837444
+Valid Loss: 0.585553944111
+Error Rate: 0.941821212342
+Best Error: 0.517389097686
+
+[Epoch 149] 
+Train Loss: 0.443256728649
+Valid Loss: 0.58555128177
+Error Rate: 0.941742933503
+Best Error: 0.517389097686
+
+[Epoch 150] 
+Train Loss: 0.443168621063
+Valid Loss: 0.585765361786
+Error Rate: 0.941455337046
+Best Error: 0.517389097686
+
+[Epoch 151] 
+Train Loss: 0.443192919493
+Valid Loss: 0.585489193598
+Error Rate: 0.941458194224
+Best Error: 0.517389097686
+
+[Epoch 152] 
+Train Loss: 0.443099566698
+Valid Loss: 0.58521771431
+Error Rate: 0.941791779499
+Best Error: 0.517389097686
+
+[Epoch 153] 
+Train Loss: 0.443077267408
+Valid Loss: 0.585256377856
+Error Rate: 0.941706533842
+Best Error: 0.517389097686
+
+[Epoch 154] 
+Train Loss: 0.442994369268
+Valid Loss: 0.585407773654
+Error Rate: 0.941662345437
+Best Error: 0.517389097686
+
+[Epoch 155] 
+Train Loss: 0.442992473841
+Valid Loss: 0.585471649965
+Error Rate: 0.941733422624
+Best Error: 0.517389097686
+
+[Epoch 156] 
+Train Loss: 0.442928458452
+Valid Loss: 0.585244218508
+Error Rate: 0.941496472576
+Best Error: 0.517389097686
+
+[Epoch 157] 
+Train Loss: 0.44288086772
+Valid Loss: 0.585637748241
+Error Rate: 0.941921370118
+Best Error: 0.517389097686
+
+[Epoch 158] 
+Train Loss: 0.442860863209
+Valid Loss: 0.585129717986
+Error Rate: 0.941497685898
+Best Error: 0.517389097686
+
+[Epoch 159] 
+Train Loss: 0.442815300226
+Valid Loss: 0.585353593032
+Error Rate: 0.94167228685
+Best Error: 0.517389097686
+
+[Epoch 160] 
+Train Loss: 0.442784126997
+Valid Loss: 0.585001687209
+Error Rate: 0.941356862266
+Best Error: 0.517389097686
+
+[Epoch 161] 
+Train Loss: 0.442728260756
+Valid Loss: 0.584950109323
+Error Rate: 0.941412949055
+Best Error: 0.517389097686
+
+[Epoch 162] 
+Train Loss: 0.442678824663
+Valid Loss: 0.585178673267
+Error Rate: 0.941590407184
+Best Error: 0.517389097686
+
+[Epoch 163] 
+Train Loss: 0.442632727623
+Valid Loss: 0.585235774517
+Error Rate: 0.941322302158
+Best Error: 0.517389097686
+
+[Epoch 164] 
+Train Loss: 0.442598567009
+Valid Loss: 0.585051000118
+Error Rate: 0.941412322824
+Best Error: 0.517389097686
+
+[Epoch 165] 
+Train Loss: 0.442591457367
+Valid Loss: 0.584946632385
+Error Rate: 0.941361950391
+Best Error: 0.517389097686
+
+[Epoch 166] 
+Train Loss: 0.442528730631
+Valid Loss: 0.585011859735
+Error Rate: 0.941441403413
+Best Error: 0.517389097686
+
+[Epoch 167] 
+Train Loss: 0.442502315044
+Valid Loss: 0.585093875726
+Error Rate: 0.941237682733
+Best Error: 0.517389097686
+
+[Epoch 168] 
+Train Loss: 0.442440927029
+Valid Loss: 0.584863682588
+Error Rate: 0.941312556443
+Best Error: 0.517389097686
+
+[Epoch 169] 
+Train Loss: 0.442435258627
+Valid Loss: 0.584788441658
+Error Rate: 0.941664576384
+Best Error: 0.517389097686
+
+[Epoch 170] 
+Train Loss: 0.442379597425
+Valid Loss: 0.585090061029
+Error Rate: 0.941118033527
+Best Error: 0.517389097686
+
+[Epoch 171] 
+Train Loss: 0.442371743917
+Valid Loss: 0.584734082222
+Error Rate: 0.941124648089
+Best Error: 0.517389097686
+
+[Epoch 172] 
+Train Loss: 0.442282907963
+Valid Loss: 0.584795812766
+Error Rate: 0.941306998645
+Best Error: 0.517389097686
+
+[Epoch 173] 
+Train Loss: 0.442286100388
+Valid Loss: 0.584715346495
+Error Rate: 0.94119877815
+Best Error: 0.517389097686
+
+[Epoch 174] 
+Train Loss: 0.442256292105
+Valid Loss: 0.58450504144
+Error Rate: 0.941051966186
+Best Error: 0.517389097686
+
+[Epoch 175] 
+Train Loss: 0.442226769924
+Valid Loss: 0.58478285869
+Error Rate: 0.941669116557
+Best Error: 0.517389097686
+
+[Epoch 176] 
+Train Loss: 0.442173444033
+Valid Loss: 0.584487994512
+Error Rate: 0.941470953675
+Best Error: 0.517389097686
+
+[Epoch 177] 
+Train Loss: 0.44217214942
+Valid Loss: 0.584576527278
+Error Rate: 0.940877326095
+Best Error: 0.517389097686
+
+[Epoch 178] 
+Train Loss: 0.442142637968
+Valid Loss: 0.584810058276
+Error Rate: 0.941039950384
+Best Error: 0.517389097686
+
+[Epoch 179] 
+Train Loss: 0.442069153786
+Valid Loss: 0.584687093894
+Error Rate: 0.940710005076
+Best Error: 0.517389097686
+
+[Epoch 180] 
+Train Loss: 0.442092024088
+Valid Loss: 0.584695120653
+Error Rate: 0.940964528722
+Best Error: 0.517389097686
+
+[Epoch 181] 
+Train Loss: 0.442023935318
+Valid Loss: 0.584479490916
+Error Rate: 0.940765074239
+Best Error: 0.517389097686
+
+[Epoch 182] 
+Train Loss: 0.441983798742
+Valid Loss: 0.584456980228
+Error Rate: 0.940638340798
+Best Error: 0.517389097686
+
+[Epoch 183] 
+Train Loss: 0.441954145432
+Valid Loss: 0.584202528
+Error Rate: 0.941320032072
+Best Error: 0.517389097686
+
+[Epoch 184] 
+Train Loss: 0.441933720112
+Valid Loss: 0.584274133046
+Error Rate: 0.940819086638
+Best Error: 0.517389097686
+
+[Epoch 185] 
+Train Loss: 0.44190849781
+Valid Loss: 0.584411323071
+Error Rate: 0.9407285963
+Best Error: 0.517389097686
+
+[Epoch 186] 
+Train Loss: 0.441877907515
+Valid Loss: 0.584251979987
+Error Rate: 0.940405069856
+Best Error: 0.517389097686
+
+[Epoch 187] 
+Train Loss: 0.441854809523
+Valid Loss: 0.584331333637
+Error Rate: 0.940499552415
+Best Error: 0.517389097686
+
+[Epoch 188] 
+Train Loss: 0.441859917641
+Valid Loss: 0.584334611893
+Error Rate: 0.940544053936
+Best Error: 0.517389097686
+
+[Epoch 189] 
+Train Loss: 0.441774947643
+Valid Loss: 0.584188818932
+Error Rate: 0.940450471583
+Best Error: 0.517389097686
+
+[Epoch 190] 
+Train Loss: 0.44176294446
+Valid Loss: 0.5841695865
+Error Rate: 0.940055241722
+Best Error: 0.517389097686
+
+[Epoch 191] 
+Train Loss: 0.441724404097
+Valid Loss: 0.584045529366
+Error Rate: 0.940226633241
+Best Error: 0.517389097686
+
+[Epoch 192] 
+Train Loss: 0.441692574024
+Valid Loss: 0.584116399288
+Error Rate: 0.940281311011
+Best Error: 0.517389097686
+
+[Epoch 193] 
+Train Loss: 0.441676694155
+Valid Loss: 0.58444672823
+Error Rate: 0.940049762203
+Best Error: 0.517389097686
+
+[Epoch 194] 
+Train Loss: 0.441639693975
+Valid Loss: 0.584035515785
+Error Rate: 0.939979506945
+Best Error: 0.517389097686
+
+[Epoch 195] 
+Train Loss: 0.441617661715
+Valid Loss: 0.584040542444
+Error Rate: 0.940078960211
+Best Error: 0.517389097686
+
+[Epoch 196] 
+Train Loss: 0.441581457853
+Valid Loss: 0.584417422613
+Error Rate: 0.94011473364
+Best Error: 0.517389097686
+
+[Epoch 197] 
+Train Loss: 0.441555148363
+Valid Loss: 0.584328015645
+Error Rate: 0.939862871474
+Best Error: 0.517389097686
+
+[Epoch 198] 
+Train Loss: 0.441530092955
+Valid Loss: 0.584148009618
+Error Rate: 0.939877470478
+Best Error: 0.517389097686
+
+[Epoch 199] 
+Train Loss: 0.441511775255
+Valid Loss: 0.584287146727
+Error Rate: 0.940128275879
+Best Error: 0.517389097686
+
+[Epoch 200] 
+Train Loss: 0.44148177743
+Valid Loss: 0.583906809489
+Error Rate: 0.939789524201
+Best Error: 0.517389097686
+
+[Epoch 201] 
+Train Loss: 0.441438740492
+Valid Loss: 0.584231873353
+Error Rate: 0.939918488589
+Best Error: 0.517389097686
+
+[Epoch 202] 
+Train Loss: 0.441397161484
+Valid Loss: 0.584181288878
+Error Rate: 0.939656567592
+Best Error: 0.517389097686
+
+[Epoch 203] 
+Train Loss: 0.441406607628
+Valid Loss: 0.583991368612
+Error Rate: 0.939348814335
+Best Error: 0.517389097686
+
+[Epoch 204] 
+Train Loss: 0.441355861425
+Valid Loss: 0.58377623558
+Error Rate: 0.939606469135
+Best Error: 0.517389097686
+
+[Epoch 205] 
+Train Loss: 0.4413501966
+Valid Loss: 0.58378748099
+Error Rate: 0.939515626542
+Best Error: 0.517389097686
+
+[Epoch 206] 
+Train Loss: 0.441358056068
+Valid Loss: 0.584020177523
+Error Rate: 0.939651440328
+Best Error: 0.517389097686
+
+[Epoch 207] 
+Train Loss: 0.441304570436
+Valid Loss: 0.584080298742
+Error Rate: 0.939464510459
+Best Error: 0.517389097686
+
+[Epoch 208] 
+Train Loss: 0.441282844543
+Valid Loss: 0.584000547727
+Error Rate: 0.939299655223
+Best Error: 0.517389097686
+
+[Epoch 209] 
+Train Loss: 0.441232792139
+Valid Loss: 0.583896080653
+Error Rate: 0.939173821989
+Best Error: 0.517389097686
+
+[Epoch 210] 
+Train Loss: 0.441232777834
+Valid Loss: 0.583890199661
+Error Rate: 0.939416721228
+Best Error: 0.517389097686
+
+[Epoch 211] 
+Train Loss: 0.441215002537
+Valid Loss: 0.583800892035
+Error Rate: 0.938673111392
+Best Error: 0.517389097686
+
+[Epoch 212] 
+Train Loss: 0.441164777279
+Valid Loss: 0.583892941475
+Error Rate: 0.9389612558
+Best Error: 0.517389097686
+
+[Epoch 213] 
+Train Loss: 0.441182131767
+Valid Loss: 0.583908677101
+Error Rate: 0.939705139612
+Best Error: 0.517389097686
+
+[Epoch 214] 
+Train Loss: 0.441139370203
+Valid Loss: 0.583966990312
+Error Rate: 0.939425723294
+Best Error: 0.517389097686
+
+[Epoch 215] 
+Train Loss: 0.441145695448
+Valid Loss: 0.583650191625
+Error Rate: 0.93851467502
+Best Error: 0.517389097686
+
+[Epoch 216] 
+Train Loss: 0.441116199493
+Valid Loss: 0.583537479242
+Error Rate: 0.938743758044
+Best Error: 0.517389097686
+
+[Epoch 217] 
+Train Loss: 0.441072933674
+Valid Loss: 0.583655635516
+Error Rate: 0.939035346722
+Best Error: 0.517389097686
+
+[Epoch 218] 
+Train Loss: 0.441021164656
+Valid Loss: 0.583623607953
+Error Rate: 0.93929515419
+Best Error: 0.517389097686
+
+[Epoch 219] 
+Train Loss: 0.44101454854
+Valid Loss: 0.583669463793
+Error Rate: 0.938598824773
+Best Error: 0.517389097686
+
+[Epoch 220] 
+Train Loss: 0.441038433313
+Valid Loss: 0.583738744259
+Error Rate: 0.938647709908
+Best Error: 0.517389097686
+
+[Epoch 221] 
+Train Loss: 0.440947804451
+Valid Loss: 0.583656847477
+Error Rate: 0.938743523208
+Best Error: 0.517389097686
+
+[Epoch 222] 
+Train Loss: 0.440938564539
+Valid Loss: 0.58386528492
+Error Rate: 0.938394008189
+Best Error: 0.517389097686
+
+[Epoch 223] 
+Train Loss: 0.440899581909
+Valid Loss: 0.583652238051
+Error Rate: 0.938357960784
+Best Error: 0.517389097686
+
+[Epoch 224] 
+Train Loss: 0.440924237967
+Valid Loss: 0.583658734957
+Error Rate: 0.938674089877
+Best Error: 0.517389097686
+
+[Epoch 225] 
+Train Loss: 0.440890703201
+Valid Loss: 0.583607037862
+Error Rate: 0.938356473486
+Best Error: 0.517389097686
+
+[Epoch 226] 
+Train Loss: 0.44086057663
+Valid Loss: 0.583592573802
+Error Rate: 0.938431151499
+Best Error: 0.517389097686
+
+[Epoch 227] 
+Train Loss: 0.440823028088
+Valid Loss: 0.58352102836
+Error Rate: 0.938370250561
+Best Error: 0.517389097686
+
+[Epoch 228] 
+Train Loss: 0.440819190741
+Valid Loss: 0.583517789841
+Error Rate: 0.938094709046
+Best Error: 0.517389097686
+
+[Epoch 229] 
+Train Loss: 0.44080524683
+Valid Loss: 0.583956221739
+Error Rate: 0.938443558695
+Best Error: 0.517389097686
+
+[Epoch 230] 
+Train Loss: 0.44077149868
+Valid Loss: 0.583818554878
+Error Rate: 0.938225278151
+Best Error: 0.517389097686
+
+[Epoch 231] 
+Train Loss: 0.440774097443
+Valid Loss: 0.583538909753
+Error Rate: 0.937932280454
+Best Error: 0.517389097686
+
+[Epoch 232] 
+Train Loss: 0.440729129314
+Valid Loss: 0.583514471849
+Error Rate: 0.93788261253
+Best Error: 0.517389097686
+
+[Epoch 233] 
+Train Loss: 0.440701779127
+Valid Loss: 0.583525160948
+Error Rate: 0.938243399702
+Best Error: 0.517389097686
+
+[Epoch 234] 
+Train Loss: 0.440716069937
+Valid Loss: 0.583656410376
+Error Rate: 0.938010872409
+Best Error: 0.517389097686
+
+[Epoch 235] 
+Train Loss: 0.440666751862
+Valid Loss: 0.583512663841
+Error Rate: 0.937857367605
+Best Error: 0.517389097686
+
+[Epoch 236] 
+Train Loss: 0.440654629469
+Valid Loss: 0.583522836367
+Error Rate: 0.937656621521
+Best Error: 0.517389097686
+
+[Epoch 237] 
+Train Loss: 0.440653780699
+Valid Loss: 0.583698054155
+Error Rate: 0.937754822325
+Best Error: 0.517389097686
+
+[Epoch 238] 
+Train Loss: 0.440612514019
+Valid Loss: 0.583801428477
+Error Rate: 0.937824842747
+Best Error: 0.517389097686
+
+[Epoch 239] 
+Train Loss: 0.44058393836
+Valid Loss: 0.583494822184
+Error Rate: 0.937496306457
+Best Error: 0.517389097686
+
+[Epoch 240] 
+Train Loss: 0.440553642511
+Valid Loss: 0.583545247714
+Error Rate: 0.937720144799
+Best Error: 0.517389097686
+
+[Epoch 241] 
+Train Loss: 0.440577960014
+Valid Loss: 0.58369076252
+Error Rate: 0.93750624787
+Best Error: 0.517389097686
+
+[Epoch 242] 
+Train Loss: 0.440549756289
+Valid Loss: 0.583549638589
+Error Rate: 0.936754927568
+Best Error: 0.517389097686
+
+[Epoch 243] 
+Train Loss: 0.440517120361
+Valid Loss: 0.583823521932
+Error Rate: 0.937466991032
+Best Error: 0.517389097686
+
+[Epoch 244] 
+Train Loss: 0.440497694016
+Valid Loss: 0.58333671093
+Error Rate: 0.937184365282
+Best Error: 0.517389097686
+
+[Epoch 245] 
+Train Loss: 0.440467386246
+Valid Loss: 0.583670775096
+Error Rate: 0.937540103468
+Best Error: 0.517389097686
+
+[Epoch 246] 
+Train Loss: 0.440469466448
+Valid Loss: 0.583870549997
+Error Rate: 0.937324719241
+Best Error: 0.517389097686
+
+[Epoch 247] 
+Train Loss: 0.440464549065
+Valid Loss: 0.583531300227
+Error Rate: 0.936900447931
+Best Error: 0.517389097686
+
+[Epoch 248] 
+Train Loss: 0.440407975912
+Valid Loss: 0.583769877752
+Error Rate: 0.936663223907
+Best Error: 0.517389097686
+
+[Epoch 249] 
+Train Loss: 0.440379785299
+Valid Loss: 0.583557109038
+Error Rate: 0.936998531317
+Best Error: 0.517389097686
+
+[Epoch 250] 
+Train Loss: 0.440378038883
+Valid Loss: 0.58363934358
+Error Rate: 0.936807335251
+Best Error: 0.517389097686
+
+[Epoch 251] 
+Train Loss: 0.440347702503
+Valid Loss: 0.583723405997
+Error Rate: 0.936746786569
+Best Error: 0.517389097686
+
+[Epoch 252] 
+Train Loss: 0.440354324579
+Valid Loss: 0.583836376667
+Error Rate: 0.936880604245
+Best Error: 0.517389097686
+
+[Epoch 253] 
+Train Loss: 0.440317766666
+Valid Loss: 0.583333631357
+Error Rate: 0.936326350921
+Best Error: 0.517389097686
+
+[Epoch 254] 
+Train Loss: 0.440275062323
+Valid Loss: 0.583346943061
+Error Rate: 0.936157855719
+Best Error: 0.517389097686
+
+[Epoch 255] 
+Train Loss: 0.440292443037
+Valid Loss: 0.583637773991
+Error Rate: 0.936686120468
+Best Error: 0.517389097686
+
+[Epoch 256] 
+Train Loss: 0.440247144699
+Valid Loss: 0.583225766818
+Error Rate: 0.935674053351
+Best Error: 0.517389097686
+
+[Epoch 257] 
+Train Loss: 0.440205160379
+Valid Loss: 0.583532234033
+Error Rate: 0.936425569351
+Best Error: 0.517389097686
+
+[Epoch 258] 
+Train Loss: 0.440232188702
+Valid Loss: 0.583443760872
+Error Rate: 0.935925484984
+Best Error: 0.517389097686
+
+[Epoch 259] 
+Train Loss: 0.440215137005
+Valid Loss: 0.583814601103
+Error Rate: 0.936150340951
+Best Error: 0.517389097686
+
+[Epoch 260] 
+Train Loss: 0.440184606314
+Valid Loss: 0.583431621393
+Error Rate: 0.936584984207
+Best Error: 0.517389097686
+
+[Epoch 261] 
+Train Loss: 0.440155798197
+Valid Loss: 0.583869556586
+Error Rate: 0.93625089012
+Best Error: 0.517389097686
+
+[Epoch 262] 
+Train Loss: 0.440138657093
+Valid Loss: 0.58349198103
+Error Rate: 0.93602556448
+Best Error: 0.517389097686
+
+[Epoch 263] 
+Train Loss: 0.440147647858
+Valid Loss: 0.583376387755
+Error Rate: 0.935128684676
+Best Error: 0.517389097686
+
+[Epoch 264] 
+Train Loss: 0.440115379095
+Valid Loss: 0.583814581235
+Error Rate: 0.936258091773
+Best Error: 0.517389097686
+
+[Epoch 265] 
+Train Loss: 0.440111957788
+Valid Loss: 0.583584090074
+Error Rate: 0.936010339246
+Best Error: 0.517389097686
+
+[Epoch 266] 
+Train Loss: 0.440091619492
+Valid Loss: 0.583571612835
+Error Rate: 0.935662468083
+Best Error: 0.517389097686
+
+[Epoch 267] 
+Train Loss: 0.440100979805
+Valid Loss: 0.583680232366
+Error Rate: 0.936007012395
+Best Error: 0.517389097686
+
+[Epoch 268] 
+Train Loss: 0.44003341198
+Valid Loss: 0.583653708299
+Error Rate: 0.935529002662
+Best Error: 0.517389097686
+
+[Epoch 269] 
+Train Loss: 0.44005366683
+Valid Loss: 0.583192090193
+Error Rate: 0.934953261797
+Best Error: 0.517389097686
+
+[Epoch 270] 
+Train Loss: 0.440007410049
+Valid Loss: 0.583796779315
+Error Rate: 0.935828497502
+Best Error: 0.517389097686
+
+[Epoch 271] 
+Train Loss: 0.44000901103
+Valid Loss: 0.583849906921
+Error Rate: 0.935740825202
+Best Error: 0.517389097686
+
+[Epoch 272] 
+Train Loss: 0.439982475042
+Valid Loss: 0.583788971106
+Error Rate: 0.935106727462
+Best Error: 0.517389097686
+
+[Epoch 273] 
+Train Loss: 0.439962171316
+Valid Loss: 0.583666741848
+Error Rate: 0.935058625115
+Best Error: 0.517389097686
+
+[Epoch 274] 
+Train Loss: 0.439963905811
+Valid Loss: 0.583871324857
+Error Rate: 0.935266611992
+Best Error: 0.517389097686
+
+[Epoch 275] 
+Train Loss: 0.439957983494
+Valid Loss: 0.583751320839
+Error Rate: 0.935200348954
+Best Error: 0.517389097686
+
+[Epoch 276] 
+Train Loss: 0.43988681674
+Valid Loss: 0.58387174209
+Error Rate: 0.93570383845
+Best Error: 0.517389097686
+
+[Epoch 277] 
+Train Loss: 0.439885646105
+Valid Loss: 0.583891967932
+Error Rate: 0.935472759316
+Best Error: 0.517389097686
+
+[Epoch 278] 
+Train Loss: 0.43987210393
+Valid Loss: 0.583806256453
+Error Rate: 0.935207315771
+Best Error: 0.517389097686
+
+[Epoch 279] 
+Train Loss: 0.43989587903
+Valid Loss: 0.583965043227
+Error Rate: 0.934970796257
+Best Error: 0.517389097686
+
+[Epoch 280] 
+Train Loss: 0.439867192507
+Valid Loss: 0.583677093188
+Error Rate: 0.935128136724
+Best Error: 0.517389097686
+
+[Epoch 281] 
+Train Loss: 0.439794518948
+Valid Loss: 0.583784123262
+Error Rate: 0.935691940066
+Best Error: 0.517389097686
+
+[Epoch 282] 
+Train Loss: 0.439798882008
+Valid Loss: 0.584159334501
+Error Rate: 0.93482218388
+Best Error: 0.517389097686
+
+[Epoch 283] 
+Train Loss: 0.4397478652
+Valid Loss: 0.583803792795
+Error Rate: 0.93472100848
+Best Error: 0.517389097686
+
+[Epoch 284] 
+Train Loss: 0.439791167974
+Valid Loss: 0.583615481853
+Error Rate: 0.934660655495
+Best Error: 0.517389097686
+
+[Epoch 285] 
+Train Loss: 0.439717619419
+Valid Loss: 0.583624780178
+Error Rate: 0.934706252919
+Best Error: 0.517389097686
+
+[Epoch 286] 
+Train Loss: 0.439730657339
+Valid Loss: 0.584041237831
+Error Rate: 0.934740499911
+Best Error: 0.517389097686
+
+[Epoch 287] 
+Train Loss: 0.4397113204
+Valid Loss: 0.583774089813
+Error Rate: 0.934466406554
+Best Error: 0.517389097686
+
+[Epoch 288] 
+Train Loss: 0.439707392454
+Valid Loss: 0.583902498086
+Error Rate: 0.934526289867
+Best Error: 0.517389097686
+
+[Epoch 289] 
+Train Loss: 0.439704079628
+Valid Loss: 0.584055324395
+Error Rate: 0.934600537346
+Best Error: 0.517389097686
+
+[Epoch 290] 
+Train Loss: 0.439664239883
+Valid Loss: 0.58386272192
+Error Rate: 0.934952165893
+Best Error: 0.517389097686
+
+[Epoch 291] 
+Train Loss: 0.439673473835
+Valid Loss: 0.584201574326
+Error Rate: 0.934517405218
+Best Error: 0.517389097686
+
+[Epoch 292] 
+Train Loss: 0.439624109268
+Valid Loss: 0.58414342006
+Error Rate: 0.934646056491
+Best Error: 0.517389097686
+
+[Epoch 293] 
+Train Loss: 0.439623303413
+Valid Loss: 0.584419945876
+Error Rate: 0.935157099895
+Best Error: 0.517389097686
+
+[Epoch 294] 
+Train Loss: 0.43961476326
+Valid Loss: 0.584297855695
+Error Rate: 0.934902497969
+Best Error: 0.517389097686
+
+[Epoch 295] 
+Train Loss: 0.439617290497
+Valid Loss: 0.584040641785
+Error Rate: 0.934434664485
+Best Error: 0.517389097686
+
+[Epoch 296] 
+Train Loss: 0.439549593925
+Valid Loss: 0.583902835846
+Error Rate: 0.933961234063
+Best Error: 0.517389097686
+
+[Epoch 297] 
+Train Loss: 0.439553761482
+Valid Loss: 0.583811144034
+Error Rate: 0.933935754301
+Best Error: 0.517389097686
+
+[Epoch 298] 
+Train Loss: 0.439547580481
+Valid Loss: 0.583959857623
+Error Rate: 0.93428119882
+Best Error: 0.517389097686
+
+[Epoch 299] 
+Train Loss: 0.439537010193
+Valid Loss: 0.584110120932
+Error Rate: 0.934142293019
+Best Error: 0.517389097686
+
+[Epoch 300] 
+Train Loss: 0.439486789703
+Valid Loss: 0.583842734496
+Error Rate: 0.934067771564
+Best Error: 0.517389097686
+
+[Epoch 301] 
+Train Loss: 0.439532498121
+Valid Loss: 0.583900352319
+Error Rate: 0.93418472015
+Best Error: 0.517389097686
+
+[Epoch 302] 
+Train Loss: 0.439473032951
+Valid Loss: 0.584001660347
+Error Rate: 0.934006988045
+Best Error: 0.517389097686
+
+[Epoch 303] 
+Train Loss: 0.439427047968
+Valid Loss: 0.584151963393
+Error Rate: 0.934585038136
+Best Error: 0.517389097686
+
+[Epoch 304] 
+Train Loss: 0.439448698759
+Valid Loss: 0.584441463153
+Error Rate: 0.934660342379
+Best Error: 0.517389097686
+
+[Epoch 305] 
+Train Loss: 0.439410215616
+Valid Loss: 0.58418238163
+Error Rate: 0.934002134757
+Best Error: 0.517389097686
+
+[Epoch 306] 
+Train Loss: 0.43940756917
+Valid Loss: 0.584254384041
+Error Rate: 0.934204759533
+Best Error: 0.517389097686
+
+[Epoch 307] 
+Train Loss: 0.439382350445
+Valid Loss: 0.584060251713
+Error Rate: 0.93349938891
+Best Error: 0.517389097686
+
+[Epoch 308] 
+Train Loss: 0.439380949736
+Valid Loss: 0.584238330523
+Error Rate: 0.933866947201
+Best Error: 0.517389097686
+
+[Epoch 309] 
+Train Loss: 0.439376116991
+Valid Loss: 0.584028422832
+Error Rate: 0.933536610498
+Best Error: 0.517389097686
+
+[Epoch 310] 
+Train Loss: 0.439364031553
+Valid Loss: 0.583702186743
+Error Rate: 0.93305687863
+Best Error: 0.517389097686
+
+[Epoch 311] 
+Train Loss: 0.439333218336
+Valid Loss: 0.584021369616
+Error Rate: 0.933523498793
+Best Error: 0.517389097686
+
+[Epoch 312] 
+Train Loss: 0.439319856167
+Valid Loss: 0.584469020367
+Error Rate: 0.933578489677
+Best Error: 0.517389097686
+
+[Epoch 313] 
+Train Loss: 0.439286390543
+Valid Loss: 0.583967963854
+Error Rate: 0.933286979279
+Best Error: 0.517389097686
+
+[Epoch 314] 
+Train Loss: 0.439268447161
+Valid Loss: 0.583849628766
+Error Rate: 0.933605769853
+Best Error: 0.517389097686
+
+[Epoch 315] 
+Train Loss: 0.439270789623
+Valid Loss: 0.584040979544
+Error Rate: 0.933581346855
+Best Error: 0.517389097686
+
+[Epoch 316] 
+Train Loss: 0.439252531528
+Valid Loss: 0.584242125352
+Error Rate: 0.934034620475
+Best Error: 0.517389097686
+
+[Epoch 317] 
+Train Loss: 0.439234793186
+Valid Loss: 0.584037979444
+Error Rate: 0.933871409095
+Best Error: 0.517389097686
+
+[Epoch 318] 
+Train Loss: 0.439237669706
+Valid Loss: 0.583478808403
+Error Rate: 0.933247252768
+Best Error: 0.517389097686
+
+[Epoch 319] 
+Train Loss: 0.439190832376
+Valid Loss: 0.583836575349
+Error Rate: 0.932854566969
+Best Error: 0.517389097686
+
+[Epoch 320] 
+Train Loss: 0.43920540452
+Valid Loss: 0.584029793739
+Error Rate: 0.933264239276
+Best Error: 0.517389097686
+
+[Epoch 321] 
+Train Loss: 0.439159342051
+Valid Loss: 0.584167361259
+Error Rate: 0.933766789426
+Best Error: 0.517389097686
+
+[Epoch 322] 
+Train Loss: 0.439172958136
+Valid Loss: 0.584388494492
+Error Rate: 0.933780918756
+Best Error: 0.517389097686
+
+[Epoch 323] 
+Train Loss: 0.439164007902
+Valid Loss: 0.584478974342
+Error Rate: 0.933897554227
+Best Error: 0.517389097686
+
+[Epoch 324] 
+Train Loss: 0.439149880409
+Valid Loss: 0.584065715472
+Error Rate: 0.932815623247
+Best Error: 0.517389097686
+
+[Epoch 325] 
+Train Loss: 0.439139481783
+Valid Loss: 0.583631892999
+Error Rate: 0.93233041186
+Best Error: 0.517389097686
+
+[Epoch 326] 
+Train Loss: 0.43912617445
+Valid Loss: 0.58375732104
+Error Rate: 0.932774761692
+Best Error: 0.517389097686
+
+[Epoch 327] 
+Train Loss: 0.439114382267
+Valid Loss: 0.583893378576
+Error Rate: 0.932663410043
+Best Error: 0.517389097686
+
+[Epoch 328] 
+Train Loss: 0.439091449976
+Valid Loss: 0.583867967129
+Error Rate: 0.932378709904
+Best Error: 0.517389097686
+
+[Epoch 329] 
+Train Loss: 0.439060384035
+Valid Loss: 0.583412269751
+Error Rate: 0.932113422916
+Best Error: 0.517389097686
+
+[Epoch 330] 
+Train Loss: 0.439049675465
+Valid Loss: 0.583429892858
+Error Rate: 0.932219608162
+Best Error: 0.517389097686
+
+[Epoch 331] 
+Train Loss: 0.439043610096
+Valid Loss: 0.583250939846
+Error Rate: 0.932332133994
+Best Error: 0.517389097686
+
+[Epoch 332] 
+Train Loss: 0.438998250961
+Valid Loss: 0.58334026734
+Error Rate: 0.932518985584
+Best Error: 0.517389097686
+
+[Epoch 333] 
+Train Loss: 0.439037247896
+Valid Loss: 0.583283404509
+Error Rate: 0.932249980352
+Best Error: 0.517389097686
+
+[Epoch 334] 
+Train Loss: 0.43897957325
+Valid Loss: 0.583776076635
+Error Rate: 0.932469787333
+Best Error: 0.517389097686
+
+[Epoch 335] 
+Train Loss: 0.439000189304
+Valid Loss: 0.584152956804
+Error Rate: 0.932848148104
+Best Error: 0.517389097686
+
+[Epoch 336] 
+Train Loss: 0.438980004787
+Valid Loss: 0.584422508876
+Error Rate: 0.932985214352
+Best Error: 0.517389097686
+
+[Epoch 337] 
+Train Loss: 0.438981548548
+Valid Loss: 0.584107259909
+Error Rate: 0.932718205231
+Best Error: 0.517389097686
+
+[Epoch 338] 
+Train Loss: 0.438961596489
+Valid Loss: 0.583960135778
+Error Rate: 0.932752256526
+Best Error: 0.517389097686
+
+[Epoch 339] 
+Train Loss: 0.438948149681
+Valid Loss: 0.583925187588
+Error Rate: 0.932353699814
+Best Error: 0.517389097686
+
+[Epoch 340] 
+Train Loss: 0.438936197758
+Valid Loss: 0.58393150568
+Error Rate: 0.932465364579
+Best Error: 0.517389097686
+
+[Epoch 341] 
+Train Loss: 0.438931787014
+Valid Loss: 0.583935777346
+Error Rate: 0.932799810921
+Best Error: 0.517389097686
+
+[Epoch 342] 
+Train Loss: 0.438904426098
+Valid Loss: 0.584391951561
+Error Rate: 0.932967092801
+Best Error: 0.517389097686
+
+[Epoch 343] 
+Train Loss: 0.438901090622
+Valid Loss: 0.583661754926
+Error Rate: 0.932071191482
+Best Error: 0.517389097686
+
+[Epoch 344] 
+Train Loss: 0.438885167837
+Valid Loss: 0.583971838156
+Error Rate: 0.932598516885
+Best Error: 0.517389097686
+
+[Epoch 345] 
+Train Loss: 0.438827887774
+Valid Loss: 0.584028263887
+Error Rate: 0.932341449176
+Best Error: 0.517389097686
+
+[Epoch 346] 
+Train Loss: 0.43884652257
+Valid Loss: 0.584143161774
+Error Rate: 0.932616207903
+Best Error: 0.517389097686
+
+[Epoch 347] 
+Train Loss: 0.438800953627
+Valid Loss: 0.583894491196
+Error Rate: 0.931826530969
+Best Error: 0.517389097686
+
+[Epoch 348] 
+Train Loss: 0.438783392906
+Valid Loss: 0.584275523822
+Error Rate: 0.932554563317
+Best Error: 0.517389097686
+
+[Epoch 349] 
+Train Loss: 0.438805974722
+Valid Loss: 0.58419829607
+Error Rate: 0.932387790249
+Best Error: 0.517389097686
+
+[Epoch 350] 
+Train Loss: 0.43875608325
+Valid Loss: 0.584411263466
+Error Rate: 0.932573976469
+Best Error: 0.517389097686
+
+[Epoch 351] 
+Train Loss: 0.438795653582
+Valid Loss: 0.584197461605
+Error Rate: 0.931961092295
+Best Error: 0.517389097686
+
+[Epoch 352] 
+Train Loss: 0.438762872219
+Valid Loss: 0.584117233753
+Error Rate: 0.932050017056
+Best Error: 0.517389097686
+
+[Epoch 353] 
+Train Loss: 0.438748955727
+Valid Loss: 0.584157705307
+Error Rate: 0.93204371561
+Best Error: 0.517389097686
+
+[Epoch 354] 
+Train Loss: 0.438756014109
+Valid Loss: 0.5839189291
+Error Rate: 0.931826570109
+Best Error: 0.517389097686
+
+[Epoch 355] 
+Train Loss: 0.438749744892
+Valid Loss: 0.584325691064
+Error Rate: 0.932037531581
+Best Error: 0.517389097686
+
+[Epoch 356] 
+Train Loss: 0.438735362291
+Valid Loss: 0.583924333254
+Error Rate: 0.931843478338
+Best Error: 0.517389097686
+
+[Epoch 357] 
+Train Loss: 0.43871057868
+Valid Loss: 0.584061364333
+Error Rate: 0.931859995173
+Best Error: 0.517389097686
+
+[Epoch 358] 
+Train Loss: 0.438664581776
+Valid Loss: 0.584351857503
+Error Rate: 0.931863439442
+Best Error: 0.517389097686
+
+[Epoch 359] 
+Train Loss: 0.438694952726
+Valid Loss: 0.584187765916
+Error Rate: 0.931492436882
+Best Error: 0.517389097686
+
+[Epoch 360] 
+Train Loss: 0.43866319418
+Valid Loss: 0.584069788456
+Error Rate: 0.931163470059
+Best Error: 0.517389097686
+
+[Epoch 361] 
+Train Loss: 0.438665602207
+Valid Loss: 0.584275106589
+Error Rate: 0.931575686428
+Best Error: 0.517389097686
+
+[Epoch 362] 
+Train Loss: 0.438606481552
+Valid Loss: 0.583620289961
+Error Rate: 0.931172589544
+Best Error: 0.517389097686
+
+[Epoch 363] 
+Train Loss: 0.438628344536
+Valid Loss: 0.584222873052
+Error Rate: 0.931397719486
+Best Error: 0.517389097686
+
+[Epoch 364] 
+Train Loss: 0.438624521494
+Valid Loss: 0.583700935046
+Error Rate: 0.930488471626
+Best Error: 0.517389097686
+
+[Epoch 365] 
+Train Loss: 0.43858312726
+Valid Loss: 0.584489603837
+Error Rate: 0.931883674522
+Best Error: 0.517389097686
+
+[Epoch 366] 
+Train Loss: 0.438610435724
+Valid Loss: 0.584075232347
+Error Rate: 0.931063468842
+Best Error: 0.517389097686
+
+[Epoch 367] 
+Train Loss: 0.438616805077
+Valid Loss: 0.584458231926
+Error Rate: 0.931968959318
+Best Error: 0.517389097686
+
+[Epoch 368] 
+Train Loss: 0.43857655406
+Valid Loss: 0.584026535352
+Error Rate: 0.931199008652
+Best Error: 0.517389097686
+
+[Epoch 369] 
+Train Loss: 0.438528439999
+Valid Loss: 0.584485411644
+Error Rate: 0.931844926497
+Best Error: 0.517389097686
+
+[Epoch 370] 
+Train Loss: 0.438571895361
+Valid Loss: 0.584606965383
+Error Rate: 0.932095692759
+Best Error: 0.517389097686
+
+[Epoch 371] 
+Train Loss: 0.438488446474
+Valid Loss: 0.584013064702
+Error Rate: 0.93115869505
+Best Error: 0.517389097686
+
+[Epoch 372] 
+Train Loss: 0.438485459089
+Valid Loss: 0.584529916445
+Error Rate: 0.931540734926
+Best Error: 0.517389097686
+
+[Epoch 373] 
+Train Loss: 0.438509136438
+Valid Loss: 0.584359029929
+Error Rate: 0.930883231813
+Best Error: 0.517389097686
+
+[Epoch 374] 
+Train Loss: 0.438493170738
+Valid Loss: 0.584693888823
+Error Rate: 0.931681871674
+Best Error: 0.517389097686
+
+[Epoch 375] 
+Train Loss: 0.438518797159
+Valid Loss: 0.584132691224
+Error Rate: 0.930857712912
+Best Error: 0.517389097686
+
+[Epoch 376] 
+Train Loss: 0.438440796137
+Valid Loss: 0.584683636824
+Error Rate: 0.931610559651
+Best Error: 0.517389097686
+
+[Epoch 377] 
+Train Loss: 0.438414810896
+Valid Loss: 0.584415535132
+Error Rate: 0.930313205304
+Best Error: 0.517389097686
+
+[Epoch 378] 
+Train Loss: 0.438501939774
+Valid Loss: 0.584286212921
+Error Rate: 0.931003742087
+Best Error: 0.517389097686
+
+[Epoch 379] 
+Train Loss: 0.438421322107
+Valid Loss: 0.583890279134
+Error Rate: 0.930424361256
+Best Error: 0.517389097686
+
+[Epoch 380] 
+Train Loss: 0.438451778889
+Valid Loss: 0.584424157937
+Error Rate: 0.931092666849
+Best Error: 0.517389097686
+
+[Epoch 381] 
+Train Loss: 0.438431564569
+Valid Loss: 0.584317326546
+Error Rate: 0.930687886969
+Best Error: 0.517389097686
+
+[Epoch 382] 
+Train Loss: 0.438416137695
+Valid Loss: 0.583707829316
+Error Rate: 0.929784040349
+Best Error: 0.517389097686
+
+[Epoch 383] 
+Train Loss: 0.438387610912
+Valid Loss: 0.584240555763
+Error Rate: 0.930490311178
+Best Error: 0.517389097686
+
+[Epoch 384] 
+Train Loss: 0.438386029005
+Valid Loss: 0.583923975627
+Error Rate: 0.930341424826
+Best Error: 0.517389097686
+
+[Epoch 385] 
+Train Loss: 0.438358089924
+Valid Loss: 0.58369298776
+Error Rate: 0.929836095777
+Best Error: 0.517389097686
+
+[Epoch 386] 
+Train Loss: 0.438349114656
+Valid Loss: 0.584416131179
+Error Rate: 0.930992939607
+Best Error: 0.517389097686
+
+[Epoch 387] 
+Train Loss: 0.438317754269
+Valid Loss: 0.583602587382
+Error Rate: 0.929617267281
+Best Error: 0.517389097686
+
+[Epoch 388] 
+Train Loss: 0.438341622353
+Valid Loss: 0.583857456843
+Error Rate: 0.930255122405
+Best Error: 0.517389097686
+
+[Epoch 389] 
+Train Loss: 0.438282922506
+Valid Loss: 0.584373573462
+Error Rate: 0.929858326967
+Best Error: 0.517389097686
+
+[Epoch 390] 
+Train Loss: 0.438322111368
+Valid Loss: 0.584205627441
+Error Rate: 0.930268782062
+Best Error: 0.517389097686
+
+[Epoch 391] 
+Train Loss: 0.438248199224
+Valid Loss: 0.583609342575
+Error Rate: 0.929717581614
+Best Error: 0.517389097686
+
+[Epoch 392] 
+Train Loss: 0.438272007704
+Valid Loss: 0.58400974671
+Error Rate: 0.929831751301
+Best Error: 0.517389097686
+
+[Epoch 393] 
+Train Loss: 0.438295975924
+Valid Loss: 0.583607037862
+Error Rate: 0.928640269084
+Best Error: 0.517389097686
+
+[Epoch 394] 
+Train Loss: 0.438268485069
+Valid Loss: 0.583671053251
+Error Rate: 0.929379456166
+Best Error: 0.517389097686
+
+[Epoch 395] 
+Train Loss: 0.438270198107
+Valid Loss: 0.583251317342
+Error Rate: 0.928551853135
+Best Error: 0.517389097686
+
+[Epoch 396] 
+Train Loss: 0.438264796734
+Valid Loss: 0.583119134108
+Error Rate: 0.928360304815
+Best Error: 0.517389097686
+
+[Epoch 397] 
+Train Loss: 0.438220082521
+Valid Loss: 0.583061496417
+Error Rate: 0.928683557283
+Best Error: 0.517389097686
+
+[Epoch 398] 
+Train Loss: 0.438216713667
+Valid Loss: 0.583090265592
+Error Rate: 0.928367271632
+Best Error: 0.517389097686
+
+[Epoch 399] 
+Train Loss: 0.438236806393
+Valid Loss: 0.583133379618
+Error Rate: 0.928300852036
+Best Error: 0.517389097686
+
+[Epoch 400] 
+Train Loss: 0.438213970661
+Valid Loss: 0.582917531331
+Error Rate: 0.92854140291
+Best Error: 0.517389097686
+
+[Epoch 401] 
+Train Loss: 0.438170931339
+Valid Loss: 0.582653383414
+Error Rate: 0.927947618773
+Best Error: 0.517389097686
+
+[Epoch 402] 
+Train Loss: 0.438190630674
+Valid Loss: 0.582562168439
+Error Rate: 0.927874584615
+Best Error: 0.517389097686
+
+[Epoch 403] 
+Train Loss: 0.438159550428
+Valid Loss: 0.582894543807
+Error Rate: 0.927915328751
+Best Error: 0.517389097686
+
+[Epoch 404] 
+Train Loss: 0.438149789572
+Valid Loss: 0.583206395308
+Error Rate: 0.928820623531
+Best Error: 0.517389097686
+
+[Epoch 405] 
+Train Loss: 0.438104919195
+Valid Loss: 0.583573877811
+Error Rate: 0.929484976042
+Best Error: 0.517389097686
+
+[Epoch 406] 
+Train Loss: 0.438162292242
+Valid Loss: 0.583715041478
+Error Rate: 0.92979339467
+Best Error: 0.517389097686
+
+[Epoch 407] 
+Train Loss: 0.438140486479
+Valid Loss: 0.58445439736
+Error Rate: 0.930361503348
+Best Error: 0.517389097686
+
+[Epoch 408] 
+Train Loss: 0.438109048605
+Valid Loss: 0.584562639395
+Error Rate: 0.930356924036
+Best Error: 0.517389097686
+
+[Epoch 409] 
+Train Loss: 0.438143341541
+Valid Loss: 0.584887305895
+Error Rate: 0.930814816108
+Best Error: 0.517389097686
+
+[Epoch 410] 
+Train Loss: 0.438104115725
+Valid Loss: 0.584878365199
+Error Rate: 0.93102241159
+Best Error: 0.517389097686
+
+[Epoch 411] 
+Train Loss: 0.438091030121
+Valid Loss: 0.585617959499
+Error Rate: 0.931789035405
+Best Error: 0.517389097686
+
+[Epoch 412] 
+Train Loss: 0.438127163649
+Valid Loss: 0.585639595985
+Error Rate: 0.931546840676
+Best Error: 0.517389097686
+
+[Epoch 413] 
+Train Loss: 0.438077981472
+Valid Loss: 0.585024476051
+Error Rate: 0.930812467743
+Best Error: 0.517389097686
+
+[Epoch 414] 
+Train Loss: 0.438057252169
+Valid Loss: 0.584703902404
+Error Rate: 0.92943315545
+Best Error: 0.517389097686
+
+[Epoch 415] 
+Train Loss: 0.438014415503
+Valid Loss: 0.584248125553
+Error Rate: 0.929224581482
+Best Error: 0.517389097686
+
+[Epoch 416] 
+Train Loss: 0.43802985549
+Valid Loss: 0.58390879631
+Error Rate: 0.928900115692
+Best Error: 0.517389097686
+
+[Epoch 417] 
+Train Loss: 0.438013881445
+Valid Loss: 0.583627144496
+Error Rate: 0.92800382298
+Best Error: 0.517389097686
+
+[Epoch 418] 
+Train Loss: 0.438009060621
+Valid Loss: 0.583460688591
+Error Rate: 0.927752821881
+Best Error: 0.517389097686
+
+[Epoch 419] 
+Train Loss: 0.43795404911
+Valid Loss: 0.583710590998
+Error Rate: 0.927778927874
+Best Error: 0.517389097686
+
+[Epoch 420] 
+Train Loss: 0.437957303524
+Valid Loss: 0.583272079627
+Error Rate: 0.928005271138
+Best Error: 0.517389097686
+
+[Epoch 421] 
+Train Loss: 0.437948759794
+Valid Loss: 0.583841999372
+Error Rate: 0.928180889715
+Best Error: 0.517389097686
+
+[Epoch 422] 
+Train Loss: 0.437916886806
+Valid Loss: 0.583619614442
+Error Rate: 0.927879281346
+Best Error: 0.517389097686
+
+[Epoch 423] 
+Train Loss: 0.437904520035
+Valid Loss: 0.58388119936
+Error Rate: 0.927930671404
+Best Error: 0.517389097686
+
+[Epoch 424] 
+Train Loss: 0.437908403873
+Valid Loss: 0.584161400795
+Error Rate: 0.928538154338
+Best Error: 0.517389097686
+
+[Epoch 425] 
+Train Loss: 0.437851510048
+Valid Loss: 0.583921968937
+Error Rate: 0.92851310511
+Best Error: 0.517389097686
+
+[Epoch 426] 
+Train Loss: 0.437851617336
+Valid Loss: 0.583828866482
+Error Rate: 0.928546295338
+Best Error: 0.517389097686
+
+[Epoch 427] 
+Train Loss: 0.437871609926
+Valid Loss: 0.58429680268
+Error Rate: 0.929013189476
+Best Error: 0.517389097686
+
+[Epoch 428] 
+Train Loss: 0.437851265669
+Valid Loss: 0.584913790226
+Error Rate: 0.929120744602
+Best Error: 0.517389097686
+
+[Epoch 429] 
+Train Loss: 0.437857631445
+Valid Loss: 0.584772964319
+Error Rate: 0.929157457377
+Best Error: 0.517389097686
+
+[Epoch 430] 
+Train Loss: 0.437813048363
+Valid Loss: 0.584960639477
+Error Rate: 0.929190217072
+Best Error: 0.517389097686
+
+[Epoch 431] 
+Train Loss: 0.437792030573
+Valid Loss: 0.585122148196
+Error Rate: 0.929194522408
+Best Error: 0.517389097686
+
+[Epoch 432] 
+Train Loss: 0.437787998915
+Valid Loss: 0.58513623476
+Error Rate: 0.929161606156
+Best Error: 0.517389097686
+
+[Epoch 433] 
+Train Loss: 0.437796478271
+Valid Loss: 0.585160036882
+Error Rate: 0.928816944425
+Best Error: 0.517389097686
+
+[Epoch 434] 
+Train Loss: 0.437778408527
+Valid Loss: 0.584517538548
+Error Rate: 0.928208796121
+Best Error: 0.517389097686
+
+[Epoch 435] 
+Train Loss: 0.437774095535
+Valid Loss: 0.584271252155
+Error Rate: 0.927890122965
+Best Error: 0.517389097686
+
+[Epoch 436] 
+Train Loss: 0.437672406435
+Valid Loss: 0.584354102612
+Error Rate: 0.927295438621
+Best Error: 0.517389097686
+
+[Epoch 437] 
+Train Loss: 0.437734737396
+Valid Loss: 0.584798971812
+Error Rate: 0.928014116647
+Best Error: 0.517389097686
+
+[Epoch 438] 
+Train Loss: 0.437706338167
+Valid Loss: 0.584234774113
+Error Rate: 0.927356613534
+Best Error: 0.517389097686
+
+[Epoch 439] 
+Train Loss: 0.437661778927
+Valid Loss: 0.583910405636
+Error Rate: 0.927330624959
+Best Error: 0.517389097686
+
+[Epoch 440] 
+Train Loss: 0.437690550089
+Valid Loss: 0.584046641986
+Error Rate: 0.926624588966
+Best Error: 0.517389097686
+
+[Epoch 441] 
+Train Loss: 0.437650102377
+Valid Loss: 0.583290398121
+Error Rate: 0.925838591138
+Best Error: 0.517389097686
+
+[Epoch 442] 
+Train Loss: 0.437657133341
+Valid Loss: 0.583760758241
+Error Rate: 0.926646233065
+Best Error: 0.517389097686
+
+[Epoch 443] 
+Train Loss: 0.437618774176
+Valid Loss: 0.583668291569
+Error Rate: 0.926031548478
+Best Error: 0.517389097686
+
+[Epoch 444] 
+Train Loss: 0.437600386143
+Valid Loss: 0.583923260371
+Error Rate: 0.926103995544
+Best Error: 0.517389097686
+
+[Epoch 445] 
+Train Loss: 0.437580449581
+Valid Loss: 0.583419899146
+Error Rate: 0.925834677196
+Best Error: 0.517389097686
+
+[Epoch 446] 
+Train Loss: 0.43756783843
+Valid Loss: 0.583438495795
+Error Rate: 0.926449870596
+Best Error: 0.517389097686
+
+[Epoch 447] 
+Train Loss: 0.437560918331
+Valid Loss: 0.583878099918
+Error Rate: 0.926788152601
+Best Error: 0.517389097686
+
+[Epoch 448] 
+Train Loss: 0.437568445206
+Valid Loss: 0.583790640036
+Error Rate: 0.926590185416
+Best Error: 0.517389097686
+
+[Epoch 449] 
+Train Loss: 0.437541199923
+Valid Loss: 0.583830833435
+Error Rate: 0.92632822528
+Best Error: 0.517389097686
+
+[Epoch 450] 
+Train Loss: 0.437497235537
+Valid Loss: 0.584309577942
+Error Rate: 0.926940248387
+Best Error: 0.517389097686
+
+[Epoch 451] 
+Train Loss: 0.437498379946
+Valid Loss: 0.583806673686
+Error Rate: 0.926238439451
+Best Error: 0.517389097686
+
+[Epoch 452] 
+Train Loss: 0.437519612312
+Valid Loss: 0.584082265695
+Error Rate: 0.926350534749
+Best Error: 0.517389097686
+
+[Epoch 453] 
+Train Loss: 0.437506414652
+Valid Loss: 0.584279795488
+Error Rate: 0.926823926031
+Best Error: 0.517389097686
+
+[Epoch 454] 
+Train Loss: 0.437463390827
+Valid Loss: 0.584004998207
+Error Rate: 0.926454489048
+Best Error: 0.517389097686
+
+[Epoch 455] 
+Train Loss: 0.437525104284
+Valid Loss: 0.584227740765
+Error Rate: 0.926852028134
+Best Error: 0.517389097686
+
+[Epoch 456] 
+Train Loss: 0.437461640835
+Valid Loss: 0.584432045619
+Error Rate: 0.927500646599
+Best Error: 0.517389097686
+
+[Epoch 457] 
+Train Loss: 0.437440755367
+Valid Loss: 0.584309995174
+Error Rate: 0.9273737566
+Best Error: 0.517389097686
+
+[Epoch 458] 
+Train Loss: 0.437423753738
+Valid Loss: 0.584401925405
+Error Rate: 0.926715314141
+Best Error: 0.517389097686
+
+[Epoch 459] 
+Train Loss: 0.437462904453
+Valid Loss: 0.58464384079
+Error Rate: 0.927046120517
+Best Error: 0.517389097686
+
+[Epoch 460] 
+Train Loss: 0.437436950207
+Valid Loss: 0.584214289983
+Error Rate: 0.926603023146
+Best Error: 0.517389097686
+
+[Epoch 461] 
+Train Loss: 0.437385237217
+Valid Loss: 0.584550221761
+Error Rate: 0.927232619852
+Best Error: 0.517389097686
+
+[Epoch 462] 
+Train Loss: 0.437402415276
+Valid Loss: 0.58500089248
+Error Rate: 0.927958930065
+Best Error: 0.517389097686
+
+[Epoch 463] 
+Train Loss: 0.43741853714
+Valid Loss: 0.584917823474
+Error Rate: 0.927754348318
+Best Error: 0.517389097686
+
+[Epoch 464] 
+Train Loss: 0.437357691526
+Valid Loss: 0.58526357015
+Error Rate: 0.927623035565
+Best Error: 0.517389097686
+
+[Epoch 465] 
+Train Loss: 0.437325936556
+Valid Loss: 0.584965070089
+Error Rate: 0.927773957167
+Best Error: 0.517389097686
+
+[Epoch 466] 
+Train Loss: 0.437400252819
+Valid Loss: 0.585235734781
+Error Rate: 0.927429999946
+Best Error: 0.517389097686
+
+[Epoch 467] 
+Train Loss: 0.437325052023
+Valid Loss: 0.585137784481
+Error Rate: 0.927783624604
+Best Error: 0.517389097686
+
+[Epoch 468] 
+Train Loss: 0.437369978428
+Valid Loss: 0.585319340229
+Error Rate: 0.928015486527
+Best Error: 0.517389097686
+
+[Epoch 469] 
+Train Loss: 0.437342914343
+Valid Loss: 0.585899889469
+Error Rate: 0.928158188851
+Best Error: 0.517389097686
+
+[Epoch 470] 
+Train Loss: 0.437283052206
+Valid Loss: 0.585573534171
+Error Rate: 0.927820767913
+Best Error: 0.517389097686
+
+[Epoch 471] 
+Train Loss: 0.437273426056
+Valid Loss: 0.585670789083
+Error Rate: 0.927558377243
+Best Error: 0.517389097686
+
+[Epoch 472] 
+Train Loss: 0.437299286127
+Valid Loss: 0.585173865159
+Error Rate: 0.927219586426
+Best Error: 0.517389097686
+
+[Epoch 473] 
+Train Loss: 0.43728951335
+Valid Loss: 0.585704922676
+Error Rate: 0.927629258732
+Best Error: 0.517389097686
+
+[Epoch 474] 
+Train Loss: 0.43722797513
+Valid Loss: 0.584707736969
+Error Rate: 0.926164583366
+Best Error: 0.517389097686
+
+[Epoch 475] 
+Train Loss: 0.437276483774
+Valid Loss: 0.584793190161
+Error Rate: 0.926559069577
+Best Error: 0.517389097686
+
+[Epoch 476] 
+Train Loss: 0.437264130116
+Valid Loss: 0.584146042665
+Error Rate: 0.925626964295
+Best Error: 0.517389097686
+
+[Epoch 477] 
+Train Loss: 0.43728058815
+Valid Loss: 0.583393216133
+Error Rate: 0.925310052414
+Best Error: 0.517389097686
+
+[Epoch 478] 
+Train Loss: 0.437240710258
+Valid Loss: 0.583450516065
+Error Rate: 0.924360843205
+Best Error: 0.517389097686
+
+[Epoch 479] 
+Train Loss: 0.437276871204
+Valid Loss: 0.58284107844
+Error Rate: 0.923902872854
+Best Error: 0.517389097686
+
+[Epoch 480] 
+Train Loss: 0.437226325274
+Valid Loss: 0.583768328031
+Error Rate: 0.925108406123
+Best Error: 0.517389097686
+
+[Epoch 481] 
+Train Loss: 0.437196891308
+Valid Loss: 0.584037840366
+Error Rate: 0.926002350471
+Best Error: 0.517389097686
+
+[Epoch 482] 
+Train Loss: 0.437183070183
+Valid Loss: 0.584671715895
+Error Rate: 0.926156090111
+Best Error: 0.517389097686
+
+[Epoch 483] 
+Train Loss: 0.437159192562
+Valid Loss: 0.584778209527
+Error Rate: 0.926221570361
+Best Error: 0.517389097686
+
+[Epoch 484] 
+Train Loss: 0.437155531645
+Valid Loss: 0.584351837635
+Error Rate: 0.925716750124
+Best Error: 0.517389097686
+
+[Epoch 485] 
+Train Loss: 0.437121949196
+Valid Loss: 0.584720830123
+Error Rate: 0.926321728136
+Best Error: 0.517389097686
+
+[Epoch 486] 
+Train Loss: 0.437096021175
+Valid Loss: 0.584446072578
+Error Rate: 0.925365943505
+Best Error: 0.517389097686
+
+[Epoch 487] 
+Train Loss: 0.43711302042
+Valid Loss: 0.58469225963
+Error Rate: 0.925905793522
+Best Error: 0.517389097686
+
+[Epoch 488] 
+Train Loss: 0.43707865715
+Valid Loss: 0.584703902404
+Error Rate: 0.926018006238
+Best Error: 0.517389097686
+
+[Epoch 489] 
+Train Loss: 0.437075351477
+Valid Loss: 0.584561566512
+Error Rate: 0.925483753159
+Best Error: 0.517389097686
+
+[Epoch 490] 
+Train Loss: 0.437098149061
+Valid Loss: 0.584644556046
+Error Rate: 0.925686769329
+Best Error: 0.517389097686
+
+[Epoch 491] 
+Train Loss: 0.437072389126
+Valid Loss: 0.58421866099
+Error Rate: 0.924516618096
+Best Error: 0.517389097686
+
+[Epoch 492] 
+Train Loss: 0.437093364
+Valid Loss: 0.584075689316
+Error Rate: 0.925160187575
+Best Error: 0.517389097686
+
+[Epoch 493] 
+Train Loss: 0.437095524073
+Valid Loss: 0.584166427453
+Error Rate: 0.924708949205
+Best Error: 0.517389097686
+
+[Epoch 494] 
+Train Loss: 0.437031525373
+Valid Loss: 0.584183653196
+Error Rate: 0.924655837012
+Best Error: 0.517389097686
+
+[Epoch 495] 
+Train Loss: 0.437050772905
+Valid Loss: 0.584220945835
+Error Rate: 0.924849224885
+Best Error: 0.517389097686
+
+[Epoch 496] 
+Train Loss: 0.437016284466
+Valid Loss: 0.583871126175
+Error Rate: 0.924453838467
+Best Error: 0.517389097686
+
+[Epoch 497] 
+Train Loss: 0.436985102892
+Valid Loss: 0.583999057611
+Error Rate: 0.924398025654
+Best Error: 0.517389097686
+
+[Epoch 498] 
+Train Loss: 0.43696377039
+Valid Loss: 0.583807249864
+Error Rate: 0.923810190708
+Best Error: 0.517389097686
+
+[Epoch 499] 
+Train Loss: 0.437009140253
+Valid Loss: 0.583971997102
+Error Rate: 0.924660455464
+Best Error: 0.517389097686
+
+[Epoch 500] 
+Train Loss: 0.437024946213
+Valid Loss: 0.582874615987
+Error Rate: 0.92316051548
+Best Error: 0.517389097686
+
+[Epoch 501] 
+Train Loss: 0.436995528936
+Valid Loss: 0.583159705003
+Error Rate: 0.923744867017
+Best Error: 0.517389097686
+
+[Epoch 502] 
+Train Loss: 0.436957604885
+Valid Loss: 0.583545684814
+Error Rate: 0.923358012992
+Best Error: 0.517389097686
+
+[Epoch 503] 
+Train Loss: 0.436948736906
+Valid Loss: 0.583618581295
+Error Rate: 0.924206438194
+Best Error: 0.517389097686
+
+[Epoch 504] 
+Train Loss: 0.436914772987
+Valid Loss: 0.583668490251
+Error Rate: 0.92383163911
+Best Error: 0.517389097686
+
+[Epoch 505] 
+Train Loss: 0.436930516958
+Valid Loss: 0.583502391974
+Error Rate: 0.92355104861
+Best Error: 0.517389097686
+
+[Epoch 506] 
+Train Loss: 0.436902582645
+Valid Loss: 0.584050456683
+Error Rate: 0.92456288089
+Best Error: 0.517389097686
+
+[Epoch 507] 
+Train Loss: 0.436889498234
+Valid Loss: 0.58371057113
+Error Rate: 0.923900172234
+Best Error: 0.517389097686
+
+[Epoch 508] 
+Train Loss: 0.436869388819
+Valid Loss: 0.583885133266
+Error Rate: 0.924092503343
+Best Error: 0.517389097686
+
+[Epoch 509] 
+Train Loss: 0.436874781847
+Valid Loss: 0.584475954374
+Error Rate: 0.924822805777
+Best Error: 0.517389097686
+
+[Epoch 510] 
+Train Loss: 0.436875505447
+Valid Loss: 0.584444741408
+Error Rate: 0.924830163988
+Best Error: 0.517389097686
+
+[Epoch 511] 
+Train Loss: 0.436879740953
+Valid Loss: 0.584426442782
+Error Rate: 0.925196548096
+Best Error: 0.517389097686
+
+[Epoch 512] 
+Train Loss: 0.436857720613
+Valid Loss: 0.584656039874
+Error Rate: 0.924809459235
+Best Error: 0.517389097686
+
+[Epoch 513] 
+Train Loss: 0.436838730574
+Valid Loss: 0.584964692593
+Error Rate: 0.925901370768
+Best Error: 0.517389097686
+
+[Epoch 514] 
+Train Loss: 0.436830457449
+Valid Loss: 0.585041364034
+Error Rate: 0.925454946546
+Best Error: 0.517389097686
+
+[Epoch 515] 
+Train Loss: 0.436887873411
+Valid Loss: 0.584817965825
+Error Rate: 0.926159260404
+Best Error: 0.517389097686
+
+[Epoch 516] 
+Train Loss: 0.436848274469
+Valid Loss: 0.585913956165
+Error Rate: 0.926190141407
+Best Error: 0.517389097686
+
+[Epoch 517] 
+Train Loss: 0.436875702143
+Valid Loss: 0.58575151364
+Error Rate: 0.926703611455
+Best Error: 0.517389097686
+
+[Epoch 518] 
+Train Loss: 0.436833739281
+Valid Loss: 0.586314638456
+Error Rate: 0.927610315253
+Best Error: 0.517389097686
+
+[Epoch 519] 
+Train Loss: 0.436861032248
+Valid Loss: 0.585705081622
+Error Rate: 0.926433666876
+Best Error: 0.517389097686
+
+[Epoch 520] 
+Train Loss: 0.436833888292
+Valid Loss: 0.586221456528
+Error Rate: 0.927193049899
+Best Error: 0.517389097686
+
+[Epoch 521] 
+Train Loss: 0.436829692125
+Valid Loss: 0.585287153721
+Error Rate: 0.92558211052
+Best Error: 0.517389097686
+
+[Epoch 522] 
+Train Loss: 0.436796640158
+Valid Loss: 0.584276914597
+Error Rate: 0.924646013018
+Best Error: 0.517389097686
+
+[Epoch 523] 
+Train Loss: 0.436830606461
+Valid Loss: 0.583222965399
+Error Rate: 0.923221964369
+Best Error: 0.517389097686
+
+[Epoch 524] 
+Train Loss: 0.436814160347
+Valid Loss: 0.583128333092
+Error Rate: 0.921889697659
+Best Error: 0.517389097686
+
+[Epoch 525] 
+Train Loss: 0.43680000186
+Valid Loss: 0.58288927873
+Error Rate: 0.922630567736
+Best Error: 0.517389097686
+
+[Epoch 526] 
+Train Loss: 0.436777989864
+Valid Loss: 0.583036422729
+Error Rate: 0.922747359764
+Best Error: 0.517389097686
+
+[Epoch 527] 
+Train Loss: 0.436761441231
+Valid Loss: 0.5842979153
+Error Rate: 0.92465935956
+Best Error: 0.517389097686
+
+[Epoch 528] 
+Train Loss: 0.43670334816
+Valid Loss: 0.584638098876
+Error Rate: 0.924692980321
+Best Error: 0.517389097686
+
+[Epoch 529] 
+Train Loss: 0.436685048342
+Valid Loss: 0.584572990735
+Error Rate: 0.924365344239
+Best Error: 0.517389097686
+
+[Epoch 530] 
+Train Loss: 0.436647046804
+Valid Loss: 0.585099339485
+Error Rate: 0.924492899608
+Best Error: 0.517389097686
+
+[Epoch 531] 
+Train Loss: 0.436665971279
+Valid Loss: 0.585198044777
+Error Rate: 0.92401852984
+Best Error: 0.517389097686
+
+[Epoch 532] 
+Train Loss: 0.43665058732
+Valid Loss: 0.585018873215
+Error Rate: 0.924545542127
+Best Error: 0.517389097686
+
+[Epoch 533] 
+Train Loss: 0.436631783247
+Valid Loss: 0.585282564163
+Error Rate: 0.924293953937
+Best Error: 0.517389097686
+
+[Epoch 534] 
+Train Loss: 0.436618922949
+Valid Loss: 0.584906995296
+Error Rate: 0.923913401358
+Best Error: 0.517389097686
+
+[Epoch 535] 
+Train Loss: 0.436615817547
+Valid Loss: 0.585018138091
+Error Rate: 0.923882520356
+Best Error: 0.517389097686
+
+[Epoch 536] 
+Train Loss: 0.436621699333
+Valid Loss: 0.584784587224
+Error Rate: 0.923976494103
+Best Error: 0.517389097686
+
+[Epoch 537] 
+Train Loss: 0.436582149267
+Valid Loss: 0.584958871206
+Error Rate: 0.92329875591
+Best Error: 0.517389097686
+
+[Epoch 538] 
+Train Loss: 0.436592953205
+Valid Loss: 0.585103233655
+Error Rate: 0.923261534322
+Best Error: 0.517389097686
+
+[Epoch 539] 
+Train Loss: 0.436578711271
+Valid Loss: 0.585392177105
+Error Rate: 0.923739113522
+Best Error: 0.517389097686
+
+[Epoch 540] 
+Train Loss: 0.436591955423
+Valid Loss: 0.58490784963
+Error Rate: 0.923480558515
+Best Error: 0.517389097686
+
+[Epoch 541] 
+Train Loss: 0.43653263092
+Valid Loss: 0.585155566533
+Error Rate: 0.923379383115
+Best Error: 0.517389097686
+
+[Epoch 542] 
+Train Loss: 0.436545653343
+Valid Loss: 0.58458618323
+Error Rate: 0.922622348458
+Best Error: 0.517389097686
+
+[Epoch 543] 
+Train Loss: 0.436562019587
+Valid Loss: 0.585256139437
+Error Rate: 0.92330149567
+Best Error: 0.517389097686
+
+[Epoch 544] 
+Train Loss: 0.436530905962
+Valid Loss: 0.584167400996
+Error Rate: 0.922700705576
+Best Error: 0.517389097686
+
+[Epoch 545] 
+Train Loss: 0.436562234163
+Valid Loss: 0.584995985031
+Error Rate: 0.923352650891
+Best Error: 0.517389097686
+
+[Epoch 546] 
+Train Loss: 0.436536216736
+Valid Loss: 0.584541877111
+Error Rate: 0.922151853493
+Best Error: 0.517389097686
+
+[Epoch 547] 
+Train Loss: 0.436515423059
+Valid Loss: 0.584849337737
+Error Rate: 0.923063488858
+Best Error: 0.517389097686
+
+[Epoch 548] 
+Train Loss: 0.436487927437
+Valid Loss: 0.584764440854
+Error Rate: 0.922019757951
+Best Error: 0.517389097686
+

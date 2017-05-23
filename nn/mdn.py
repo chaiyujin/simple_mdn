@@ -41,11 +41,12 @@ def parameter_layer(X, Dims, K, bias=0):
         pi = tf.nn.softmax(pi_hat)
     # scale should be bigger than 0.05
     # otherwise, the loss will boom
-    min_scale = tf.constant(
-        np.full((K * Dims), 0.05, np.float32),
-        dtype=tf.float32
-    )
-    scales = tf.add(scales, min_scale)
+    # min_scale = tf.constant(
+    #     np.full((K * Dims), 0.05, np.float32),
+    #     dtype=tf.float32
+    # )
+    # scales = tf.add(scales, min_scale)
+    scales = tf.clip_by_value(scales, 0.05, 0.4)
     # reshape the output tensor into parameters
     locs = reshape_gmm_tensor(locs, Dims, K)
     scales = reshape_gmm_tensor(scales, Dims, K)

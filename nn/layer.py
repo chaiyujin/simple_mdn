@@ -6,7 +6,7 @@ import tensorflow as tf
 def LSTM_cell(size, initializer, dropout=0):
     cell = tf.contrib.rnn.LSTMCell(
         size, state_is_tuple=True,
-        initializer=initializer
+        initializer=tf.orthogonal_initializer
     )
     if dropout > 0:
         cell = tf.contrib.rnn.DropoutWrapper(

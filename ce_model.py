@@ -38,16 +38,19 @@ class Model():
         )
         self._W = {}
         self._b = {}
+        self._lstm_layers = []
 
         # set the input tensor
-        self._audio_input = tf.placeholder(
+        self._inputs = tf.placeholder(
             dtype=tf.float32,
             shape=[None, None, self._audio_num_features]
         )
-        self._anime_data = tf.placeholder(
+        self._outputs = tf.placeholder(
             dtype=tf.float32,
             shape=[None, None, self._anime_num_features]
         )
+        self._audio_input = self._inputs
+        self._anime_data = self._outputs
         self._seq_len = tf.placeholder(tf.int32, [None])
         # set the last_anime_data
         self._audio_input_shape = tf.shape(self._audio_input)
@@ -74,6 +77,7 @@ class Model():
             dropout=self._dropout,
             scope='audio_lstm'
         )
+        self._lstm_layers.append(self._audio_lstm)
         # 2. dense layer
         # a. flatten the batch and timestep
         self._audio_lstm_output = tf.reshape(
@@ -109,35 +113,42 @@ class Model():
             dropout=self._dropout,
             scope='anime_lstm'
         )
+        self._lstm_layers.append(self._anime_lstm)
         # 2. dense layer
         self._anime_lstm_output = tf.reshape(
             self._anime_lstm['output'],
             [-1, self._anime_lstm_size]
         )
         self._hidden_layer = layer.dense_layer(
-            input_size=self._anime_lstm_size,
+            # input_size=self._anime_lstm_size,
+            input_size=self._feature_size,
             output_size=self._dense_size,
-            inputs=self._anime_lstm_output,
+            # inputs=self._anime_lstm_output,
+            inputs=tf.reshape(
+                self._feature_input,
+                [-1, self._feature_size]
+            ),
             initializer=self._initializer,
             activation=tf.nn.relu,
             scope='lstm2hidden_dense'
-        )
-        self._dense_output = tf.reshape(
-            self._hidden_layer['output'],
-            [self._batch_size, -1, self._dense_size]
         )
 
         # III. output layer
         self._output_layer = layer.dense_layer(
             input_size=self._dense_size,
             output_size=self._anime_num_features,
-            inputs=self._dense_output,
+            inputs=self._hidden_layer['output'],
             initializer=self._initializer,
             activation=None,
             scope='output_dense'
         )
 
-        # self._loss_fn = tf.nn.sigmoid_cross_entropy_with_logits
+        self._output_anime = tf.nn.sigmoid(self._output_layer['output'])
+
+        self._loss_fn = tf.reduce_mean(tf.nn.sigmoid_cross_entropy_with_logits(
+            logits=self._output_layer['output'],
+            labels=tf.reshape(self._outputs, [-1, self._anime_num_features])
+        ))
 
         # saver
         self._saver = tf.train.Saver()
@@ -160,13 +171,7 @@ class Model():
                 self._seq_len: data['seq_len'][indexes]
             }
             if optimizer is not None:
-                locs, scale, pi, \
-                    scale_hat, pi_hat, loss, _ = sess.run(
-                        [self._locs, self._scales_diag, self._pi,
-                         self._scales_hat, self._pi_hat,
-                         self._loss_fn, optimizer],
-                        feed_dict=feed
-                    )
+                loss, _ = sess.run([self._loss_fn, optimizer], feed_dict=feed)
             else:
                 loss = sess.run(self._loss_fn, feed_dict=feed)
             avg_loss += loss
@@ -312,15 +317,13 @@ class Model():
         is0, is1,\
             self._audio_lstm['next_state'],\
             self._anime_lstm['next_state'],\
-            locs, scales, pi,\
-            scales_hat, pi_hat = sess.run(
+            output_anime = sess.run(
                 [
                     self._audio_lstm['init_state'],
                     self._anime_lstm['init_state'],
                     self._audio_lstm['last_state'],
                     self._anime_lstm['last_state'],
-                    self._locs, self._scales_diag, self._pi,
-                    self._scales_hat, self._pi_hat
+                    self._output_anime
                 ],
                 feed_dict=feed_dict
             )
@@ -329,15 +332,11 @@ class Model():
         # os.system('pause')
         anime_frame = []
         for i in range(bs):
-            if self._train:
-                one_sample = sample_gmm_with_hat(
-                    locs[i], scales_hat[i],
-                    pi_hat[i], self._sample_mdn_bias)
-            else:
-                one_sample = sample_gmm(locs[i], scales[i], pi[i])
-            anime_frame.append([one_sample])
+            anime_frame.append([output_anime[i]])
+        anime_frame = np.asarray(anime_frame, dtype=np.float32)
+        # print(anime_frame.shape)
         # (batch_size, 1, features)
-        return np.asarray(anime_frame, dtype=np.float32)
+        return anime_frame
 
     def sample_audio(self, sess, audio_input):
         bs = audio_input.shape[0]
@@ -381,6 +380,9 @@ class Model():
 
             anime_pred = self.sample_audio(sess, audio)
             assert(len(anime_pred) == len(anime_true))
+
+            anime_pred = anime_pred ** 2
+            anime_true = anime_true ** 4
             # update error
             zeros = np.zeros(anime_true.shape)
             mse = ((anime_true - anime_pred) ** 2).mean()

@@ -14,15 +14,26 @@ class Trainer():
         self._train_set = train_set
         self._valid_set = valid_set
 
+    def checkpoint_epoch(self, epoch, epoches, cp=10):
+        if (epoch + 1) % cp == 0 or (epoch + 1) == epoches:
+            return True
+        else:
+            return False
+
     def train(self, optimizer, epoches, mini_batch_size, valid_batch_size):
         with tf.Session() as self._sess:
             self._optimizer = optimizer.minimize(self._model._loss_fn)
             self._sess.run(tf.global_variables_initializer())
+
+            # self._model.load(self._sess)
+
             epoch_list = []
             train_loss_list = []
             valid_loss_list = []
-            error_rate_list = []
+            train_error_rate_list = []
+            valid_error_rate_list = []
             total_time = 0
+            best_valid_loss = 1000000
             for epoch in range(epoches):
                 start_time = time.time()
                 console.log('log', 'Epoch ' + str(epoch) + '/' + str(epoches))
@@ -31,26 +42,33 @@ class Trainer():
                     data_set=self._train_set,
                     batch_size=mini_batch_size,
                     is_train=True
-                )
+                ).mean()
                 # valid by time
                 valid_loss = self.run_one_epoch(
                     data_set=self._valid_set,
                     batch_size=valid_batch_size,
                     is_train=False
-                )
-                error_rate = self._model.sample_data(
+                ).mean()
+                train_error_rate = self._model.sample_data(
+                    self._sess, self._train_set, valid_batch_size)
+                valid_error_rate = self._model.sample_data(
                     self._sess, self._valid_set, valid_batch_size)
 
                 epoch_list.append(epoch)
                 train_loss_list.append(train_loss)
                 valid_loss_list.append(valid_loss)
-                if error_rate > 1:
-                    error_rate_list.append(1)
+                if train_error_rate > 1:
+                    train_error_rate_list.append(1)
                 else:
-                    error_rate_list.append(error_rate)
+                    train_error_rate_list.append(train_error_rate)
+                if valid_error_rate > 1:
+                    valid_error_rate_list.append(1)
+                else:
+                    valid_error_rate_list.append(valid_error_rate)
                 console.log('info', 'Train Loss', str(train_loss) + '\n')
                 console.log('info', 'Valid Loss', str(valid_loss) + '\n')
-                console.log('info', 'Error Rate', str(error_rate) + '\n')
+                console.log('info', 'Train Error Rate', str(train_error_rate) + '\n')
+                console.log('info', 'Valid Error Rate', str(valid_error_rate) + '\n')
 
                 if True:
                     fig = plt.figure(figsize=(12, 12))
@@ -62,10 +80,18 @@ class Trainer():
                         epoch_list, valid_loss_list, 'r'
                     )
                     rate_plt.plot(
-                        epoch_list, error_rate_list, 'r'
+                        epoch_list, train_error_rate_list, 'g',
+                        epoch_list, valid_error_rate_list, 'r'
                     )
                     plt.savefig('error.png')
                     plt.clf()
+                    plt.close(fig)
+
+                if valid_loss < best_valid_loss:
+                    if self.checkpoint_epoch(epoch, epoches) or\
+                       epoch > 400:
+                        best_valid_loss = valid_loss
+                        self._model.save(self._sess, epoch)
 
                 # end time
                 delta_time = time.time() - start_time
@@ -126,7 +152,7 @@ class Trainer():
                         to_run,
                         feed_dict=feed_dict
                     )
-                avg_loss += result[0]
+                avg_loss += result[0].mean()
                 avg_count += 1
 
             bar = process_bar.process_bar(batch, batches)

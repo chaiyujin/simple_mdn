@@ -8,6 +8,7 @@ import fbxanime
 import numpy as np
 import pickle
 from utils import media, console
+import matplotlib.pyplot as plt
 
 
 def find_files(path, target_ext):
@@ -158,4 +159,11 @@ def process(
 
 
 if __name__ == '__main__':
-    process()
+    # process()
+    train_data = load('data/train.pkl')
+    data = train_data['outputs'].flatten()
+    data = data ** 0.25
+    fig = plt.figure()
+    ax = fig.add_subplot(111)
+    ax.hist(data, bins=20)
+    plt.show()

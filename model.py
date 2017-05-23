@@ -122,7 +122,7 @@ class Model():
             output_size=self._dense_size,
             inputs=self._anime_lstm_output,
             initializer=self._initializer,
-            activation=tf.nn.relu,
+            activation=tf.nn.tanh,
             scope='lstm2hidden_dense'
         )
         self._dense_output = tf.reshape(
