@@ -160,10 +160,14 @@ def process(
 
 if __name__ == '__main__':
     # process()
+    # train_data = load('data/train.pkl')
+    # data = train_data['outputs']  # .flatten()
+    # # data = data ** 0.25
+    # print(data.shape)
+    # fig = plt.figure()
+    # ax = fig.add_subplot(111)
+    # ax.hist(data, bins=20)
+    # plt.show()
     train_data = load('data/train.pkl')
-    data = train_data['outputs'].flatten()
-    data = data ** 0.25
-    fig = plt.figure()
-    ax = fig.add_subplot(111)
-    ax.hist(data, bins=20)
-    plt.show()
+    test_data = load('data/test.pkl')
+    print(len(train_data['inputs']) + len(test_data['inputs']))

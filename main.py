@@ -40,13 +40,13 @@ if __name__ == '__main__':
     if model._train:
         # pass
         console.add_log_file('log.txt')
-        optimizer = tf.train.AdamOptimizer(1e-4)
+        optimizer = tf.train.AdamOptimizer(1e-5)
         # optimizer = tf.train.MomentumOptimizer(1e-4, 0.9)
         model.simple_train(
             train_data=train_data,
             valid_data=valid_data,
             epoches=5000,
-            mini_batch_size=32,
+            mini_batch_size=16,
             valid_batch_size=64,
             optimizer=optimizer
         )
@@ -62,4 +62,5 @@ if __name__ == '__main__':
 
     with tf.Session() as sess:
         model.load(sess)
-        print(model.sample_data(sess, valid_data, 8, 8, True))
+        print(model.sample_data(sess, train_data, 8, 8, True))
+        # print(model.sample_data(sess, valid_data, 8, 8, True))

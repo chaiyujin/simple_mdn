@@ -273,6 +273,7 @@ class Model():
                     )
                     plt.savefig('error.png')
                     plt.clf()
+                    plt.close(fig)
 
                 # console the training loss and error rate
                 console.log('info', 'Train Loss', str(train_loss) + '\n')
@@ -381,7 +382,7 @@ class Model():
             anime_pred = self.sample_audio(sess, audio)
             assert(len(anime_pred) == len(anime_true))
 
-            anime_pred = anime_pred ** 2
+            # anime_pred = anime_pred ** 2
             anime_true = anime_true ** 4
             # update error
             zeros = np.zeros(anime_true.shape)
