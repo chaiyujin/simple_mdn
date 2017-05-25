@@ -40,23 +40,23 @@ def init_dde_fbx(
         return False
 
 
-def pad_sequences(sequences, maxlen=None, dtype=np.float32,
+def pad_sequences(sequences, maxlen=None, dtype=numpy.float32,
                   padding='post', truncating='post', value=0.):
-    lengths = np.asarray([len(s) for s in sequences], dtype=np.int64)
+    lengths = numpy.asarray([len(s) for s in sequences], dtype=numpy.int64)
 
     nb_samples = len(sequences)
     if maxlen is None:
-        maxlen = np.max(lengths)
+        maxlen = numpy.max(lengths)
 
     # take the sample shape from the first non empty sequence
     # checking for consistency in the main loop below.
     sample_shape = tuple()
     for s in sequences:
         if len(s) > 0:
-            sample_shape = np.asarray(s).shape[1:]
+            sample_shape = numpy.asarray(s).shape[1:]
             break
 
-    x = (np.ones((nb_samples, maxlen) + sample_shape) * value).astype(dtype)
+    x = (numpy.ones((nb_samples, maxlen) + sample_shape) * value).astype(dtype)
     for idx, s in enumerate(sequences):
         if len(s) == 0:
             continue  # empty list was found
@@ -69,7 +69,7 @@ def pad_sequences(sequences, maxlen=None, dtype=np.float32,
                              truncating)
 
         # check `trunc` has expected shape
-        trunc = np.asarray(trunc, dtype=dtype)
+        trunc = numpy.asarray(trunc, dtype=dtype)
         if trunc.shape[1:] != sample_shape:
             raise ValueError('Shape of sample %s of sequence at position %s is\
                               different from expected shape %s' %

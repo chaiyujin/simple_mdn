@@ -118,10 +118,17 @@ class Model(BasicModel):
             activation=tf.nn.relu,
             scope='lstm2hidden_dense'
         )
+        if self._train:
+            self._hidden_output = tf.nn.dropout(
+                x=self._hidden_layer['output'],
+                keep_prob=(1.0 - self._dropout)
+            )
+        else:
+            self._hidden_output = self._hidden_layer['output']
         self._output_layer = layer.dense_layer(
             input_size=self._dense_size,
             output_size=self._anime_num_features,
-            inputs=self._hidden_layer['output'],
+            inputs=self._hidden_output,
             initializer=self._initializer,
             activation=None,
             scope='output_dense'
