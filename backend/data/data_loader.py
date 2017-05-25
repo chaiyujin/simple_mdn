@@ -99,7 +99,7 @@ class DataSet():
         })
 
     # normalize the certain data
-    def normalize(self, key):
+    def normalize(self, key, mean=None, stdv=None):
         assert(self._keys is not None)
         assert(key in self._keys)
         # already normalized
@@ -107,33 +107,36 @@ class DataSet():
             warnings.warn('The key <' + key + '> is already normalized.')
             return
 
-        self.reset()
-        mean = 0
-        cnt = 0
-        while True:
-            batch, s = self.next_batch()
-            if batch is None:
-                break
-            mean += batch[key].mean() * s
-            cnt += s
-        mean /= cnt
-        self.reset()
-        stdv = 0
-        cnt = 0
-        while True:
-            batch, s = self.next_batch()
-            if batch is None:
-                break
-            stdv += ((batch[key] - mean) ** 2).mean() * s
-            cnt += s
-        stdv /= cnt
-        stdv = math.sqrt(stdv)
-        print(mean, ' ', stdv)
+        if mean is None:
+            self.reset()
+            mean = 0
+            cnt = 0
+            while True:
+                batch, s = self.next_batch()
+                if batch is None:
+                    break
+                mean += batch[key].mean() * s
+                cnt += s
+            mean /= cnt
+
+        if stdv is None:
+            self.reset()
+            stdv = 0
+            cnt = 0
+            while True:
+                batch, s = self.next_batch()
+                if batch is None:
+                    break
+                stdv += ((batch[key] - mean) ** 2).mean() * s
+                cnt += s
+            stdv /= cnt
+            stdv = math.sqrt(stdv)
         self.reset()
         self._normalized[key] = {
             'mean': mean,
             'stdv': stdv
         }
+        return mean, stdv
 
     def entire_set(self):
         ret = None

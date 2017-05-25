@@ -35,5 +35,9 @@ class BasicModel():
     def placeholder_dict(self):
         raise NotImplementedError()
 
+    @property
+    def pred_tensor(self):
+        raise NotImplementedError()
+
     def error_rate(self, pred, true):
         raise NotImplementedError()

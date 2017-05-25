@@ -40,6 +40,50 @@ def init_dde_fbx(
         return False
 
 
+def pad_sequences(sequences, maxlen=None, dtype=np.float32,
+                  padding='post', truncating='post', value=0.):
+    lengths = np.asarray([len(s) for s in sequences], dtype=np.int64)
+
+    nb_samples = len(sequences)
+    if maxlen is None:
+        maxlen = np.max(lengths)
+
+    # take the sample shape from the first non empty sequence
+    # checking for consistency in the main loop below.
+    sample_shape = tuple()
+    for s in sequences:
+        if len(s) > 0:
+            sample_shape = np.asarray(s).shape[1:]
+            break
+
+    x = (np.ones((nb_samples, maxlen) + sample_shape) * value).astype(dtype)
+    for idx, s in enumerate(sequences):
+        if len(s) == 0:
+            continue  # empty list was found
+        if truncating == 'pre':
+            trunc = s[-maxlen:]
+        elif truncating == 'post':
+            trunc = s[:maxlen]
+        else:
+            raise ValueError('Truncating type "%s" not understood' % 
+                             truncating)
+
+        # check `trunc` has expected shape
+        trunc = np.asarray(trunc, dtype=dtype)
+        if trunc.shape[1:] != sample_shape:
+            raise ValueError('Shape of sample %s of sequence at position %s is\
+                              different from expected shape %s' %
+                             (trunc.shape[1:], idx, sample_shape))
+
+        if padding == 'post':
+            x[idx, :len(trunc)] = trunc
+        elif padding == 'pre':
+            x[idx, -len(trunc):] = trunc
+        else:
+            raise ValueError('Padding type "%s" not understood' % padding)
+    return x, lengths
+
+
 def remove_files(list):
     for file_name in list:
         if os.path.exists(file_name):
@@ -295,6 +339,7 @@ def generate_video_for_anime(anime_data, video_path):
     global g_fbx_h
     global g_fbx_w
 
+    anime_data, _ = pad_sequences(anime_data, maxlen=19)
     fourcc = cv2.VideoWriter_fourcc(*'XVID')
     out = cv2.VideoWriter(video_path, fourcc, VIDEO_FPS, (g_fbx_w, g_fbx_h))
     for i, frame in enumerate(anime_data):

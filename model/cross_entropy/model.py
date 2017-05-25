@@ -15,7 +15,9 @@ class Model(BasicModel):
         self._audio_num_features = config['audio_num_features']
         self._anime_num_features = config['anime_num_features']
         self._audio_lstm_size = config['audio_lstm_size']
+        self._anime_lstm_size = config['anime_lstm_size']
         self._audio_lstm_dropout = config['audio_lstm_dropout']
+        self._anime_lstm_dropout = config['anime_lstm_dropout']
         self._phoneme_classes = config['phoneme_classes']
         self._dense_size = config['dense_size']
         self._train = bool(config['train'])
@@ -23,6 +25,7 @@ class Model(BasicModel):
         if not self._train:
             self._dropout = 0
             self._audio_lstm_dropout = 0
+            self._anime_lstm_dropout = 0
 
         self._inputs = tf.placeholder(
             tf.float32,
@@ -44,9 +47,20 @@ class Model(BasicModel):
         self._initializer = tf.truncated_normal_initializer(
             mean=0., stddev=.075, seed=None, dtype=tf.float32
         )
+        self._anime_data = self._outputs
         self._audio_input_shape = tf.shape(self._inputs)
         self._batch_size = self._audio_input_shape[0]
         self._time_step = self._audio_input_shape[1]
+        self._zero_anime_data = tf.zeros(
+            [self._batch_size, 1, self._anime_num_features], dtype=tf.float32)
+        if self._train:
+            self._last_anime_data = tf.concat(
+                [self._zero_anime_data, self._anime_data[:, 0: -1, :]], 1
+            )
+        else:
+            # when no train, directly use anime_data
+            self._last_anime_data = self._anime_data
+
         self._lstm_layers = []
 
         # define the network
@@ -71,10 +85,43 @@ class Model(BasicModel):
             activation=tf.nn.relu,
             scope='lstm2phn_dense'
         )
+        # reshape the vector back to batch and timestep
+        self._phn_vector = tf.reshape(
+            self._phn_layer['output'],
+            [self._batch_size, -1, self._phoneme_classes]
+        )
+
+        # build feature process layer
+        self._feature_input = tf.concat(
+            [self._last_anime_data, self._phn_vector], 2)
+        self._feature_size = self._anime_num_features + self._phoneme_classes
+        # 1. uni-lstm
+        self._anime_lstm = layer.LSTM_layer(
+            batch_size=self._batch_size,
+            lstm_size=self._anime_lstm_size,
+            inputs=self._feature_input,
+            seq_len=self._seq_len,
+            initializer=self._initializer,
+            dropout=self._anime_lstm_dropout,
+            scope='anime_lstm'
+        )
+        self._lstm_layers.append(self._anime_lstm)
+        self._anime_lstm_output = tf.reshape(
+            self._anime_lstm['output'],
+            [-1, self._anime_lstm_size]
+        )
+        self._hidden_layer = layer.dense_layer(
+            input_size=self._anime_lstm_size,
+            output_size=self._dense_size,
+            inputs=self._anime_lstm_output,
+            initializer=self._initializer,
+            activation=tf.nn.relu,
+            scope='lstm2hidden_dense'
+        )
         self._output_layer = layer.dense_layer(
-            input_size=self._phoneme_classes,
+            input_size=self._dense_size,
             output_size=self._anime_num_features,
-            inputs=self._phn_layer['output'],
+            inputs=self._hidden_layer['output'],
             initializer=self._initializer,
             activation=None,
             scope='output_dense'
@@ -177,7 +224,7 @@ class Model(BasicModel):
             anime_pred = self.sample_audio(sess, audio)
             assert(len(anime_pred) == len(anime_true))
 
-            # anime_pred = anime_pred ** 2
+            anime_pred = anime_pred ** 4
             anime_true = anime_true ** 4
 
             if video:

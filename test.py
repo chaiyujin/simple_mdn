@@ -12,24 +12,33 @@ if __name__ == '__main__':
         'audio_num_features': 39,
         'anime_num_features': 19,
         'audio_lstm_size': 128,
-        'audio_lstm_dropout': 0.5,
-        'phoneme_classes': 40,
+        'anime_lstm_size': 50,
+        'audio_lstm_dropout': 0.4,
+        'anime_lstm_dropout': 0.3,
+        'phoneme_classes': 20,
         'dense_size': 100,
         'train': 1,
-        'dropout': 0.5
+        'dropout': 0.3
     }
     data_process.process(config)
     # set model
     model = model.Model(config)
     # load data set
-    train_set = data_loader.DataSet(keys=['inputs', 'outputs', 'seq_len', 'path_prefix'])
-    valid_set = data_loader.DataSet(keys=['inputs', 'outputs', 'seq_len', 'path_prefix'])
+    set_keys = ['inputs', 'outputs', 'seq_len', 'path_prefix']
+    train_set = data_loader.DataSet(keys=set_keys)
+    valid_set = data_loader.DataSet(keys=set_keys)
     train_set.add_pkl('data/train.pkl')
     valid_set.add_pkl('data/test.pkl')
-    train_set.normalize('inputs')
-    valid_set.normalize('inputs')
+    mean, stdv = train_set.normalize('inputs')
+    valid_set.normalize('inputs', mean, stdv)
     train_set.power('outputs', 0.25)
     valid_set.power('outputs', 0.25)
+    # for i in range(19):
+    #     train_data = train_set.entire_set()
+    #     d = train_data['outputs'].flatten()
+    #     plt.hist(d, bins=10)
+    #     plt.show()
+    #     plt.clf()
 
     with tf.Session() as sess:
         if model._train:
@@ -46,7 +55,7 @@ if __name__ == '__main__':
                 sess,
                 optimizer,
                 5000,
-                64,
+                8,
                 64,
                 early_stopping_n=10,
                 load=False
