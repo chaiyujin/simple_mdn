@@ -22,8 +22,8 @@ class BasicModel():
         self._saver.save(sess, path, global_step=step)
 
     def load(self, sess, name='best', step=0):
-        path = os.path.join(self._default_save_path, name)
-        assert(os.path.exists(path))
+        path = os.path.join(self._default_save_path, name + '-' + str(step))
+        assert(os.path.exists(path + '.index'))
         self._saver.restore(sess, path)
 
     @property

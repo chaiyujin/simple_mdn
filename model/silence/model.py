@@ -94,6 +94,10 @@ class Model(BasicModel):
     def loss_fn(self):
         return self._loss_fn
 
+    @property
+    def pred_tensor(self):
+        return self._silence_pred
+
     def error_rate(self, pred, true):
         pred[pred < 0.5] = 0
         pred[pred >= 0.5] = 1

@@ -15,6 +15,7 @@ class DataSet():
         self._batch_size = 1    # default batch_size is 1
         self._keys = keys
         self._normalized = {}
+        self._powered = []
         self.clear()
 
     def add_pkl(self, path):
@@ -86,7 +87,16 @@ class DataSet():
         for key in self._normalized:
             norm = self._normalized[key]
             ret[key] = (ret[key] - norm['mean']) / norm['stdv']
+        # power
+        for power in self._powered:
+            ret[power['key']] = ret[power['key']] ** power['value']
         return ret, need
+
+    def power(self, key, p):
+        self._powered.append({
+            'key': key,
+            'value': p
+        })
 
     # normalize the certain data
     def normalize(self, key):

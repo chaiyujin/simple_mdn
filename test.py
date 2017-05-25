@@ -1,5 +1,5 @@
 from backend.data import data_process, data_loader
-from model.silence import model
+from model.cross_entropy import model
 from backend.train import BPTT
 import sys
 import numpy as np
@@ -22,21 +22,23 @@ if __name__ == '__main__':
     # set model
     model = model.Model(config)
     # load data set
-    train_set = data_loader.DataSet(keys=['inputs', 'silence', 'seq_len'])
-    valid_set = data_loader.DataSet(keys=['inputs', 'silence', 'seq_len'])
+    train_set = data_loader.DataSet(keys=['inputs', 'outputs', 'seq_len', 'path_prefix'])
+    valid_set = data_loader.DataSet(keys=['inputs', 'outputs', 'seq_len', 'path_prefix'])
     train_set.add_pkl('data/train.pkl')
     valid_set.add_pkl('data/test.pkl')
     train_set.normalize('inputs')
     valid_set.normalize('inputs')
+    train_set.power('outputs', 0.25)
+    valid_set.power('outputs', 0.25)
 
     with tf.Session() as sess:
         if model._train:
             optimizer = tf.train.GradientDescentOptimizer(1e-2)
             trainer = BPTT.Trainer(
-                model, train_set, valid_set, label_key='silence',
+                model, train_set, valid_set, label_key='outputs',
                 feed_keys={
                     'inputs': 'inputs',
-                    'outputs': 'silence',
+                    'outputs': 'outputs',
                     'seq_len': 'seq_len'
                 }
             )
@@ -46,8 +48,12 @@ if __name__ == '__main__':
                 5000,
                 64,
                 64,
+                early_stopping_n=10,
                 load=False
             )
 
+        model.load(sess)
+
+        model.sample(sess, valid_set, 8, 8, True)
 
 

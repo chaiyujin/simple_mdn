@@ -84,14 +84,17 @@ class Trainer(BasicTrainer):
                     plt.close(fig)
 
                 if valid_loss < best_valid_loss:
+                    best_valid_loss = valid_loss
                     if self.checkpoint_epoch(epoch, epoches) or\
-                       epoch > 400:
-                        best_valid_loss = valid_loss
+                       epoch > 100:
                         self._model.save(self._sess)
                     early_stopping_cnt = 0
                 else:
                     early_stopping_cnt += 1
-                    # if early_stopping_n > 0 && early_s
+                    if early_stopping_n > 0:
+                        if early_stopping_cnt >= early_stopping_n:
+                            console.log('warning', 'Early Stopping')
+                            break
 
                 # end time
                 delta_time = time.time() - start_time
@@ -119,7 +122,7 @@ class Trainer(BasicTrainer):
             feed_dict, sub_set = self.next_feed_dict(data_set)
             if feed_dict is None:
                 break
-            to_run = [self._model.loss_fn, self._model._silence_pred]
+            to_run = [self._model.loss_fn, self._model.pred_tensor]
             if is_train:
                 to_run.append(self._optimizer)
             result = self._sess.run(
