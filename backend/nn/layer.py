@@ -34,8 +34,14 @@ def LSTM_layer(
 
 def dense_layer(
         input_size, output_size, inputs,
-        initializer, activation=None, scope='dense_layer'):
+        initializer=None, activation=None, scope='dense_layer'):
     layer = {}
+    w_init = initializer
+    b_init = initializer
+    if w_init is None:
+        w_init = tf.contrib.layers.xavier_initializer
+    if b_init is None:
+        b_init = tf.ones_initializer
     with tf.variable_scope(scope):
         layer['W'] = tf.get_variable(
             scope + '_w',

@@ -7,11 +7,15 @@ import matplotlib.pyplot as plt
 from .base import BasicTrainer
 from ..utils import console, process_bar, format_time
 
+g_trainner_id = 0
+
 
 class Trainer(BasicTrainer):
     def __init__(self, model, train_set, valid_set, label_key, feed_keys=None):
+        global g_trainner_id
         super(Trainer, self).__init__(
             model, train_set, valid_set, label_key, feed_keys)
+        g_trainner_id += 1
 
     def checkpoint_epoch(self, epoch, epoches, cp=10):
         if (epoch + 1) % cp == 0 or (epoch + 1) == epoches:
@@ -22,6 +26,8 @@ class Trainer(BasicTrainer):
     def train(self, sess, optimizer, epoches,
               mini_batch_size, valid_batch_size,
               early_stopping_n=-1, load=False):
+        global g_trainner_id
+        console.log_file('Start', str(g_trainner_id) + '\n')
         if sess is not None:
             self._sess = sess
             self._optimizer = optimizer.minimize(self._model._loss_fn)
@@ -62,6 +68,11 @@ class Trainer(BasicTrainer):
                 console.log('info', 'Valid Loss', str(valid_loss) + '\n')
                 console.log('info', 'Train ER', str(train_er) + '\n')
                 console.log('info', 'Valid ER', str(valid_er) + '\n')
+                console.log_file('Epoch ' + str(epoch) + '/' + str(epoches))
+                console.log_file('Train Loss', str(train_loss) + '\n')
+                console.log_file('Valid Loss', str(valid_loss) + '\n')
+                console.log_file('Train ER', str(train_er) + '\n')
+                console.log_file('Valid ER', str(valid_er) + '\n\n')
 
                 if True:
                     fig = plt.figure(figsize=(12, 12))
@@ -78,16 +89,16 @@ class Trainer(BasicTrainer):
                         epoch_list, valid_er_list, 'r'
                     )
                     plt.savefig(
-                        os.path.join(self._path, 'error.png')
+                        os.path.join(
+                            self._path,
+                            'error' + str(g_trainner_id) + '.png')
                     )
                     plt.clf()
                     plt.close(fig)
 
                 if valid_loss < best_valid_loss:
                     best_valid_loss = valid_loss
-                    if self.checkpoint_epoch(epoch, epoches) or\
-                       epoch > 100:
-                        self._model.save(self._sess)
+                    self._model.save(self._sess)
                     early_stopping_cnt = 0
                 else:
                     early_stopping_cnt += 1
@@ -133,7 +144,10 @@ class Trainer(BasicTrainer):
             bar = process_bar.process_bar(batch, batches)
             batch += 1  # add one batch
             avg_count += 1
-            avg_loss += result[0]
+            if type(result[0]) != float:
+                avg_loss += result[0].mean()
+            else:
+                avg_loss += result[0]
             loss_str = '\tLoss %.4f' % (avg_loss / avg_count)
             try:
                 avg_er += self._model.error_rate(

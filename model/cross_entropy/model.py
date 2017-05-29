@@ -19,7 +19,8 @@ class Model(BasicModel):
         self._audio_lstm_dropout = config['audio_lstm_dropout']
         self._anime_lstm_dropout = config['anime_lstm_dropout']
         self._phoneme_classes = config['phoneme_classes']
-        self._dense_size = config['dense_size']
+        self._dense_size0 = config['dense_size0']
+        self._dense_size1 = config['dense_size1']
         self._train = bool(config['train'])
         self._dropout = float(config['dropout'])
         if not self._train:
@@ -44,9 +45,11 @@ class Model(BasicModel):
             'outputs': self._outputs,
             'seq_len': self._seq_len
         }
-        self._initializer = tf.truncated_normal_initializer(
-            mean=0., stddev=.075, seed=None, dtype=tf.float32
-        )
+        # self._initializer = tf.truncated_normal_initializer(
+        #     mean=0., stddev=.075, seed=None, dtype=tf.float32
+        # )
+        self._initializer = None
+
         self._anime_data = self._outputs
         self._audio_input_shape = tf.shape(self._inputs)
         self._batch_size = self._audio_input_shape[0]
@@ -110,13 +113,21 @@ class Model(BasicModel):
             self._anime_lstm['output'],
             [-1, self._anime_lstm_size]
         )
-        self._hidden_layer = layer.dense_layer(
+        self._hidden_layer0 = layer.dense_layer(
             input_size=self._anime_lstm_size,
-            output_size=self._dense_size,
+            output_size=self._dense_size0,
             inputs=self._anime_lstm_output,
             initializer=self._initializer,
             activation=tf.nn.relu,
-            scope='lstm2hidden_dense'
+            scope='lstm2hidden_dense0'
+        )
+        self._hidden_layer = layer.dense_layer(
+            input_size=self._dense_size0,
+            output_size=self._dense_size1,
+            inputs=self._hidden_layer0['output'],
+            initializer=self._initializer,
+            activation=tf.nn.relu,
+            scope='lstm2hidden_dense1'
         )
         if self._train:
             self._hidden_output = tf.nn.dropout(
@@ -126,7 +137,7 @@ class Model(BasicModel):
         else:
             self._hidden_output = self._hidden_layer['output']
         self._output_layer = layer.dense_layer(
-            input_size=self._dense_size,
+            input_size=self._dense_size1,
             output_size=self._anime_num_features,
             inputs=self._hidden_output,
             initializer=self._initializer,
@@ -139,7 +150,9 @@ class Model(BasicModel):
         self._loss_fn = tf.reduce_mean(tf.nn.sigmoid_cross_entropy_with_logits(
             logits=self._output_layer['output'],
             labels=tf.reshape(self._outputs, [-1, self._anime_num_features])
-        ))
+        ), axis=0)
+
+        print(self._loss_fn.shape)
         # finally, create the saver
         self._saver = tf.train.Saver()
 

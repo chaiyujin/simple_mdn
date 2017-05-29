@@ -39,7 +39,9 @@ def log_file(level='', content='\n'):
     global file_list
     for file in file_list:
         # print(content)
-        file.write('[' + level + '] ' + content)
+        if len(level) > 0:
+            level = '[' + level + '] '
+        file.write(level + content)
         file.flush()
 
 

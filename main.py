@@ -1,14 +1,15 @@
 import sys
 import numpy
-import yuki.data.data_process as data_process
+import backend.data.data_process as data_process
 import tensorflow as tf
-from yuki.model.ce_model import Model
-from yuki.utils.process_bar import process_bar
-from yuki.utils import console
-from yuki.train import RTRL
+from model.cross_entropy.model import Model
+from backend.utils.process_bar import process_bar
+from backend.utils import console
+from backend.train import RTRL
 
 
 if __name__ == '__main__':
+    sys.path.append('.')
     config = {
         'audio_num_features': 39,
         'anime_num_features': 19,
