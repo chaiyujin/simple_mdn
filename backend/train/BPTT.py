@@ -7,15 +7,10 @@ import matplotlib.pyplot as plt
 from .base import BasicTrainer
 from ..utils import console, process_bar, format_time
 
-g_trainner_id = 0
-
-
 class Trainer(BasicTrainer):
     def __init__(self, model, train_set, valid_set, label_key, feed_keys=None):
-        global g_trainner_id
         super(Trainer, self).__init__(
             model, train_set, valid_set, label_key, feed_keys)
-        g_trainner_id += 1
 
     def checkpoint_epoch(self, epoch, epoches, cp=10):
         if (epoch + 1) % cp == 0 or (epoch + 1) == epoches:
@@ -25,9 +20,8 @@ class Trainer(BasicTrainer):
 
     def train(self, sess, optimizer, epoches,
               mini_batch_size, valid_batch_size,
-              early_stopping_n=-1, load=False):
-        global g_trainner_id
-        console.log_file('Start', str(g_trainner_id) + '\n')
+              train_id=0, early_stopping_n=-1, load=False):
+        console.log_file('Start training phase', str(train_id) + '\n')
         if sess is not None:
             self._sess = sess
             self._optimizer = optimizer.minimize(self._model._loss_fn)
@@ -91,7 +85,7 @@ class Trainer(BasicTrainer):
                     plt.savefig(
                         os.path.join(
                             self._path,
-                            'error' + str(g_trainner_id) + '.png')
+                            'error' + str(train_id) + '.png')
                     )
                     plt.clf()
                     plt.close(fig)
@@ -148,16 +142,16 @@ class Trainer(BasicTrainer):
                 avg_loss += result[0].mean()
             else:
                 avg_loss += result[0]
-            loss_str = '\tLoss %.4f' % (avg_loss / avg_count)
+            loss_str = ' Loss %.4f' % (avg_loss / avg_count)
             try:
                 avg_er += self._model.error_rate(
                     pred=result[1],
                     true=sub_set[self.label_key]
                 )
+                loss_str += ' ER %.4f' % (avg_er / avg_count)
             except:
                 pass
 
-            loss_str += '\tER %.4f' % (avg_er / avg_count)
             if is_train:
                 console.log('', 'Train', bar + loss_str + '\r')
             else:

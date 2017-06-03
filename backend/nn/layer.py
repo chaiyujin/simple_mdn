@@ -39,17 +39,17 @@ def dense_layer(
     w_init = initializer
     b_init = initializer
     if w_init is None:
-        w_init = tf.contrib.layers.xavier_initializer
+        w_init = tf.contrib.layers.xavier_initializer()
     if b_init is None:
         b_init = tf.ones_initializer
     with tf.variable_scope(scope):
         layer['W'] = tf.get_variable(
             scope + '_w',
             [input_size, output_size],
-            initializer=initializer)
+            initializer=w_init)
         layer['b'] = tf.get_variable(
             scope + '_b', [output_size],
-            initializer=initializer)
+            initializer=b_init)
         if activation is None:
             layer['output'] = tf.nn.xw_plus_b(inputs, layer['W'], layer['b'])
         else:

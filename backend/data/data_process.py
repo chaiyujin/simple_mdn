@@ -96,7 +96,11 @@ def accumulate_data(file_list, config):
     for idx, file in enumerate(file_list):
         console.log(
             'info', 'Process ' + str(idx + 1) + '/' + str(len(file_list)))
-        res = media.process_media(file, config)
+        res = None
+        try:
+            res = media.process_media(file, config)
+        except:
+            res = None
         if res is not None:
             inputs.append(res[0])
             outputs.append(res[1])
@@ -157,6 +161,20 @@ def process(
     sets = generate_train_test(root_path, ext, test_rate, config)
     save(train_path, sets['train_set'])
     save(test_path, sets['test_set'])
+
+
+def merge(path_list, path):
+    all_set = {}
+    for p in path_list:
+        with open(p, 'rb') as file:
+            the_set = pickle.load(file)
+            for k in the_set:
+                if k in all_set:
+                    all_set[k] = np.append(all_set[k], the_set[k], axis=0)
+                else:
+                    all_set[k] = np.asarray(the_set[k])
+    with open(path, 'wb') as file:
+        pickle.dump(all_set, file)
 
 
 if __name__ == '__main__':

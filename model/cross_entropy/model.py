@@ -4,7 +4,6 @@ import numpy as np
 import tensorflow as tf
 from backend.nn import layer
 from backend.model import BasicModel
-from backend.utils.media import sample_video
 from backend.utils import process_bar, console
 
 
@@ -225,6 +224,9 @@ class Model(BasicModel):
         return np.asarray(anime_data)
 
     def sample(self, sess, data, batch_size, number=None, video=False):
+        # import the utils to sample video
+        from backend.utils.media import sample_video
+
         if number is None or number > data.length:
             number = data.length
         if batch_size > number:
