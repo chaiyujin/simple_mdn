@@ -134,6 +134,28 @@ class GAN():
             )
             return lin
 
+    def sample(self, sess, path, id, vx, vy, file_prefix):
+        x_shape = [self._b_size, self._img_h, self._img_w, 1]
+        y_shape = [self._b_size, self._img_h, self._expr, 1]
+        if sess is not None:
+            if not os.path.exists(path):
+                os.mkdir(path)
+            pred = sess.run(self.pred, feed_dict={
+                self.x: np.reshape(vx, x_shape),
+                self.y: np.reshape(vy, y_shape)
+            })
+            from ..backend.utils.media import sample_video
+            print('\nSampling...')
+            sample_config = {
+                'path_prefix': file_prefix[0],
+                'anime_true': vy[0],
+                'anime_pred': pred[0]
+            }
+            sample_video(
+                sample_config,
+                os.path.join(path, str(id) + '.mp4')
+            )
+
     def train_batch(self, sess, epoch, x_batch, y_batch, vx, vy, file_prefix):
         x_shape = [self._b_size, self._img_h, self._img_w, 1]
         y_shape = [self._b_size, self._img_h, self._expr, 1]

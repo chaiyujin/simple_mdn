@@ -226,7 +226,6 @@ class Model(BasicModel):
     def sample(self, sess, data, batch_size, number=None, video=False):
         # import the utils to sample video
         from backend.utils.media import sample_video
-
         if number is None or number > data.length:
             number = data.length
         if batch_size > number:
