@@ -1,9 +1,48 @@
 import os
 import sys
+import pickle
 import argparse
 import tensorflow as tf
-from pack.models.gan import GAN
+from pack.models.gan2 import GAN, generate_noise
 from pack.backend.data import data_loader
+
+
+def add_noise(save_train, save_test=None):
+    train_set = None
+    test_set = None
+    len_train = 0
+    len_test = 0
+    with open(save_train, 'rb') as file:
+        train_set = pickle.load(file)
+        len_train = len(train_set['inputs'])
+    if save_test:
+        with open(save_test, 'rb') as file:
+            test_set = pickle.load(file)
+        len_test = len(test_set['inputs'])
+    noise_config = {
+        'length': len_train + len_test,
+        'time_steps': 75,
+        'chr_dims': 16,
+        'emo_dims': 12,
+        'rdm_dims': 4
+    }
+    noise = generate_noise(noise_config)
+    print('Add noise with shape: ', noise.shape)
+    # train
+    train_noise = noise[:len_train]
+    train_set['noise'] = train_noise
+    print(len_train, ' ', train_noise.shape)
+    with open(save_train, 'wb') as file:
+        pickle.dump(train_set, file)
+
+    if save_test:
+        test_noise = noise[len_train:]
+        test_set['noise'] = test_noise
+        print(len_test, ' ', test_noise.shape)
+
+        with open(save_test, 'wb') as file:
+            pickle.dump(test_set, file)
+
 
 if __name__ == '__main__':
     sys.path.append('.')
@@ -11,7 +50,8 @@ if __name__ == '__main__':
     # parse the command
     parser = argparse.ArgumentParser()
     parser.add_argument('-d', '--process_data', action='store_true')
-    parser.add_argument('-m', '--merge_data', action='store_true')
+    # parser.add_argument('-m', '--merge_data', action='store_true')
+    parser.add_argument('-n', '--noise_data', action='store_true')
     parser.add_argument('-t', '--train', action='store_true')
     args = parser.parse_args()
 
@@ -43,9 +83,10 @@ if __name__ == '__main__':
             test_list.append(save_test)
             data_process.process(
                 config, path, 'mpg', 0.2, save_train, save_test)
-        if args.merge_data:
-            data_process.merge(train_list, 'data/train.pkl')
-            data_process.merge(test_list, 'data/test.pkl')
+            if args.noise_data:
+                add_noise(save_train, save_test)
+        data_process.merge(train_list, 'data/train.pkl')
+        data_process.merge(test_list, 'data/test.pkl')
 
         train_list = []
         for i in range(18, 32):
@@ -58,10 +99,11 @@ if __name__ == '__main__':
             test_list.append(save_test)
             data_process.process(
                 config, path, 'mpg', 0, save_train, save_test)
-        if args.merge_data:
-            data_process.merge(train_list, 'data/notrain.pkl')
+            if args.noise_data:
+                add_noise(save_train)
+        data_process.merge(train_list, 'data/notrain.pkl')
     # load data set
-    set_keys = ['inputs', 'outputs', 'seq_len', 'path_prefix']
+    set_keys = ['inputs', 'outputs', 'noise', 'path_prefix']
     train_set = data_loader.DataSet(keys=set_keys)
     valid_set = data_loader.DataSet(keys=set_keys)
     no_train = data_loader.DataSet(keys=set_keys)
@@ -91,6 +133,7 @@ if __name__ == '__main__':
             vb, _ = valid_set.next_batch()
             vx = vb['inputs']
             vy = vb['outputs']
+            vz = vb['noise']
             pf = vb['path_prefix']
 
             for epoch in range(1000000):
@@ -100,8 +143,9 @@ if __name__ == '__main__':
                     batch, bs = train_set.next_batch()
                 xb = batch['inputs']
                 yb = batch['outputs']
+                zb = batch['noise']
 
-                net.train_batch(sess, epoch, xb, yb, vx, vy, pf)
+                net.train_batch(sess, epoch, xb, yb, zb, vx, vy, vz, pf)
         else:
             net.saver.restore(sess, 'save/best.cpkt')
             no_train.batch_size = 32
@@ -116,6 +160,7 @@ if __name__ == '__main__':
                     break
                 vx = vb['inputs']
                 vy = vb['outputs']
+                vz = vb['noise']
                 pf = vb['path_prefix']
-                net.sample(sess, 'sample', i, vx, vy, pf)
+                net.sample(sess, 'sample', i, vx, vy, vz, pf)
                 i += 1
