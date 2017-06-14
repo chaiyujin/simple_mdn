@@ -148,35 +148,8 @@ if __name__ == '__main__':
                 net.train_batch(sess, epoch, xb, yb, zb, vx, vy, vz, pf)
         else:
             net.saver.restore(sess, 'save/best.cpkt')
-
-            # 1. sample train
             no_train.batch_size = 32
             no_train.reset()
-            train_set.batch_size = 32
-            train_set.reset()
-            i = 0
-            while True:
-                for _ in range(25):
-                    vb, bs = train_set.next_batch()
-                    if vb is None:
-                        break
-                if vb is None or bs != 32:
-                    break
-                vx = vb['inputs']
-                vy = vb['outputs']
-                pf = vb['path_prefix']
-                vz = vb['noise']
-                print(vz[0][0])
-                net.sample(sess, 'sample_train', i, vx, vy, vz, pf)
-                i += 1
-
-            # 2. sample unseen with given noise
-            no_train.batch_size = 32
-            no_train.reset()
-            train_set.batch_size = 32
-            train_set.reset()
-            vb, bs = train_set.next_batch()
-            vz = vb['noise']
             i = 0
             while True:
                 for _ in range(5):
@@ -187,51 +160,7 @@ if __name__ == '__main__':
                     break
                 vx = vb['inputs']
                 vy = vb['outputs']
-                pf = vb['path_prefix']
-                print(vz[0][0])
-                net.sample(sess, 'sample_unseen_with_given_noise', i, vx, vy, vz, pf)
-                i += 1
-
-            # 3. sample with random noise
-            no_train.batch_size = 32
-            no_train.reset()
-            train_set.batch_size = 32
-            train_set.reset()
-            i = 0
-            while True:
-                for _ in range(5):
-                    vb, bs = no_train.next_batch()
-                    if vb is None:
-                        break
-                if vb is None or bs != 32:
-                    break
-                vx = vb['inputs']
-                vy = vb['outputs']
-                pf = vb['path_prefix']
                 vz = vb['noise']
-                print(vz[0][0])
-                net.sample(sess, 'sample_unseen_with_random_noise', i, vx, vy, vz, pf)
-                i += 1
-
-            # 4. sample with sample_different_noise
-            no_train.batch_size = 32
-            no_train.reset()
-            train_set.batch_size = 32
-            train_set.reset()
-            for _ in range(5 * 20):
-                vb, bs = no_train.next_batch()
-            vx = vb['inputs']
-            vy = vb['outputs']
-            pf = vb['path_prefix']
-            i = 0
-            while True:
-                for _ in range(25):
-                    vb, bs = train_set.next_batch()
-                    if vb is None:
-                        break
-                if vb is None or bs != 32:
-                    break
-                vz = vb['noise']
-                print(vz[0][0])
-                net.sample(sess, 'sample_different_noise', i, vx, vy, vz, pf)
+                pf = vb['path_prefix']
+                net.sample(sess, 'sample', i, vx, vy, vz, pf)
                 i += 1

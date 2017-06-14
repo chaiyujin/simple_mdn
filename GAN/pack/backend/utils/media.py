@@ -379,6 +379,49 @@ def sample_video(data, media_path):
         os.remove(m_path_true + '.avi')
 
 
+def concat_audio(files, path):
+    if os.path.exists(path):
+        os.remove(path)
+    with open('list.txt', 'w') as file:
+        for f in files:
+            file.write("file '" + f + ".WAV'\n")
+    ffmpy.FFmpeg(
+        inputs=None,
+        outputs={
+            path: '-f concat -safe 0 -i list.txt -c copy -loglevel ' + loglevel
+        }
+    ).run()
+    os.remove('list.txt')
+
+
+def sample_concat_video(data, media_path):
+    prefix, _ = os.path.splitext(media_path)
+    concat_audio(data['path_prefix'], 'tmp.WAV')
+    if 'anime_pred' in data:
+        m_path_pred = prefix + '_pred'
+        generate_video_for_anime(data['anime_pred'], m_path_pred + '.avi')
+        if os.path.exists(m_path_pred + '.mp4'):
+            os.remove(m_path_pred + '.mp4')
+        mux(
+            'tmp.WAV',
+            m_path_pred + '.avi',
+            m_path_pred + '.mp4'
+        )
+        os.remove(m_path_pred + '.avi')
+    if 'anime_true' in data:
+        m_path_true = prefix + '_true'
+        generate_video_for_anime(data['anime_true'], m_path_true + '.avi')
+        if os.path.exists(m_path_true + '.mp4'):
+            os.remove(m_path_true + '.mp4')
+        mux(
+            'tmp.WAV',
+            m_path_true + '.avi',
+            m_path_true + '.mp4'
+        )
+        os.remove(m_path_true + '.avi')
+    os.remove('tmp.WAV')
+
+
 init_dde_fbx()
 
 if __name__ == '__main__':

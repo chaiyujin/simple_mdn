@@ -56,13 +56,13 @@ def generate_noise(noise_config):
 
 class GAN():
     def __init__(self, scope='GAN', config=default_config):
-        self._b_size = default_config['b_size']
-        self._img_h = default_config['img_h']
-        self._img_w = default_config['img_w']
-        self._expr = default_config['expr']
-        self._z_dims = default_config['z_dims']
-        penalty_scale = default_config['penalty_scale']
-        l1_scale = default_config['l1_scale']
+        self._b_size = config['b_size']
+        self._img_h = config['img_h']
+        self._img_w = config['img_w']
+        self._expr = config['expr']
+        self._z_dims = config['z_dims']
+        penalty_scale = config['penalty_scale']
+        l1_scale = config['l1_scale']
         self.x = tf.placeholder(
             tf.float32, [self._b_size, self._img_h, self._img_w, 1])
         self.y = tf.placeholder(
@@ -72,6 +72,7 @@ class GAN():
         Gy, Gy_logits = self.__G(self.x, self.z)
         Dr = self.__D(self.x, self.y)
         Df = self.__D(self.x, Gy, reuse=True)
+        self.pred = Gy
 
         # penalty
         epsilon = tf.random_uniform([], 0.0, 1.0)
@@ -94,7 +95,6 @@ class GAN():
         )
         self.G_loss = -tf.reduce_mean(Df) + L1 * l1_scale
 
-        self.pred = Gy
         self.L1_loss = L1
         # optim
         self.D_optim = tf.train.RMSPropOptimizer(learning_rate=1e-4).minimize(
@@ -197,6 +197,30 @@ class GAN():
                 'anime_pred': pred[0]
             }
             sample_video(
+                sample_config,
+                os.path.join(path, str(id) + '.mp4')
+            )
+
+    def scale_sample(self, sess, path, id, vx, vy, vz, files):
+        x_shape = [self._b_size, self._img_h, self._img_w, 1]
+        y_shape = [self._b_size, self._img_h, self._expr, 1]
+        z_shape = [self._b_size, self._img_h, self._z_dims]
+        if sess is not None:
+            if not os.path.exists(path):
+                os.mkdir(path)
+            pred = sess.run(self.pred, feed_dict={
+                self.x: np.reshape(vx, x_shape),
+                self.y: np.reshape(vy, y_shape),
+                self.z: np.reshape(vz, z_shape)
+            })
+            from ..backend.utils.media import sample_concat_video
+            print('\nSampling...')
+            sample_config = {
+                'path_prefix': files,
+                'anime_true': vy[0],
+                'anime_pred': pred[0]
+            }
+            sample_concat_video(
                 sample_config,
                 os.path.join(path, str(id) + '.mp4')
             )
