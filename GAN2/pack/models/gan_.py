@@ -7,6 +7,7 @@ import tensorflow as tf
 import tensorflow.contrib.layers as tflayers
 import matplotlib.pyplot as plt
 from .models import ConvNet, DeconvNet
+from ..backend.train.RMSProp import RMSProp as MyRMS
 
 
 default_config = {
@@ -177,6 +178,7 @@ class GAN():
         RMSProp = tf.train.RMSPropOptimizer(learning_rate=1e-4)
         self.D_optim = RMSProp.minimize(self.D_loss, var_list=self.D_theta)
         self.G_optim = RMSProp.minimize(self.G_loss, var_list=self.G_theta)
+        self.z_optim = MyRMS(learning_rate=1e-6)
 
         # saver
         theta = [
@@ -236,13 +238,13 @@ class GAN():
     def generate_feed_dict(self, x, y, z):
         x_batch = np.reshape(x, self.x_shape)
         y_batch = np.reshape(y, self.y_shape)
-        z_batch = np.reshape(z[0, 0, :], self.z_shape) if z is not None else None
+        z_batch = np.reshape(z, self.z_shape) if z is not None else None
         feed_d = {self.x: x_batch, self.y: y_batch}
         if z_batch is not None:
             feed_d[self.z] = z_batch
         return feed_d
 
-    def train_batch(self, sess, epoch, x, y, z, vx, vy, vz, prefix):
+    def train_batch(self, sess, epoch, id, x, y, z, vx, vy, vz, prefix):
         feed_train = self.generate_feed_dict(x, y, z)
         feed_valid = self.generate_feed_dict(vx, vy, vz)
         # sample
@@ -259,8 +261,9 @@ class GAN():
             )
             D_loss += loss
         D_loss /= n_d
-        print(dDz.mean())
-        print(dDZ.mean())
+        # print(dDz.mean())
+        # print(dDZ.mean())
+        z = self.z_optim.apply_gradient(z, dDz, str(id))
 
         G_loss = 0
         for _ in range(1):
@@ -309,3 +312,5 @@ class GAN():
             plt.savefig('error.png')
             plt.clf()
             plt.close(fig)
+
+        return z
