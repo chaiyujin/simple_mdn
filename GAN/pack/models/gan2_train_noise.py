@@ -28,11 +28,9 @@ emo_noise = None
 
 
 def noise_layer(shape):
-    size = 1
-    for i in range(1, 3):
-        size *= shape[i]
+    size = shape[-1]
     with tf.variable_scope('noise_layer'):
-        x = tf.constant(0, tf.float32, [shape[0], 1])
+        x = tf.constant(0, tf.float32, [1, 1])
         W = tf.get_variable(
             'W', [1, size], dtype=tf.float32,
             initializer=tf.zeros_initializer
@@ -42,7 +40,8 @@ def noise_layer(shape):
             initializer=tf.zeros_initializer
         )
         out = tf.nn.xw_plus_b(x, W, b)
-        out = tf.reshape(out, shape)
+        zeros = tf.zeros(shape, tf.float32)
+        out = zeros + out
         return out, b
 
 
@@ -124,6 +123,7 @@ class GAN():
             ]
         )
         self.saver = tf.train.Saver(load_list)
+        self.noise_saver = tf.train.Saver([noise_theta])
         self.epoch_list = []
         self.loss_list = {
             'D_loss': [],
@@ -312,7 +312,8 @@ class GAN():
         self.loss_list['L1_valid'].append(L1_valid)
 
         if epoch % 200 == 0:
-            self.saver.save(sess, 'save_noise/best.cpkt')
+            self.saver.save(sess, 'save_noise/model.cpkt')
+            self.noise_saver.save(sess, 'save_noise/best.cpkt')
 
         if epoch % 5 == 0:
             fig = plt.figure(figsize=(12, 12))

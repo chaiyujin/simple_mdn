@@ -192,7 +192,11 @@ def noop_scan(video_path):
 
 
 def get_anime_data_from_video(video_path, show, fbx, sil_frames):
-    # dde.reset()
+    dde.reset()
+    noop_scan(video_path)
+    noop_scan(video_path)
+    noop_scan(video_path)
+    noop_scan(video_path)
     noop_scan(video_path)
     console.log('log', 'Get anime data from video')
     cap = cv2.VideoCapture(video_path)
@@ -221,7 +225,7 @@ def get_anime_data_from_video(video_path, show, fbx, sil_frames):
                 return None
 
             # print('speak')
-            for _ in range(4):
+            for _ in range(1):
                 dde.run(frame)
 
             # push anime data
@@ -253,6 +257,9 @@ def get_anime_data_from_video(video_path, show, fbx, sil_frames):
 
 def process_media(video_path, config, show=False, fbx=False, clear_old=False):
     dde.reset()
+    dde.reset()
+    dde.reset()
+    dde.reset()
     demuxed = demux_video(video_path, clear_old)
     # audio feat
     audio_feat = get_mfcc(demuxed['audio_path'])
@@ -264,21 +271,21 @@ def process_media(video_path, config, show=False, fbx=False, clear_old=False):
     file_prefix, _ = os.path.splitext(video_path)
     align_text = file_prefix + '.align'
     sil_frames = []
-    with open(align_text, 'r') as file:
-        count = 0
-        for line in file:
-            line = line.strip().split(' ')
-            start = int(float(line[0]) / 1000.0)
-            end = int(float(line[1]) / 1000.0)
-            word = line[2]
-            if word == 'sil':
-                if count == 0:
-                    end = end
-                else:
-                    end = end + 1
-                count += 1
-                for i in range(start, end):
-                    sil_frames.append(i)
+    # with open(align_text, 'r') as file:
+    #     count = 0
+    #     for line in file:
+    #         line = line.strip().split(' ')
+    #         start = int(float(line[0]) / 1000.0)
+    #         end = int(float(line[1]) / 1000.0)
+    #         word = line[2]
+    #         if word == 'sil':
+    #             if count == 0:
+    #                 end = end
+    #             else:
+    #                 end = end + 1
+    #             count += 1
+    #             for i in range(start, end):
+    #                 sil_frames.append(i)
     # video track
     anime_data = get_anime_data_from_cache(
         demuxed['video_path'], clear_old

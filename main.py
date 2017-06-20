@@ -30,11 +30,15 @@ if __name__ == '__main__':
         'dropout': 0
     }
 
+    bad = [4, 15]
+    fair = [9, 13, 14]
     if args.process_data:
         from backend.data import data_process
         train_list = []
         test_list = []
-        for i in range(1, 2):
+        for i in range(1, 17):
+            if i in bad or i in fair:
+                continue
             path = '../../dataset/GRID/video/s' + str(i) + '/'
             if not os.path.exists(path):
                 continue

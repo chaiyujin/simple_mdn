@@ -109,7 +109,8 @@ def accumulate_data(file_list, config):
             path_prefix.append(res[3])
         else:
             failed += 1
-        # if idx > 10: break
+        # break
+        # if idx > 2: break
     if failed > 0:
         console.log('error', 'Failed', str(failed) + '\n')
     if len(inputs) == 0:

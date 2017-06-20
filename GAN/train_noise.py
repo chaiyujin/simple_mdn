@@ -63,7 +63,7 @@ if __name__ == '__main__':
             pf = vb['path_prefix']
 
             train_set.reset()
-            for epoch in range(1000):
+            for epoch in range(10000):
                 batch, bs = train_set.next_batch()
                 if batch is None or bs != 32:
                     train_set.reset()
@@ -74,7 +74,8 @@ if __name__ == '__main__':
 
                 net.train_batch(sess, epoch, xb, yb, zb, vx, vy, vz, pf)
         else:
-            net.saver.restore(sess, 'save_noise/best.cpkt')
+            net.saver.restore(sess, 'save_noise/model.cpkt')
+            net.noise_saver.restore(sess, 'save_noise/best.cpkt')
             train_set.batch_size = 32
             train_set.reset()
             i = 0
