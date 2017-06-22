@@ -6,7 +6,7 @@ import numpy as np
 import tensorflow as tf
 import tensorflow.contrib.layers as tflayers
 import matplotlib.pyplot as plt
-from .models import ConvNet, DeconvNet, UNet
+from .models import ConvNet, UNet
 from ..backend.train.RMSProp import RMSProp as MyRMS
 
 
@@ -19,6 +19,7 @@ default_config = {
     'penalty_scale': 10,
     'l1_scale': 3
 }
+start_noise_train_epoch = 15000
 
 
 # Generator: input audio mfcc features and noise z
@@ -271,7 +272,8 @@ class GAN():
                     feed_dict=feed_train
                 )
             D_loss += loss
-            new_z = self.z_optim.apply_gradient(new_z, dDz, 'Dz' + str(id))
+            if only_train_noise or epoch > start_noise_train_epoch:
+                new_z = self.z_optim.apply_gradient(new_z, dDz, 'Dz' + str(id))
         D_loss /= n_d
 
         G_loss = 0
@@ -287,7 +289,8 @@ class GAN():
                     feed_dict=feed_train
                 )
             G_loss += loss
-            new_z = self.z_optim.apply_gradient(new_z, dGz, 'Gz' + str(id))
+            if only_train_noise or epoch > start_noise_train_epoch:
+                new_z = self.z_optim.apply_gradient(new_z, dGz, 'Gz' + str(id))
         G_loss /= 1
 
         if epoch % 100 == 0:
