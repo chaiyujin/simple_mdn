@@ -170,6 +170,25 @@ if __name__ == '__main__':
                 net.sample(sess, 'sample_train', i, vx, vy, vz, pf)
                 i += 1
 
+            # 1. sample train
+            valid_set.batch_size = 32
+            valid_set.reset()
+            i = 0
+            while True:
+                for _ in range(5):
+                    vb, bs = valid_set.next_batch()
+                    if vb is None:
+                        break
+                if vb is None or bs != 32:
+                    break
+                vx = vb['inputs']
+                vy = vb['outputs']
+                pf = vb['path_prefix']
+                vz = vb['noise']
+                print(vz[0][0])
+                net.sample(sess, 'sample_valid', i, vx, vy, vz, pf)
+                i += 1
+
             # 2. sample unseen with given noise
             no_train.batch_size = 32
             no_train.reset()

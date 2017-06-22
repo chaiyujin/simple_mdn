@@ -6,7 +6,7 @@ import numpy as np
 import tensorflow as tf
 import tensorflow.contrib.layers as tflayers
 import matplotlib.pyplot as plt
-from .models import ConvNet, DeconvNet
+from .models import ConvNet, DeconvNet, UNet
 from ..backend.train.RMSProp import RMSProp as MyRMS
 
 
@@ -31,36 +31,37 @@ def generator(x, z, config, scope='Gen', reuse=False):
         x_s = [int(d) for d in x.get_shape()]
         z = tf.reshape(z, [x_s[0], x_s[1], x_s[2], -1])
         input = tf.concat([x, z], axis=3)
-        # encoding
-        enc = ConvNet() if reuse else ConvNet(config={'log'})
-        # input 75x16, 2
-        enc.conv_layer(16, [4, 4], [1, 2], 'lrelu')
-        # => 75x8, 32
-        enc.conv_layer(128, [5, 4], [3, 2], 'lrelu', True)
-        # => 25x4, 128
+        if True:
+            net = UNet()
+            # input 75x16, 3
+            net.encode_layer(32, [1, 4], [1, 2], 'lrelu')
+            # => 75x8, 32
+            net.encode_layer(128, [8, 4], [5, 2], 'lrelu', True)
+            # => 15x4, 128
+            net.encode_layer(256, [5, 2], [3, 1], 'lrelu', True)
+            # => 5x4, 256
+            net.decode_layer(128, [5, 2], [3, 1], 'lrelu', True)
+            # => 15x4, 128
+            net.decode_layer(32, [8, 4], [5, 2], 'lrelu', True)
+            # => 75x8, 32
+            net.decode_layer(1, [1, 4], [1, 2], 'lrelu', True)
+            # =>75x16, 1
 
-        # decoding
-        dec = DeconvNet() if reuse else DeconvNet(config={'log'})
-        dec.deconv_layer(16, [5, 16], [3, 4], 'lrelu', True)
-        # => 75x16, 32
-        dec.deconv_layer(1, [4, 16], [1, 1], 'lrelu', True)
-        # => 75x16, 1
+            # concat noise at input
+            lin = tf.reshape(
+                net(input),
+                [x_s[0] * x_s[1], -1]
+            )
+            logits = tflayers.fully_connected(
+                lin, config['expr_dims'], None,
+                weights_initializer=tf.random_normal_initializer(0, 0.02)
+            )
+            logits = tf.reshape(
+                logits, [x_s[0], x_s[1], config['expr_dims'], 1]
+            )
+            anime = tf.sigmoid(logits)
 
-        lin = tf.reshape(
-            dec(enc(input)),
-            [x_s[0] * x_s[1], -1]
-        )
-        lin = tflayers.fully_connected(
-            lin, config['expr_dims'], None,
-            weights_initializer=tf.random_normal_initializer(0, 0.02)
-        )
-        logits = tf.reshape(
-            lin,
-            [x_s[0], x_s[1], config['expr_dims'], 1]
-        )
-        anime = tf.sigmoid(logits)
-
-        return anime, logits
+            return anime, logits
 
 
 # Discriminator: input audio mfcc features and anime exprs
@@ -177,7 +178,7 @@ class GAN():
         RMSProp = tf.train.RMSPropOptimizer(learning_rate=1e-4)
         self.D_optim = RMSProp.minimize(self.D_loss, var_list=self.D_theta)
         self.G_optim = RMSProp.minimize(self.G_loss, var_list=self.G_theta)
-        self.z_optim = MyRMS(learning_rate=1e-3)
+        self.z_optim = MyRMS(learning_rate=1e-6)
 
         # saver
         theta = [
@@ -246,7 +247,6 @@ class GAN():
     def train_batch(
             self, sess, epoch, id, x, y, z,
             vx, vy, vz, prefix, only_train_noise=False):
-        feed_train = self.generate_feed_dict(x, y, z)
         feed_valid = self.generate_feed_dict(vx, vy, vz)
         # sample
         if epoch % 500 == 0:
@@ -260,6 +260,7 @@ class GAN():
         D_loss = 0
         n_d = 100 if epoch < 25 or (epoch + 1) % 500 == 0 else 5
         for _ in range(n_d):
+            feed_train = self.generate_feed_dict(x, y, new_z)
             if only_train_noise:
                 dDz, loss = sess.run(
                     [self.grad_Dz, self.D_loss], feed_dict=feed_train
@@ -275,6 +276,7 @@ class GAN():
 
         G_loss = 0
         for _ in range(1):
+            feed_train = self.generate_feed_dict(x, y, new_z)
             if only_train_noise:
                 dGz, loss = sess.run(
                     [self.grad_Gz, self.G_loss], feed_dict=feed_train
