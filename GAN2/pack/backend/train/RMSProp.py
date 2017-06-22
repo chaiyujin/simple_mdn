@@ -4,7 +4,7 @@
     momentum=0.0,
     epsilon=1e-10,
 '''
-import math
+import numpy as np
 
 
 class RMSProp():
@@ -15,18 +15,19 @@ class RMSProp():
         self._mean_squares = {}
 
     def apply_gradient(self, var, gradient, var_name):
+        # print(var)
         # get from _mean_squares
         r = 0
         if var_name in self._mean_squares:
             r = self._mean_squares[var_name]
         # calc
         r = self._decay * r + (1 - self._decay) * (gradient * gradient)
-        delta = -self._lr * gradient / math.sqrt(self._eps + r)
+        delta = -self._lr * gradient / np.sqrt(self._eps + r)
         var = var + delta
 
         # save into var map
         self._mean_squares[var_name] = r
-
+        # print(var)
         return var
 
 

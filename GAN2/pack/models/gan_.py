@@ -34,7 +34,7 @@ def generator(x, z, config, scope='Gen', reuse=False):
         # encoding
         enc = ConvNet() if reuse else ConvNet(config={'log'})
         # input 75x16, 2
-        enc.conv_layer(16, [2, 4], [1, 2], 'lrelu')
+        enc.conv_layer(16, [4, 4], [1, 2], 'lrelu')
         # => 75x8, 32
         enc.conv_layer(128, [5, 4], [3, 2], 'lrelu', True)
         # => 25x4, 128
@@ -43,7 +43,7 @@ def generator(x, z, config, scope='Gen', reuse=False):
         dec = DeconvNet() if reuse else DeconvNet(config={'log'})
         dec.deconv_layer(16, [5, 16], [3, 4], 'lrelu', True)
         # => 75x16, 32
-        dec.deconv_layer(1, [2, 16], [1, 1], 'lrelu', True)
+        dec.deconv_layer(1, [4, 16], [1, 1], 'lrelu', True)
         # => 75x16, 1
 
         lin = tf.reshape(
@@ -168,17 +168,16 @@ class GAN():
             if var.name.startswith("Gen")
         ]
 
-        self.grad_DZ, self.grad_Dz = tf.gradients(
-            self.D_loss, [self.Z, self.z]
-        )
-
+        self.grad_Dz = tf.gradients(self.D_loss, [self.z])[0]
+        self.grad_Gz = tf.gradients(self.G_loss, [self.z])[0]
         self.grad_Dz /= self._img_h * self._b_size
+        self.grad_Gz /= self._img_h * self._b_size
 
         # optim
         RMSProp = tf.train.RMSPropOptimizer(learning_rate=1e-4)
         self.D_optim = RMSProp.minimize(self.D_loss, var_list=self.D_theta)
         self.G_optim = RMSProp.minimize(self.G_loss, var_list=self.G_theta)
-        self.z_optim = MyRMS(learning_rate=1e-6)
+        self.z_optim = MyRMS(learning_rate=1e-3)
 
         # saver
         theta = [
@@ -244,39 +243,56 @@ class GAN():
             feed_d[self.z] = z_batch
         return feed_d
 
-    def train_batch(self, sess, epoch, id, x, y, z, vx, vy, vz, prefix):
+    def train_batch(
+            self, sess, epoch, id, x, y, z,
+            vx, vy, vz, prefix, only_train_noise=False):
         feed_train = self.generate_feed_dict(x, y, z)
         feed_valid = self.generate_feed_dict(vx, vy, vz)
         # sample
         if epoch % 500 == 0:
-            self._sample(sess, 'out', epoch, feed_valid, prefix, (epoch == 0))
+            self._sample(
+                sess, 'out', str(epoch),
+                feed_valid, prefix, (epoch == 0)
+            )
 
+        new_z = z
         # BP
         D_loss = 0
         n_d = 100 if epoch < 25 or (epoch + 1) % 500 == 0 else 5
         for _ in range(n_d):
-            dDz, dDZ, loss, _ = sess.run(
-                [self.grad_Dz, self.grad_DZ, self.D_loss, self.D_optim],
-                feed_dict=feed_train
-            )
+            if only_train_noise:
+                dDz, loss = sess.run(
+                    [self.grad_Dz, self.D_loss], feed_dict=feed_train
+                )
+            else:
+                dDz, loss, _ = sess.run(
+                    [self.grad_Dz, self.D_loss, self.D_optim],
+                    feed_dict=feed_train
+                )
             D_loss += loss
+            new_z = self.z_optim.apply_gradient(new_z, dDz, 'Dz' + str(id))
         D_loss /= n_d
-        # print(dDz.mean())
-        # print(dDZ.mean())
-        z = self.z_optim.apply_gradient(z, dDz, str(id))
 
         G_loss = 0
         for _ in range(1):
-            loss, _ = sess.run(
-                [self.G_loss, self.G_optim], feed_dict=feed_train
-            )
+            if only_train_noise:
+                dGz, loss = sess.run(
+                    [self.grad_Gz, self.G_loss], feed_dict=feed_train
+                )
+            else:
+                dGz, loss, _ = sess.run(
+                    [self.grad_Gz, self.G_loss, self.G_optim],
+                    feed_dict=feed_train
+                )
             G_loss += loss
+            new_z = self.z_optim.apply_gradient(new_z, dGz, 'Gz' + str(id))
         G_loss /= 1
 
         if epoch % 100 == 0:
-            if not os.path.exists('save'):
-                os.mkdir('save')
-            self.saver.save(sess, 'save/best.cpkt')
+            if (not only_train_noise):
+                if not os.path.exists('save'):
+                    os.mkdir('save')
+                self.saver.save(sess, 'save/best.cpkt')
 
         if epoch % 50 == 0:
             L1_train = sess.run(self.L1_loss, feed_dict=feed_train)
@@ -313,4 +329,4 @@ class GAN():
             plt.clf()
             plt.close(fig)
 
-        return z
+        return new_z
